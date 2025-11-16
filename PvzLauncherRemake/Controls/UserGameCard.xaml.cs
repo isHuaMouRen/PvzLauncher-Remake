@@ -20,7 +20,7 @@ namespace PvzLauncherRemake.Controls
     /// </summary>
     public partial class UserGameCard : UserControl
     {
-        public Path[] Icon { get; set; } = null!;
+        public UIElement[] Icon { get; set; } = { new Rectangle { Fill = new SolidColorBrush(Color.FromRgb(255, 0, 255)) } };
         public string Title { get; set; } = "Title";
         public string Version { get; set; } = "1.0.0.0";
 
@@ -34,10 +34,13 @@ namespace PvzLauncherRemake.Controls
 
         private void LoadUI(object sender, RoutedEventArgs e)
         {
-            grid_Icon.Children.Clear();
-            foreach (var path in Icon)
+            if (Icon.Length > 0)
             {
-                grid_Icon.Children.Add(path);
+                grid_Icon.Children.Clear();
+                foreach (var path in Icon)
+                {
+                    grid_Icon.Children.Add(path);
+                }
             }
 
             textBlock_Title.Text = Title;
