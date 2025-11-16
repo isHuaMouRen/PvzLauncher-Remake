@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="PvzLauncherRemake.Controls.UserGameCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PvzLauncherRemake.Controls"
+             mc:Ignorable="d" 
+             Height="50">
+    <Grid>
+        <Viewbox Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0">
+            <!-- 以后要放Path或者image -->
+            <Grid x:Name="grid_Icon">
+                <Rectangle Height="50" Width="50" Fill="Magenta"/>
+            </Grid>
+        </Viewbox>
+
+        <TextBlock x:Name="textBlock_Title" Text="Title" Margin="50,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14"/>
+
+        <Grid VerticalAlignment="Bottom" Margin="50,0,5,5">
+            <Rectangle Fill="#66000000" RadiusX="3" RadiusY="3"/>
+            <TextBlock x:Name="textBlock_Version" Text="Version" FontSize="10" Margin="2,2,2,2" Foreground="White"/>
+        </Grid>
+    </Grid>
+</UserControl>
