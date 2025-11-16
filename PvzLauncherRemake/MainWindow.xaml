@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:PvzLauncherRemake"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True">
+        Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Window_Loaded">
     <Grid>
-        <ui:NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False">
+        <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem x:Name="navViewItem_Launch" Content="启动" Tag="Launch">
                     <ui:NavigationViewItem.Icon>
@@ -43,7 +43,7 @@
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
 
-            <ui:Frame NavigationUIVisibility="Hidden"/>
+            <ui:Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
         </ui:NavigationView>
     </Grid>
 </Window>
