@@ -8,4 +8,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HuaZi.Library" Version="2025.11.7.1" />
+    <PackageReference Include="ModernWpfUI" Version="0.9.7-preview.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
 </Project>
