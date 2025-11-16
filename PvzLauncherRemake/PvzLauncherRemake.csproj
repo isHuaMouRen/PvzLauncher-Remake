@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="Class\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
 
 </Project>
