@@ -9,7 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\image\Icon.ico" />
+    <Compile Remove="Assets\image\**" />
+    <EmbeddedResource Remove="Assets\image\**" />
+    <None Remove="Assets\image\**" />
+    <Page Remove="Assets\image\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Icon\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Icon\Icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -20,12 +33,6 @@
 
   <ItemGroup>
     <Folder Include="Class\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Assets\image\Icon.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
 </Project>

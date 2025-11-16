@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PvzLauncherRemake"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Assets/image/Icon.ico">
+        Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Assets/icon/Icon.ico">
     <Grid>
         <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged">
             <ui:NavigationView.MenuItems>
