@@ -40,6 +40,7 @@ namespace PvzLauncherRemake
                     logger.Info($"已将 {t.Name} 添加进预加载");
                 }
                 AddType(typeof(PageLaunch));
+                AddType(typeof(PageManage));
                 AddType(typeof(PageDownload));
 
                 AddType(typeof(PageTask));
