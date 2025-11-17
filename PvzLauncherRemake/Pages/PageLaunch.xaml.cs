@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PvzLauncherRemake.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,27 @@ namespace PvzLauncherRemake.Pages
     /// </summary>
     public partial class PageLaunch : ModernWpf.Controls.Page
     {
+        #region Init
+        public void Initialize() { }
+        public void InitializeLoaded()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", "加载后初始化 PageLaunch 发生错误", ex);
+            }
+        }
+        #endregion
+
         public PageLaunch()
         {
             InitializeComponent();
+            Initialize();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e) { InitializeLoaded(); }
     }
 }
