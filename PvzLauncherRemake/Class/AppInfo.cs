@@ -1,4 +1,4 @@
-using PvzLauncherRemake.Class.JsonConfig;
+using PvzLauncherRemake.Class.JsonConfigs;
 using System.IO;
 using System.Reflection;
 
@@ -12,6 +12,7 @@ namespace PvzLauncherRemake.Class
         public static readonly string RootPath = $"{Path.GetDirectoryName(ExecutePath)}";//顶级目录
         public static readonly string GameDirectory = $"{Path.Combine(ExecutePath, "Games")}";//游戏目录
         public static List<JsonGameInfo.Index> GameList = new List<JsonGameInfo.Index>();//游戏列表
+        public static JsonConfig.Index Config = null!;//配置
         
         //启动参数配置
         public static class Arguments
