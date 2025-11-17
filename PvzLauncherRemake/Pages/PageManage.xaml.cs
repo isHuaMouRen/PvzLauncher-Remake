@@ -1,4 +1,5 @@
 ﻿using HuaZi.Library.Logger;
+using ModernWpf.Controls;
 using Newtonsoft.Json;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
@@ -76,6 +77,7 @@ namespace PvzLauncherRemake.Pages
                     logger.Info($"添加卡片: 标题: {card.Title} 版本: {card.Version}");
 
                     //选择卡片
+                    bool isChecked = false;
                     if (AppInfo.Config.CurrentGame != null)
                     {
                         logger.Info("当前选择不为空，开始检查项");
@@ -83,10 +85,19 @@ namespace PvzLauncherRemake.Pages
                         {
                             if ($"{((UserGameCard)item).Title}" == AppInfo.Config.CurrentGame)
                             {
+                                isChecked = true;
                                 listBox.SelectedItem = item;
                             }
                         }
                     }
+                    if (!isChecked)
+                        await DialogManager.ShowDialogAsync(new ContentDialog
+                        {
+                            Title = "发现无效的配置",
+                            Content = $"发现无效的配置: \"Index -> CurrentGame\": \"{AppInfo.Config.CurrentGame}\"\n\n找不到目标游戏",
+                            PrimaryButtonText = "确定",
+                            DefaultButton = ContentDialogButton.Primary
+                        });
                 }
 
                 EndLoad();
