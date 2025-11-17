@@ -11,9 +11,9 @@
 
     <Grid Margin="10,10,10,10">
         <StackPanel x:Name="stackPanel_LaunchButtons" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-            <Button x:Name="button_Launch" Style="{DynamicResource AccentButtonStyle}" Height="60" Width="250" Margin="0,0,0,5">
+            <Button x:Name="button_Launch" Style="{DynamicResource AccentButtonStyle}" Height="60" Width="250" Margin="0,0,0,5" Click="button_Launch_Click">
                 <StackPanel>
-                    <TextBlock Text="启动游戏" Foreground="#E4FFFFFF"/>
+                    <TextBlock x:Name="textBlock_LaunchText" Text="启动游戏" Foreground="#E4FFFFFF" HorizontalAlignment="Center"/>
                     <TextBlock x:Name="textBlock_LaunchVersion" Text="Version" FontSize="10" HorizontalAlignment="Center" Foreground="#E4C8C8C8"/>
                 </StackPanel>
             </Button>
