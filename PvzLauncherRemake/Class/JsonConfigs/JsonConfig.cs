@@ -12,7 +12,7 @@ namespace PvzLauncherRemake.Class.JsonConfigs
         public class Index
         {
             [JsonProperty("current_game")]
-            public JsonGameInfo.Index CurrentGame { get; set; }
+            public string CurrentGame { get; set; }
         }
     }
 }
