@@ -35,7 +35,7 @@ namespace PvzLauncherRemake
         {
             try
             {
-                logger.Info($"{this.Name} 开始初始化");
+                logger.Info($"MainWindow 开始初始化");
 
                 //预加载
                 void AddType(Type t)
@@ -54,11 +54,11 @@ namespace PvzLauncherRemake
                 //选择默认页
                 navView.SelectedItem = navViewItem_Launch;
 
-                logger.Info($"{this.Name} 结束初始化");
+                logger.Info($"MainWindow 结束初始化");
             }
             catch (Exception ex)
             {
-                ErrorReportDialog.Show("发生错误", $"初始化 {this.Name} 发生错误", ex);
+                ErrorReportDialog.Show("发生错误", $"初始化 MainWindow 发生错误", ex);
             }
         }
 
@@ -66,7 +66,7 @@ namespace PvzLauncherRemake
         {
             try
             {
-                logger.Info($"处理 {this.Name} 加载事件");
+                logger.Info($"处理 MainWindow 加载事件");
 
                 //处理启动参数
                 string[] args = Environment.GetCommandLineArgs();
@@ -104,11 +104,11 @@ namespace PvzLauncherRemake
                         Environment.Exit(0);
                     }));
 
-                logger.Info($"处理 {this.Name} 加载事件完毕");
+                logger.Info($"处理 MainWindow 加载事件完毕");
             }
             catch (Exception ex)
             {
-                ErrorReportDialog.Show("发生错误", $"加载 {this.Name} 发生错误", ex);
+                ErrorReportDialog.Show("发生错误", $"加载 MainWindow 发生错误", ex);
             }
         }
         #endregion
