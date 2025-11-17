@@ -53,10 +53,14 @@ namespace PvzLauncherRemake
 
                 //选择默认页
                 navView.SelectedItem = navViewItem_Launch;
+                logger.Info($"选择默认页: {((NavigationViewItem)navView.SelectedItem).Name}");
 
                 //创建游戏目录
                 if (!Directory.Exists(AppInfo.GameDirectory))
+                {
+                    logger.Info($"游戏目录 {AppInfo.GameDirectory} 不存在，即将创建");
                     Directory.CreateDirectory(AppInfo.GameDirectory);
+                }
 
                 logger.Info($"MainWindow 结束初始化");
             }
