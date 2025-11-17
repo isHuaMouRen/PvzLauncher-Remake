@@ -16,5 +16,11 @@ namespace PvzLauncherRemake.Class
         {
             public static bool isShell = false;
         }
+
+        //字符串常量
+        public static class Strings
+        {
+            public static readonly string GameConfigTip = "此文件为PvzLauncher版本标志文件，请勿移除！";
+        }
     }
 }
