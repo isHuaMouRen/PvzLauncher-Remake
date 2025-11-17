@@ -1,5 +1,7 @@
 ﻿using HuaZi.Library.Logger;
+using Newtonsoft.Json;
 using PvzLauncherRemake.Class;
+using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls;
 using PvzLauncherRemake.Utils;
 using System;
@@ -69,10 +71,22 @@ namespace PvzLauncherRemake.Pages
                     {
                         Title = game.GameInfo.Name,
                         Version = $"{version} {game.GameInfo.Version}", //拼接，示例:"英文原版 1.0.0.1051"
-                        Tag = game
                     };
                     listBox.Items.Add(card);//添加
                     logger.Info($"添加卡片: 标题: {card.Title} 版本: {card.Version}");
+
+                    //选择卡片
+                    if (AppInfo.Config.CurrentGame != null)
+                    {
+                        logger.Info("当前选择不为空，开始检查项");
+                        foreach (var item in listBox.Items)
+                        {
+                            if ($"{((UserGameCard)item).Title}" == AppInfo.Config.CurrentGame)
+                            {
+                                listBox.SelectedItem = item;
+                            }
+                        }
+                    }
                 }
 
                 EndLoad();
@@ -92,5 +106,22 @@ namespace PvzLauncherRemake.Pages
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e) { InitializeLoaded(); }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (listBox.SelectedItem != null)
+                {
+                    logger.Info($"用户选择游戏: {((UserGameCard)listBox.SelectedItem).Title}");
+                    AppInfo.Config.CurrentGame = $"{((UserGameCard)listBox.SelectedItem).Title}";
+                    ConfigManager.SaveAllConfig();
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", "处理选择事件发生错误", ex);
+            }
+        }
     }
 }
