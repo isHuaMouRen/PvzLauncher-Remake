@@ -70,22 +70,23 @@ namespace PvzLauncherRemake
 
                 //处理启动参数
                 string[] args = Environment.GetCommandLineArgs();
-                logger.Info("==========[启动参数信息]==========");
-
                 foreach (var arg in args)
                 {
                     switch (arg)
                     {
                         //外壳启动
                         case "-shell":
-                            AppInfo.Arguments.isShell = true;
-                            logger.Info($"isShell: {AppInfo.Arguments.isShell}"); break;
+                            AppInfo.Arguments.isShell = true; break;
                     }
                 }
+
+                logger.Info("==========[启动参数信息]==========");
+                logger.Info($"isShell: {AppInfo.Arguments.isShell}");
                 logger.Info("==========[End]==========");
 
                 //是否外壳启动
-                if (!AppInfo.Arguments.isShell)
+                if (!AppInfo.Arguments.isShell && !Debugger.IsAttached) 
+                {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "警告",
@@ -103,6 +104,7 @@ namespace PvzLauncherRemake
                         });
                         Environment.Exit(0);
                     }));
+                }
 
                 logger.Info($"处理 MainWindow 加载事件完毕");
             }
