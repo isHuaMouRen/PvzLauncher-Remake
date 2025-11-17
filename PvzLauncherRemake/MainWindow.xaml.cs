@@ -2,6 +2,7 @@
 using ModernWpf.Controls;
 using ModernWpf.Media.Animation;
 using PvzLauncherRemake.Class;
+using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Pages;
 using PvzLauncherRemake.Utils;
 using System.Diagnostics;
@@ -61,6 +62,19 @@ namespace PvzLauncherRemake
                     logger.Info($"游戏目录 {AppInfo.GameDirectory} 不存在，即将创建");
                     Directory.CreateDirectory(AppInfo.GameDirectory);
                 }
+
+                //初始化配置文件
+                if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecutePath, "config.json")))
+                {
+                    AppInfo.Config = new JsonConfig.Index
+                    {
+                        CurrentGame = null!
+                    };
+                    ConfigManager.SaveAllConfig();
+                }
+
+                //读配置
+                ConfigManager.ReadAllConfig();
 
                 logger.Info($"MainWindow 结束初始化");
             }
