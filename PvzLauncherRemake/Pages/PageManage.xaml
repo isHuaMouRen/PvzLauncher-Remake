@@ -12,7 +12,7 @@
 
     <Grid>
         <Grid x:Name="grid_Main" Margin="10">
-            <ListBox x:Name="listBox">
+            <ListBox x:Name="listBox" SelectionChanged="listBox_SelectionChanged">
                 <ctrl:UserGameCard/>
                 <ctrl:UserGameCard/>
                 <ctrl:UserGameCard/>
