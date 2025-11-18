@@ -35,6 +35,12 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("execute_name")]
             public string ExecuteName { get; set; }
 
+            [JsonProperty("is_recommend")]
+            public bool IsRecommend { get; set; }
+
+            [JsonProperty("is_new")]
+            public bool IsNew { get; set; }
+
             [JsonProperty("url")]
             public string Url { get; set; }
         }
