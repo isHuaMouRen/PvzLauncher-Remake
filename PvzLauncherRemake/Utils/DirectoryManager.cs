@@ -7,6 +7,12 @@ namespace PvzLauncherRemake.Utils
 {
     public static class DirectoryManager
     {
+        /// <summary>
+        /// 简单的复制文件夹，没有安全保护，自己写去
+        /// </summary>
+        /// <param name="sourceDir">源文件夹</param>
+        /// <param name="destDir">目标文件夹</param>
+        /// <returns></returns>
         public static async Task CopyDirectoryAsync(string sourceDir, string destDir)
         {
             var sourceDirInfo = new DirectoryInfo(sourceDir);
