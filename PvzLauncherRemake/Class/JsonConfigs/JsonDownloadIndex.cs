@@ -9,7 +9,7 @@ namespace PvzLauncherRemake.Class.JsonConfigs
 {
     public class JsonDownloadIndex
     {
-        public partial class Download
+        public partial class Index
         {
             [JsonProperty("en_origin")]
             public GameInfo[] EnOrigin { get; set; }
