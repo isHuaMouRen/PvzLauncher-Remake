@@ -5,40 +5,45 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PvzLauncherRemake.Pages"
       xmlns:ui="http://schemas.modernwpf.com/2019"
+      xmlns:ctrl="clr-namespace:PvzLauncherRemake.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageDownload">
+      Title="PageDownload" Loaded="Page_Loaded">
 
     <Grid>
-        <TabControl Style="{StaticResource TabControlPivotStyle}">
+        <TabControl x:Name="tabControl_Main" Style="{StaticResource TabControlPivotStyle}">
             <TabItem Header="游戏下载">
-                <TabControl Style="{StaticResource TabControlPivotStyle}">
+                <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10">
                     <TabItem Header="中文原版">
-                        <ListBox>
-                            <ListBoxItem Content="Item1"/>
-                            <ListBoxItem Content="Item2"/>
+                        <ListBox x:Name="listBox_zhOrigin">
+                            <ctrl:UserDownloadCard/>
+                            <ctrl:UserDownloadCard isRecommend="True" Icon="beta" isNew="True"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="中文改版">
-                        <ListBox>
+                        <ListBox x:Name="listBox_zhRevision">
                             <ListBoxItem Content="Item3"/>
                             <ListBoxItem Content="Item4"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="英文原版">
-                        <ListBox>
+                        <ListBox x:Name="listBox_enOrigin">
                             <ListBoxItem Content="Item5"/>
                             <ListBoxItem Content="Item6"/>
                         </ListBox>
                     </TabItem>
                 </TabControl>
             </TabItem>
-            <TabItem Header="修改器下载">
-                <ListBox>
+            <TabItem Header="修改器下载" IsEnabled="False">
+                <ListBox x:Name="listBox_trainer">
                     <ListBoxItem Content="Item7"/>
                     <ListBoxItem Content="Item8"/>
                 </ListBox>
             </TabItem>
         </TabControl>
+        <Grid x:Name="grid_Loading" Visibility="Hidden">
+            <ui:ProgressRing IsActive="True" Width="50" Height="50"/>
+            <TextBlock x:Name="textBlock_Loading" Text="加载中..." HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,0,0"/>
+        </Grid>
     </Grid>
 </ui:Page>
