@@ -12,7 +12,20 @@
 
     <Grid>
         <Grid x:Name="grid_Main" Margin="10">
-            <ListBox x:Name="listBox" SelectionChanged="listBox_SelectionChanged">
+            <Button x:Name="button_Load" Content="导入游戏" VerticalAlignment="Top" Background="#B3F0F0F0" Click="button_Load_Click">
+                
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                        <LinearGradientBrush.RelativeTransform>
+                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#29000000"/>
+                        <GradientStop Color="#33000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+
+            <ListBox x:Name="listBox" SelectionChanged="listBox_SelectionChanged" Margin="0,36,0,0">
                 <ctrl:UserGameCard/>
                 <ctrl:UserGameCard/>
                 <ctrl:UserGameCard/>
