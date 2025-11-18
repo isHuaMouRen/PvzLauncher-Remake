@@ -15,19 +15,19 @@
             <TabItem Header="游戏下载">
                 <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10">
                     <TabItem Header="中文原版">
-                        <ListBox x:Name="listBox_zhOrigin">
+                        <ListBox x:Name="listBox_zhOrigin" SelectionChanged="listBox_SelectionChanged">
                             <ctrl:UserDownloadCard/>
                             <ctrl:UserDownloadCard isRecommend="True" Icon="beta" isNew="True"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="中文改版">
-                        <ListBox x:Name="listBox_zhRevision">
+                        <ListBox x:Name="listBox_zhRevision" SelectionChanged="listBox_SelectionChanged">
                             <ListBoxItem Content="Item3"/>
                             <ListBoxItem Content="Item4"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="英文原版">
-                        <ListBox x:Name="listBox_enOrigin">
+                        <ListBox x:Name="listBox_enOrigin" SelectionChanged="listBox_SelectionChanged">
                             <ListBoxItem Content="Item5"/>
                             <ListBoxItem Content="Item6"/>
                         </ListBox>
@@ -44,6 +44,7 @@
         <Grid x:Name="grid_Loading" Visibility="Hidden">
             <ui:ProgressRing IsActive="True" Width="50" Height="50"/>
             <TextBlock x:Name="textBlock_Loading" Text="加载中..." HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,0,0"/>
+            <ui:ProgressBar x:Name="progressBar_Loading" HorizontalAlignment="Center" Width="250" Margin="0,120,0,0" Background="#66C8C8C8" Visibility="Hidden"/>
         </Grid>
     </Grid>
 </ui:Page>
