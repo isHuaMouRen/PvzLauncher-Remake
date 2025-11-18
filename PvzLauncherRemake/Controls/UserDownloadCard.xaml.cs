@@ -44,9 +44,10 @@ namespace PvzLauncherRemake.Controls
             }
 
             //添加lCard
+            stackPanel_lCards.Children.Clear();
             if (!string.IsNullOrEmpty(Version))
             {
-                string xaml = "<Grid Margin=\"0,0,5,0\">" +
+                string xaml = "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                                 "<Rectangle Height=\"20\" Fill=\"#FF969696\" RadiusX=\"3\" RadiusY=\"3\"/>" +
                                 $"<TextBlock Text=\"{Version}\" Foreground=\"White\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Margin=\"5,0,5,0\"/>" +
                               "</Grid>";
@@ -54,7 +55,7 @@ namespace PvzLauncherRemake.Controls
             }
             if (isRecommend)
             {
-                string xaml = "<Grid Margin=\"0,0,5,0\">" +
+                string xaml = "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                                 "<Rectangle Height=\"20\" Fill=\"#FF64FF64\" RadiusX=\"3\" RadiusY=\"3\"/>" +
                                 "<TextBlock Text=\"推荐\" Foreground=\"White\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Margin=\"5,0,5,0\" FontWeight=\"Bold\"/>" +
                               "</Grid>";
