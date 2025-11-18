@@ -32,9 +32,6 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("name")]
             public string Name { get; set; }
 
-            [JsonProperty("dir_name")]
-            public string DirName { get; set; }
-
             [JsonProperty("execute_name")]
             public string ExecuteName { get; set; }
         }

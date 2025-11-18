@@ -34,7 +34,7 @@ namespace PvzLauncherRemake.Utils
                     if (File.Exists(configPath))
                     {
                         JsonGameInfo.Index configContent = Json.ReadJson<JsonGameInfo.Index>(configPath);
-                        logger.Info($"找到游戏配置: {configContent.GameInfo.Name}");
+                        logger.Info($"找到游戏配置: {Path.GetFileName(game)}");
                         AppInfo.GameList.Add(configContent);
                     }
                 }

@@ -96,7 +96,7 @@ namespace PvzLauncherRemake.Pages
                     logger.Info("游戏开始启动...");
                     logger.Info($"当前游戏: {AppInfo.Config.CurrentGame}");
                     //游戏exe路径
-                    string gameExePath = System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.DirName, currentGameInfo.GameInfo.ExecuteName);
+                    string gameExePath = System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name, currentGameInfo.GameInfo.ExecuteName);
 
                     logger.Info($"游戏exe路径: {gameExePath}");
 
@@ -107,7 +107,7 @@ namespace PvzLauncherRemake.Pages
                         {
                             FileName = gameExePath,
                             UseShellExecute = true,
-                            WorkingDirectory = System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.DirName)
+                            WorkingDirectory = System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name)
                         }
                     };
 
