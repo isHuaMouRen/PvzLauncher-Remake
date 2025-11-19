@@ -40,6 +40,7 @@
                 </Path>
             </Canvas>
         </Viewbox>
+        
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="50,5,5,0">
             <TextBlock x:Name="textBlock_Title" Text="Title" FontSize="15" Margin="0,0,5,0"/>
             <TextBlock x:Name="textBlock_Description" Text="Description" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="#B2000000"/>
