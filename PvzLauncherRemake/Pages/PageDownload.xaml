@@ -34,10 +34,9 @@
                     </TabItem>
                 </TabControl>
             </TabItem>
-            <TabItem Header="修改器下载" IsEnabled="False">
+            <TabItem Header="修改器下载">
                 <ListBox x:Name="listBox_trainer">
-                    <ListBoxItem Content="Item7"/>
-                    <ListBoxItem Content="Item8"/>
+                    <ctrl:UserDownloadCard SupportVersion="1.0.0.1051"/>
                 </ListBox>
             </TabItem>
         </TabControl>
