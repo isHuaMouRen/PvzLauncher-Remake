@@ -74,6 +74,7 @@ namespace PvzLauncherRemake.Pages
                     var card = new UserDownloadCard
                     {
                         Title = zhOriginGame.Name,
+                        Description = zhOriginGame.Description,
                         Icon = "origin",
                         Version = zhOriginGame.Version,
                         isNew = zhOriginGame.IsNew,
@@ -91,6 +92,7 @@ namespace PvzLauncherRemake.Pages
                     var card = new UserDownloadCard
                     {
                         Title = zhRevisionGame.Name,
+                        Description = zhRevisionGame.Description,
                         Icon = zhRevisionGame.Version.StartsWith("β") ? "beta" : "origin",
                         Version = zhRevisionGame.Version,
                         isNew = zhRevisionGame.IsNew,
@@ -108,6 +110,7 @@ namespace PvzLauncherRemake.Pages
                     var card = new UserDownloadCard
                     {
                         Title = enOriginGame.Name,
+                        Description = enOriginGame.Description,
                         Icon = "origin",
                         Version = enOriginGame.Version,
                         isNew = enOriginGame.IsNew,
@@ -116,6 +119,25 @@ namespace PvzLauncherRemake.Pages
                     };
                     logger.Info($"添加游戏: {card.Title}");
                     listBox_enOrigin.Items.Add(card);
+                }
+
+                //修改器
+                listBox_trainer.Items.Clear();
+                foreach (var trainerInfo in DownloadIndex.Trainer)
+                {
+                    var card = new UserDownloadCard
+                    {
+                        Title = trainerInfo.Name,
+                        Description = trainerInfo.Description,
+                        Icon = "origin",
+                        Version = trainerInfo.Version,
+                        SupportVersion = trainerInfo.SupportVersion,
+                        isNew = trainerInfo.IsNew,
+                        isRecommend = trainerInfo.IsRecommend,
+                        Tag = trainerInfo
+                    };
+                    logger.Info($"添加修改器: {card.Title}");
+                    listBox_trainer.Items.Add(card);
                 }
 
                 EndLoad();
