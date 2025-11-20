@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <NoWarn>NU1701</NoWarn>
 
     <!-- 只保留指定的语言文化，其余全部排除 -->
     <SatelliteResourceLanguages>none</SatelliteResourceLanguages>
