@@ -6,6 +6,8 @@ using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls;
 using PvzLauncherRemake.Utils;
+using SharpCompress.Archives;
+using SharpCompress.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -258,8 +260,19 @@ namespace PvzLauncherRemake.Pages
 
 
                         textBlock_Loading.Text = "解压中...";
+                        //创建文件夹
+                        if (!Directory.Exists(savePath))
+                            Directory.CreateDirectory(savePath);
                         //解压
-                        await Task.Run(() => ZipFile.ExtractToDirectory(System.IO.Path.Combine(AppInfo.TempPath, "Game.zip"), savePath, true));
+                        await Task.Run(() =>
+                        {
+                            //使用SharpCompress库解压
+                            ArchiveFactory.WriteToDirectory(System.IO.Path.Combine(AppInfo.TempPath, "Game.zip"), savePath, new ExtractionOptions
+                            {
+                                ExtractFullPath = true,
+                                Overwrite = true
+                            });
+                        });
 
                         //写Json
                         var jsonContent = new JsonGameInfo.Index
