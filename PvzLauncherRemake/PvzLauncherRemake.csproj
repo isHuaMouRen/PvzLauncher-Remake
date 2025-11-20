@@ -36,6 +36,7 @@
     <PackageReference Include="ModernWpfUI" Version="0.9.7-preview.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Notifications.Wpf" Version="0.1.1" />
+    <PackageReference Include="SharpCompress" Version="0.41.0" />
   </ItemGroup>
 
 </Project>
