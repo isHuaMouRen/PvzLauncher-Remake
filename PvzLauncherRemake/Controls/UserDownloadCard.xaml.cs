@@ -40,7 +40,7 @@ namespace PvzLauncherRemake.Controls
             textBlock_Title.Text = Title;
             textBlock_Description.Text = Description;
 
-            List<Viewbox> icons = new List<Viewbox> { viewBox_beta, viewBox_origin };
+            List<Viewbox> icons = new List<Viewbox> { viewBox_beta, viewBox_origin, viewBox_tat };
             foreach (var icon in icons)
             {
                 if (icon.Tag.ToString() != Icon)

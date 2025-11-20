@@ -40,7 +40,78 @@
                 </Path>
             </Canvas>
         </Viewbox>
-        
+        <Viewbox x:Name="viewBox_tat" Tag="tat" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5">
+            <Canvas Width="421.669" Height="236.707">
+                <Canvas.Resources>
+                    <LinearGradientBrush x:Key="BaseGradient" StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0" Color="#FF26D5F0"/>
+                        <GradientStop Offset="1" Color="#FF8A0BE8"/>
+                    </LinearGradientBrush>
+                    <LinearGradientBrush x:Key="TransformedGradient"
+                             StartPoint="195,259.063"
+                             EndPoint="316.691,259.063">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <TranslateTransform X="-58.56" Y="-61.618"/>
+                                <ScaleTransform ScaleX="1.2549" ScaleY="1.2549"/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0" Color="#FF26D5F0"/>
+                            <GradientStop Offset="1" Color="#FF8A0BE8"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Canvas.Resources>
+                <Canvas>
+                    <Canvas.RenderTransform>
+                        <MatrixTransform Matrix="1,0,0,1,0,0"/>
+                    </Canvas.RenderTransform>
+
+                    <!-- First group (left shape) -->
+                    <!-- Outline (no fill) -->
+                    <Path Data="M9.429 3.98l-4.41 38.8 40.105.653s1.914 61.044 1.429 91.567c-0.485 30.522-4.339 91.567-4.339 91.567l49.852 1.206-2.48-179.33 38.722 1.07 5.74-39.897z"
+              Stroke="#FF000000" StrokeThickness="2.51" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Fill="Black"/>
+
+                    <!-- Filled part -->
+                    <Path Data="M5.664 2.098l-4.41 38.8 40.105.652s1.914 61.045 1.43 91.567c-0.486 30.523-4.34 91.567-4.34 91.567l49.852 1.207L85.82 46.56l38.723 1.07 5.74-39.896z"
+              Fill="#FF26D5F0"
+              Stroke="#FF000000" StrokeThickness="2.51" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round"/>
+
+                    <!-- Second group (middle shape) -->
+                    <!-- Outline (no fill) -->
+                    <Path Data="M228.64 5.647l-43.294 3.137-47.687 211.923 42.667 14.745 11.137-50.04 40.785-0.627s8.313 50.353 10.823 50.353 44.79-9.95 44.79-9.95zm-19.27 72.424s15.307 67.44 14.42 69.88c-0.888 2.44-26.62-0.666-26.62-0.666z"
+              Stroke="#FF000000" StrokeThickness="2.51" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Fill="Black"/>
+
+                    <!-- Filled part (with transform and gradient fill) -->
+                    <Path Data="M278.383 148.579l-43.294 3.137-47.687 211.923 42.667 14.745 11.138-50.04 40.784-0.627s8.314 50.353 10.824 50.353 44.79-9.951 44.79-9.951zm-19.27 72.424s15.307 67.44 14.42 69.88c-0.888 2.44-26.62-0.666-26.62-0.666z">
+                        <Path.RenderTransform>
+                            <TranslateTransform X="-53.508" Y="-147.324"/>
+                        </Path.RenderTransform>
+                        <Path.Fill>
+                            <StaticResource ResourceKey="TransformedGradient"/>
+                        </Path.Fill>
+                        <Path.Stroke>
+                            <SolidColorBrush Color="#FF000000"/>
+                        </Path.Stroke>
+                        <Path.StrokeThickness>2.51</Path.StrokeThickness>
+                        <Path.StrokeLineJoin>Round</Path.StrokeLineJoin>
+                        <Path.StrokeStartLineCap>Round</Path.StrokeStartLineCap>
+                        <Path.StrokeEndLineCap>Round</Path.StrokeEndLineCap>
+                    </Path>
+
+                    <!-- Third group (right shape) -->
+                    <!-- Outline (no fill) -->
+                    <Path Data="M295.794 4.392l-4.409 38.801 40.104.652s1.915 61.044 1.43 91.567c-0.485 30.522-4.339 91.567-4.339 91.567l49.851 1.206-2.48-179.33 38.723 1.07 5.74-39.897z"
+              Stroke="#FF000000" StrokeThickness="2.51" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Fill="Black"/>
+
+                    <!-- Filled part -->
+                    <Path Data="M292.03 2.51l-4.41 38.8 40.105.652s1.914 61.045 1.429 91.567c-0.485 30.523-4.339 91.568-4.339 91.568l49.852 1.206-2.48-179.33 38.722 1.07 5.74-39.897z"
+              Fill="#FF8A0BE8"
+              Stroke="#FF000000" StrokeThickness="2.51" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round"/>
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="50,5,5,0">
             <TextBlock x:Name="textBlock_Title" Text="Title" FontSize="15" Margin="0,0,5,0"/>
             <TextBlock x:Name="textBlock_Description" Text="Description" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="#B2000000"/>
