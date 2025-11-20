@@ -93,7 +93,8 @@ namespace PvzLauncherRemake.Pages
                     {
                         Title = zhRevisionGame.Name,
                         Description = zhRevisionGame.Description,
-                        Icon = zhRevisionGame.Version.StartsWith("β") ? "beta" : "origin",
+                        Icon = zhRevisionGame.Version.StartsWith("β") ? "beta" :
+                                zhRevisionGame.Version.StartsWith("TAT", StringComparison.OrdinalIgnoreCase) ? "tat" : "origin",
                         Version = zhRevisionGame.Version,
                         isNew = zhRevisionGame.IsNew,
                         isRecommend = zhRevisionGame.IsRecommend,
