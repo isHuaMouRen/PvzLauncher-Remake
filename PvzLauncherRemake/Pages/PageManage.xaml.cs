@@ -87,7 +87,7 @@ namespace PvzLauncherRemake.Pages
                             Background = Brushes.Transparent,
                             Tag = game
                         };
-                        card.PreviewMouseLeftButtonDown += SelectGame;
+                        card.PreviewMouseDoubleClick += SelectGame;
                         card.PreviewMouseRightButtonDown += SetGame;
                         listBox.Items.Add(card);//添加
                         logger.Info($"添加卡片: 标题: {card.Title} 版本: {card.Version}");
@@ -158,7 +158,12 @@ namespace PvzLauncherRemake.Pages
             {
                 if (listBox.SelectedItem != null)
                 {
-
+                    notificationManager.Show(new NotificationContent
+                    {
+                        Title = "选择游戏",
+                        Message = $"已选择 \"{((UserGameCard)sender).Title}\" 作为启动游戏",
+                        Type = NotificationType.Information
+                    });
                     logger.Info($"用户选择游戏: {((UserGameCard)sender).Title}");
                     AppInfo.Config.CurrentGame = $"{((UserGameCard)sender).Title}";
                     ConfigManager.SaveAllConfig();
