@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Assets/icon/Icon.ico">
     <Grid>
-        <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged" BackRequested="navView_BackRequested">
+        <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged" BackRequested="navView_BackRequested" PaneDisplayMode="LeftCompact">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem x:Name="navViewItem_Launch" Content="启动" Tag="Launch">
                     <ui:NavigationViewItem.Icon>
