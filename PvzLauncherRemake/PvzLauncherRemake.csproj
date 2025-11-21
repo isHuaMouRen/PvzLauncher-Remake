@@ -16,10 +16,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\bitmap\background.png" />
     <None Remove="Assets\Icon\Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Assets\bitmap\background.png" />
     <Content Include="Assets\Icon\Icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
