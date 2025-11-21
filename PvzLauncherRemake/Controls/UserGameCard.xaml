@@ -51,9 +51,15 @@
 
         <TextBlock x:Name="textBlock_Title" Text="Title" Margin="50,5,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14"/>
 
-        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,5,5">
-            <Rectangle Fill="#66000000" RadiusX="3" RadiusY="3"/>
-            <TextBlock x:Name="textBlock_Version" Text="Version" FontSize="10" Margin="2,2,2,2" Foreground="White"/>
-        </Grid>
+        <StackPanel x:Name="stackPanel" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,5,5">
+            <Grid Margin="0,0,5,0">
+                <Rectangle Fill="#FF8C8C8C" RadiusX="3" RadiusY="3"/>
+                <TextBlock x:Name="textBlock_Version" Text="Version" Margin="2,2,2,2" Foreground="White"/>
+            </Grid>
+            <Grid Margin="0,0,5,0">
+                <Rectangle Fill="#FFFF6464" RadiusX="3" RadiusY="3"/>
+                <TextBlock Text="活动" Margin="2,2,2,2" Foreground="White" FontWeight="Bold"/>
+            </Grid>
+        </StackPanel>
     </Grid>
 </UserControl>

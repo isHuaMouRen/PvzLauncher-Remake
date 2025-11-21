@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -23,6 +24,7 @@ namespace PvzLauncherRemake.Controls
         public string Icon { get; set; } = "origin";
         public string Title { get; set; } = "Title";
         public string Version { get; set; } = "1.0.0.0";
+        public bool isCurrent { get; set; } = false;
 
 
         public UserGameCard()
@@ -43,7 +45,32 @@ namespace PvzLauncherRemake.Controls
             }
 
             textBlock_Title.Text = Title;
-            textBlock_Version.Text = Version;
+
+            SetLabels();
+        }
+
+        public void SetLabels()
+        {
+            //添加标签
+            stackPanel.Children.Clear();
+            if (!string.IsNullOrEmpty(Version))
+            {
+                string xaml =
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
+                        "<Rectangle Fill=\"#FF8C8C8C\" RadiusX=\"3\" RadiusY=\"3\"/>" +
+                        $"<TextBlock Text=\"{Version}\" FontSize=\"12\" Margin=\"2,2,2,2\" Foreground=\"White\"/>" +
+                    "</Grid>";
+                stackPanel.Children.Add(XamlReader.Parse(xaml) as Grid);
+            }
+            if (isCurrent)
+            {
+                string xaml =
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
+                        "<Rectangle Fill=\"#FFFF6464\" RadiusX=\"3\" RadiusY=\"3\"/>" +
+                        $"<TextBlock Text=\"活动\" FontSize=\"12\" Margin=\"2,2,2,2\" Foreground=\"White\" FontWeight=\"Bold\"/>" +
+                    "</Grid>";
+                stackPanel.Children.Add(XamlReader.Parse(xaml) as Grid);
+            }
         }
     }
 }
