@@ -16,13 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Assets\image\**" />
-    <EmbeddedResource Remove="Assets\image\**" />
-    <None Remove="Assets\image\**" />
-    <Page Remove="Assets\image\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Assets\Icon\Icon.ico" />
   </ItemGroup>
 
