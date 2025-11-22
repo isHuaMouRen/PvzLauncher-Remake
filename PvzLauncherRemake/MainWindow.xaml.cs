@@ -50,6 +50,13 @@ namespace PvzLauncherRemake
                 this.Title = AppInfo.Config.LauncherConfig.WindowTitle;
                 this.Width = AppInfo.Config.LauncherConfig.WindowSize.Width;
                 this.Height = AppInfo.Config.LauncherConfig.WindowSize.Height;
+                switch (AppInfo.Config.LauncherConfig.NavigationViewAlign)
+                {
+                    case "Left":
+                        navView.PaneDisplayMode = NavigationViewPaneDisplayMode.LeftCompact;break;
+                    case "Top":
+                        navView.PaneDisplayMode = NavigationViewPaneDisplayMode.Top;break;
+                }
 
                 //创建游戏目录
                 if (!Directory.Exists(AppInfo.GameDirectory))

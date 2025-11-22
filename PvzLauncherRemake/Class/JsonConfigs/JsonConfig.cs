@@ -35,6 +35,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
 
             [JsonProperty("background")]
             public string Background { get; set; } = null!;
+
+            [JsonProperty("navigation_view_align")]
+            public string NavigationViewAlign { get; set; } = "Left";
         }
 
         public class WindowSize

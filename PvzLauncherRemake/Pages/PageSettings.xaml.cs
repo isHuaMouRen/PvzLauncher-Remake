@@ -94,6 +94,15 @@ namespace PvzLauncherRemake.Pages
                     button_Background_Select.IsEnabled = false;
                     radioButton_Background_Default.IsChecked = true;
                 }
+                //### NavigationView位置
+                radioButton_NavViewLeft.IsChecked = false;radioButton_NavViewTop.IsChecked = false;
+                switch (AppInfo.Config.LauncherConfig.NavigationViewAlign)
+                {
+                    case "Left":
+                        radioButton_NavViewLeft.IsChecked = true;break;
+                    case "Top":
+                        radioButton_NavViewTop.IsChecked = true;break;
+                }
 
 
                     isInitialized = true;
@@ -206,6 +215,21 @@ namespace PvzLauncherRemake.Pages
                 }
 
 
+            }
+        }
+
+        private void radioButton_NavViewLeft_Checked(object sender, RoutedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                AppInfo.Config.LauncherConfig.NavigationViewAlign = (string)(((RadioButton)sender).Tag);
+                ConfigManager.SaveAllConfig();
+                new NotificationManager().Show(new NotificationContent
+                {
+                    Title = "提示",
+                    Message = "此设置项重启才能生效",
+                    Type = NotificationType.Information
+                });
             }
         }
     }
