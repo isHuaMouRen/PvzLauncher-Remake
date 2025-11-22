@@ -16,6 +16,7 @@ namespace PvzLauncherRemake.Class
         public static List<JsonTrainerInfo.Index> TrainerList = new List<JsonTrainerInfo.Index>();//修改器
         public static JsonConfig.Index Config = null!;//配置
         public static readonly string DownloadIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/download.json";//下载索引
+        public static readonly string UpdateIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/update.json";//更新索引
         public static readonly string TempPath = Path.GetTempPath();//临时文件夹
 
         //启动参数配置
