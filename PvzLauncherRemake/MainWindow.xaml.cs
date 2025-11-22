@@ -31,7 +31,7 @@ namespace PvzLauncherRemake
         private Dictionary<string, Type> PageMap = new Dictionary<string, Type>();//Page预加载
         private NavigationTransitionInfo FrameAnimation = new DrillInNavigationTransitionInfo();//Frame切换动画
 
-        #region Initialize
+        #region Init
         public async void Initialize()
         {
             try
@@ -43,10 +43,17 @@ namespace PvzLauncherRemake
                 {
                     AppInfo.Config = new JsonConfig.Index();
                     ConfigManager.SaveAllConfig();
+                }//创建游戏目录
+                if (!Directory.Exists(AppInfo.GameDirectory))
+                {
+                    logger.Info($"游戏目录 {AppInfo.GameDirectory} 不存在，即将创建");
+                    Directory.CreateDirectory(AppInfo.GameDirectory);
                 }
 
                 //读配置
                 ConfigManager.ReadAllConfig();
+
+                //应用配置
                 this.Title = AppInfo.Config.LauncherConfig.WindowTitle;
                 this.Width = AppInfo.Config.LauncherConfig.WindowSize.Width;
                 this.Height = AppInfo.Config.LauncherConfig.WindowSize.Height;
@@ -58,17 +65,18 @@ namespace PvzLauncherRemake
                         navView.PaneDisplayMode = NavigationViewPaneDisplayMode.Top;break;
                 }
 
-                //创建游戏目录
-                if (!Directory.Exists(AppInfo.GameDirectory))
+                //注册事件
+                this.SizeChanged += ((sender, e) =>
                 {
-                    logger.Info($"游戏目录 {AppInfo.GameDirectory} 不存在，即将创建");
-                    Directory.CreateDirectory(AppInfo.GameDirectory);
-                }
+                    AppInfo.Config.LauncherConfig.WindowSize = new JsonConfig.WindowSize { Width = this.Width, Height = this.Height };
+                    ConfigManager.SaveAllConfig();
+                });
+
 
                 //加载游戏列表
                 await GameManager.LoadGameList();
 
-                //预加载
+                //预加载Page
                 void AddType(Type t)
                 {
                     PageMap.Add($"{t.Name}", t);
@@ -84,14 +92,6 @@ namespace PvzLauncherRemake
                 //选择默认页
                 navView.SelectedItem = navViewItem_Launch;
                 logger.Info($"选择默认页: {((NavigationViewItem)navView.SelectedItem).Name}");
-
-                //注册事件
-                this.SizeChanged += ((sender, e) =>
-                {
-                    AppInfo.Config.LauncherConfig.WindowSize = new JsonConfig.WindowSize { Width = this.Width, Height = this.Height };
-                    ConfigManager.SaveAllConfig();
-                });
-
                 logger.Info($"MainWindow 结束初始化");
             }
             catch (Exception ex)
