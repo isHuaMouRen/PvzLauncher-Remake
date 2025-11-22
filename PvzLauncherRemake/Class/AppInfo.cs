@@ -8,7 +8,7 @@ namespace PvzLauncherRemake.Class
     public static class AppInfo
     {
         public static readonly string ExecutePath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}";//执行目录
-        public static readonly string Version = $"1.0.0-alpha.13";//版本
+        public static readonly string Version = $"1.0.0-alpha.14";//版本
         public static readonly string RootPath = $"{Path.GetDirectoryName(ExecutePath)}";//顶级目录
         public static readonly string GameDirectory = $"{Path.Combine(ExecutePath, "Games")}";//游戏目录
         public static readonly string TrainerDirectory = $"{Path.Combine(ExecutePath, "Trainer")}";//修改器目录
