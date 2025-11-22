@@ -1,0 +1,13 @@
+name: 🔵 新功能建议
+description: 希望程序可以添加什么功能
+labels: [🔵新功能]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: 具体功能
+      description: 想要添加的具体功能描述
+      placeholder: |
+        添加可调整窗口大小功能
+    validations:
+      required: true

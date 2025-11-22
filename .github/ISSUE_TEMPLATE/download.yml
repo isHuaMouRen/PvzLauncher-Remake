@@ -1,0 +1,35 @@
+name: 🟡 为游戏库库贡献
+description: 你可以将你知道的植物大战僵尸版本贡献到游戏库，让玩家可以直接从启动器下载页面下载到你贡献的游戏！
+labels: [🟡 游戏库]
+body:
+  - type: textarea
+    id: gamename
+    attributes:
+      label: 游戏名称
+      description: 植物大战僵尸游戏名称或改版名称
+      placeholder: |
+        例如: 植物大战僵尸β版
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 游戏版本
+      description: 游戏版本
+      placeholder: |
+        例如: 6.30
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 游戏官网或下载链接
+      description: 提供游戏下载链接或者官网
+      placeholder: |
+        例如: https://www.example.com
+    validations:
+      required: true
+
+

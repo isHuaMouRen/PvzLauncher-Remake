@@ -1,0 +1,34 @@
+name: 🔴 BUG 报告
+description: 程序报错或出现意料之外的情况
+labels: [🔴 BUG]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: BUG描述
+      description: 发生了什么BUG
+      placeholder: |
+        点击最小化按钮程序会崩溃
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 是如何出现此 bug 的
+      placeholder: |
+        1. 打开程序
+        2. 点击最小化按钮
+        3. 程序崩溃
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志
+      description: 请把程序的日志粘贴到此处到此处
+      placeholder: 1970-1-1.log
+    validations:
+      required: true
