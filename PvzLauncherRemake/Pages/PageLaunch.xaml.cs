@@ -1,4 +1,5 @@
 ﻿using HuaZi.Library.Json;
+using ModernWpf;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
@@ -31,6 +32,7 @@ namespace PvzLauncherRemake.Pages
     public partial class PageLaunch : ModernWpf.Controls.Page
     {
         private JsonGameInfo.Index currentGameInfo = null!;
+        private JsonTrainerInfo.Index currentTrainerInfo = null!;
         private NotificationManager notifi = new NotificationManager();
         private bool MainCycleEnable = false;
 
@@ -93,6 +95,18 @@ namespace PvzLauncherRemake.Pages
                     logger.Info("没有检测到选择游戏，禁用按钮");
                     button_Launch.IsEnabled = false;
                     textBlock_LaunchVersion.Text = "请选择一个游戏";
+                }
+
+                if (!string.IsNullOrEmpty(AppInfo.Config.CurrentTrainer))
+                {
+                    logger.Info($"当前选择修改器: {AppInfo.Config.CurrentTrainer}");
+                    foreach (var trainer in AppInfo.TrainerList)
+                        if (trainer.Name == AppInfo.Config.CurrentTrainer)
+                            currentTrainerInfo = trainer;
+                }
+                else
+                {
+                    button_LaunchTrainer.IsEnabled = false;
                 }
 
                 //判断游戏是否运行
@@ -208,7 +222,7 @@ namespace PvzLauncherRemake.Pages
                     {
                         Title = "提示",
                         Message = $"{AppInfo.Config.CurrentGame} 启动成功!",
-                        Type = NotificationType.Information
+                        Type = NotificationType.Success
                     });
 
                     //等待结束
@@ -280,6 +294,30 @@ namespace PvzLauncherRemake.Pages
             {
                 MainCycleEnable = false;
                 ErrorReportDialog.Show("发生错误", "启动游戏时发生错误", ex);
+            }
+        }
+
+        private void button_LaunchTrainer_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                logger.Info("开始启动修改器...");
+
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = System.IO.Path.Combine(AppInfo.TrainerDirectory, currentTrainerInfo.Name, currentTrainerInfo.ExecuteName),
+                    UseShellExecute = true
+                });
+                notifi.Show(new NotificationContent
+                {
+                    Title = "提示",
+                    Message = $"{AppInfo.Config.CurrentTrainer} 启动成功!",
+                    Type = NotificationType.Success
+                });
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", null!, ex);
             }
         }
     }

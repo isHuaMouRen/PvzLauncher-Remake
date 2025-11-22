@@ -306,6 +306,7 @@ namespace PvzLauncherRemake.Pages
                         {
                             JsonTrainerInfo.Index jsonContent = new JsonTrainerInfo.Index
                             {
+                                Name = downloadIndex.Name,
                                 ExecuteName = downloadIndex.ExecuteName,
                                 Version = downloadIndex.Version
                             };

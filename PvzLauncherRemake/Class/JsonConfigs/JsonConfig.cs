@@ -15,6 +15,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("current_game")]
             public string CurrentGame { get; set; } = null!;
 
+            [JsonProperty("current_trainer")]
+            public string CurrentTrainer { get; set; } = null!;
+
             [JsonProperty("launcher_config")]
             public LauncherConfig LauncherConfig { get; set; } = new LauncherConfig();
         }

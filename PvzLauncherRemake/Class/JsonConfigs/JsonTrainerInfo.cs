@@ -12,6 +12,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
     {
         public class Index
         {
+            [JsonProperty("name")]
+            public string Name { get; set; }
+
             [JsonProperty("execute_name")]
             public string ExecuteName { get; set; }
 
