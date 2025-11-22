@@ -974,15 +974,37 @@
                                 <RadioButton x:Name="radioButton_NavViewLeft" Content="左侧" Tag="Left" Checked="radioButton_NavViewLeft_Checked"/>
                                 <RadioButton x:Name="radioButton_NavViewTop" Content="顶部" Tag="Top" Checked="radioButton_NavViewLeft_Checked"/>
                             </StackPanel>
-                            
-
-
-
                         </StackPanel>
+
+                        <!--更新-->
+                        <StackPanel Margin="0,0,0,10">
+                            <TextBlock Text="更新" FontSize="25" FontWeight="Bold"/>
+                            <!--检测更新-->
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock Text="检测更新:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                <Button x:Name="button_CheckUpdate" Content="检测更新" Click="button_CheckUpdate_Click">
+                                    <Button.BorderBrush>
+                                        <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                                            <LinearGradientBrush.RelativeTransform>
+                                                <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                                            </LinearGradientBrush.RelativeTransform>
+                                            <GradientStop Color="#29000000"/>
+                                            <GradientStop Color="#33000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.BorderBrush>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+
+
                     </StackPanel>
                 </ScrollViewer>
 
             </TabItem>
         </TabControl>
+        <Grid x:Name="grid_Loading" Visibility="Hidden">
+            <ui:ProgressRing IsActive="True" Width="50" Height="50"/>
+            <TextBlock x:Name="textBlock_Loading" Text="加载中..." HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,0,0"/>
+        </Grid>
     </Grid>
 </ui:Page>

@@ -16,6 +16,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -30,6 +31,27 @@ namespace PvzLauncherRemake.Pages
     public partial class PageSettings : ModernWpf.Controls.Page
     {
         private bool isInitialized = false;
+
+        #region Load
+        public void SetLoad(bool isLoad)
+        {
+            tabControl.IsEnabled = !isLoad;
+
+            if (isLoad)
+            {
+                grid_Loading.Visibility = Visibility.Visible;
+                tabControl.Effect = new BlurEffect { Radius = 10 };
+            }
+            else
+            {
+                grid_Loading.Visibility = Visibility.Hidden;
+                tabControl.Effect = null;
+            }
+        }
+
+        public void StartLoad() => SetLoad(true);
+        public void EndLoad() => SetLoad(false);
+        #endregion
 
         #region Init
         public void Initialize() { }
@@ -231,6 +253,26 @@ namespace PvzLauncherRemake.Pages
                     Type = NotificationType.Information
                 });
             }
+        }
+
+        private async void button_CheckUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                StartLoad();
+
+                await Updater.CheckUpdate((p, s) =>
+                {
+                    textBlock_Loading.Text = $"下载更新文件中 {Math.Round(p, 2)}% ... ({Math.Round(s / 1024, 2)} MB/S)";
+                });
+
+                EndLoad();
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", "更新时发生错误", ex);
+            }
+            
         }
     }
 }
