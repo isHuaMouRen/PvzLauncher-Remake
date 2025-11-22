@@ -281,7 +281,7 @@ namespace PvzLauncherRemake.Pages
 
                         //写Json
                         string jsonContentName = null!;
-                        if (listbox.Tag.ToString() == "trainer")
+                        if (listbox.Tag.ToString() != "trainer")
                         {
                             JsonGameInfo.Index jsonContent = new JsonGameInfo.Index
                             {

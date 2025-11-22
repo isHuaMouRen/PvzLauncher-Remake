@@ -15,19 +15,19 @@
             <TabItem Header="游戏下载">
                 <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10">
                     <TabItem Header="中文原版">
-                        <ListBox x:Name="listBox_zhOrigin" SelectionChanged="listBox_SelectionChanged">
+                        <ListBox x:Name="listBox_zhOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged">
                             <ctrl:UserDownloadCard/>
                             <ctrl:UserDownloadCard isRecommend="True" Icon="beta" isNew="True"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="中文改版">
-                        <ListBox x:Name="listBox_zhRevision" SelectionChanged="listBox_SelectionChanged">
+                        <ListBox x:Name="listBox_zhRevision" Tag="game" SelectionChanged="listBox_SelectionChanged">
                             <ListBoxItem Content="Item3"/>
                             <ListBoxItem Content="Item4"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="英文原版">
-                        <ListBox x:Name="listBox_enOrigin" SelectionChanged="listBox_SelectionChanged">
+                        <ListBox x:Name="listBox_enOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged">
                             <ListBoxItem Content="Item5"/>
                             <ListBoxItem Content="Item6"/>
                         </ListBox>
