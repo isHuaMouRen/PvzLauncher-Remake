@@ -1,6 +1,6 @@
 name: 🔵 新功能建议
 description: 希望程序可以添加什么功能
-labels: [🔵新功能]
+labels: [🔵 新功能]
 body:
   - type: textarea
     id: feature
