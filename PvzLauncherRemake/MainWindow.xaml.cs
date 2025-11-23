@@ -39,7 +39,7 @@ namespace PvzLauncherRemake
                 logger.Info($"MainWindow 开始初始化");
 
                 //初始化配置文件
-                if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecutePath, "config.json")))
+                if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecuteDirectory, "config.json")))
                 {
                     AppInfo.Config = new JsonConfig.Index();
                     ConfigManager.SaveAllConfig();
@@ -148,7 +148,7 @@ namespace PvzLauncherRemake
                         //Primary=>改用外壳启动
                         Process.Start(new ProcessStartInfo
                         {
-                            FileName = System.IO.Path.Combine(AppInfo.RootPath, "PvzLauncher.exe"),
+                            FileName = System.IO.Path.Combine(AppInfo.RootDirectory, "PvzLauncher.exe"),
                             UseShellExecute = true
                         });
                         Environment.Exit(0);

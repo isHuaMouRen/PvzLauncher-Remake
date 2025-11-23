@@ -6,6 +6,6 @@ namespace PvzLauncherRemake.Class
     public static class AppLogger
     {
         //日志记录器
-        public static Logger logger = new Logger(Path.Combine(AppInfo.ExecutePath, "Logs"));
+        public static Logger logger = new Logger(Path.Combine(AppInfo.ExecuteDirectory, "Logs"));
     }
 }

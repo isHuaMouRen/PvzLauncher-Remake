@@ -14,12 +14,12 @@ namespace PvzLauncherRemake.Utils
     {
         public static void SaveAllConfig()
         {
-            Json.WriteJson(Path.Combine(AppInfo.ExecutePath, "config.json"), AppInfo.Config);
+            Json.WriteJson(Path.Combine(AppInfo.ExecuteDirectory, "config.json"), AppInfo.Config);
         }
 
         public static void ReadAllConfig()
         {
-            AppInfo.Config = Json.ReadJson<JsonConfig.Index>(Path.Combine(AppInfo.ExecutePath, "config.json"));
+            AppInfo.Config = Json.ReadJson<JsonConfig.Index>(Path.Combine(AppInfo.ExecuteDirectory, "config.json"));
         }
     }
 }

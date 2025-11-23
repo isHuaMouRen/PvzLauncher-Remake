@@ -21,7 +21,7 @@ namespace PvzLauncherRemake.Utils
         public static JsonUpdateIndex.Index UpdateIndex = null!;
         public static string LatestVersion = null!;
         public static string Url = null!;
-        public static string SavePath = Path.Combine(AppInfo.TempPath, "PVZLAUNCHERUPDATECACHE.zip");
+        public static string SavePath = Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHERUPDATECACHE.zip");
         public static bool isUpdate = false;
         public static HttpClient Client = new HttpClient();
 
@@ -102,7 +102,7 @@ namespace PvzLauncherRemake.Utils
             //运行更新服务
             Process.Start(new ProcessStartInfo
             {
-                FileName = Path.Combine(AppInfo.ExecutePath, "UpdateService"),
+                FileName = Path.Combine(AppInfo.ExecuteDirectory, "UpdateService"),
                 UseShellExecute = true
             });
 

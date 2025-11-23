@@ -226,8 +226,8 @@ namespace PvzLauncherRemake.Pages
                         StartLoad(true);
 
                         //清除残留
-                        if (File.Exists(System.IO.Path.Combine(AppInfo.TempPath, "PVZLAUNCHERCACHE.zip")))
-                            await Task.Run(() => File.Delete(System.IO.Path.Combine(AppInfo.TempPath, "PVZLAUNCHERCACHE.zip")));
+                        if (File.Exists(System.IO.Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHERCACHE.zip")))
+                            await Task.Run(() => File.Delete(System.IO.Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHERCACHE.zip")));
 
                         bool isDownloadDone = false;
                         string? downloadError = null;
@@ -235,7 +235,7 @@ namespace PvzLauncherRemake.Pages
                         downloader = new Downloader
                         {
                             Url = downloadIndex.Url,
-                            SavePath = System.IO.Path.Combine(AppInfo.TempPath, "PVZLAUNCHERCACHE.zip"),
+                            SavePath = System.IO.Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHERCACHE.zip"),
                             Progress = ((p, s) =>
                             {
                                 progressBar_Loading.Value = p;
@@ -272,7 +272,7 @@ namespace PvzLauncherRemake.Pages
                         await Task.Run(() =>
                         {
                             //使用SharpCompress库解压
-                            ArchiveFactory.WriteToDirectory(System.IO.Path.Combine(AppInfo.TempPath, "PVZLAUNCHERCACHE.zip"), savePath, new ExtractionOptions
+                            ArchiveFactory.WriteToDirectory(System.IO.Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHERCACHE.zip"), savePath, new ExtractionOptions
                             {
                                 ExtractFullPath = true,
                                 Overwrite = true
