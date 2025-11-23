@@ -11,7 +11,7 @@
 
     <Grid Margin="10,10,10,10">
         <Viewbox Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Canvas UseLayoutRounding="False" Width="407.65085" Height="350.34695" RenderTransformOrigin="0.5,0.5">
+            <Canvas UseLayoutRounding="False" Width="407.65085" Height="350.34695" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="Canvas_MouseLeftButtonDown">
                 <Canvas.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
