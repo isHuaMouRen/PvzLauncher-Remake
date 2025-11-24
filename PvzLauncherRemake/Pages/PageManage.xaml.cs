@@ -99,6 +99,7 @@ namespace PvzLauncherRemake.Pages
                 }
                 else
                 {
+                    AppInfo.Config.CurrentGame = null!;
                     if (AppInfo.Config.LauncherConfig.DownloadTip.ShowGameDownloadTip)
                         await DialogManager.ShowDialogAsync(new ContentDialog
                         {
@@ -142,6 +143,7 @@ namespace PvzLauncherRemake.Pages
                 }
                 else
                 {
+                    AppInfo.Config.CurrentTrainer = null!;
                     if (AppInfo.Config.LauncherConfig.DownloadTip.ShowTrainerDownloadTip)
                         await DialogManager.ShowDialogAsync(new ContentDialog
                         {
