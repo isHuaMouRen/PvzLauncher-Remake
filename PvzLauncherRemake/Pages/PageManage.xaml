@@ -12,18 +12,6 @@
 
     <Grid>
         <Grid x:Name="grid_Main">
-            <Button x:Name="button_Load" Content="导入游戏" VerticalAlignment="Top" Background="#B3F0F0F0" Click="button_Load_Click" HorizontalAlignment="Right" Margin="0,10,10,0">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
-                        <LinearGradientBrush.RelativeTransform>
-                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#29000000"/>
-                        <GradientStop Color="#33000000" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-            </Button>
-
             <TabControl x:Name="tabControl" Style="{StaticResource TabControlPivotStyle}">
                 <TabItem Header="游戏管理">
                     <ListBox x:Name="listBox" SelectionMode="Single">
@@ -54,6 +42,17 @@
                     </ListBox>
                 </TabItem>
             </TabControl>
+            <Button x:Name="button_Load" Content="导入游戏" VerticalAlignment="Top" Background="#B3F0F0F0" Click="button_Load_Click" HorizontalAlignment="Right" Margin="0,10,10,0">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                        <LinearGradientBrush.RelativeTransform>
+                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#29000000"/>
+                        <GradientStop Color="#33000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
 
 
         </Grid>
