@@ -21,7 +21,7 @@
                 <Button x:Name="button_Launch" Style="{DynamicResource AccentButtonStyle}" Height="60" Width="250" Margin="0,0,0,5" Click="button_Launch_Click">
                     <StackPanel>
                         <TextBlock x:Name="textBlock_LaunchText" Text="启动游戏" Foreground="#E4FFFFFF" HorizontalAlignment="Center"/>
-                        <TextBlock x:Name="textBlock_LaunchVersion" Text="Version" FontSize="10" HorizontalAlignment="Center" Foreground="#E4C8C8C8"/>
+                        <TextBlock x:Name="textBlock_LaunchVersion" Text="Version" FontSize="10" HorizontalAlignment="Center" Foreground="#7FFFFFFF"/>
                     </StackPanel>
                 </Button>
 
