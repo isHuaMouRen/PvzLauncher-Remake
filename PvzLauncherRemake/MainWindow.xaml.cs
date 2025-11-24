@@ -219,7 +219,7 @@ namespace PvzLauncherRemake
             try
             {
                 //判断是否显示返回箭头
-                if (frame.Content is PageManageSet)
+                if (frame.Content is PageManageSet || frame.Content is PageDeveloper) 
                 {
                     navView.IsBackButtonVisible = NavigationViewBackButtonVisible.Visible;
                     navView.IsBackEnabled = true;
