@@ -1,5 +1,6 @@
 ﻿using HuaZi.Library.Downloader;
 using HuaZi.Library.Json;
+using MdXaml;
 using ModernWpf.Controls;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
@@ -12,6 +13,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Utils
@@ -20,6 +22,7 @@ namespace PvzLauncherRemake.Utils
     {
         public static JsonUpdateIndex.Index UpdateIndex = null!;
         public static string LatestVersion = null!;
+        public static string ChangeLog = null!;
         public static string Url = null!;
         public static string SavePath = Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHERUPDATECACHE.zip");
         public static bool isUpdate = false;
@@ -35,9 +38,16 @@ namespace PvzLauncherRemake.Utils
             switch (AppInfo.Config.LauncherConfig.UpdateChannel)
             {
                 case "Stable":
-                    LatestVersion = UpdateIndex.Stable.LatestVersion; Url = UpdateIndex.Stable.Url; break;
+                    LatestVersion = UpdateIndex.Stable.LatestVersion;
+                    ChangeLog = await Client.GetStringAsync(UpdateIndex.Stable.ChangeLog);
+                    Url = UpdateIndex.Stable.Url;
+                    break;
+
                 case "Development":
-                    LatestVersion = UpdateIndex.Development.LatestVersion; Url = UpdateIndex.Development.Url; break;
+                    LatestVersion = UpdateIndex.Development.LatestVersion;
+                    ChangeLog = await Client.GetStringAsync(UpdateIndex.Development.ChangeLog);
+                    Url = UpdateIndex.Development.Url;
+                    break;
             }
             logger.Info($"当前更新通道: {AppInfo.Config.LauncherConfig.UpdateChannel}\n最新版本: {LatestVersion}\nURL: {Url}");
 
@@ -46,8 +56,15 @@ namespace PvzLauncherRemake.Utils
             {
                 await DialogManager.ShowDialogAsync(new ContentDialog
                 {
-                    Title = "发现可用更新",
-                    Content = $"当前版本: {AppInfo.Version}\n最新版本: {LatestVersion}\n\n您现在可升级到最新的 {LatestVersion} 版本",
+                    Title = $"发现可用更新 - {LatestVersion}",
+                    Content = new ScrollViewer
+                    {
+                        Content = new MarkdownScrollViewer
+                        {
+                            Markdown = ChangeLog,
+                            MarkdownStyleName = "GithubLike"
+                        }
+                    },
                     PrimaryButtonText = "立即更新",
                     CloseButtonText = "取消更新",
                     DefaultButton = ContentDialogButton.Primary

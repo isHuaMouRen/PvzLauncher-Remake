@@ -23,6 +23,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("latest_version")]
             public string LatestVersion { get; set; }
 
+            [JsonProperty("change_log")]
+            public string ChangeLog { get; set; }
+
             [JsonProperty("url")]
             public string Url { get; set; }
         }
