@@ -120,6 +120,10 @@
                 <TextBlock Text="Version" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,5,0"/>
             </Grid>
             <Grid Margin="0,0,5,0">
+                <Rectangle Height="20" Fill="#7F000000" RadiusX="3" RadiusY="3"/>
+                <TextBlock Text="Size" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,5,0"/>
+            </Grid>
+            <Grid Margin="0,0,5,0">
                 <Rectangle Height="20" RadiusX="3" RadiusY="3" Fill="#CC0000FF"/>
                 <TextBlock Text="支持版本: Version" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,5,0"/>
             </Grid>

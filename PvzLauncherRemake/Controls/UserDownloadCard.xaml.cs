@@ -12,6 +12,7 @@ namespace PvzLauncherRemake.Controls
         public string Title { get; set; } = "Title";
         public string Description { get; set; } = null!;
         public string Version { get; set; } = "1.0.0.0";
+        public double Size { get; set; } = 0;//MB
         public string SupportVersion { get; set; } = null!;
         public string Icon { get; set; } = "origin";
         public bool isRecommend { get; set; } = false;
@@ -42,6 +43,14 @@ namespace PvzLauncherRemake.Controls
                 string xaml = "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                                 "<Rectangle Height=\"20\" Fill=\"#7F000000\" RadiusX=\"3\" RadiusY=\"3\"/>" +
                                 $"<TextBlock Text=\"{Version}\" Foreground=\"White\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Margin=\"5,0,5,0\"/>" +
+                              "</Grid>";
+                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
+            }
+            if (Size != 0.0 && !double.IsNaN(Size)) 
+            {
+                string xaml = "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
+                                "<Rectangle Height=\"20\" Fill=\"#7F000000\" RadiusX=\"3\" RadiusY=\"3\"/>" +
+                                $"<TextBlock Text=\"{Size}MB\" Foreground=\"White\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Margin=\"5,0,5,0\"/>" +
                               "</Grid>";
                 stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
             }
