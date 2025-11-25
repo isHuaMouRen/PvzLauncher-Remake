@@ -64,6 +64,7 @@ namespace PvzLauncherRemake.Pages
                         Description = zhOriginGame.Description,
                         Icon = "origin",
                         Version = zhOriginGame.Version,
+                        Size = zhOriginGame.Size,
                         isNew = zhOriginGame.IsNew,
                         isRecommend = zhOriginGame.IsRecommend,
                         Tag = zhOriginGame
@@ -83,6 +84,7 @@ namespace PvzLauncherRemake.Pages
                         Icon = zhRevisionGame.Version.StartsWith("β") ? "beta" :
                                 zhRevisionGame.Version.StartsWith("TAT", StringComparison.OrdinalIgnoreCase) ? "tat" : "origin",
                         Version = zhRevisionGame.Version,
+                        Size = zhRevisionGame.Size,
                         isNew = zhRevisionGame.IsNew,
                         isRecommend = zhRevisionGame.IsRecommend,
                         Tag = zhRevisionGame
@@ -101,6 +103,7 @@ namespace PvzLauncherRemake.Pages
                         Description = enOriginGame.Description,
                         Icon = "origin",
                         Version = enOriginGame.Version,
+                        Size = enOriginGame.Size,
                         isNew = enOriginGame.IsNew,
                         isRecommend = enOriginGame.IsRecommend,
                         Tag = enOriginGame
@@ -119,6 +122,7 @@ namespace PvzLauncherRemake.Pages
                         Description = trainerInfo.Description,
                         Icon = "origin",
                         Version = trainerInfo.Version,
+                        Size = trainerInfo.Size,
                         SupportVersion = trainerInfo.SupportVersion,
                         isNew = trainerInfo.IsNew,
                         isRecommend = trainerInfo.IsRecommend,
