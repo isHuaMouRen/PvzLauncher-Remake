@@ -160,7 +160,7 @@ namespace PvzLauncherRemake.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e) { InitializeLoaded(); }
 
         //选择游戏
-        private async void SelectGame(object sender, MouseButtonEventArgs e)
+        private void SelectGame(object sender, MouseButtonEventArgs e)
         {
             try
             {
