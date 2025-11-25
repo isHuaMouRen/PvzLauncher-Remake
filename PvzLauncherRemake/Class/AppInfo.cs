@@ -20,7 +20,7 @@ namespace PvzLauncherRemake.Class
         public static JsonConfig.Index Config = null!;//配置
         
         //字符串
-        public static readonly string Version = $"1.0.0-beta.2";//版本
+        public static readonly string Version = $"1.0.0-beta.3";//版本
         public static readonly string DownloadIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/download.json";//下载索引
         public static readonly string UpdateIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/update.json";//更新索引
 
