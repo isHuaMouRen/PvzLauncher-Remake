@@ -4,8 +4,10 @@ using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils;
 using System.Diagnostics;
+using System.Diagnostics.Tracing;
 using System.IO;
 using System.Windows;
+using System.Windows.Forms.VisualStyles;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 
@@ -54,6 +56,17 @@ namespace PvzLauncherRemake.Pages
             animation.KeyFrames.Add(easingKeyFrame);
             animation.FillBehavior = FillBehavior.HoldEnd;
             grid_Title.BeginAnimation(FrameworkElement.MarginProperty, animation);
+        }
+
+        public void StartButtonAnimation(double timeMs = 500)
+        {
+            var anim = new ThicknessAnimation
+            {
+                To = new Thickness(0),
+                Duration = TimeSpan.FromMilliseconds(timeMs),
+                EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 }
+            };
+            stackPanel_LaunchButtons.BeginAnimation(MarginProperty, anim);
         }
         #endregion
 
@@ -118,8 +131,11 @@ namespace PvzLauncherRemake.Pages
                         viewBox_Title_ZH.Visibility = Visibility.Visible; break;
                 }
                 grid_Title.Margin = new Thickness(0, -10 - grid_Title.Height, 0, 0);
+                stackPanel_LaunchButtons.Margin = new Thickness(0, 0, -50 - button_Launch.Width, 0);
                 await Task.Delay(200);//等待Frame动画播放完毕
                 StartTitleAnimation(grid_Title.Height, 500);
+                await Task.Delay(20);
+                StartButtonAnimation();
 
                 //设置背景
                 if (!string.IsNullOrEmpty(AppInfo.Config.LauncherConfig.Background))
