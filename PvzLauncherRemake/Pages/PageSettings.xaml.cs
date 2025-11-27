@@ -1,6 +1,8 @@
-﻿using Microsoft.Win32;
+﻿using HuaZi.Library.Logger;
+using Microsoft.Win32;
 using ModernWpf;
 using ModernWpf.Controls;
+using Newtonsoft.Json;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
@@ -12,6 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
+using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Pages
 {
@@ -77,19 +80,22 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
+                logger.Info($"[设置] 开始初始化");
+
                 //动画归位
                 StackPanel[] sps = { sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10 };
                 foreach (var sp in sps)
                 {
+                    logger.Info($"[设置: 动画] 动画元素 {sp.Name} 归位");
                     sp.Margin = new Thickness(-500, sp.Margin.Top, sp.Margin.Right, sp.Margin.Bottom);
                     sp.Opacity = 0;
                 }
 
+                logger.Info($"[设置: 动画] 所有动画元素已归位");
 
-                
+                logger.Info($"[设置] 当前配置文件: {JsonConvert.SerializeObject(AppInfo.Config)}");
+
                 isInitialized = false;
-
-                
 
                 //# 启动器设置
                 //## 操作
@@ -191,14 +197,16 @@ namespace PvzLauncherRemake.Pages
 
 
 
-
-                    isInitialized = true;
-
+                logger.Info($"[设置] 设置项应用完毕");
+                isInitialized = true;
+                logger.Info($"[设置: 动画] 动画元素开始执行");
                 foreach (var sp in sps)
                 {
+                    logger.Info($"[设置: 动画] 元素 {sp.Name} 开始播放动画");
                     await Task.Delay(50);
                     StartAnimation(sp);
                 }
+                logger.Info($"[设置] 完成初始化");
             }
             catch (Exception ex)
             {
