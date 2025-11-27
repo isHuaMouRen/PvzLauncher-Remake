@@ -25,9 +25,6 @@ namespace PvzLauncherRemake
         {
             try
             {
-                //初始化WebView2
-                await AppWebView2.WebView2.EnsureCoreWebView2Async(null);
-
                 //初始化配置文件
                 if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecuteDirectory, "config.json")))
                 {
