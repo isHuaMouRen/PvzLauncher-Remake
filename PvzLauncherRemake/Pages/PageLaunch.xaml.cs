@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Forms.VisualStyles;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
+using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Pages
 {
@@ -76,9 +77,12 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
+                logger.Info($"[启动] 开始初始化...");
+
                 if (!string.IsNullOrEmpty(AppInfo.Config.CurrentGame))
                 {
-                    
+                    logger.Info($"[启动] 当前选中游戏: {AppInfo.Config.CurrentGame}");
+
                     //查找选择游戏信息
                     foreach (var game in AppInfo.GameList)
                         if (game.GameInfo.Name == AppInfo.Config.CurrentGame)
@@ -90,14 +94,13 @@ namespace PvzLauncherRemake.Pages
                 }
                 else
                 {
-                    
                     button_Launch.IsEnabled = false;
                     textBlock_LaunchVersion.Text = "请选择一个游戏";
                 }
 
                 if (!string.IsNullOrEmpty(AppInfo.Config.CurrentTrainer))
                 {
-                    
+                    logger.Info($"[启动] 当前选中修改器: {AppInfo.Config.CurrentTrainer}");
                     foreach (var trainer in AppInfo.TrainerList)
                         if (trainer.Name == AppInfo.Config.CurrentTrainer)
                             currentTrainerInfo = trainer;
@@ -112,9 +115,8 @@ namespace PvzLauncherRemake.Pages
                 {
                     if (AppProcess.Process != null && AppProcess.Process.Id != 0 && !AppProcess.Process.HasExited)
                     {
-                        
+                        logger.Info($"[启动] 检测到游戏仍在运行切换为结束状态");
                         textBlock_LaunchText.Text = "结束进程";
-
                     }
                 }
                 catch (InvalidOperationException) { }
@@ -123,6 +125,7 @@ namespace PvzLauncherRemake.Pages
                 //播放动画
                 viewBox_Title_EN.Visibility = Visibility.Hidden;
                 viewBox_Title_ZH.Visibility = Visibility.Hidden;
+                logger.Info($"[启动] 标题语言: {AppInfo.Config.LauncherConfig.TitleImage}");
                 switch (AppInfo.Config.LauncherConfig.TitleImage)//切换语言
                 {
                     case "EN":
@@ -140,6 +143,7 @@ namespace PvzLauncherRemake.Pages
                 //设置背景
                 if (!string.IsNullOrEmpty(AppInfo.Config.LauncherConfig.Background))
                     image.Source = new BitmapImage(new Uri(AppInfo.Config.LauncherConfig.Background));
+                logger.Info($"[启动] 完成初始化");
 
             }
             catch (Exception ex)
@@ -178,18 +182,23 @@ namespace PvzLauncherRemake.Pages
                 //没运行就启动
                 if (textBlock_LaunchText.Text == "启动游戏")
                 {
+                    logger.Info($"[启动] 开始启动游戏");
+
                     textBlock_LaunchText.Text = "结束进程";
 
                     //切换存档
                     if (AppInfo.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(Path.Combine(AppInfo.GameDirectory, AppInfo.Config.CurrentGame, ".save")))
                     {
+                        logger.Info($"[启动] 已启用存档隔离，开始切换存档");
                         if (Directory.Exists(AppInfo.SaveDirectory))
                             Directory.Delete(AppInfo.SaveDirectory, true);
                         await DirectoryManager.CopyDirectoryAsync(Path.Combine(AppInfo.GameDirectory, AppInfo.Config.CurrentGame, ".save"), AppInfo.SaveDirectory);
+                        logger.Info($"[启动] 存档切换成功！");
                     }
 
                     //游戏exe路径
                     string gameExePath = System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name, currentGameInfo.GameInfo.ExecuteName);
+                    logger.Info($"[启动] 设置游戏可执行文件路径: {gameExePath}");
                     //定义Process
                     AppProcess.Process = new Process
                     {
@@ -200,12 +209,12 @@ namespace PvzLauncherRemake.Pages
                             WorkingDirectory = System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name)
                         }
                     };
-
+                    logger.Info($"[启动] 启动进程");
                     //启动
                     AppProcess.Process.Start();
-                    
 
                     //启动后操作
+                    logger.Info($"[启动] 启动后操作为: {AppInfo.Config.LauncherConfig.LaunchedOperate}");
                     switch (AppInfo.Config.LauncherConfig.LaunchedOperate)
                     {
                         case "Close":
@@ -216,10 +225,12 @@ namespace PvzLauncherRemake.Pages
 
                     //记录启动次数
                     currentGameInfo.Record.PlayCount++;
+                    logger.Info($"[启动] 启动次数+1, 现在为： {currentGameInfo.Record.PlayCount}");
                     Json.WriteJson(System.IO.Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name, ".pvzl.json"), currentGameInfo);
 
                     //开始计时
                     MainCycleEnable = true;
+                    logger.Info($"[启动] 开始计时游玩时间，现在为: {currentGameInfo.Record.PlayTime}");
 
                     //启动提示
                     notifi.Show(new NotificationContent
@@ -230,14 +241,16 @@ namespace PvzLauncherRemake.Pages
                     });
 
                     //等待结束
-                    
 
+                    logger.Info($"[启动] 启动操作完毕，等待游戏结束...");
                     await AppProcess.Process.WaitForExitAsync();
 
                     //停止计时
                     MainCycleEnable = false;
+                    logger.Info($"[启动] 游戏进程已结束");
+                    logger.Info($"[启动] 游玩时间: {currentGameInfo.Record.PlayTime}");
 
-                    
+
                     notifi.Show(new NotificationContent
                     {
                         Title = "提示",
@@ -248,6 +261,7 @@ namespace PvzLauncherRemake.Pages
                     textBlock_LaunchText.Text = "启动游戏";
 
                     //启动后操作
+                    logger.Info($"[启动] 启动后操作为: {AppInfo.Config.LauncherConfig.LaunchedOperate}");
                     switch (AppInfo.Config.LauncherConfig.LaunchedOperate)
                     {
                         case "HideAndDisplay":
@@ -255,22 +269,25 @@ namespace PvzLauncherRemake.Pages
                     }
 
                     //保存存档
-                    if (AppInfo.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(AppInfo.SaveDirectory)) 
+                    if (AppInfo.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(AppInfo.SaveDirectory))
                     {
+                        logger.Info($"[启动] 存档隔离已开启，开始保存存档");
                         if (Directory.Exists(Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name, ".save")))
                             Directory.Delete(Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name, ".save"), true);
                         await DirectoryManager.CopyDirectoryAsync(AppInfo.SaveDirectory, Path.Combine(AppInfo.GameDirectory, currentGameInfo.GameInfo.Name, ".save"));
+                        logger.Info($"[启动] 存档保存成功");
                     }
                 }
                 //运行就结束
                 else if (textBlock_LaunchText.Text == "结束进程")
                 {
-                    
+                    logger.Info($"[启动] 正在结束游戏...");
                     textBlock_LaunchText.Text = "启动游戏";
 
                     //尝试使程序自行退出
                     if (!AppProcess.Process.HasExited)
                     {
+                        logger.Info($"[启动] 尝试使游戏进程自行退出");
                         notifi.Show(new NotificationContent
                         {
                             Title = "提示",
@@ -284,6 +301,7 @@ namespace PvzLauncherRemake.Pages
                         //强制关
                         if (!AppProcess.Process.HasExited)
                         {
+                            logger.Warn($"[启动] 游戏进程仍然运行，开始强制结束");
                             AppProcess.Process.Kill();
                             //等待完全关闭
                             await Task.Delay(1000);
@@ -292,6 +310,7 @@ namespace PvzLauncherRemake.Pages
                         if (!AppProcess.Process.HasExited)
                         {
                             //都Kill()了不能再关不上吧
+                            logger.Error($"[启动] 无法终止游戏进程!");
                             notifi.Show(new NotificationContent
                             {
                                 Title = "失败",
@@ -313,7 +332,7 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
-                
+                logger.Info($"[启动] 开始启动修改器...");
 
                 Process.Start(new ProcessStartInfo
                 {
@@ -326,6 +345,7 @@ namespace PvzLauncherRemake.Pages
                     Message = $"{AppInfo.Config.CurrentTrainer} 启动成功!",
                     Type = NotificationType.Success
                 });
+                logger.Info($"[启动] 修改器启动成功");
             }
             catch (Exception ex)
             {
