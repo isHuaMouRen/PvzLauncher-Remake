@@ -1,6 +1,7 @@
 ﻿using ModernWpf;
 using ModernWpf.Controls;
 using ModernWpf.Media.Animation;
+using Newtonsoft.Json;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Pages;
@@ -9,6 +10,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Navigation;
+using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake
 {
@@ -25,20 +27,23 @@ namespace PvzLauncherRemake
         {
             try
             {
+                logger.Info($"[主窗口] 开始构造...");
+
                 //初始化配置文件
                 if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecuteDirectory, "config.json")))
                 {
+                    logger.Info($"[主窗口] 未检测到配置文件，即将创建");
                     AppInfo.Config = new JsonConfig.Index();
                     ConfigManager.SaveAllConfig();
                 }//创建游戏目录
                 if (!Directory.Exists(AppInfo.GameDirectory))
                 {
-                    
+                    logger.Info($"[主窗口] 未检测到游戏文件夹，即将创建");
                     Directory.CreateDirectory(AppInfo.GameDirectory);
                 }
                 if (!Directory.Exists(AppInfo.TrainerDirectory))
                 {
-                    
+                    logger.Info($"[主窗口] 未检测到修改器文件夹，即将创建");
                     Directory.CreateDirectory(AppInfo.TrainerDirectory);
                 }
 
@@ -46,6 +51,8 @@ namespace PvzLauncherRemake
                 ConfigManager.ReadAllConfig();
 
                 //应用配置
+                logger.Info($"[主窗口] 开始应用配置");
+                logger.Info($"[主窗口] 当前配置文件: {JsonConvert.SerializeObject(AppInfo.Config)}");
                 this.Title = AppInfo.Config.LauncherConfig.WindowTitle;
                 this.Width = AppInfo.Config.LauncherConfig.WindowSize.Width;
                 this.Height = AppInfo.Config.LauncherConfig.WindowSize.Height;
@@ -65,8 +72,10 @@ namespace PvzLauncherRemake
                 }
 
                 //注册事件
+                logger.Info($"[主窗口] 注册窗口大小改变事件...");
                 this.SizeChanged += ((sender, e) =>
                 {
+                    logger.Info($"[主窗口] 窗口大小改变:  Width: {this.Width}  Height: {this.Height}");
                     AppInfo.Config.LauncherConfig.WindowSize = new JsonConfig.WindowSize { Width = this.Width, Height = this.Height };
                     ConfigManager.SaveAllConfig();
                 });
@@ -80,7 +89,7 @@ namespace PvzLauncherRemake
                 void AddType(Type t)
                 {
                     PageMap.Add($"{t.Name}", t);
-                    
+                    logger.Info($"[主窗口] 预加载Page: {t.Name}");
                 }
                 AddType(typeof(PageLaunch));
                 AddType(typeof(PageManage));
@@ -91,8 +100,8 @@ namespace PvzLauncherRemake
 
                 //选择默认页
                 navView.SelectedItem = navViewItem_Launch;
-                
-                
+
+                logger.Info($"[主窗口] 构造完毕!");
             }
             catch (Exception ex)
             {
@@ -104,12 +113,14 @@ namespace PvzLauncherRemake
         {
             try
             {
-                
+                logger.Info($"[主窗口] 开始初始化...");
 
+                logger.Info($"[主窗口] 处理启动参数");
                 //处理启动参数
                 string[] args = Environment.GetCommandLineArgs();
                 foreach (var arg in args)
                 {
+                    logger.Info($"[主窗口] 传入的参数: {arg}");
                     switch (arg)
                     {
                         //外壳启动
@@ -121,15 +132,15 @@ namespace PvzLauncherRemake
                     }
                 }
 
-                
-                
-                
-                
+
+
+                logger.Info($"[主窗口] {new string('=', 10)}启动参数配置{new string('=', 10)}");
+
 
                 //是否外壳启动
                 if (!AppInfo.Arguments.isShell && !Debugger.IsAttached)
                 {
-                    
+                    logger.Info($"[主窗口] isShell={AppInfo.Arguments.isShell}");
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "警告",
@@ -151,6 +162,7 @@ namespace PvzLauncherRemake
                 //更新启动
                 if (AppInfo.Arguments.isUpdate)
                 {
+                    logger.Info($"[主窗口] isUpdate={AppInfo.Arguments.isUpdate}");
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "更新完毕",
@@ -160,7 +172,7 @@ namespace PvzLauncherRemake
                     });
                 }
 
-
+                logger.Info($"[主窗口] {new string('=', 20)}");
 
 
 
@@ -172,10 +184,13 @@ namespace PvzLauncherRemake
 
                 //检查更新
                 if (AppInfo.Config.LauncherConfig.StartUpCheckUpdate)
+                {
+                    logger.Info($"[主窗口] 检测更新");
                     await Updater.CheckUpdate(null!, true);
+                }
 
 
-                
+                logger.Info($"[主窗口] 完成初始化!");
             }
             catch (Exception ex)
             {
@@ -195,7 +210,7 @@ namespace PvzLauncherRemake
             {
                 if (navView.SelectedItem is NavigationViewItem item)
                 {
-                    
+                    logger.Info($"[主窗口] 选择标签页: {item.Tag}");
 
                     frame.Navigate(PageMap[$"Page{item.Tag}"], null, FrameAnimation);
                 }
