@@ -48,12 +48,6 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
-                //动画重置位置
-                button_Load.Margin = new Thickness(0, -50, 10, 0);
-                tabControl.Margin = new Thickness(0, 100, 0, 0);
-                tabControl.Opacity = 0;
-                button_Load.Opacity = 0;
-
                 StartLoad();
 
                 //清理
@@ -152,33 +146,6 @@ namespace PvzLauncherRemake.Pages
                 }
 
                 EndLoad();
-                //动画开始
-                await Task.Delay(150);
-                tabControl.BeginAnimation(MarginProperty, new ThicknessAnimation
-                {
-                    To = new Thickness(0),
-                    Duration = TimeSpan.FromMilliseconds(500),
-                    EasingFunction = new QuarticEase { EasingMode = EasingMode.EaseOut }
-                });
-                tabControl.BeginAnimation(OpacityProperty, new DoubleAnimation
-                {
-                    To = 1,
-                    Duration = TimeSpan.FromMilliseconds(500),
-                    EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut }
-                });
-                await Task.Delay(20);
-                button_Load.BeginAnimation(MarginProperty, new ThicknessAnimation
-                {
-                    To = new Thickness(0, 10, 10, 0),
-                    Duration = TimeSpan.FromMilliseconds(500),
-                    EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 }
-                });
-                button_Load.BeginAnimation(OpacityProperty, new DoubleAnimation
-                {
-                    To = 1,
-                    Duration = TimeSpan.FromMilliseconds(500),
-                    EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut }
-                });
 
             }
             catch (Exception ex)
