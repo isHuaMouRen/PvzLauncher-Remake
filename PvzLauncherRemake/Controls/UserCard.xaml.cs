@@ -60,7 +60,7 @@ namespace PvzLauncherRemake.Controls
             if (!string.IsNullOrEmpty(Version))
             {
                 string xaml =
-                    "<Grid Margin=\"0,0,5,0\">" +
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                         "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC969696\"/>" +
                         $"<TextBlock Text=\"{Version}\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
                     "</Grid>";
@@ -69,7 +69,7 @@ namespace PvzLauncherRemake.Controls
             if (!string.IsNullOrEmpty(Size))
             {
                 string xaml =
-                    "<Grid Margin=\"0,0,5,0\">" +
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                         "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC009696\"/>" +
                         $"<TextBlock Text=\"{Size}\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
                     "</Grid>";
@@ -78,7 +78,7 @@ namespace PvzLauncherRemake.Controls
             if (!string.IsNullOrEmpty(SupportVersion))
             {
                 string xaml =
-                    "<Grid Margin=\"0,0,5,0\">" +
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                         "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC0000FF\"/>" +
                         $"<TextBlock Text=\"支持版本: {SupportVersion}\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
                     "</Grid>";
@@ -87,7 +87,7 @@ namespace PvzLauncherRemake.Controls
             if (isRecommend)
             {
                 string xaml =
-                    "<Grid Margin=\"0,0,5,0\">" +
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                         "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC00FF00\"/>" +
                         $"<TextBlock Text=\"推荐\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
                     "</Grid>";
@@ -96,7 +96,7 @@ namespace PvzLauncherRemake.Controls
             if (isActive)
             {
                 string xaml =
-                    "<Grid Margin=\"0,0,5,0\">" +
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
                         "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CCFF0000\"/>" +
                         $"<TextBlock Text=\"活动\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
                     "</Grid>";
