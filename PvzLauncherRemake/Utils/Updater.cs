@@ -58,6 +58,7 @@ namespace PvzLauncherRemake.Utils
                     Title = $"发现可用更新 - {LatestVersion}",
                     Content = new ScrollViewer
                     {
+                        VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
                         Content = new MarkdownScrollViewer
                         {
                             Markdown = ChangeLog,
@@ -110,7 +111,7 @@ namespace PvzLauncherRemake.Utils
                         errorMessage = e!;
                     }
                 }),
-                Progress = ((p,s) =>
+                Progress = ((p, s) =>
                 {
                     progressCallback(p, s);
                     logger.Info($"[更新器] 下载更新文件: {Math.Round(p, 2)}  ({Math.Round(s / 1024, 2)}MB/s)");
