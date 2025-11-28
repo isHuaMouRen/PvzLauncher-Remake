@@ -22,10 +22,10 @@
                                 <Setter Property="Padding" Value="0"/>
                             </Style>
                         </ListBox.ItemContainerStyle>
-                        <ctrl:UserGameCard/>
-                        <ctrl:UserGameCard Icon="beta"/>
-                        <ctrl:UserGameCard/>
-                        <ctrl:UserGameCard/>
+                        <ctrl:UserCard/>
+                        <ctrl:UserCard Icon="beta"/>
+                        <ctrl:UserCard/>
+                        <ctrl:UserCard/>
                     </ListBox>
                 </TabItem>
                 <TabItem Header="修改器管理">
@@ -38,7 +38,7 @@
                             </Style>
                         </ListBox.ItemContainerStyle>
 
-                        <ctrl:UserTrainerCard Title="Title" Version="1.0.0.0" SupportVersion="1.0.0.0" isCurrent="True"/>
+                        <ctrl:UserCard Title="Title" Version="1.0.0.0" SupportVersion="1.0.0.0" isActive="True"/>
                     </ListBox>
                 </TabItem>
             </TabControl>

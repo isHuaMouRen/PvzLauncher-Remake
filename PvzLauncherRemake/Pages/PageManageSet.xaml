@@ -12,7 +12,7 @@
 
     <Grid>
         <StackPanel x:Name="stackPanel_main" Margin="10">
-            <ctrl:UserGameCard x:Name="userGameCard" VerticalAlignment="Top" Margin="0,0,0,10"/>
+            <ctrl:UserCard x:Name="userGameCard" VerticalAlignment="Top" Margin="0,0,0,10"/>
 
             <!--操作按钮-->
             <StackPanel Orientation="Horizontal" Margin="10,0,10,10">

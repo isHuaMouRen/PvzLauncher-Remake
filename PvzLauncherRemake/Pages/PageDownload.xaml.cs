@@ -66,13 +66,13 @@ namespace PvzLauncherRemake.Pages
                 listBox_zhOrigin.Items.Clear();
                 foreach (var zhOriginGame in DownloadIndex.ZhOrigin)
                 {
-                    var card = new UserDownloadCard
+                    var card = new UserCard
                     {
                         Title = zhOriginGame.Name,
                         Description = zhOriginGame.Description,
-                        Icon = "origin",
+                        Icon = "Origin",
                         Version = zhOriginGame.Version,
-                        Size = zhOriginGame.Size,
+                        Size = zhOriginGame.Size.ToString(),
                         isNew = zhOriginGame.IsNew,
                         isRecommend = zhOriginGame.IsRecommend,
                         Tag = zhOriginGame
@@ -86,14 +86,14 @@ namespace PvzLauncherRemake.Pages
                 listBox_zhRevision.Items.Clear();
                 foreach (var zhRevisionGame in DownloadIndex.ZhRevision)
                 {
-                    var card = new UserDownloadCard
+                    var card = new UserCard
                     {
                         Title = zhRevisionGame.Name,
                         Description = zhRevisionGame.Description,
-                        Icon = zhRevisionGame.Version.StartsWith("β") ? "beta" :
-                                zhRevisionGame.Version.StartsWith("TAT", StringComparison.OrdinalIgnoreCase) ? "tat" : "origin",
+                        Icon = zhRevisionGame.Version.StartsWith("β") ? "Beta" :
+                                zhRevisionGame.Version.StartsWith("TAT", StringComparison.OrdinalIgnoreCase) ? "Tat" : "Origin",
                         Version = zhRevisionGame.Version,
-                        Size = zhRevisionGame.Size,
+                        Size = zhRevisionGame.Size.ToString(),
                         isNew = zhRevisionGame.IsNew,
                         isRecommend = zhRevisionGame.IsRecommend,
                         Tag = zhRevisionGame
@@ -107,13 +107,13 @@ namespace PvzLauncherRemake.Pages
                 listBox_enOrigin.Items.Clear();
                 foreach (var enOriginGame in DownloadIndex.EnOrigin)
                 {
-                    var card = new UserDownloadCard
+                    var card = new UserCard
                     {
                         Title = enOriginGame.Name,
                         Description = enOriginGame.Description,
-                        Icon = "origin",
+                        Icon = "Origin",
                         Version = enOriginGame.Version,
-                        Size = enOriginGame.Size,
+                        Size = enOriginGame.Size.ToString(),
                         isNew = enOriginGame.IsNew,
                         isRecommend = enOriginGame.IsRecommend,
                         Tag = enOriginGame
@@ -127,13 +127,13 @@ namespace PvzLauncherRemake.Pages
                 listBox_trainer.Items.Clear();
                 foreach (var trainerInfo in DownloadIndex.Trainer)
                 {
-                    var card = new UserDownloadCard
+                    var card = new UserCard
                     {
                         Title = trainerInfo.Name,
                         Description = trainerInfo.Description,
-                        Icon = "origin",
+                        Icon = "Origin",
                         Version = trainerInfo.Version,
-                        Size = trainerInfo.Size,
+                        Size = trainerInfo.Size.ToString(),
                         SupportVersion = trainerInfo.SupportVersion,
                         isNew = trainerInfo.IsNew,
                         isRecommend = trainerInfo.IsRecommend,
@@ -168,7 +168,7 @@ namespace PvzLauncherRemake.Pages
                 logger.Info($"[下载] 准备下载游戏...");
 
                 var listbox = (ListBox)sender;
-                var selectItem = (UserDownloadCard)listbox.SelectedItem;
+                var selectItem = (UserCard)listbox.SelectedItem;
                 var downloadIndex = (string)listbox.Tag == "trainer"
                     ? (JsonDownloadIndex.TrainerInfo)selectItem.Tag
                     : (JsonDownloadIndex.GameInfo)selectItem.Tag;

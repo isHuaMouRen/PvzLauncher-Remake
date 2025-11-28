@@ -11,6 +11,7 @@ using PvzLauncherRemake.Utils;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Security.RightsManagement;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -74,18 +75,18 @@ namespace PvzLauncherRemake.Pages
                             game.GameInfo.VersionType == "zh_origin" ? "中文原版" :
                             game.GameInfo.VersionType == "zh_revision" ? "中文改版" : "未知";
                         //定义卡片
-                        var card = new UserGameCard
+                        var card = new UserCard
                         {
                             Title = game.GameInfo.Name,
-                            Icon = game.GameInfo.Version.StartsWith("β") ? "beta" : "origin",
-                            isCurrent = game.GameInfo.Name == AppInfo.Config.CurrentGame ? true : false,
+                            Icon = game.GameInfo.Version.StartsWith("β") ? "Beta" : "Origin",
+                            isActive = game.GameInfo.Name == AppInfo.Config.CurrentGame ? true : false,
                             Version = $"{version} {game.GameInfo.Version}", //拼接，示例:"英文原版 1.0.0.1051"
                             Background = System.Windows.Media.Brushes.Transparent,
                             Tag = game
                         };
                         card.PreviewMouseDoubleClick += SelectGame;
                         card.PreviewMouseRightButtonDown += SetGame;
-                        logger.Info($"[管理] 添加游戏: Title=\"{card.Title}\"  Icon=\"{card.Icon}\"  isCurrent=\"{card.isCurrent}\"  Version=\"{card.Version}\"");
+                        logger.Info($"[管理] 添加游戏: Title=\"{card.Title}\"  Icon=\"{card.Icon}\"  isCurrent=\"{card.isActive}\"  Version=\"{card.Version}\"");
                         listBox.Items.Add(card);//添加
 
                     }
@@ -121,18 +122,18 @@ namespace PvzLauncherRemake.Pages
                     foreach (var trainer in AppInfo.TrainerList)
                     {
                         //定义卡片
-                        var card = new UserTrainerCard
+                        var card = new UserCard
                         {
                             Title = trainer.Name,
-                            Icon = Icon.ExtractAssociatedIcon(System.IO.Path.Combine(AppInfo.TrainerDirectory, trainer.Name, trainer.ExecuteName))!,
-                            isCurrent = trainer.Name == AppInfo.Config.CurrentTrainer ? true : false,
+                            Icon = "Origin",
+                            isActive = trainer.Name == AppInfo.Config.CurrentTrainer ? true : false,
                             Version = $"{trainer.Version}", //拼接，示例:"英文原版 1.0.0.1051"
                             Background = System.Windows.Media.Brushes.Transparent,
                             Tag = trainer
                         };
                         card.PreviewMouseDoubleClick += SelectTrainer;
                         //card.PreviewMouseRightButtonDown += SetGame;
-                        logger.Info($"[管理] 添加修改器: Title=\"{card.Title}\"  Icon=\"{card.Icon}\"  isCurrent=\"{card.isCurrent}\"  Version=\"{card.Version}\"");
+                        logger.Info($"[管理] 添加修改器: Title=\"{card.Title}\"  Icon=\"{card.Icon}\"  isCurrent=\"{card.isActive}\"  Version=\"{card.Version}\"");
                         listBox_Trainer.Items.Add(card);//添加
 
                     }
@@ -156,7 +157,7 @@ namespace PvzLauncherRemake.Pages
                 }
 
                 EndLoad();
-                logger.Info($"[管理] ");                
+                logger.Info($"[管理] ");
             }
             catch (Exception ex)
             {
@@ -179,18 +180,18 @@ namespace PvzLauncherRemake.Pages
                     notificationManager.Show(new NotificationContent
                     {
                         Title = "选择游戏",
-                        Message = $"已选择 \"{((UserGameCard)sender).Title}\" 作为启动游戏",
+                        Message = $"已选择 \"{((UserCard)sender).Title}\" 作为启动游戏",
                         Type = NotificationType.Information
                     });
 
                     //更新控件
                     foreach (var card in listBox.Items)
                     {
-                        ((UserGameCard)card).isCurrent = (card == sender);
-                        ((UserGameCard)card).SetLabels();
+                        ((UserCard)card).isActive = (card == sender);
+                        ((UserCard)card).SetLabels();
                     }
 
-                    AppInfo.Config.CurrentGame = $"{((UserGameCard)sender).Title}";
+                    AppInfo.Config.CurrentGame = $"{((UserCard)sender).Title}";
                     ConfigManager.SaveAllConfig();
                     logger.Info($"[管理] 选择游戏: {AppInfo.Config.CurrentGame}");
                 }
@@ -211,19 +212,19 @@ namespace PvzLauncherRemake.Pages
                     notificationManager.Show(new NotificationContent
                     {
                         Title = "选择修改器",
-                        Message = $"已选择 \"{((UserTrainerCard)sender).Title}\" 作为当前修改器",
+                        Message = $"已选择 \"{((UserCard)sender).Title}\" 作为当前修改器",
                         Type = NotificationType.Information
                     });
 
                     //更新控件
                     foreach (var card in listBox_Trainer.Items)
                     {
-                        ((UserTrainerCard)card).isCurrent = (card == sender);
-                        ((UserTrainerCard)card).SetLabels();
+                        ((UserCard)card).isActive = (card == sender);
+                        ((UserCard)card).SetLabels();
                     }
 
 
-                    AppInfo.Config.CurrentTrainer = $"{((UserTrainerCard)sender).Title}";
+                    AppInfo.Config.CurrentTrainer = $"{((UserCard)sender).Title}";
                     ConfigManager.SaveAllConfig();
                     logger.Info($"[管理] 选择修改器: {AppInfo.Config.CurrentTrainer}");
                 }
@@ -240,7 +241,7 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
-                this.NavigationService.Navigate(new PageManageSet((JsonGameInfo.Index)((UserGameCard)sender).Tag));
+                this.NavigationService.Navigate(new PageManageSet((JsonGameInfo.Index)((UserCard)sender).Tag));
             }
             catch (Exception ex)
             {
