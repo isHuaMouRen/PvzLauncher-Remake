@@ -1,19 +1,19 @@
 <?xml version="1.0" ?>
-<Viewbox xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" Name="beta_inkscape">
+<Viewbox xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" Name="beta">
     <Canvas UseLayoutRounding="False" Width="512.0" Height="512.0">
         <Canvas.Clip>
             <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
         </Canvas.Clip>
         <Canvas UseLayoutRounding="False" RenderTransform="1.4098453,0.0,0.0,1.4098453,-72.027561,-100.10744">
-            <Path Stroke="#ff000000" StrokeLineJoin="Round" StrokeThickness="6.0" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+            <Path Stroke="#ff000000" StrokeLineJoin="Round" StrokeThickness="7.051" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
                 <Path.Fill>
-                    <LinearGradientBrush MappingMode="Absolute" StartPoint="249.15904,161.90834" EndPoint="209.5457,333.49252">
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="249.15904,161.90834" EndPoint="209.5457,333.49252" Transform="1.1751668,0.0,0.0,1.1751668,-37.766718,-43.889476">
                         <GradientStop Color="#ffffe300" Offset="0.0"/>
                         <GradientStop Color="#ffee4600" Offset="1.0"/>
                     </LinearGradientBrush>
                 </Path.Fill>
                 <Path.Data>
-                    <PathGeometry Figures="m 249.123 116.445 c -56.3734 -1.99454 -74.8086 49.4004 -74.8086 49.4004 c 0 0 -17.5816 95.5068 -25.3594 143.725 c -4.7366 29.3643 -4.65039 63.6309 -4.65039 63.6309 l 48.3086 5.81055 l 4.08594 -63.75 c 0 0 32.9903 23.0463 59.4805 13.6074 c 26.4212 -9.41425 47.4416 -22.4942 52.2227 -52.9297 c 5.54527 -35.3007 -28.6562 -54.2051 -28.6562 -54.2051 c 0 0 47.2059 -27.7598 31.4805 -69.2969 c -7.34645 -19.4049 -29.3985 -34.8351 -62.1035 -35.9922 z m -5.00586 39.8184 c 22.45 -0.10349 43.2992 34.8217 -13.2149 49.6016 l -2.34961 28.1777 c 55.1714 16.0454 30.3947 86.3984 -24.9512 42.418 l 17.9648 -100.68 c 4.73577 -14.0738 13.766 -19.4771 22.5508 -19.5176 z" FillRule="Nonzero"/>
+                    <PathGeometry Figures="m 254.994 92.9532 c -66.2481 -2.34392 -87.9126 58.0537 -87.9126 58.0537 c 0 0 -20.6613 112.236 -29.8015 168.9 c -5.5663 34.5079 -5.46499 74.7769 -5.46499 74.7769 l 56.7707 6.82837 l 4.80167 -74.9169 c 0 0 38.7691 27.0832 69.8995 15.991 c 31.0493 -11.0633 55.7518 -26.4344 61.3703 -62.2012 c 6.51662 -41.4842 -33.6759 -63.7 -33.6759 -63.7 c 0 0 55.4748 -32.6224 36.9948 -81.4354 c -8.6333 -22.804 -34.5481 -40.937 -72.982 -42.2968 z M 249.112 139.746 c 26.3825 -0.12161 50.8838 40.9213 -15.5297 58.2901 l -2.76119 33.1135 c 64.8356 18.856 35.7188 101.532 -29.3218 49.8482 l 21.1117 -118.315 c 5.56532 -16.5391 16.1773 -22.8888 26.5009 -22.9364 z" FillRule="Nonzero"/>
                 </Path.Data>
             </Path>
         </Canvas>
