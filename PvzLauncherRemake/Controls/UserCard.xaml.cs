@@ -93,6 +93,15 @@ namespace PvzLauncherRemake.Controls
                     "</Grid>";
                 stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
             }
+            if (isNew)
+            {
+                string xaml =
+                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
+                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC6400FF\"/>" +
+                        $"<TextBlock Text=\"新\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
+                    "</Grid>";
+                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
+            }
             if (isActive)
             {
                 string xaml =
