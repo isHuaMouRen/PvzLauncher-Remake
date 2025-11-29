@@ -16,27 +16,20 @@
                 <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10">
                     <TabItem Header="中文原版">
                         <ListBox x:Name="listBox_zhOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="Transparent">
-                            <ctrl:UserCard/>
-                            <ctrl:UserCard isRecommend="True" Icon="beta" isNew="True"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="中文改版">
                         <ListBox x:Name="listBox_zhRevision" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="#00000000">
-                            <ListBoxItem Content="Item3"/>
-                            <ListBoxItem Content="Item4"/>
                         </ListBox>
                     </TabItem>
                     <TabItem Header="英文原版">
                         <ListBox x:Name="listBox_enOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="#00000000">
-                            <ListBoxItem Content="Item5"/>
-                            <ListBoxItem Content="Item6"/>
                         </ListBox>
                     </TabItem>
                 </TabControl>
             </TabItem>
             <TabItem Header="修改器下载">
                 <ListBox x:Name="listBox_trainer" Tag="trainer" SelectionChanged="listBox_SelectionChanged" Background="#00000000">
-                    <ctrl:UserCard SupportVersion="1.0.0.1051"/>
                 </ListBox>
             </TabItem>
         </TabControl>
