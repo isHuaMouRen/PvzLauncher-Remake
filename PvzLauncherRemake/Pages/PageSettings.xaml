@@ -1065,7 +1065,7 @@
                             <TextBlock TextWrapping="Wrap" Text="启用存档隔离后，每个版本使用独立的存档，不会发生串档现象，这仅适用于原版或基于原版存档系统制作的改版。其他引擎重写的或更改了存档系统的版本无效" Margin="0,0,0,10"/>
                             <!--开启存档隔离-->
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="启用存档隔离" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="启用存档隔离:" Margin="0,0,10,0" VerticalAlignment="Center"/>
                                 <CheckBox x:Name="checkBox_EnableIsolationSave" Content="启用" Click="checkBox_EnableIsolationSave_Click"/>
                             </StackPanel>
                         </StackPanel>
