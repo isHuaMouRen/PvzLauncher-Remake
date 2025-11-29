@@ -1047,13 +1047,29 @@
                                             <LinearGradientBrush.RelativeTransform>
                                                 <ScaleTransform CenterY="0.5" ScaleY="-1"/>
                                             </LinearGradientBrush.RelativeTransform>
-                                            <GradientStop Color="#29000000"/>
-                                            <GradientStop Color="#33000000" Offset="1"/>
+                                            <GradientStop Color="#33000000"/>
+                                            <GradientStop Color="#0F000000" Offset="1"/>
                                         </LinearGradientBrush>
                                     </Button.BorderBrush>
                                     <StackPanel Orientation="Horizontal">
                                         <ui:PathIcon Data="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" Height="15" Width="15" VerticalAlignment="Center" Margin="0,0,5,0"/>
                                         <TextBlock Text="删除存档" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <!--迁移-->
+                                <Button x:Name="button_SaveMove" Margin="0,0,10,0" Click="button_SaveMove_Click">
+                                    <Button.BorderBrush>
+                                        <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                                            <LinearGradientBrush.RelativeTransform>
+                                                <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                                            </LinearGradientBrush.RelativeTransform>
+                                            <GradientStop Color="#33000000"/>
+                                            <GradientStop Color="#0F000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.BorderBrush>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ui:PathIcon Width="15" Height="15" Margin="0,0,5,0" Data="m280-120-56-56 63-66q-106-12-176.5-91.5T40-520q0-117 81.5-198.5T320-800h120v80H320q-83 0-141.5 58.5T120-520q0 72 46 127t117 69l-59-59 56-57 160 160-160 160Zm240-40v-280h360v280H520Zm0-360v-280h360v280H520Zm80-80h200v-120H600v120Z"/>
+                                        <TextBlock Text="存档迁移"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>

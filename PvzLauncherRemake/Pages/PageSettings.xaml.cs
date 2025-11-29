@@ -444,15 +444,208 @@ namespace PvzLauncherRemake.Pages
             }
         }
 
-        private void checkBox_EnableIsolationSave_Click(object sender, RoutedEventArgs e)
+        private async void checkBox_EnableIsolationSave_Click(object sender, RoutedEventArgs e)
         {
             if (isInitialized)
             {
-                AppInfo.Config.SaveConfig.EnableSaveIsolation = (bool)checkBox_EnableIsolationSave.IsChecked!;
+                if (checkBox_EnableIsolationSave.IsChecked == true)
+                    await DialogManager.ShowDialogAsync(new ContentDialog
+                    {
+                        Title = "警告",
+                        Content = "开启存档隔离会导致当前存档丢失。请做好备份再开启！",
+                        PrimaryButtonText = "继续开启",
+                        SecondaryButtonText = "取消",
+                        DefaultButton = ContentDialogButton.Primary
+                    }, (() =>
+                    {
+                        AppInfo.Config.SaveConfig.EnableSaveIsolation = true;
+                    }), (() =>
+                    {
+                        checkBox_EnableIsolationSave.IsChecked = false;
+                        AppInfo.Config.SaveConfig.EnableSaveIsolation = false;
+                    }), (() =>
+                    {
+                        checkBox_EnableIsolationSave.IsChecked = false;
+                        AppInfo.Config.SaveConfig.EnableSaveIsolation = false;
+                    }));
+
                 ConfigManager.SaveAllConfig();
             }
         }
 
         #endregion
+
+        private async void button_SaveMove_Click(object sender, RoutedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                if (AppInfo.Config.SaveConfig.EnableSaveIsolation)
+                {
+                    if (AppInfo.GameList.Count >= 2)
+                    {
+                        var listBox = new ListBox();
+                        string originGameName = null!;
+                        string targetGameName = null!;
+                        foreach (var game in AppInfo.GameList)
+                        {
+                            listBox.Items.Add(game.GameInfo.Name);
+                        }
+
+                        await DialogManager.ShowDialogAsync(new ContentDialog
+                        {
+                            Title = "存档迁移",
+                            Content = new StackPanel
+                            {
+                                Children =
+                            {
+                                new TextBlock
+                                {
+                                    Text="存档迁移可以将某个游戏的存档复制到另一个游戏，请选择要复制的游戏",
+                                    Margin=new Thickness(0,0,0,5)
+                                },
+                                listBox
+                            }
+                            },
+                            PrimaryButtonText = "确定",
+                            CloseButtonText = "取消",
+                            DefaultButton = ContentDialogButton.Primary
+                        }, (async () =>
+                        {
+                            if (listBox.SelectedItem != null)
+                            {
+                                originGameName = listBox.SelectedItem.ToString()!;
+
+                                if (Directory.Exists(Path.Combine(AppInfo.GameDirectory, originGameName, ".save")))
+                                {
+
+                                    var targetListBox = new ListBox();
+                                    foreach (var game in AppInfo.GameList)
+                                    {
+                                        if (game.GameInfo.Name != originGameName)
+                                            targetListBox.Items.Add(game.GameInfo.Name);
+                                    }
+
+                                    await DialogManager.ShowDialogAsync(new ContentDialog
+                                    {
+                                        Title = "存档迁移",
+                                        Content = new StackPanel
+                                        {
+                                            Children =
+                                        {
+                                            new TextBlock
+                                            {
+                                                Text="请选择要替换的游戏存档，此操作会将目标游戏的存档覆盖！",
+                                                Margin=new Thickness(0,0,0,5)
+                                            },
+                                            targetListBox
+                                        }
+                                        },
+                                        PrimaryButtonText = "确定",
+                                        CloseButtonText = "取消",
+                                        DefaultButton = ContentDialogButton.Primary
+                                    }, (async () =>
+                                    {
+                                        if (targetListBox.SelectedItem != null)
+                                        {
+                                            targetGameName = targetListBox.SelectedItem.ToString()!;
+
+                                            await DialogManager.ShowDialogAsync(new ContentDialog
+                                            {
+                                                Title = "操作确认",
+                                                Content = new StackPanel
+                                                {
+                                                    Children =
+                                                    {
+                                                    new TextBlock
+                                                    {
+                                                        Text="请确认操作，此操作会将原游戏的存档复制到目标游戏\n这会导致目标游戏的存档被覆盖！",
+                                                        Margin=new Thickness(0,0,0,5)
+                                                    },
+                                                    new TextBlock
+                                                    {
+                                                        Text=$"{originGameName} -> {targetGameName}",
+                                                        HorizontalAlignment=HorizontalAlignment.Center
+                                                    }
+                                                    }
+                                                },
+                                                PrimaryButtonText = "确认",
+                                                CloseButtonText = "取消",
+                                                DefaultButton = ContentDialogButton.Primary
+                                            }, (async () =>
+                                            {
+                                                StartLoad();
+
+                                                await Task.Run(() =>
+                                                {
+                                                    if (Directory.Exists(Path.Combine(AppInfo.GameDirectory, targetGameName, ".save")))
+                                                        Directory.Delete(Path.Combine(AppInfo.GameDirectory, targetGameName, ".save"), true);
+                                                    else
+                                                        Directory.CreateDirectory(Path.Combine(AppInfo.GameDirectory, targetGameName, ".save"));
+                                                });
+                                                await DirectoryManager.CopyDirectoryAsync(Path.Combine(AppInfo.GameDirectory, originGameName, ".save"), Path.Combine(AppInfo.GameDirectory, targetGameName, ".save"));
+
+                                                new NotificationManager().Show(new NotificationContent
+                                                {
+                                                    Title = "迁移成功",
+                                                    Message = $"{originGameName} 的存档已迁移至 {targetGameName}",
+                                                    Type = NotificationType.Success
+                                                });
+
+                                                EndLoad();
+                                            }));
+                                        }
+                                        else
+                                        {
+                                            new NotificationManager().Show(new NotificationContent
+                                            {
+                                                Title = "操作中断",
+                                                Message = "没有选择目标游戏",
+                                                Type = NotificationType.Error
+                                            });
+                                        }
+                                    }));
+                                }
+                                else
+                                {
+                                    new NotificationManager().Show(new NotificationContent
+                                    {
+                                        Title = "操作中断",
+                                        Message = "原游戏无独立存档，请至少启动一次游戏并创建存档",
+                                        Type = NotificationType.Error
+                                    });
+                                }
+                            }
+                            else
+                            {
+                                new NotificationManager().Show(new NotificationContent
+                                {
+                                    Title = "操作中断",
+                                    Message = "没有选择任何游戏",
+                                    Type = NotificationType.Error
+                                });
+                            }
+                        }));
+                    }
+                    else
+                    {
+                        new NotificationManager().Show(new NotificationContent
+                        {
+                            Title = "无法迁移",
+                            Message = "游戏库内少于两个游戏，无法使用此功能",
+                            Type = NotificationType.Warning
+                        });
+                    }
+                }
+                else
+                {
+                    new NotificationManager().Show(new NotificationContent
+                    {
+                        Title = "提示",
+                        Message = "请先启用存档隔离功能",
+                        Type = NotificationType.Warning
+                    });
+                }
+            }
+        }
     }
 }
