@@ -42,8 +42,8 @@
                         <LinearGradientBrush.RelativeTransform>
                             <ScaleTransform CenterY="0.5" ScaleY="-1"/>
                         </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#29000000"/>
-                        <GradientStop Color="#33000000" Offset="1"/>
+                        <GradientStop Color="#33000000"/>
+                        <GradientStop Color="#0F000000" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.BorderBrush>
             </Button>

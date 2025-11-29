@@ -255,9 +255,54 @@ namespace PvzLauncherRemake.Pages
 
                 logger.Info($"[管理: 修改器设置] 开始设置修改器");
                 //控件
-                var buttonDelete = XamlReader.Parse("<Button xmlns:ui=\"http://schemas.modernwpf.com/2019\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" HorizontalAlignment=\"Stretch\" Margin=\"0,0,0,10\" Foreground=\"#E4FF0000\">\r\n<Button.BorderBrush>\r\n<LinearGradientBrush EndPoint=\"0,3\" MappingMode=\"Absolute\">\r\n<LinearGradientBrush.RelativeTransform>\r\n<ScaleTransform CenterY=\"0.5\" ScaleY=\"-1\"/>\r\n</LinearGradientBrush.RelativeTransform>\r\n<GradientStop Color=\"#29000000\"/>\r\n<GradientStop Color=\"#33000000\" Offset=\"1\"/>\r\n</LinearGradientBrush>\r\n</Button.BorderBrush>\r\n<StackPanel Orientation=\"Horizontal\">\r\n<ui:PathIcon Width=\"15\" Height=\"15\" Data=\"M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z\" Margin=\"0,0,5,0\"/>\r\n<TextBlock Text=\"删除修改器\"/>\r\n</StackPanel>\r\n</Button>\r\n") as Button;
-                var buttonRename = XamlReader.Parse("<Button xmlns:ui=\"http://schemas.modernwpf.com/2019\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" HorizontalAlignment=\"Stretch\" Margin=\"0,0,0,10\">\r\n                    <Button.BorderBrush>\r\n                        <LinearGradientBrush EndPoint=\"0,3\" MappingMode=\"Absolute\">\r\n                            <LinearGradientBrush.RelativeTransform>\r\n                                <ScaleTransform CenterY=\"0.5\" ScaleY=\"-1\"/>\r\n                            </LinearGradientBrush.RelativeTransform>\r\n                            <GradientStop Color=\"#29000000\"/>\r\n                            <GradientStop Color=\"#33000000\" Offset=\"1\"/>\r\n                        </LinearGradientBrush>\r\n                    </Button.BorderBrush>\r\n                    <StackPanel Orientation=\"Horizontal\">\r\n                        <ui:PathIcon Height=\"15\" Width=\"15\" Margin=\"0,0,5,0\" Data=\"M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z\"/>\r\n                        <TextBlock Text=\"更改名称\"/>\r\n                    </StackPanel>\r\n                </Button>\r\n") as Button;
-                var buttonOpenFolder = XamlReader.Parse("<Button xmlns:ui=\"http://schemas.modernwpf.com/2019\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" HorizontalAlignment=\"Stretch\">\r\n                    <Button.BorderBrush>\r\n                        <LinearGradientBrush EndPoint=\"0,3\" MappingMode=\"Absolute\">\r\n                            <LinearGradientBrush.RelativeTransform>\r\n                                <ScaleTransform CenterY=\"0.5\" ScaleY=\"-1\"/>\r\n                            </LinearGradientBrush.RelativeTransform>\r\n                            <GradientStop Color=\"#29000000\"/>\r\n                            <GradientStop Color=\"#33000000\" Offset=\"1\"/>\r\n                        </LinearGradientBrush>\r\n                    </Button.BorderBrush>\r\n                    <StackPanel Orientation=\"Horizontal\">\r\n                        <ui:PathIcon Width=\"15\" Height=\"15\" Margin=\"0,0,5,0\" Data=\"M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z\"/>\r\n                        <TextBlock Text=\"打开文件夹\"/>\r\n                    </StackPanel>\r\n                </Button>\r\n") as Button;
+                var buttonDelete = XamlReader.Parse(
+                    "<Button xmlns:ui=\"http://schemas.modernwpf.com/2019\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" HorizontalAlignment=\"Stretch\" Margin=\"0,0,0,10\" Foreground=\"#E4FF0000\">" +
+                        "<Button.BorderBrush>" +
+                            "<LinearGradientBrush EndPoint=\"0,3\" MappingMode=\"Absolute\">" +
+                                "<LinearGradientBrush.RelativeTransform>" +
+                                    "<ScaleTransform CenterY=\"0.5\" ScaleY=\"-1\"/>" +
+                                "</LinearGradientBrush.RelativeTransform>" +
+                                "<GradientStop Color=\"#33000000\"/>" +
+                                "<GradientStop Color=\"#0F000000\" Offset=\"1\"/>" +
+                            "</LinearGradientBrush>" +
+                        "</Button.BorderBrush>" +
+                        "<StackPanel Orientation=\"Horizontal\">" +
+                            "<ui:PathIcon Width=\"15\" Height=\"15\" Data=\"M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z\" Margin=\"0,0,5,0\"/>" +
+                            "<TextBlock Text=\"删除修改器\"/>" +
+                        "</StackPanel>" +
+                    "</Button>") as Button;
+                var buttonRename = XamlReader.Parse(
+                    "<Button xmlns:ui=\"http://schemas.modernwpf.com/2019\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" HorizontalAlignment=\"Stretch\" Margin=\"0,0,0,10\">" +
+                        "<Button.BorderBrush>" +
+                            "<LinearGradientBrush EndPoint=\"0,3\" MappingMode=\"Absolute\">" +
+                                "<LinearGradientBrush.RelativeTransform>" +
+                                    "<ScaleTransform CenterY=\"0.5\" ScaleY=\"-1\"/>" +
+                                "</LinearGradientBrush.RelativeTransform>" +
+                                "<GradientStop Color=\"#33000000\"/>" +
+                                "<GradientStop Color=\"#0F000000\" Offset=\"1\"/>" +
+                            "</LinearGradientBrush>" +
+                        "</Button.BorderBrush>" +
+                        "<StackPanel Orientation=\"Horizontal\">" +
+                            "<ui:PathIcon Height=\"15\" Width=\"15\" Margin=\"0,0,5,0\" Data=\"M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z\"/>" +
+                            "<TextBlock Text=\"更改名称\"/>" +
+                        "</StackPanel>" +
+                    "</Button>") as Button;
+                var buttonOpenFolder = XamlReader.Parse(
+                    "<Button xmlns:ui=\"http://schemas.modernwpf.com/2019\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" HorizontalAlignment=\"Stretch\">" +
+                        "<Button.BorderBrush>" +
+                            "<LinearGradientBrush EndPoint=\"0,3\" MappingMode=\"Absolute\">" +
+                                "<LinearGradientBrush.RelativeTransform>" +
+                                    "<ScaleTransform CenterY=\"0.5\" ScaleY=\"-1\"/>" +
+                                "</LinearGradientBrush.RelativeTransform>" +
+                                "<GradientStop Color=\"#33000000\"/>" +
+                                "<GradientStop Color=\"#0F000000\" Offset=\"1\"/>" +
+                            "</LinearGradientBrush>" +
+                        "</Button.BorderBrush>" +
+                        "<StackPanel Orientation=\"Horizontal\">" +
+                            "<ui:PathIcon Width=\"15\" Height=\"15\" Margin=\"0,0,5,0\" Data=\"M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z\"/>" +
+                            "<TextBlock Text=\"打开文件夹\"/>" +
+                        "</StackPanel>" +
+                    "</Button>") as Button;
 
                 var dialog = new ContentDialog
                 {
