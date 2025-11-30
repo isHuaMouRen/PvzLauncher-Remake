@@ -18,7 +18,6 @@ namespace PvzLauncherRemake.Pages
             logger.Info($"[开发者控制面板:周期循环] 开始进入周期循环");
             while (true)
             {
-                logger.Info($"[开发者控制面板:周期循环] 循环事件触发");
                 await Task.Delay(1000);
 
                 // =====
@@ -31,7 +30,7 @@ namespace PvzLauncherRemake.Pages
                 foreach (FieldInfo field in fields)
                 {
                     string fieldName = field.Name;
-                    object? value = field.GetValue(null); // 静态字段传 null
+                    object? value = field.GetValue(null);
                     text = $"{text}{fieldName} = {value}\n";
                 }
 
@@ -73,16 +72,6 @@ namespace PvzLauncherRemake.Pages
             if (isInitialize)
             {
                 webView2.CoreWebView2.NavigateToString(textBox_WebView.Text);
-
-                /*if (webView2.CoreWebView2 != null)
-                    webView2.CoreWebView2.NavigateToString(textBox_WebView.Text);
-                else
-                    new NotificationManager().Show(new NotificationContent
-                    {
-                        Title = "WebView2",
-                        Message = "核心未完成初始化",
-                        Type = NotificationType.Error
-                    });*/
             }
         }
     }
