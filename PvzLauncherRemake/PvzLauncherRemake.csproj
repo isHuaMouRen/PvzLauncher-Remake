@@ -45,8 +45,4 @@
     </SplashScreen>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dialogs\PageAbout\" />
-  </ItemGroup>
-
 </Project>
