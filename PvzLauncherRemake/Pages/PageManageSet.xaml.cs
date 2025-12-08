@@ -158,7 +158,7 @@ namespace PvzLauncherRemake.Pages
                                 Type = NotificationType.Success
                             });
                             //刷新游戏列表
-                            await GameManager.LoadGameList();
+                            await GameManager.LoadGameListAsync();
 
                             if (AppInfo.GameList.Count > 0 && AppInfo.Config.CurrentGame == GameInfo.GameInfo.Name)
                             {

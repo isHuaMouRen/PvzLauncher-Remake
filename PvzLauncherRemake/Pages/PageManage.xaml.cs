@@ -56,8 +56,8 @@ namespace PvzLauncherRemake.Pages
                 listBox_Trainer.Items.Clear();
                 //加载列表
                 logger.Info($"[管理] 开始加载游戏列表");
-                await GameManager.LoadGameList();
-                await GameManager.LoadTrainerList();
+                await GameManager.LoadGameListAsync();
+                await GameManager.LoadTrainerListAsync();
                 logger.Info($"[管理] 游戏列表加载完毕");
 
                 //游戏库里有东西才加
@@ -337,7 +337,7 @@ namespace PvzLauncherRemake.Pages
 
                         await Task.Run(() => Directory.Delete(Path.Combine(AppInfo.TrainerDirectory, trainerConfig.Name), true));
                         logger.Info($"[管理: 修改器设置] 删除完毕");
-                        await GameManager.LoadTrainerList();
+                        await GameManager.LoadTrainerListAsync();
 
                         if (AppInfo.TrainerList.Count > 0 && AppInfo.Config.CurrentTrainer == trainerConfig.Name)
                         {

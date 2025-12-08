@@ -84,8 +84,8 @@ namespace PvzLauncherRemake
 
 
                 //加载列表
-                await GameManager.LoadGameList();
-                await GameManager.LoadTrainerList();
+                await GameManager.LoadGameListAsync();
+                await GameManager.LoadTrainerListAsync();
 
                 //预加载Page
                 void AddType(Type t)
