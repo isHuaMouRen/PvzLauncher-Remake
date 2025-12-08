@@ -58,59 +58,44 @@ namespace PvzLauncherRemake.Controls
             //清除
             stackPanel_Labels.Children.Clear();
             if (!string.IsNullOrEmpty(Version))
-            {
-                string xaml =
-                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
-                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC969696\"/>" +
-                        $"<TextBlock Text=\"{Version}\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
-                    "</Grid>";
-                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
-            }
+                AddLabel(Version, Color.FromArgb(204, 150, 150, 150), false);
             if (!string.IsNullOrEmpty(Size))
-            {
-                string xaml =
-                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
-                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC009696\"/>" +
-                        $"<TextBlock Text=\"{Size} MB\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
-                    "</Grid>";
-                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
-            }
+                AddLabel($"{Size} MB", Color.FromArgb(204, 0, 150, 150), false);
             if (!string.IsNullOrEmpty(SupportVersion))
-            {
-                string xaml =
-                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
-                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC0000FF\"/>" +
-                        $"<TextBlock Text=\"支持版本: {SupportVersion}\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
-                    "</Grid>";
-                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
-            }
+                AddLabel($"支持版本: {SupportVersion}", Color.FromArgb(204, 0, 0, 255), false);
             if (isRecommend)
-            {
-                string xaml =
-                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
-                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC00FF00\"/>" +
-                        $"<TextBlock Text=\"推荐\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
-                    "</Grid>";
-                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
-            }
+                AddLabel($"推荐", Color.FromArgb(204, 0, 255, 0), true);
             if (isNew)
-            {
-                string xaml =
-                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
-                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CC6400FF\"/>" +
-                        $"<TextBlock Text=\"新\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
-                    "</Grid>";
-                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
-            }
+                AddLabel($"新", Color.FromArgb(204, 100, 0, 255), true);
             if (isActive)
+                AddLabel($"活动", Color.FromArgb(204, 255, 0, 0), true);
+        }
+
+        public void AddLabel(string content, Color color, bool textBold)
+        {
+            var label = new Grid
             {
-                string xaml =
-                    "<Grid Margin=\"0,0,5,0\" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">" +
-                        "<Rectangle Height=\"20\" RadiusY=\"3\" RadiusX=\"3\" Fill=\"#CCFF0000\"/>" +
-                        $"<TextBlock Text=\"活动\" HorizontalAlignment=\"Center\" VerticalAlignment=\"Center\" Foreground=\"White\" Margin=\"5,0,5,0\"/>" +
-                    "</Grid>";
-                stackPanel_Labels.Children.Add(XamlReader.Parse(xaml) as Grid);
-            }
+                Margin = new Thickness(0, 0, 5, 0),
+                Children =
+                {
+                    new Rectangle
+                    {
+                        Height=20,
+                        RadiusX=3,
+                        RadiusY=3,
+                        Fill=new SolidColorBrush(color)
+                    },
+                    new TextBlock
+                    {
+                        Text=content,
+                        HorizontalAlignment=HorizontalAlignment.Center,
+                        VerticalAlignment=VerticalAlignment.Center,
+                        Foreground=new SolidColorBrush(Colors.White),
+                        Margin=new Thickness(5,0,5,0)
+                    }
+                }
+            };
+            stackPanel_Labels.Children.Add(label);
         }
     }
 }
