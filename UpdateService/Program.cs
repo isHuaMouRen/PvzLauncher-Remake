@@ -12,7 +12,7 @@ namespace UpdateService
             try
             {
                 string executePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
-                string updateFilePath = Path.Combine(Path.GetTempPath(), "PVZLAUNCHERUPDATECACHE.zip");
+                string updateFilePath = Path.Combine(Path.GetTempPath(), "PVZLAUNCHERUPDATECACHE");
 
 
 
