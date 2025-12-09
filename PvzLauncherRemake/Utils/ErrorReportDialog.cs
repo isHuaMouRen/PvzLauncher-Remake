@@ -58,9 +58,6 @@ namespace PvzLauncherRemake.Utils
                     new TextBlock
                     {
                         Text = "您可以全选并复制上方内容反馈给开发者",
-                        FontSize = 12,
-                        Foreground = Brushes.LightGray,
-                        HorizontalAlignment = HorizontalAlignment.Right
                     }
                 }
             };
