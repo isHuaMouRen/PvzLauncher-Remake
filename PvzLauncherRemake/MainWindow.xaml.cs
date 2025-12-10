@@ -31,7 +31,10 @@ namespace PvzLauncherRemake
             try
             {
                 logger.Info($"[主窗口] 开始构造...");
-
+                //CI构建检测
+#if IsCiBuild
+                AppInfo.IsCiBuild = true;
+#endif
                 //初始化配置文件
                 if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecuteDirectory, "config.json")))
                 {
@@ -141,6 +144,18 @@ namespace PvzLauncherRemake
                 logger.Info($"[主窗口] isUpdate={AppInfo.Arguments.isUpdate}");
                 logger.Info($"[主窗口] {new string('=', 30)}");
 
+                //Ci提示
+                if (AppInfo.IsCiBuild)
+                {
+                    await DialogManager.ShowDialogAsync(new ContentDialog
+                    {
+                        Title = "警告",
+                        Content = $"你使用的是 Github Actions 自动构建的Ci版本！可能包含很多Bug，不要向仓库反馈关于Ci版本的Bug！",
+                        PrimaryButtonText = "我已确认风险并继续",
+                        DefaultButton = ContentDialogButton.Primary
+                    });
+                }
+
 
                 //是否外壳启动
                 if (!AppInfo.Arguments.isShell && !Debugger.IsAttached)
@@ -191,7 +206,7 @@ namespace PvzLauncherRemake
                 ErrorReportDialog.Show("发生错误", $"加载 MainWindow 发生错误", ex);
             }
         }
-        #endregion
+#endregion
 
 
         public MainWindow() { InitializeComponent(); Initialize(); }

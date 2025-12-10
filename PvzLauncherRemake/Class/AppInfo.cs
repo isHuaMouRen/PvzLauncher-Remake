@@ -19,9 +19,10 @@ namespace PvzLauncherRemake.Class
         public static List<JsonGameInfo.Index> GameList = new List<JsonGameInfo.Index>();//游戏列表
         public static List<JsonTrainerInfo.Index> TrainerList = new List<JsonTrainerInfo.Index>();//修改器
         public static JsonConfig.Index Config = null!;//配置
+        public static bool IsCiBuild = false;//是否为CI构建
         
         //字符串
-        public static readonly string Version = $"1.0.0-rc.2";//版本
+        public static readonly string Version = $"1.0.0-rc.3";//版本
         public static readonly string DownloadIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/download.json";//下载索引
         public static readonly string UpdateIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/update.json";//更新索引
 
