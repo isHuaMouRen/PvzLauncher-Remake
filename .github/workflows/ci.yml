@@ -30,6 +30,8 @@ jobs:
         IS_CI_BUILD: "true"
       run: >
         dotnet publish 
+        "PvzLauncherRemake\PvzLauncherRemake.csproj" 
+        -o "ci" 
         -c Release 
         -r win-x64 
         --self-contained true 
@@ -45,6 +47,6 @@ jobs:
       with:
         name: PvZ-Launcher-Latest
         path: |
-          **/bin/Release/net10.0-windows/win-x64/publish/*.exe
-          **/bin/Release/net10.0-windows/win-x64/publish/*.dll
+          **/ci/*.exe
+          **/ci/*.dll
         if-no-files-found: warn
