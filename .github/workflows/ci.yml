@@ -1,0 +1,50 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main, refactor, shell, update-service ]
+  pull_request:
+    branches: [ main, refactor, shell, update-service ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET 10
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build Release
+      env:
+        IS_CI_BUILD: "true"
+      run: >
+        dotnet publish 
+        -c Release 
+        -r win-x64 
+        --self-contained true 
+        -p:PublishSingleFile=true 
+        -p:IncludeNativeLibrariesForSelfExtract=true 
+        -p:PublishTrimmed=false 
+        -p:EnableCompressionInSingleFile=true 
+        --no-restore 
+        /p:Version=${{ github.sha }} 
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: PvZ-Launcher-Latest
+        path: |
+          **/bin/Release/net10.0-windows/win-x64/publish/*.exe
+          **/bin/Release/net10.0-windows/win-x64/publish/*.dll
+        if-no-files-found: warn
