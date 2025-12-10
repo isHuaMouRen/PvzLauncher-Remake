@@ -2,6 +2,7 @@
 using HuaZi.Library.Json;
 using MdXaml;
 using ModernWpf.Controls;
+using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using System.Diagnostics;
@@ -94,6 +95,17 @@ namespace PvzLauncherRemake.Utils
             }
 
             logger.Info($"[更新器] 准备更新...");
+
+            if (AppDownloader.downloader != null)
+            {
+                new NotificationManager().Show(new NotificationContent
+                {
+                    Title = "启动下载任务失败",
+                    Message = "已经有一个下载任务在执行，请等待任务完成",
+                    Type = NotificationType.Error
+                });
+                return;
+            }
 
             //开始更新
             bool? done = null;
