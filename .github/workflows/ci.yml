@@ -39,7 +39,6 @@ jobs:
         -p:PublishTrimmed=false 
         -p:EnableCompressionInSingleFile=true 
         --no-restore 
-        /p:Version=${{ github.sha }} 
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
