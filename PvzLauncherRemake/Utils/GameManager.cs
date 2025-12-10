@@ -148,7 +148,7 @@ namespace PvzLauncherRemake.Utils
             IsGameRuning = true;
 
             logger.Info($"[启动] 启动操作完毕，等待游戏结束...");
-            await WaitGameExit();
+            await WaitGameExit(gameInfo);
 
             exitCallback?.Invoke();
         }
@@ -156,7 +156,7 @@ namespace PvzLauncherRemake.Utils
         /// <summary>
         /// 等待游戏退出
         /// </summary>
-        public static async Task WaitGameExit()
+        public static async Task WaitGameExit(JsonGameInfo.Index gameInfo)
         {
             await AppProcess.Process.WaitForExitAsync();
 
@@ -168,6 +168,11 @@ namespace PvzLauncherRemake.Utils
                 case "HideAndDisplay":
                     Application.Current.MainWindow.Visibility = Visibility.Visible; break;
             }
+
+
+            //保存游玩时间
+            gameInfo.Record.PlayTime = gameInfo.Record.PlayTime + ((long)(DateTimeOffset.Now - LatestGameLaunchTime!).Value.TotalSeconds);
+            Json.WriteJson(Path.Combine(AppInfo.GameDirectory, gameInfo.GameInfo.Name, ".pvzl.json"), gameInfo);
         }
 
         /// <summary>
