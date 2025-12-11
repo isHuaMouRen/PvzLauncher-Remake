@@ -41,6 +41,18 @@
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
+            <TabItem Header="Markdown渲染测试2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="textBox_Md2" Text="# Title" Grid.Column="0" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextChanged="textBox_Md2_TextChanged"/>
+                    <FlowDocumentScrollViewer Grid.Column="1" x:Name="flowDocumentScrollViewer_Md2"/>
+
+                </Grid>
+            </TabItem>
             <TabItem Header="WebView2测试">
                 <Grid>
                     <Grid.ColumnDefinitions>

@@ -1,7 +1,12 @@
-﻿using Notifications.Wpf;
+﻿using Markdig;
+using MdXaml;
+using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media;
 using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Pages
@@ -42,7 +47,6 @@ namespace PvzLauncherRemake.Pages
         public PageDeveloper()
         {
             InitializeComponent();
-            MainCycle();
             Loaded += (async (s, e) =>
             {
                 logger.Info($"[开发者控制面板] 初始化...");
@@ -60,6 +64,8 @@ namespace PvzLauncherRemake.Pages
                     Type = NotificationType.Success
                 });
             });
+            MainCycle();
+
         }
 
         private void textBox_markdown_TextChanged(object sender, TextChangedEventArgs e)
@@ -72,6 +78,26 @@ namespace PvzLauncherRemake.Pages
             if (isInitialize)
             {
                 webView2.CoreWebView2.NavigateToString(textBox_WebView.Text);
+            }
+        }
+
+        private void textBox_Md2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (isInitialize)
+            {
+                var markdown = new MdXaml.Markdown();
+
+                FlowDocument doc = markdown.Transform(textBox_Md2.Text);
+
+                doc.FontFamily = new FontFamily("Microsoft Yahei UI");
+
+                foreach (Paragraph p in doc.Blocks.OfType<Paragraph>())
+                {
+                    p.LineHeight = 10;
+                    p.LineStackingStrategy = LineStackingStrategy.BlockLineHeight;
+                }
+
+                flowDocumentScrollViewer_Md2.Document = doc;
             }
         }
     }
