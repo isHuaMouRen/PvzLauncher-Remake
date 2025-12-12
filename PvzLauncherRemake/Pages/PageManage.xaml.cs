@@ -15,6 +15,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using static PvzLauncherRemake.Class.AppLogger;
 
@@ -163,6 +164,46 @@ namespace PvzLauncherRemake.Pages
             }
         }
         #endregion
+
+        //tab动画
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (IsInitialized)
+            {
+                var selectItem = ((TabControl)sender).SelectedContent;
+                ListBox animControl = null!;
+
+                if (selectItem is ListBox)
+                {
+                    animControl = (ListBox)selectItem;
+                }
+                else
+                {
+                    return;
+                }
+
+                animControl.BeginAnimation(MarginProperty, null);
+                animControl.BeginAnimation(OpacityProperty, null);
+
+                animControl.Margin = new Thickness(0, 25, 0, 0);
+                animControl.Opacity = 0;
+
+                var margniAnim = new ThicknessAnimation
+                {
+                    To = new Thickness(0),
+                    Duration = TimeSpan.FromMilliseconds(500),
+                    EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+                };
+                var opacAnim = new DoubleAnimation
+                {
+                    To = 1,
+                    Duration = TimeSpan.FromMilliseconds(500),
+                    EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+                };
+                animControl.BeginAnimation(MarginProperty, margniAnim);
+                animControl.BeginAnimation(OpacityProperty, opacAnim);
+            }
+        }
 
         public PageManage() => InitializeComponent();
 

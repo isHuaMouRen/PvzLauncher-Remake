@@ -12,7 +12,7 @@
 
     <Grid>
         <Grid x:Name="grid_Main">
-            <TabControl x:Name="tabControl" Style="{StaticResource TabControlPivotStyle}">
+            <TabControl x:Name="tabControl" Style="{StaticResource TabControlPivotStyle}" SelectionChanged="tabControl_SelectionChanged">
                 <TabItem Header="游戏管理">
                     <ListBox x:Name="listBox" SelectionMode="Single" Background="#00000000" Margin="0,0,0,10">
                         <ListBox.ItemContainerStyle>
