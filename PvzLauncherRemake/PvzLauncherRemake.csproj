@@ -8,6 +8,8 @@
     <UseWPF>true</UseWPF>
     <NoWarn>NU1701</NoWarn>
     <RuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimeIdentifiers>
+    <ApplicationIcon>Assets\Icon\Icon.ico</ApplicationIcon>
+
 
     <SatelliteResourceLanguages>none</SatelliteResourceLanguages>
     <ExcludeAllSatelliteAssemblies>true</ExcludeAllSatelliteAssemblies>
