@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="PvzLauncherRemake.Controls.UserTaskCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             xmlns:local="clr-namespace:PvzLauncherRemake.Controls"
+             mc:Ignorable="d">
+    <StackPanel>
+        <Grid Margin="10,10,10,0">
+            <TextBlock x:Name="textBlock_Title" Text="Title" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="18"/>
+            <Button x:Name="button_Cancel" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Button_Click">
+                <ui:PathIcon Height="15" Width="15" Data="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </Button>
+        </Grid>
+        <Grid Margin="10,10,10,10">
+            <ui:ProgressRing IsActive="True" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <ProgressBar x:Name="progressBar" Value="50" Margin="30,0,0,0" Background="#19000000" VerticalAlignment="Bottom"/>
+            <TextBlock x:Name="textBlock_Progress" Text="100%" Margin="30,0,0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="textBlock_Speed" Text="100Mb/s" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,14"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

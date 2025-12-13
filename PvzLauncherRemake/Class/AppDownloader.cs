@@ -11,6 +11,10 @@ namespace PvzLauncherRemake.Class
 {
     public class AppDownloader
     {
+        public static event Action<DownloadTaskInfo>? TaskAdded;
+        public static event Action<DownloadTaskInfo>? TaskRemoved;
+
+
         //主任务列表
         public static List<DownloadTaskInfo> DownloadTaskList = new List<DownloadTaskInfo>();
 
@@ -34,6 +38,8 @@ namespace PvzLauncherRemake.Class
                             Message = $"无法下载 {taskInfo.TaskName}\n\n错误信息: {e}",
                             Type = NotificationType.Error
                         });
+                        DownloadTaskList.Remove(taskInfo);
+                        TaskRemoved?.Invoke(taskInfo);
                         return;
                     }
 
@@ -95,6 +101,8 @@ namespace PvzLauncherRemake.Class
                         Message = $"成功完成任务 \"{taskInfo.TaskName}\"",
                         Type = NotificationType.Success
                     });
+                    DownloadTaskList.Remove(taskInfo);
+                    TaskRemoved?.Invoke(taskInfo);
                 }),
                 Progress = ((p, s) =>
                 {
@@ -106,7 +114,7 @@ namespace PvzLauncherRemake.Class
             };
 
             DownloadTaskList.Add(taskInfo);
-
+            TaskAdded?.Invoke(taskInfo);
             StartTask(taskInfo);
         }
 
@@ -131,6 +139,7 @@ namespace PvzLauncherRemake.Class
             if (task != null)
             {
                 task.Downloader?.StartDownload();
+                TaskRemoved?.Invoke(task);
             }
         }
 

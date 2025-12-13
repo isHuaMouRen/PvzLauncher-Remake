@@ -96,6 +96,7 @@ namespace PvzLauncherRemake
                 AddType(typeof(PageManage));
                 AddType(typeof(PageDownload));
 
+                AddType(typeof(PageTask));
                 AddType(typeof(PageSettings));
                 AddType(typeof(PageAbout));
 
