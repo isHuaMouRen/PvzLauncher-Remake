@@ -87,6 +87,9 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
+                double progressSum = 0;
+                double progressAverage = 0;
+
                 foreach (UserTaskCard card in listBox_Task.Items)
                 {
                     if (card.Tag != null)
@@ -96,6 +99,13 @@ namespace PvzLauncherRemake.Pages
                         card.UpdateControl();
                     }
                 }
+                foreach (var task in AppDownloader.DownloadTaskList)
+                    progressSum = progressSum + task.Progress;
+                progressAverage = progressSum / AppDownloader.DownloadTaskList.Count;
+
+                textBlock_Average.Text = $"总进度: {(double.IsNaN(progressAverage) ? "0" : Math.Round(progressAverage, 2))}%";
+                progressBar_Average.Value = double.IsNaN(progressAverage) ? 0 : progressAverage;
+
             }
             catch (Exception ex)
             {
