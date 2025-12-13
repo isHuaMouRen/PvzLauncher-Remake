@@ -22,7 +22,7 @@ namespace PvzLauncherRemake.Class
         public static Random Random = new Random();//随机数生成器
         
         //字符串
-        public static readonly string Version = $"1.0.0-rc.6";//版本
+        public static readonly string Version = $"1.0.0-rc.7";//版本
         public static readonly string DownloadIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/download.json";//下载索引
         public static readonly string UpdateIndexUrl = "https://gitee.com/huamouren110/UpdateService/raw/main/PvzLauncherRemake/update.json";//更新索引
 
