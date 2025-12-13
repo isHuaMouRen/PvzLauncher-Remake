@@ -16,7 +16,7 @@
                 <TextBlock x:Name="textBlock_Average" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
                 <ProgressBar x:Name="progressBar_Average" Background="#19000000" VerticalAlignment="Bottom"/>
             </Grid>
-            <ListBox x:Name="listBox_Task" Background="#00000000" Margin="0,40,0,0">
+            <ListBox x:Name="listBox_Task" Background="#00000000" Margin="0,40,0,0" VirtualizingPanel.ScrollUnit="Pixel">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>

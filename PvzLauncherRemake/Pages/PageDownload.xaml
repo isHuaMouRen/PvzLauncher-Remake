@@ -15,21 +15,21 @@
             <TabItem Header="游戏下载">
                 <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10" SelectionChanged="tabControl_Main_SelectionChanged">
                     <TabItem Header="中文原版">
-                        <ListBox x:Name="listBox_zhOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="Transparent">
+                        <ListBox x:Name="listBox_zhOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="Transparent" VirtualizingPanel.ScrollUnit="Pixel">
                         </ListBox>
                     </TabItem>
                     <TabItem Header="中文改版">
-                        <ListBox x:Name="listBox_zhRevision" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="#00000000">
+                        <ListBox x:Name="listBox_zhRevision" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="#00000000" VirtualizingPanel.ScrollUnit="Pixel">
                         </ListBox>
                     </TabItem>
                     <TabItem Header="英文原版">
-                        <ListBox x:Name="listBox_enOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="#00000000">
+                        <ListBox x:Name="listBox_enOrigin" Tag="game" SelectionChanged="listBox_SelectionChanged" Background="#00000000" VirtualizingPanel.ScrollUnit="Pixel">
                         </ListBox>
                     </TabItem>
                 </TabControl>
             </TabItem>
             <TabItem Header="修改器下载">
-                <ListBox x:Name="listBox_trainer" Tag="trainer" SelectionChanged="listBox_SelectionChanged" Background="#00000000">
+                <ListBox x:Name="listBox_trainer" Tag="trainer" SelectionChanged="listBox_SelectionChanged" Background="#00000000" VirtualizingPanel.ScrollUnit="Pixel">
                 </ListBox>
             </TabItem>
         </TabControl>
