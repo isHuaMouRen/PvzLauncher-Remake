@@ -14,20 +14,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Dialogs\**" />
-    <EmbeddedResource Remove="Dialogs\**" />
-    <None Remove="Dialogs\**" />
-    <Page Remove="Dialogs\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Assets\bitmap\background.png" />
     <None Remove="Assets\Icon\Icon.ico" />
     <None Remove="Splash\SplashScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\bitmap\background.png" />
     <Content Include="Assets\Icon\Icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
