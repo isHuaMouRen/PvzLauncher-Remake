@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using ModernWpf.Controls;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -7,7 +7,7 @@ namespace PvzLauncherRemake.Utils
 {
     public class AnimationPlayer
     {
-        public static async Task PlayListBoxAnimation(ListBox listBox, double playDelay = 20)
+        public static async Task PlayListBoxAnimation(ListBox listBox, int playDelay = 20)
         {
             List<UserControl> animationControls = new List<UserControl>();
             animationControls.Clear();
@@ -17,9 +17,9 @@ namespace PvzLauncherRemake.Utils
                 if (listBox.Items[0] is not UserControl)
                     return;
 
-                if (listBox.Items[0] is UserControl item)
+                foreach (var item in listBox.Items)
                 {
-                    animationControls.Add(item);
+                    animationControls.Add((UserControl)item);
                 }
 
                 var animation = new ThicknessAnimation
@@ -30,13 +30,14 @@ namespace PvzLauncherRemake.Utils
                 };
 
                 foreach (var ctrl in animationControls)
-                    ctrl.Margin = new Thickness(-ctrl.Width, 0, -ctrl.Width, 0);
+                    ctrl.Margin = new Thickness(0 - ctrl.ActualWidth, 0, 0 - ctrl.ActualWidth, 0);
 
-                await Task.Delay(20);
+                await Task.Delay(playDelay);
 
                 foreach (var ctrl in animationControls)
                 {
                     ctrl.BeginAnimation(FrameworkElement.MarginProperty, animation);
+                    await Task.Delay(20);
                 }
             }
         }
