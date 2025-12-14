@@ -1027,7 +1027,26 @@
                             </StackPanel>
                         </StackPanel>
                         
-                        
+                        <!--存储-->
+                        <StackPanel Margin="0,0,0,10">
+                            <TextBlock Text="存储" FontWeight="Bold" FontSize="25"/>
+                            
+                            <!--下载缓存-->
+                            <StackPanel x:Name="sp11" Orientation="Horizontal">
+                                <TextBlock Text="下载缓存:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                <Button Content="清理" Click="Launcher_ClearTemp">
+                                    <Button.BorderBrush>
+                                        <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                                            <LinearGradientBrush.RelativeTransform>
+                                                <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                                            </LinearGradientBrush.RelativeTransform>
+                                            <GradientStop Color="#33000000"/>
+                                            <GradientStop Color="#0F000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.BorderBrush>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
 
                     </StackPanel>
                 </ctrl:UserScrollViewer>

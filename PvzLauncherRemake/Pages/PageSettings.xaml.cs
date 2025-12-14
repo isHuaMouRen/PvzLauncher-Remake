@@ -83,7 +83,7 @@ namespace PvzLauncherRemake.Pages
                 logger.Info($"[设置] 开始初始化");
 
                 //动画归位
-                StackPanel[] sps = { sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10 };
+                StackPanel[] sps = { sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11 };
                 foreach (var sp in sps)
                 {
                     logger.Info($"[设置: 动画] 动画元素 {sp.Name} 归位");
@@ -424,6 +424,107 @@ namespace PvzLauncherRemake.Pages
             }
         }
 
+        private async void Launcher_ClearTemp(object sender, RoutedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                try
+                {
+                    StartLoad();
+                    textBlock_Loading.Text = "扫描临时文件夹...";
+
+                    string[] allTempFiles = { };//全部临时文件
+                    List<string> pvzLauncherFiles = new List<string>();//PvzLauncher的临时文件
+                    double tempFilesSize = 0;//缓存文件总大小
+
+
+                    await Task.Run(() =>
+                    {
+                        allTempFiles = Directory.GetFiles(AppInfo.TempDiectory);
+                    });
+
+                    if (!(allTempFiles.Length > 0))
+                    {
+                        new NotificationManager().Show(new NotificationContent
+                        {
+                            Title = "清理完成",
+                            Message = "临时文件夹是空的，无需清除",
+                            Type = NotificationType.Success
+                        });
+                        EndLoad();
+                        return;
+                    }
+
+                    pvzLauncherFiles.Clear();
+                    foreach (var file in allTempFiles)
+                    {
+                        if (Path.GetFileName(file).StartsWith("PvzLauncher", StringComparison.OrdinalIgnoreCase))
+                        {
+                            pvzLauncherFiles.Add(file);
+                            tempFilesSize = tempFilesSize + new FileInfo(file).Length;
+                        }
+                    }
+
+                    if (!(pvzLauncherFiles.Count > 0))
+                    {
+                        new NotificationManager().Show(new NotificationContent
+                        {
+                            Title = "清理完成",
+                            Message = "没有需要清理的缓存文件",
+                            Type = NotificationType.Success
+                        });
+                        EndLoad();
+                        return;
+                    }
+
+                    bool isClear = false;
+                    await DialogManager.ShowDialogAsync(new ContentDialog
+                    {
+                        Title = "发现缓存文件",
+                        Content = $"发现了 {pvzLauncherFiles.Count} 个来自PvzLauncher的缓存文件, 共 {Math.Round(tempFilesSize / (1024 * 1024), 2)}MB, 是否清理?",
+                        PrimaryButtonText = "清理",
+                        CloseButtonText = "取消",
+                        DefaultButton = ContentDialogButton.Primary
+                    }, (() => isClear = true));
+
+                    if (!isClear)
+                    {
+                        EndLoad();
+                        return;
+                    }
+
+
+                    await Task.Run(() =>
+                    {
+                        foreach (var file in pvzLauncherFiles)
+                        {
+                            Dispatcher.BeginInvoke(() =>
+                            {
+                                textBlock_Loading.Text = $"正在删除 {Path.GetFileName(file)}";
+                            });
+                            File.Delete(file);
+                        }
+                    });
+
+                    new NotificationManager().Show(new NotificationContent
+                    {
+                        Title = "清理完成",
+                        Message = $"已清理所有缓存文件，共 {Math.Round(tempFilesSize / (1024 * 1024), 2)}MB",
+                        Type = NotificationType.Success
+                    });
+
+
+
+                    EndLoad();
+                }
+                catch (Exception ex)
+                {
+                    ErrorReportDialog.Show("发生错误", null!, ex);
+                }
+                
+            }
+        }
+
         #endregion
 
         #region 存档设置
@@ -692,9 +793,8 @@ namespace PvzLauncherRemake.Pages
             }
         }
 
+
+
         #endregion
-
-
-
     }
 }
