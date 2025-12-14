@@ -31,6 +31,7 @@ namespace PvzLauncherRemake.Controls
         public bool isRecommend { get; set; }
         public bool isNew { get; set; }
         public bool isActive { get; set; }
+        public object AttachedProperty { get; set; }
 
         public UserCard()
         {
