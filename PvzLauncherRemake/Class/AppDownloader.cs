@@ -2,6 +2,7 @@
 using HuaZi.Library.Json;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class.JsonConfigs;
+using PvzLauncherRemake.Utils;
 using SharpCompress.Archives;
 using SharpCompress.Common;
 using System.IO;
@@ -53,11 +54,11 @@ namespace PvzLauncherRemake.Class
                     //解压
                     await Task.Run(() =>
                     {
-                        ArchiveFactory.WriteToDirectory(originDownloader!.SavePath, taskInfo.SavePath, new ExtractionOptions
+                        CompressExtracter.ExtractWithProgress(originDownloader!.SavePath, taskInfo.SavePath, ((p) =>
                         {
-                            ExtractFullPath = true,
-                            Overwrite = true
-                        });
+                            taskInfo.ExtractProgress = p;
+                            logger.Info($"{p}");
+                        }));
                     });
 
 
@@ -186,6 +187,7 @@ namespace PvzLauncherRemake.Class
 
         public double Progress { get; set; } = 0.0;//下载进度%
         public double Speed { get; set; } = 0.0;//下载速度Mb/s
+        public double ExtractProgress { get; set; } = 0.0;//解压进度%
     }
 
     public enum TaskType
