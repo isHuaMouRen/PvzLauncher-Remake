@@ -14,7 +14,7 @@
                         <ScaleTransform CenterY="0.5" ScaleY="-1"/>
                     </LinearGradientBrush.RelativeTransform>
                     <GradientStop Color="#33000000"/>
-                    <GradientStop Color="#0F000000" Offset="1"/>
+                    <GradientStop Color="#19000000" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
         </Border>
