@@ -37,14 +37,15 @@ namespace PvzLauncherRemake.Pages
         {
             try
             {
-                listBox_Task.Items.Clear();
+                stackPanel_Tasks.Children.Clear();
 
                 foreach (var task in AppDownloader.DownloadTaskList)
                 {
                     var card = new UserTaskCard
                     {
                         Title = task.TaskName!,
-                        Tag = task
+                        Tag = task,
+                        Margin = new Thickness(5, 5, 5, 5)
                     };
                     card.button_Cancel.Click += (s, e) =>
                     {
@@ -55,7 +56,7 @@ namespace PvzLauncherRemake.Pages
                     };
 
                     card.UpdateControl();
-                    listBox_Task.Items.Add(card);
+                    stackPanel_Tasks.Children.Add(card);
                 }
 
                 ShowNoneTip();
@@ -90,7 +91,7 @@ namespace PvzLauncherRemake.Pages
                 double progressSum = 0;
                 double progressAverage = 0;
 
-                foreach (UserTaskCard card in listBox_Task.Items)
+                foreach (UserTaskCard card in stackPanel_Tasks.Children)
                 {
                     if (card.Tag != null)
                     {
@@ -131,7 +132,7 @@ namespace PvzLauncherRemake.Pages
                 card.button_Cancel.Click += (s, e) => AppDownloader.StopTask(task);
 
                 card.UpdateControl();
-                listBox_Task.Items.Add(card);
+                stackPanel_Tasks.Children.Add(card);
             });
         }
 
@@ -141,12 +142,12 @@ namespace PvzLauncherRemake.Pages
             {
                 ShowNoneTip();
 
-                for (int i = listBox_Task.Items.Count - 1; i >= 0; i--)
+                for (int i = stackPanel_Tasks.Children.Count - 1; i >= 0; i--)
                 {
-                    if (listBox_Task.Items[i] is UserTaskCard card &&
+                    if (stackPanel_Tasks.Children[i] is UserTaskCard card &&
                         ReferenceEquals(card.Tag, task))  // 使用引用比较
                     {
-                        listBox_Task.Items.RemoveAt(i);
+                        stackPanel_Tasks.Children.RemoveAt(i);
                         break;
                     }
                 }

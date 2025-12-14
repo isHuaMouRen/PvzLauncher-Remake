@@ -16,18 +16,13 @@
                 <TextBlock x:Name="textBlock_Average" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
                 <ProgressBar x:Name="progressBar_Average" Background="#19000000" VerticalAlignment="Bottom"/>
             </Grid>
-            <ListBox x:Name="listBox_Task" Background="#00000000" Margin="0,40,0,0" VirtualizingPanel.ScrollUnit="Pixel">
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="ListBoxItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
-                        <Setter Property="Padding" Value="5"/>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-                <controls:UserTaskCard/>
-                <controls:UserTaskCard/>
-                <controls:UserTaskCard/>
-            </ListBox>
+            <controls:UserScrollViewer Margin="0,40,0,0">
+                <StackPanel x:Name="stackPanel_Tasks" Background="#00000000" VirtualizingPanel.ScrollUnit="Pixel">
+                    <controls:UserTaskCard/>
+                    <controls:UserTaskCard/>
+                    <controls:UserTaskCard/>
+                </StackPanel>
+            </controls:UserScrollViewer>
         </Grid>
 
         <TextBlock x:Name="textBlock_None" Text="这里似乎什么都没有，去下载页看看吧！" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="25" Visibility="Hidden"/>
