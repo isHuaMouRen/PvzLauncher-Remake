@@ -7,7 +7,7 @@ namespace PvzLauncherRemake.Utils
 {
     public class AnimationPlayer
     {
-        public static async Task PlayListBoxAnimation(ListBox listBox, Type listBoxItemType, double playDelay = 20)
+        public static async Task PlayListBoxAnimation(ListBox listBox, double playDelay = 20)
         {
             List<UserControl> animationControls = new List<UserControl>();
             animationControls.Clear();
