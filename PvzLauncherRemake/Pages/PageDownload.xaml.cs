@@ -45,6 +45,7 @@ namespace PvzLauncherRemake.Pages
                     isNew = gameInfo.IsNew,
                     isRecommend = gameInfo.IsRecommend,
                     Tag = gameInfo,
+                    AttachedProperty = "Game",
                     Margin = new Thickness(0, 0, 0, 5)
                 };
                 card.MouseUp += UserCard_Click;
@@ -67,6 +68,7 @@ namespace PvzLauncherRemake.Pages
                     isNew = trainerInfo.IsNew,
                     isRecommend = trainerInfo.IsRecommend,
                     Tag = trainerInfo,
+                    AttachedProperty = "Trainer",
                     Margin = new Thickness(0, 0, 0, 5)
                 };
                 card.MouseUp += UserCard_Click;
@@ -187,7 +189,7 @@ namespace PvzLauncherRemake.Pages
         {
             if (sender is not UserCard userCard) return;
 
-            bool isTrainer = userCard.Tag?.ToString() == "trainer";
+            bool isTrainer = userCard.AttachedProperty.ToString() == "Trainer";
             var info = isTrainer ? (JsonDownloadIndex.TrainerInfo)userCard.Tag! : (JsonDownloadIndex.GameInfo)userCard.Tag!;
             string baseDirectory =
                 isTrainer ? AppInfo.TrainerDirectory :
