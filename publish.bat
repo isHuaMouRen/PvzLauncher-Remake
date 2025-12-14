@@ -23,5 +23,9 @@ xcopy "publish\*.*" "%targetDir%\" /s /e /y /i
 
 del "%targetDir%\PvzLauncher.deps.json"
 del "%targetDir%\PvzLauncher.pdb"
+del "%targetDir%\bin\PvzLauncherRemake.deps.json"
+del "%targetDir%\bin\PvzLauncherRemake.pdb"
+del "%targetDir%\bin\UpdateService.deps.json"
+del "%targetDir%\bin\UpdateService.pdb"
 
 pause
