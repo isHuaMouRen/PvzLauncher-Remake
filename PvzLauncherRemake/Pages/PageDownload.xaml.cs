@@ -29,7 +29,7 @@ namespace PvzLauncherRemake.Pages
         private JsonDownloadIndex.Index DownloadIndex = null!;
 
         #region AddCard
-        private void AddGameCard(ListBox listBox, JsonDownloadIndex.GameInfo[] gameInfos)
+        private void AddGameCard(StackPanel stackPanel, JsonDownloadIndex.GameInfo[] gameInfos)
         {
             foreach (var gameInfo in gameInfos)
             {
@@ -44,13 +44,15 @@ namespace PvzLauncherRemake.Pages
                     Size = gameInfo.Size.ToString(),
                     isNew = gameInfo.IsNew,
                     isRecommend = gameInfo.IsRecommend,
-                    Tag = gameInfo
+                    Tag = gameInfo,
+                    Margin = new Thickness(0, 0, 0, 5)
                 };
+                card.MouseUp += UserCard_Click;
                 logger.Info($"[下载] 添加游戏卡片: Title: {card.Title} | Icon: {card.Icon} | Version: {card.Version}");
-                listBox.Items.Add(card);
+                stackPanel.Children.Add(card);
             }
         }
-        private void AddTrainerCard(ListBox listBox, JsonDownloadIndex.TrainerInfo[] trainerInfos)
+        private void AddTrainerCard(StackPanel stackPanel, JsonDownloadIndex.TrainerInfo[] trainerInfos)
         {
             foreach (var trainerInfo in trainerInfos)
             {
@@ -64,10 +66,12 @@ namespace PvzLauncherRemake.Pages
                     SupportVersion = trainerInfo.SupportVersion,
                     isNew = trainerInfo.IsNew,
                     isRecommend = trainerInfo.IsRecommend,
-                    Tag = trainerInfo
+                    Tag = trainerInfo,
+                    Margin = new Thickness(0, 0, 0, 5)
                 };
+                card.MouseUp += UserCard_Click;
                 logger.Info($"[下载] 添加修改器卡片: Title: {card.Title} | Icon: {card.Icon} | Version: {card.Version}");
-                listBox.Items.Add(card);
+                stackPanel.Children.Add(card);
             }
         }
         #endregion
@@ -107,15 +111,15 @@ namespace PvzLauncherRemake.Pages
 
                 //中文原版
                 logger.Info($"[下载] 开始加载中文原版游戏列表");
-                listBox_zhOrigin.Items.Clear();
-                listBox_zhRevision.Items.Clear();
-                listBox_enOrigin.Items.Clear();
-                listBox_trainer.Items.Clear();
+                stackPanel_zhOrigin.Children.Clear();
+                stackPanel_zhRevision.Children.Clear();
+                stackPanel_enOrigin.Children.Clear();
+                stackPanel_trainer.Children.Clear();
 
-                AddGameCard(listBox_zhOrigin, DownloadIndex.ZhOrigin);
-                AddGameCard(listBox_zhRevision, DownloadIndex.ZhRevision);
-                AddGameCard(listBox_enOrigin, DownloadIndex.EnOrigin);
-                AddTrainerCard(listBox_trainer, DownloadIndex.Trainer);
+                AddGameCard(stackPanel_zhOrigin, DownloadIndex.ZhOrigin);
+                AddGameCard(stackPanel_zhRevision, DownloadIndex.ZhRevision);
+                AddGameCard(stackPanel_enOrigin, DownloadIndex.EnOrigin);
+                AddTrainerCard(stackPanel_trainer, DownloadIndex.Trainer);
 
                 EndLoad();
                 logger.Info($"[下载] 结束初始化");
@@ -179,12 +183,12 @@ namespace PvzLauncherRemake.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e) => Initialize();
 
-        private async void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void UserCard_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is not ListBox lisbox || lisbox.SelectedItem is not UserCard card) return;
+            if (sender is not UserCard userCard) return;
 
-            bool isTrainer = lisbox.Tag?.ToString() == "trainer";
-            var info = isTrainer ? (JsonDownloadIndex.TrainerInfo)card.Tag : (JsonDownloadIndex.GameInfo)card.Tag;
+            bool isTrainer = userCard.Tag?.ToString() == "trainer";
+            var info = isTrainer ? (JsonDownloadIndex.TrainerInfo)userCard.Tag! : (JsonDownloadIndex.GameInfo)userCard.Tag!;
             string baseDirectory =
                 isTrainer ? AppInfo.TrainerDirectory :
                 AppInfo.GameDirectory;
