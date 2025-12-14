@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -96,6 +97,62 @@ namespace PvzLauncherRemake.Controls
                 }
             };
             stackPanel_Labels.Children.Add(label);
+        }
+
+        private void rectangle_MouseTrigger_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var animation = new DoubleAnimation
+            {
+                To = 1,
+                Duration = TimeSpan.FromMilliseconds(200),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+            border.BeginAnimation(OpacityProperty, null);
+            border.BeginAnimation(OpacityProperty, animation);
+        }
+
+        private void rectangle_MouseTrigger_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var animation = new DoubleAnimation
+            {
+                To = 0,
+                From = 1,
+                Duration = TimeSpan.FromMilliseconds(500),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+            border.BeginAnimation(OpacityProperty, null);
+            border.BeginAnimation(OpacityProperty, animation);
+        }
+
+        private void rectangle_MouseTrigger_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var animation = new DoubleAnimation
+            {
+                To = 0.98,
+                Duration = TimeSpan.FromMilliseconds(200),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, null);
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, null);
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
+        }
+
+        private void rectangle_MouseTrigger_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            var animation = new DoubleAnimation
+            {
+                To = 1,
+                From = 0.98,
+                Duration = TimeSpan.FromMilliseconds(500),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, null);
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, null);
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
+            grid_Content_ScaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
         }
     }
 }
