@@ -24,7 +24,7 @@ namespace PvzLauncherRemake.Controls
     /// </summary>
     public partial class UserCard : UserControl
     {
-        
+
 
         public string Title { get; set; } = "Title";
         public string Description { get; set; }
@@ -48,14 +48,12 @@ namespace PvzLauncherRemake.Controls
                 //图标
                 switch (Icon)
                 {
-                    case GameIcons.Origin:
-                        viewBox_Icon.Child = new GameIconOrigin();break;
-                    case GameIcons.GOTY:
-                        viewBox_Icon.Child = new GameIconGoty();break;
-                    case GameIcons.Beta:
-                        viewBox_Icon.Child = new GameIconBeta();break;
-                    case GameIcons.Tat:
-                        viewBox_Icon.Child = new GameIconTat();break;
+                    case GameIcons.Unknown: viewBox_Icon.Child = new GameIconUnknown(); break;
+
+                    case GameIcons.Origin: viewBox_Icon.Child = new GameIconOrigin(); break;
+                    case GameIcons.GOTY: viewBox_Icon.Child = new GameIconGoty(); break;
+                    case GameIcons.Beta: viewBox_Icon.Child = new GameIconBeta(); break;
+                    case GameIcons.Tat: viewBox_Icon.Child = new GameIconTat(); break;
                 }
 
                 SetLabels();

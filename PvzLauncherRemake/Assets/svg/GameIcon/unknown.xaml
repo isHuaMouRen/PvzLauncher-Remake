@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Viewbox xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" Name="unknown">
+    <Canvas UseLayoutRounding="False" Width="512.0" Height="512.0">
+        <Canvas.Clip>
+            <RectangleGeometry Rect="0,0,512.0,512.0"/>
+        </Canvas.Clip>
+        <Canvas UseLayoutRounding="False">
+            <Rectangle RadiusX="0.0" RadiusY="0.0" Canvas.Left="256.0" Canvas.Top="256.0" Width="256.0" Height="256.0" Fill="#ffff00ff"/>
+            <Rectangle RadiusX="0.0" RadiusY="0.0" Canvas.Left="0.0" Canvas.Top="256.0" Width="256.0" Height="256.0" Fill="#ff000000"/>
+            <Rectangle RadiusX="0.0" RadiusY="0.0" Canvas.Left="256.0" Canvas.Top="0.0" Width="256.0" Height="256.0" Fill="#ff000000"/>
+            <Rectangle RadiusX="0.0" RadiusY="0.0" Canvas.Left="0.0" Canvas.Top="0.0" Width="256.0" Height="256.0" Fill="#ffff00ff"/>
+        </Canvas>
+    </Canvas>
+</Viewbox>
