@@ -3,6 +3,7 @@ using ModernWpf.Controls;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
+using PvzLauncherRemake.Controls;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -285,6 +286,52 @@ namespace PvzLauncherRemake.Utils
                         Message = $"库内仍然有与 \"{textBox.Text}\" 同名的文件夹，请继续解决",
                         Type = NotificationType.Warning
                     });
+            }
+        }
+
+        /// <summary>
+        /// 将图标字符串转换为枚举类型
+        /// </summary>
+        /// <param name="iconName">图标字符串，一般是下载索引获取的</param>
+        /// <returns></returns>
+        public static GameIcons ParseToGameIcons(string iconName)
+        {
+            switch (iconName)
+            {
+                case "origin":
+                    return GameIcons.Origin;
+                case "goty":
+                    return GameIcons.GOTY;
+                case "steam":
+                    return GameIcons.Steam;
+                case "test":
+                    return GameIcons.Test;
+                case "beta":
+                    return GameIcons.Beta;
+                case "ghtr":
+                    return GameIcons.Ghtr;
+                case "dream":
+                    return GameIcons.Dream;
+                case "ninefive":
+                    return GameIcons.NineFive;
+                case "he":
+                    return GameIcons.Hybrid;
+                case "fe":
+                    return GameIcons.Fusion;
+                case "tat":
+                    return GameIcons.Tat;
+
+                case "pvztoolkit":
+                    return GameIcons.PvzToolkit;
+                case "ce":
+                    return GameIcons.CheatEngine;
+
+                case "unknown":
+                    return GameIcons.Unknown;
+
+
+                default:
+                    return GameIcons.Unknown;
             }
         }
 
