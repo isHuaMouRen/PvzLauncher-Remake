@@ -58,8 +58,7 @@ namespace PvzLauncherRemake.Pages
                     GameInfo.GameInfo.VersionType == "zh_revison" ? "中文改版" :
                     GameInfo.GameInfo.VersionType == "en_origin" ? "英文原版" : "未知";
                 userGameCard.Version = $"{version} {GameInfo.GameInfo.Version}";
-                userGameCard.Icon =
-                    GameInfo.GameInfo.Version.StartsWith("β") ? GameIcons.Beta : GameIcons.Origin;
+                userGameCard.Icon = GameManager.ParseToGameIcons(GameInfo.GameInfo.Icon);
                 logger.Info($"[游戏设置] 传入的游戏信息: {JsonConvert.SerializeObject(GameInfo)}");
 
                 //统计信息
