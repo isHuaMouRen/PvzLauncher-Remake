@@ -15,18 +15,10 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PvzLauncherRemake.Class;
 
 namespace PvzLauncherRemake.Controls
 {
-    public enum GameIcons
-    {
-        Origin,
-        GOTY,
-        Beta,
-        Tat
-    }
-
-
     /// <summary>
     /// UserCard.xaml 的交互逻辑
     /// </summary>
