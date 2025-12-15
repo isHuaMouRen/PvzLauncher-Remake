@@ -21,6 +21,7 @@ namespace PvzLauncherRemake.Controls
     public enum GameIcons
     {
         Origin,
+        GOTY,
         Beta,
         Tat
     }
@@ -57,6 +58,8 @@ namespace PvzLauncherRemake.Controls
                 {
                     case GameIcons.Origin:
                         viewBox_Icon.Child = new GameIconOrigin();break;
+                    case GameIcons.GOTY:
+                        viewBox_Icon.Child = new GameIconGoty();break;
                     case GameIcons.Beta:
                         viewBox_Icon.Child = new GameIconBeta();break;
                     case GameIcons.Tat:
