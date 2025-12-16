@@ -17,6 +17,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
 
             [JsonProperty("save_config")]
             public SaveConfig SaveConfig { get; set; } = new SaveConfig();
+
+            [JsonProperty("record")]
+            public Record Record { get; set; } = new Record();
         }
 
         public class LauncherConfig
@@ -74,6 +77,12 @@ namespace PvzLauncherRemake.Class.JsonConfigs
 
             [JsonProperty("show_trainer_download_tip")]
             public bool ShowTrainerDownloadTip { get; set; } = false;
+        }
+
+        public class Record
+        {
+            [JsonProperty("launch_count")]
+            public int LaunchCount { get; set; } = 0;
         }
     }
 }
