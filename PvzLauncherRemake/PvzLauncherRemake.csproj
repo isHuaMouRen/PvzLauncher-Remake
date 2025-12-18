@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="HuaZi.Library" Version="2025.12.18.1" />
+    <PackageReference Include="HuaZi.Library" Version="2025.12.18.2" />
     <PackageReference Include="Markdig" Version="0.44.0" />
     <PackageReference Include="MdXaml" Version="1.27.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3650-prerelease" />
