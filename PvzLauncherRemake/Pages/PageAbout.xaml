@@ -156,6 +156,7 @@
 
                 <!--程序-->
                 <TextBlock Text="程序" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/qaiu/netdisk-fast-download" Content="qaiu/netdisk-fast-download - 网盘直链解析" Cursor="Hand" HorizontalAlignment="Center"/>
                 <ui:HyperlinkButton NavigateUri="https://github.com/JamesNK/Newtonsoft.Json" Content="JamesNK/Newtonsoft.Json - Json读写" Cursor="Hand" HorizontalAlignment="Center"/>
                 <ui:HyperlinkButton NavigateUri="https://github.com/adamhathcock/sharpcompress" Content="adamhathcock/sharpcompress - 压缩包操作" Cursor="Hand" HorizontalAlignment="Center"/>
             </StackPanel>
