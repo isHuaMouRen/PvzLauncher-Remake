@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<Viewbox xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" Name="dream">
+    <Canvas UseLayoutRounding="False" Width="512.0" Height="512.0">
+        <Canvas.Clip>
+            <RectangleGeometry Rect="0,0,512.0,512.0"/>
+        </Canvas.Clip>
+        <Canvas UseLayoutRounding="False">
+            <Canvas UseLayoutRounding="False">
+                <Path Fill="#ffc8e1b4" Stroke="#ff160000" StrokeLineJoin="Round" StrokeThickness="5.0" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                    <Path.Data>
+                        <PathGeometry Figures="m 220.844 384.419 c 10.4209 30.4167 66.1969 23.3481 69.878 -0.0399 c -16.302 -28.5599 -10.4726 -142.662 -13.5974 -214.55 l -50.6854 0.65825 c -1.86505 71.3106 7.60078 182.633 -5.59514 213.932 z"/>
+                    </Path.Data>
+                </Path>
+            </Canvas>
+            <Canvas UseLayoutRounding="False">
+                <Path Fill="#ffc8e1b4" Stroke="#ff000000" StrokeLineJoin="Round" StrokeThickness="5.0" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                    <Path.Data>
+                        <PathGeometry Figures="m 271.529 284.365 l 41.799 0.32913 l 1.3165 -43.4446 l -42.4573 0.65825"/>
+                    </Path.Data>
+                </Path>
+                <Path Fill="#ffc8e1b4" Stroke="#ff000000" StrokeLineJoin="Round" StrokeThickness="5.0" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                    <Path.Data>
+                        <PathGeometry Figures="m 313.657 305.758 c -15.2088 -7.26647 -22.4622 -60.6699 0 -79.6485 c 27.4482 17.6059 22.1501 71.7035 0 79.6485 z"/>
+                    </Path.Data>
+                </Path>
+                <Path Fill="#ff000000">
+                    <Path.Data>
+                        <PathGeometry Figures="m 317.936 243.882 c -6.06763 0.84504 -4.17197 41.1634 -1.3165 37.0267 c 6.88891 7.5438 9.12712 -33.604 1.3165 -37.0267 z"/>
+                    </Path.Data>
+                </Path>
+            </Canvas>
+            <Canvas UseLayoutRounding="False">
+                <Path Stroke="#ff000000" StrokeLineJoin="Round" StrokeThickness="5.0" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                    <Path.Fill>
+                        <LinearGradientBrush MappingMode="Absolute" StartPoint="96.641832,158.54646" EndPoint="345.53994,158.54646">
+                            <GradientStop Color="#ffcd85c6" Offset="0.0"/>
+                            <GradientStop Color="#ff491a40" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.Data>
+                        <PathGeometry Figures="m 99.1418 193.629 c 9.92659 13.5882 25.756 18.831 48.4073 14.4291 c 13.6338 20.1779 27.7344 30.9657 46.08 43.2873 c 38.853 -36.2707 81.9379 -69.9766 149.411 -88.9018 C 288.034 13.4106 114.325 46.6839 99.1418 193.629 Z"/>
+                    </Path.Data>
+                </Path>
+                <Canvas UseLayoutRounding="False">
+                    <Ellipse Canvas.Left="119.14364400000001" Canvas.Top="122.76402999999999" Width="63.521332" Height="52.9893" Fill="#ff521f4d"/>
+                    <Ellipse Canvas.Left="182.690911" Canvas.Top="91.461823" Width="104.261818" Height="60.509094" Fill="#ff521f4d"/>
+                    <Ellipse Canvas.Left="175.506609" Canvas.Top="177.16193900000002" Width="39.277282" Height="40.960002" Fill="#ff521f4d"/>
+                    <Path Fill="#ff521f4d">
+                        <Path.Data>
+                            <PathGeometry Figures="m 162.095 86.5602 c 6.07919 -5.05316 31.5591 -17.6969 53.8121 -18.1431 c -13.9157 24.7057 -33.8131 24.2887 -53.8121 18.1431 z"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Canvas>
+            <Canvas UseLayoutRounding="False">
+                <Canvas UseLayoutRounding="False">
+                    <Path Fill="#ff000000">
+                        <Path.Data>
+                            <PathGeometry Figures="m 276.466 195.007 c 6.72128 40.9992 30.9263 19.673 20.8995 -11.8485 c 0.006 -4.73223 -24.6412 4.46266 -20.8995 11.8485 z"/>
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#fffffaff">
+                        <Path.Data>
+                            <PathGeometry Figures="m 282.298 206.371 c -0.37145 12.2351 8.55227 2.33934 2.38545 -0.11636 c -0.84511 -0.4358 -1.64988 -0.48839 -2.38545 0.11636 z"/>
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#fffffaff">
+                        <Path.Data>
+                            <PathGeometry Figures="m 286.022 193.338 l -0.29091 9.42546 l 7.15637 -0.40728 l 0.52363 -9.42545 z"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+                <Canvas UseLayoutRounding="False">
+                    <Path Fill="#ff000000">
+                        <Path.Data>
+                            <PathGeometry Figures="m 246.807 210.095 c 5.50469 31.035 34.3679 18.3944 23.9127 -15.2436 c -8.61629 4.60369 -16.8474 9.3992 -23.9127 15.2436 z"/>
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#fffffaff">
+                        <Path.Data>
+                            <PathGeometry Figures="m 257.251 212.8 c -8.84345 0.88809 -6.68906 8.53171 0.36364 1.96364 c 0.94984 -1.11704 1.09394 -1.88616 -0.36364 -1.96364 z"/>
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#fffffaff">
+                        <Path.Data>
+                            <PathGeometry Figures="m 265.367 211.258 c 8.35593 -7.72503 2.92787 -10.9878 -4.01455 -7.44727 c -5.4549 2.44228 -7.29713 12.468 4.01455 7.44727 z"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+                <Canvas UseLayoutRounding="False"/>
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</Viewbox>
