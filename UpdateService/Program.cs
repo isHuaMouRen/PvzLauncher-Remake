@@ -12,9 +12,18 @@ namespace UpdateService
             try
             {
                 string executePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
-                string updateFilePath = Path.Combine(Path.GetTempPath(), "PVZLAUNCHERUPDATECACHE");
+                string updateFilePath = null!;
 
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (args[i] == "-updatefile" && args.Length >= i + 1)
+                        updateFilePath = args[i + 1];
+                }
 
+                if (string.IsNullOrEmpty(updateFilePath))
+                {
+                    throw new Exception($"未传入的参数 -updatefile");
+                }
 
                 Console.WriteLine($"更新文件路径: {updateFilePath}\n程序执行路径: {executePath}");
                 Console.WriteLine("等待主程序完全退出...");
