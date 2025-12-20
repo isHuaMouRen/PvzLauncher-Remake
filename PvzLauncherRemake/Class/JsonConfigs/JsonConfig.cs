@@ -64,10 +64,10 @@ namespace PvzLauncherRemake.Class.JsonConfigs
         public class WindowSize
         {
             [JsonProperty("width")]
-            public double Width { get; set; } = 800;
+            public double Width { get; set; } = 1000;
 
             [JsonProperty("height")]
-            public double Height { get; set; } = 450;
+            public double Height { get; set; } = 600;
         }
 
         public class DownloadTip
