@@ -53,11 +53,7 @@ namespace PvzLauncherRemake.Pages
 
                 //设置卡片
                 userGameCard.Title = GameInfo.GameInfo.Name;
-                string version =
-                    GameInfo.GameInfo.VersionType == "zh_origin" ? "中文原版" :
-                    GameInfo.GameInfo.VersionType == "zh_revison" ? "中文改版" :
-                    GameInfo.GameInfo.VersionType == "en_origin" ? "英文原版" : "未知";
-                userGameCard.Version = $"{version} {GameInfo.GameInfo.Version}";
+                userGameCard.Version = GameInfo.GameInfo.Version;
                 userGameCard.Icon = GameManager.ParseToGameIcons(GameInfo.GameInfo.Icon);
                 logger.Info($"[游戏设置] 传入的游戏信息: {JsonConvert.SerializeObject(GameInfo)}");
 
