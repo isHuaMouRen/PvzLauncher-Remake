@@ -53,6 +53,7 @@ namespace PvzLauncherRemake.Controls
                     case GameIcons.Origin: viewBox_Icon.Child = new GameIconOrigin(); break;
                     case GameIcons.GOTY: viewBox_Icon.Child = new GameIconGoty(); break;
                     case GameIcons.Steam: viewBox_Icon.Child = new GameIconSteam(); break;
+                    case GameIcons.Test: viewBox_Icon.Child = new GameIconTest(); break;
                     case GameIcons.Beta: viewBox_Icon.Child = new GameIconBeta(); break;
                     case GameIcons.Tat: viewBox_Icon.Child = new GameIconTat(); break;
                 }
