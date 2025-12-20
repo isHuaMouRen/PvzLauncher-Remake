@@ -13,7 +13,8 @@
     <Grid>
         <Grid>
             <Grid Margin="10,10,10,10" VerticalAlignment="Top" >
-                <TextBlock x:Name="textBlock_Average" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
+                <TextBlock x:Name="textBlock_ProgressAverage" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
+                <TextBlock x:Name="textBlock_SpeedSum" Text="总速度: Mb/s" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,10"/>
                 <ProgressBar x:Name="progressBar_Average" Background="#19000000" VerticalAlignment="Bottom"/>
             </Grid>
             <controls:UserScrollViewer Margin="0,40,0,0">

@@ -90,6 +90,7 @@ namespace PvzLauncherRemake.Pages
             {
                 double progressSum = 0;
                 double progressAverage = 0;
+                double speedSum = 0;
 
                 foreach (UserTaskCard card in stackPanel_Tasks.Children)
                 {
@@ -102,11 +103,15 @@ namespace PvzLauncherRemake.Pages
                     }
                 }
                 foreach (var task in TaskManager.DownloadTaskList)
+                {
                     progressSum = progressSum + task.Progress + task.ExtractProgress;
+                    speedSum = speedSum + task.Speed;
+                }
 
                 progressAverage = progressSum / (TaskManager.DownloadTaskList.Count * 2);
 
-                textBlock_Average.Text = $"总进度: {(double.IsNaN(progressAverage) ? "0" : Math.Round(progressAverage, 2))}%";
+                textBlock_ProgressAverage.Text = $"总进度: {(double.IsNaN(progressAverage) ? "0" : Math.Round(progressAverage, 2))}%";
+                textBlock_SpeedSum.Text = $"总速度: {(double.IsNaN(speedSum) ? "0" : Math.Round(speedSum, 2))}Mb/s";
                 progressBar_Average.Value = double.IsNaN(progressAverage) ? 0 : progressAverage;
 
             }
