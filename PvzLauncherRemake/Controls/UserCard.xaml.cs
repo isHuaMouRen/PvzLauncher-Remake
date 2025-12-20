@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using PvzLauncherRemake.Class;
+using PvzLauncherRemake.Utils;
 
 namespace PvzLauncherRemake.Controls
 {
@@ -57,20 +58,7 @@ namespace PvzLauncherRemake.Controls
                 textBlock_Description.Text = Description;
 
                 //图标
-                switch (Icon)
-                {
-                    case GameIcons.Unknown: viewBox_Icon.Child = new GameIconUnknown(); break;
-
-                    case GameIcons.Origin: viewBox_Icon.Child = new GameIconOrigin(); break;
-                    case GameIcons.GOTY: viewBox_Icon.Child = new GameIconGoty(); break;
-                    case GameIcons.Steam: viewBox_Icon.Child = new GameIconSteam(); break;
-                    case GameIcons.Test: viewBox_Icon.Child = new GameIconTest(); break;
-                    case GameIcons.Beta: viewBox_Icon.Child = new GameIconBeta(); break;
-                    case GameIcons.Ghtr: viewBox_Icon.Child = new GameIconGhtr(); break;
-                    case GameIcons.Dream: viewBox_Icon.Child = new GameIconDream(); break;
-                    case GameIcons.NineFive: viewBox_Icon.Child = new GameIconNineFive(); break;
-                    case GameIcons.Tat: viewBox_Icon.Child = new GameIconTat(); break;
-                }
+                viewBox_Icon.Child = GameManager.ParseToUserControl(Icon);
 
                 SetLabels();
             });

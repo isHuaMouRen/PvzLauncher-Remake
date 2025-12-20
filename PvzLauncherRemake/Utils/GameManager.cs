@@ -4,7 +4,9 @@ using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls;
+using PvzLauncherRemake.Controls.Icons;
 using System.Diagnostics;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
@@ -337,6 +339,31 @@ namespace PvzLauncherRemake.Utils
 
                 default:
                     return GameIcons.Unknown;
+            }
+        }
+
+        /// <summary>
+        /// 将图标类型转换为UserControl
+        /// </summary>
+        /// <param name="gameIcons"></param>
+        /// <returns></returns>
+        public static UserControl ParseToUserControl(GameIcons gameIcons)
+        {
+            switch (gameIcons)
+            {
+                case GameIcons.Unknown: return new GameIconUnknown();
+
+                case GameIcons.Origin: return new GameIconOrigin();
+                case GameIcons.GOTY: return new GameIconGoty();
+                case GameIcons.Steam: return new GameIconSteam();
+                case GameIcons.Test: return new GameIconTest();
+                case GameIcons.Beta: return new GameIconBeta();
+                case GameIcons.Ghtr: return new GameIconGhtr();
+                case GameIcons.Dream: return new GameIconDream();
+                case GameIcons.NineFive: return new GameIconNineFive();
+                case GameIcons.Tat: return new GameIconTat();
+
+                default: return new GameIconUnknown();
             }
         }
 
