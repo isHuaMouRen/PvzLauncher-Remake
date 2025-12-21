@@ -13,7 +13,7 @@
 
     <Grid Margin="10,10,10,10">
         <Viewbox Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0">
-            <icons:IconApplicationFull/>
+            <icons:IconApplicationFull MouseRightButtonDown="Canvas_MouseRightButtonDown" MouseLeftButtonDown="Canvas_MouseLeftButtonDown"/>
         </Viewbox>
 
         <TextBlock Text="Plants vs. Zombies Launcher" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Margin="0,100,0,0"/>
