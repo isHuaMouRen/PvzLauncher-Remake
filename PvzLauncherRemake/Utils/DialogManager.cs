@@ -1,8 +1,4 @@
 ﻿using ModernWpf.Controls;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows;
 using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Utils

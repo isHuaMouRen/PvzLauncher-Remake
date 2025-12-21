@@ -2,7 +2,6 @@
 using HuaZi.Library.Json;
 using MdXaml;
 using ModernWpf.Controls;
-using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using System.Diagnostics;

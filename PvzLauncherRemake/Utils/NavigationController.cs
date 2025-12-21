@@ -1,5 +1,4 @@
 ﻿using ModernWpf.Controls;
-using System.Linq;
 using System.Windows;
 using static PvzLauncherRemake.Class.AppLogger;
 

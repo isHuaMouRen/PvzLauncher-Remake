@@ -1,7 +1,4 @@
-﻿using PvzLauncherRemake.Class;
-using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
 using static PvzLauncherRemake.Class.AppLogger;
 

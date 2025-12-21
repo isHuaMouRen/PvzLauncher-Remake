@@ -1,5 +1,4 @@
-﻿using HuaZi.Library.Logger;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using ModernWpf;
 using ModernWpf.Controls;
 using Newtonsoft.Json;
@@ -8,8 +7,6 @@ using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils;
 using System.IO;
-using System.Net.Quic;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;

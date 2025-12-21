@@ -1,7 +1,5 @@
 ﻿using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Windows;
-using System.Configuration;
-using System.Data;
 using System.Windows;
 
 namespace PvzLauncherRemake

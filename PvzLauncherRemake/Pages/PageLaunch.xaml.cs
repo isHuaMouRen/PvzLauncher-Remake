@@ -1,13 +1,10 @@
-﻿using HuaZi.Library.Json;
-using Notifications.Wpf;
+﻿using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils;
 using System.Diagnostics;
-using System.Diagnostics.Tracing;
 using System.IO;
 using System.Windows;
-using System.Windows.Forms.VisualStyles;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using static PvzLauncherRemake.Class.AppLogger;

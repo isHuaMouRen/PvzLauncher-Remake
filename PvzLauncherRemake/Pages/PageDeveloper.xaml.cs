@@ -1,7 +1,4 @@
-﻿using Markdig;
-using MdXaml;
-using Notifications.Wpf;
-using PvzLauncherRemake.Class;
+﻿using PvzLauncherRemake.Class;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;

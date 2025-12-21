@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using ModernWpf;
+﻿using ModernWpf;
 using ModernWpf.Controls;
 using ModernWpf.Media.Animation;
 using Newtonsoft.Json;
@@ -9,8 +8,6 @@ using PvzLauncherRemake.Pages;
 using PvzLauncherRemake.Utils;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
 using static PvzLauncherRemake.Class.AppLogger;

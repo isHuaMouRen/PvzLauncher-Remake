@@ -1,9 +1,6 @@
 ﻿using SharpCompress.Archives;
 using SharpCompress.Common;
-using SharpCompress.Readers;
-using System;
 using System.IO;
-using System.Threading;
 
 namespace PvzLauncherRemake.Utils
 {

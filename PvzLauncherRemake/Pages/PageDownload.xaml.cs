@@ -1,23 +1,17 @@
 ﻿using HuaZi.Library.Downloader;
 using HuaZi.Library.Json;
 using ModernWpf.Controls;
-using Newtonsoft.Json;
-using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls;
 using PvzLauncherRemake.Utils;
-using SharpCompress.Archives;
-using SharpCompress.Common;
 using System.IO;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using static PvzLauncherRemake.Class.AppLogger;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace PvzLauncherRemake.Pages
 {

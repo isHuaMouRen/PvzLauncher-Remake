@@ -3,9 +3,6 @@ using HuaZi.Library.Json;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
-using PvzLauncherRemake.Utils;
-using SharpCompress.Archives;
-using SharpCompress.Common;
 using System.IO;
 using static PvzLauncherRemake.Class.AppLogger;
 
