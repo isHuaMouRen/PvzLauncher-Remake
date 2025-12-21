@@ -35,8 +35,4 @@
     <PackageReference Include="SharpCompress" Version="0.42.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Windows\" />
-  </ItemGroup>
-
 </Project>

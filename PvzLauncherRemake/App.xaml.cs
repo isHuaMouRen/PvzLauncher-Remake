@@ -13,11 +13,7 @@ namespace PvzLauncherRemake
         protected override void OnExit(ExitEventArgs e)
         {
             base.OnExit(e);
-
-            if (e.ApplicationExitCode == 0)
-                AppLogger.logger.Info($"[应用程序] 应用程序正常退出(ExitCode: {e.ApplicationExitCode})");
-            else
-                AppLogger.logger.Warn($"[应用程序] 应用程序非正常退出(ExitCode: {e.ApplicationExitCode})");
+            AppLogger.logger.Warn($"[应用程序] 应用程序{(e.ApplicationExitCode != 0 ? "非" : null)}正常退出(ExitCode: {e.ApplicationExitCode})");
         }
     }
 
