@@ -12,16 +12,26 @@
 
     <Grid>
         <Grid>
-            <Grid Margin="10,10,10,10" VerticalAlignment="Top" >
-                <TextBlock x:Name="textBlock_ProgressAverage" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
-                <TextBlock x:Name="textBlock_SpeedSum" Text="总速度: Mb/s" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,10"/>
-                <ProgressBar x:Name="progressBar_Average" Background="#19000000" VerticalAlignment="Bottom"/>
-            </Grid>
-            <controls:UserScrollViewer Margin="0,40,0,0">
+            <Border BorderThickness="2" CornerRadius="3" VerticalAlignment="Top" Margin="5" Background="#19FFFFFF">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                        <LinearGradientBrush.RelativeTransform>
+                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#33000000"/>
+                        <GradientStop Color="#19000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Grid Margin="10" VerticalAlignment="Top" >
+                    <TextBlock x:Name="textBlock_ProgressAverage" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="textBlock_SpeedSum" Text="总速度: Mb/s" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,10"/>
+                    <ProgressBar x:Name="progressBar_Average" Background="#19000000" VerticalAlignment="Bottom"/>
+                </Grid>
+            </Border>
+            
+            <controls:UserScrollViewer Margin="0,60,0,0">
                 <StackPanel x:Name="stackPanel_Tasks" Background="#00000000" VirtualizingPanel.ScrollUnit="Pixel">
-                    <controls:UserTaskCard/>
-                    <controls:UserTaskCard/>
-                    <controls:UserTaskCard/>
+                    <controls:UserTaskCard Margin="5"/>
                 </StackPanel>
             </controls:UserScrollViewer>
         </Grid>
