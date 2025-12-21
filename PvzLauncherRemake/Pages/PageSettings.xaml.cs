@@ -95,6 +95,7 @@ namespace PvzLauncherRemake.Pages
 
                 isInitialized = false;
 
+
                 //# 启动器设置
                 //## 操作
                 //### 游戏启动后操作
@@ -181,6 +182,29 @@ namespace PvzLauncherRemake.Pages
                 //### 下载通知
                 checkBox_DownloadTipGame.IsChecked = AppInfo.Config.LauncherConfig.DownloadTip.ShowGameDownloadTip;
                 checkBox_DownloadTipTrainer.IsChecked = AppInfo.Config.LauncherConfig.DownloadTip.ShowTrainerDownloadTip;
+
+                //# 游戏设置
+                //## 游戏配置
+                //### 全屏
+                switch (AppInfo.Config.GameConfig.FullScreen)
+                {
+                    case "Default":
+                        comboBox_Game_FullScreen.SelectedIndex = 0;break;
+                    case "FullScreen":
+                        comboBox_Game_FullScreen.SelectedIndex = 1;break;
+                    case "Windowed":
+                        comboBox_Game_FullScreen.SelectedIndex = 2;break;
+                }
+                //### 位置
+                switch (AppInfo.Config.GameConfig.StartUpLocation)
+                {
+                    case "Default":
+                        comboBox_Game_Location.SelectedIndex = 0; break;
+                    case "Center":
+                        comboBox_Game_Location.SelectedIndex = 1; break;
+                    case "LeftTop":
+                        comboBox_Game_Location.SelectedIndex = 2; break;
+                }
 
 
                 //# 存档设置
@@ -520,6 +544,28 @@ namespace PvzLauncherRemake.Pages
                     ErrorReportDialog.Show("发生错误", null!, ex);
                 }
                 
+            }
+        }
+
+        #endregion
+
+        #region 游戏设置
+
+        private void Game_FullScreen(object sender,SelectionChangedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                AppInfo.Config.GameConfig.FullScreen = ((ComboBoxItem)((ComboBox)sender).SelectedItem).Tag.ToString()!;
+                ConfigManager.SaveConfig();
+            }
+        }
+
+        private void Game_Location(object sender,SelectionChangedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                AppInfo.Config.GameConfig.StartUpLocation = ((ComboBoxItem)((ComboBox)sender).SelectedItem).Tag.ToString()!;
+                ConfigManager.SaveConfig();
             }
         }
 

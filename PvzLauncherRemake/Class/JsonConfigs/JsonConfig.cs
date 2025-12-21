@@ -18,6 +18,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("save_config")]
             public SaveConfig SaveConfig { get; set; } = new SaveConfig();
 
+            [JsonProperty("game_config")]
+            public GameConfig GameConfig { get; set; } = new GameConfig();
+
             [JsonProperty("record")]
             public Record Record { get; set; } = new Record();
         }
@@ -78,6 +81,19 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("show_trainer_download_tip")]
             public bool ShowTrainerDownloadTip { get; set; } = false;
         }
+
+        public class GameConfig
+        {
+            [JsonProperty("full_screen")]
+            public string FullScreen { get; set; } = "Default";
+
+            [JsonProperty("start_up_location")]
+            public string StartUpLocation { get; set; } = "Default";
+        }
+
+
+
+
 
         public class Record
         {

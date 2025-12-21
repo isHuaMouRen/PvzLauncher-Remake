@@ -1,4 +1,5 @@
 ﻿using HuaZi.Library.Json;
+using Microsoft.Win32;
 using ModernWpf.Controls;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class;
@@ -8,6 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Utils
@@ -138,6 +140,8 @@ namespace PvzLauncherRemake.Utils
                 case "HideAndDisplay":
                     Application.Current.MainWindow.Visibility = Visibility.Hidden; break;
             }
+            SetGameFullScreen();
+            SetGameLocation();
 
             //启动次数
             gameInfo.Record.PlayCount++;
@@ -360,6 +364,65 @@ namespace PvzLauncherRemake.Utils
                 case GameIcons.Tat: return new GameIconTat();
 
                 default: return new GameIconUnknown();
+            }
+        }
+
+        /// <summary>
+        /// 设置游戏屏幕模式
+        /// </summary>
+        public static void SetGameFullScreen()
+        {
+            string registyPath = @"SOFTWARE\PopCap\PlantsVsZombies";
+            string valueName = "ScreenMode";
+
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(registyPath))
+            {
+                int? valueData;
+                switch (AppInfo.Config.GameConfig.FullScreen)
+                {
+                    case "FullScreen": valueData = 1; break;
+                    case "Windowed": valueData = 0; break;
+                    default: valueData = null; break;
+                }
+                if (valueData != null)
+                    key.SetValue(valueName, valueData, RegistryValueKind.DWord);
+            }
+        }
+
+        /// <summary>
+        /// 设置游戏窗口位置
+        /// </summary>
+        public static void SetGameLocation()
+        {
+            string registyPath = @"SOFTWARE\PopCap\PlantsVsZombies";
+            string valueXName = "PreferredX";
+            string valueYName = "PreferredY";
+
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(registyPath))
+            {
+                int? gameWindowX;
+                int? gameWindowY;
+
+                switch (AppInfo.Config.GameConfig.StartUpLocation)
+                {
+                    case "Center":
+                        gameWindowX = (int)((SystemParameters.WorkArea.Width / 2) - (800 / 2));
+                        gameWindowY = (int)((SystemParameters.WorkArea.Height / 2) - (600 / 2));
+                        break;
+                    case "LeftTop":
+                        gameWindowX = 0;
+                        gameWindowY = 0;
+                        break;
+
+                    default:
+                        gameWindowX = null; gameWindowY = null; break;
+                }
+
+                if (gameWindowX != null && gameWindowY != null)
+                {
+                    key.SetValue(valueXName, gameWindowX, RegistryValueKind.DWord);
+                    key.SetValue(valueYName, gameWindowY, RegistryValueKind.DWord);
+                }
             }
         }
 
