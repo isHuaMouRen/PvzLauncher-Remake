@@ -1,4 +1,5 @@
 ﻿using PvzLauncherRemake.Class;
+using PvzLauncherRemake.Windows;
 using System.Configuration;
 using System.Data;
 using System.Windows;
@@ -10,6 +11,34 @@ namespace PvzLauncherRemake
     /// </summary>
     public partial class App : Application
     {
+        private WindowSplash? _splash;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            _splash = new WindowSplash();
+            _splash.Show();
+
+            Task.Run(async () =>
+            {
+                await Task.Delay(1000);
+
+                this.Dispatcher.Invoke(() =>
+                {
+                    var mainWindow = new MainWindow();
+                    this.MainWindow = mainWindow;
+                    mainWindow.Show();
+                    mainWindow.Activate();
+                    mainWindow.Focus();
+
+                    _splash?.Close();
+                    _splash = null;
+                });
+            });
+
+        }
+
         protected override void OnExit(ExitEventArgs e)
         {
             base.OnExit(e);

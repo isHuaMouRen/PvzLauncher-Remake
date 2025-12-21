@@ -1,0 +1,19 @@
+﻿<Window x:Class="PvzLauncherRemake.Windows.WindowSplash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PvzLauncherRemake.Windows"
+        xmlns:ctrl="clr-namespace:PvzLauncherRemake.Controls"
+        mc:Ignorable="d"
+        
+        Title="WindowSplash"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        Topmost="True"
+        Width="128" Height="128"
+        Background="Transparent">
+    <ctrl:UserSplashScreen/>
+</Window>
