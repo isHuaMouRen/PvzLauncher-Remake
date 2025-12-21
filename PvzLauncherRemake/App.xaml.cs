@@ -18,22 +18,26 @@ namespace PvzLauncherRemake
             base.OnStartup(e);
 
             _splash = new WindowSplash();
-            _splash.Show();
+            _splash.ShowAndFadeIn();
 
             Task.Run(async () =>
             {
                 await Task.Delay(1000);
 
-                this.Dispatcher.Invoke(() =>
+                await this.Dispatcher.Invoke(async () =>
                 {
                     var mainWindow = new MainWindow();
                     this.MainWindow = mainWindow;
+
                     mainWindow.Show();
                     mainWindow.Activate();
                     mainWindow.Focus();
 
-                    _splash?.Close();
+                    await Task.Delay(500);
+
+                    _splash?.FadeOutAndClose();
                     _splash = null;
+                    
                 });
             });
 

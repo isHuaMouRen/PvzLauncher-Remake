@@ -16,5 +16,5 @@
         Width="128" Height="128"
         Background="Transparent"
         Cursor="Wait">
-    <ctrl:UserSplashScreen/>
+    <ctrl:UserSplashScreen x:Name="icon"/>
 </Window>
