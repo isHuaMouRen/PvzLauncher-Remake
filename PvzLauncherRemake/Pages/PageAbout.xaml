@@ -20,7 +20,7 @@
         <TextBlock x:Name="textBlock_Version" Text="Version" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF646464" Margin="0,130,0,0"/>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button x:Name="button_ReportIssue" Content="反馈问题" Margin="0,0,10,0" Tag="https://github.com/isHuaMouRen/PvzLauncher-Remake/issues/new/choose" Click="GoToUrl">
+            <Button x:Name="button_ReportIssue" Content="反馈问题" Margin="0,0,10,0" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
                         <LinearGradientBrush.RelativeTransform>
@@ -31,7 +31,7 @@
                     </LinearGradientBrush>
                 </Button.BorderBrush>
             </Button>
-            <Button x:Name="button_UploadVersion" Content="提供游戏版本" Tag="https://github.com/isHuaMouRen/PvzLauncher-Remake/issues/new?template=download.yml" Click="GoToUrl">
+            <Button x:Name="button_UploadVersion" Content="提供游戏版本" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
                         <LinearGradientBrush.RelativeTransform>
