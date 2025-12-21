@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <None Remove="Assets\Icon\Icon.ico" />
-    <None Remove="Splash\SplashScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,9 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SplashScreen Include="Splash\SplashScreen.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </SplashScreen>
+    <Folder Include="Windows\" />
   </ItemGroup>
 
 </Project>
