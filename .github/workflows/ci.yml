@@ -2,9 +2,7 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [main, shell, update-service, feat/i18n]
   pull_request:
-    branches: [main, shell, update-service, feat/i18n]
 
 jobs:
   build:
