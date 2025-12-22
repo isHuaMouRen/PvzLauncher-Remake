@@ -321,7 +321,7 @@ namespace PvzLauncherRemake.Pages
             if (isInitialized)
             {
                 AppInfo.Config.LauncherConfig.WindowTitle = textBox_WindowTitle.Text;
-                ((MainWindow)Window.GetWindow(this)).Title = AppInfo.Config.LauncherConfig.WindowTitle;
+                ((WindowMain)Window.GetWindow(this)).Title = AppInfo.Config.LauncherConfig.WindowTitle;
                 ConfigManager.SaveConfig();
             }
         }

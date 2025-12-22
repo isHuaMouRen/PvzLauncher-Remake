@@ -12,7 +12,7 @@ namespace PvzLauncherRemake.Utils
 
             try
             {
-                if (Window.GetWindow(obj) is not MainWindow window) return;
+                if (Window.GetWindow(obj) is not WindowMain window) return;
                 if (window.FindName("navView") is not NavigationView navView) return;
 
                 NavigationViewItem? targetItem = null;

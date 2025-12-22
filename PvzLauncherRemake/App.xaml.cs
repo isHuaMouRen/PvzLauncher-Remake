@@ -24,7 +24,7 @@ namespace PvzLauncherRemake
 
                 await this.Dispatcher.Invoke(async () =>
                 {
-                    var mainWindow = new MainWindow();
+                    var mainWindow = new WindowMain();
                     this.MainWindow = mainWindow;
 
                     mainWindow.Show();

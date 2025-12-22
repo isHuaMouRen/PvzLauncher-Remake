@@ -17,7 +17,7 @@ namespace PvzLauncherRemake
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowMain : Window
     {
         private Dictionary<string, Type> PageMap = new Dictionary<string, Type>();//Page预加载
         private NavigationTransitionInfo FrameAnimation = new DrillInNavigationTransitionInfo();//Frame切换动画
@@ -235,7 +235,7 @@ namespace PvzLauncherRemake
 #endregion
 
 
-        public MainWindow() { InitializeComponent(); Initialize(); }
+        public WindowMain() { InitializeComponent(); Initialize(); }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
