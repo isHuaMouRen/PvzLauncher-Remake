@@ -8,6 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>PvzLauncher</AssemblyName>
     <ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
+    <Configurations>Debug;Release;CI</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
