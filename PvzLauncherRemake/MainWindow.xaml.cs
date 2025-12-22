@@ -120,6 +120,10 @@ namespace PvzLauncherRemake
 #if CI
                 AppInfo.Arguments.isCIBuild = true;
 #endif
+                //是否Debug构建
+#if DEBUG
+                AppInfo.Arguments.isDebugBuild = true;
+#endif
 
 
                 //处理启动参数
@@ -147,8 +151,8 @@ namespace PvzLauncherRemake
                 logger.Info($"[主窗口] IsCIBuild={AppInfo.Arguments.isCIBuild}");
                 logger.Info($"[主窗口] {new string('=', 30)}");
 
-                //是否外壳启动
-                if (!AppInfo.Arguments.isShell && !Debugger.IsAttached)
+                //参数检测
+                if (!AppInfo.Arguments.isShell && !Debugger.IsAttached)//是否外壳启动
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
@@ -168,8 +172,7 @@ namespace PvzLauncherRemake
                         Environment.Exit(0);
                     }));
                 }
-                //更新启动
-                if (AppInfo.Arguments.isUpdate)
+                if (AppInfo.Arguments.isUpdate)//更新启动
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
@@ -181,13 +184,24 @@ namespace PvzLauncherRemake
                 }
 
 
-                //CI构建
-                if (AppInfo.Arguments.isCIBuild)
+                //构建检测
+                if (AppInfo.Arguments.isCIBuild)//CI
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "警告",
                         Content = $"您使用的是基于 {AppInfo.Version} 构建的CI版本\nCI构建每个提交的临时测试版本，因此CI版本及其不稳定，仅用于测试使用\n\n如果使用CI版本出现了BUG请不要反馈给开发者!",
+                        PrimaryButtonText = "我明确风险且遇到BUG会反馈开发者",
+                        CloseButtonText = "我明确风险并了解处理BUG的方法",
+                        DefaultButton = ContentDialogButton.Primary
+                    }, (() => Environment.Exit(0)));
+                }
+                else if (AppInfo.Arguments.isDebugBuild)//DEBUG
+                {
+                    await DialogManager.ShowDialogAsync(new ContentDialog
+                    {
+                        Title = "警告",
+                        Content = $"您使用的是您自行构建的版本，此版本的稳定性与安全性无法得到保证，如果你自己改动代码导致了BUG，请不要反馈给开发者!",
                         PrimaryButtonText = "我明确风险且遇到BUG会反馈开发者",
                         CloseButtonText = "我明确风险并了解处理BUG的方法",
                         DefaultButton = ContentDialogButton.Primary

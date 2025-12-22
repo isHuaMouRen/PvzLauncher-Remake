@@ -33,6 +33,7 @@ namespace PvzLauncherRemake.Class
             public static bool isUpdate = false;//是否更新完毕启动
 
             public static bool isCIBuild = false;//是否CI构建
+            public static bool isDebugBuild = false;//是调试版构建
         }
     }
 }
