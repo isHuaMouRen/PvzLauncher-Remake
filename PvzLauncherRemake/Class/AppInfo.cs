@@ -29,10 +29,10 @@ namespace PvzLauncherRemake.Class
         //启动参数配置
         public static class Arguments
         {
-            public static bool isShell = false;
-            public static bool isUpdate = false;
+            public static bool isShell = false;//启动壳启动
+            public static bool isUpdate = false;//是否更新完毕启动
 
-            public static bool isCIBuild = false;
+            public static bool isCIBuild = false;//是否CI构建
         }
     }
 }
