@@ -13,6 +13,7 @@
 
     <SatelliteResourceLanguages>none</SatelliteResourceLanguages>
     <ExcludeAllSatelliteAssemblies>true</ExcludeAllSatelliteAssemblies>
+    <Configurations>Debug;Release;CI</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

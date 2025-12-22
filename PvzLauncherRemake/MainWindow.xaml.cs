@@ -115,6 +115,13 @@ namespace PvzLauncherRemake
                 logger.Info($"[主窗口] 开始初始化...");
 
                 logger.Info($"[主窗口] 处理启动参数");
+
+                //是否CI构建
+#if CI
+                AppInfo.IsCIBuild = true;
+#endif
+
+
                 //处理启动参数
                 string[] args = Environment.GetCommandLineArgs();
                 foreach (var arg in args)
@@ -136,6 +143,8 @@ namespace PvzLauncherRemake
                 logger.Info($"[主窗口] {new string('=', 10)}启动参数配置{new string('=', 10)}");
                 logger.Info($"[主窗口] isShell={AppInfo.Arguments.isShell}");
                 logger.Info($"[主窗口] isUpdate={AppInfo.Arguments.isUpdate}");
+                logger.Info($"[主窗口] ");
+                logger.Info($"[主窗口] IsCIBuild={AppInfo.IsCIBuild}");
                 logger.Info($"[主窗口] {new string('=', 30)}");
 
                 //是否外壳启动
@@ -170,6 +179,28 @@ namespace PvzLauncherRemake
                         DefaultButton = ContentDialogButton.Primary
                     });
                 }
+
+
+                //CI构建
+                if (AppInfo.IsCIBuild)
+                {
+                    await DialogManager.ShowDialogAsync(new ContentDialog
+                    {
+                        Title = "警告",
+                        Content = $"您使用的是基于 {AppInfo.Version} 构建的CI版本\nCI构建每个提交的临时测试版本，因此CI版本及其不稳定，仅用于测试使用\n\n如果使用CI版本出现了BUG请不要反馈给开发者!",
+                        PrimaryButtonText = "我明确风险且遇到BUG会反馈开发者",
+                        CloseButtonText = "我明确风险并了解处理BUG的方法",
+                        DefaultButton = ContentDialogButton.Primary
+                    }, (() => Environment.Exit(0)));
+                }
+
+
+
+
+
+
+
+
 
 
                 //检查更新

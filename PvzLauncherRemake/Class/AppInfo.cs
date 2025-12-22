@@ -20,6 +20,7 @@ namespace PvzLauncherRemake.Class
         public static List<JsonTrainerInfo.Index> TrainerList = new List<JsonTrainerInfo.Index>();//修改器
         public static JsonConfig.Index Config = null!;//配置
         public static Random Random = new Random();//随机数生成器
+        public static bool IsCIBuild = false;//是否CI构建
         
         //字符串
         public static readonly string Version = $"1.0.0-rc.16";//版本

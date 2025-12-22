@@ -1,5 +1,6 @@
 <Solution>
   <Configurations>
+    <BuildType Name="CI" />
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="ExecuteShell/ExecuteShell.csproj" />
