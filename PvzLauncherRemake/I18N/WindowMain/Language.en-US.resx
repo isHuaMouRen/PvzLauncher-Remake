@@ -120,4 +120,19 @@
   <data name="Launch" xml:space="preserve">
     <value>Launch</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
 </root>
