@@ -5,7 +5,7 @@ using System.Reflection;
 namespace PvzLauncherRemake.Class
 {
     //全局类
-    public static class AppInfo
+    public static class AppGlobals
     {
         //路径
         public static readonly string ExecuteDirectory = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}";//执行目录

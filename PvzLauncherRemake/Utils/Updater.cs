@@ -23,7 +23,7 @@ namespace PvzLauncherRemake.Utils
         public static string LatestVersion = null!;
         public static string ChangeLog = null!;
         public static string Url = null!;
-        public static string SavePath = Path.Combine(AppInfo.TempDiectory, "PVZLAUNCHER.UPDATE.CACHE");
+        public static string SavePath = Path.Combine(AppGlobals.TempDiectory, "PVZLAUNCHER.UPDATE.CACHE");
 
         public static bool isUpdate = false;
 
@@ -31,13 +31,13 @@ namespace PvzLauncherRemake.Utils
         {
             logger.Info($"[更新器] 开始检测更新");
             //获取主索引
-            string indexString = await Client.GetStringAsync(AppInfo.UpdateIndexUrl);
+            string indexString = await Client.GetStringAsync(AppGlobals.UpdateIndexUrl);
             logger.Info($"[更新器] 获取更新索引: {indexString}");
             UpdateIndex = Json.ReadJson<JsonUpdateIndex.Index>(indexString);
 
             //判断更新通道
-            logger.Info($"[更新器] 当前更新通道: {AppInfo.Config.LauncherConfig.UpdateChannel}");
-            switch (AppInfo.Config.LauncherConfig.UpdateChannel)
+            logger.Info($"[更新器] 当前更新通道: {AppGlobals.Config.LauncherConfig.UpdateChannel}");
+            switch (AppGlobals.Config.LauncherConfig.UpdateChannel)
             {
                 case "Stable":
                     LatestVersion = UpdateIndex.Stable.LatestVersion;
@@ -54,8 +54,8 @@ namespace PvzLauncherRemake.Utils
             logger.Info($"[更新器] 最新版本: {LatestVersion}  更新文件Url: {Url}");
 
             //判断版本
-            logger.Info($"[更新器] 当前版本: {AppInfo.Version}");
-            if (AppInfo.Version != LatestVersion)
+            logger.Info($"[更新器] 当前版本: {AppGlobals.Version}");
+            if (AppGlobals.Version != LatestVersion)
             {
                 logger.Info($"[更新器] 检测到更新，开始更新");
 
@@ -93,7 +93,7 @@ namespace PvzLauncherRemake.Utils
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "无可用更新",
-                        Content = $"您使用的已经是最新版本 {AppInfo.Version} , 无需更新!",
+                        Content = $"您使用的已经是最新版本 {AppGlobals.Version} , 无需更新!",
                         PrimaryButtonText = "确定",
                         DefaultButton = ContentDialogButton.Primary
                     });
@@ -148,11 +148,11 @@ namespace PvzLauncherRemake.Utils
             //下载成功↓
             //运行更新服务
             logger.Info($"[更新器] 下载完成，运行更新服务");
-            if (File.Exists(Path.Combine(AppInfo.ExecuteDirectory, "UpdateService.exe")))
+            if (File.Exists(Path.Combine(AppGlobals.ExecuteDirectory, "UpdateService.exe")))
             {
                 Process.Start(new ProcessStartInfo
                 {
-                    FileName = Path.Combine(AppInfo.ExecuteDirectory, "UpdateService.exe"),
+                    FileName = Path.Combine(AppGlobals.ExecuteDirectory, "UpdateService.exe"),
                     Arguments = $"-updatefile {SavePath}",
                     UseShellExecute = true
                 });
@@ -163,7 +163,7 @@ namespace PvzLauncherRemake.Utils
                 await DialogManager.ShowDialogAsync(new ContentDialog
                 {
                     Title = "失败",
-                    Content = $"无法在 \"{Path.Combine(AppInfo.ExecuteDirectory, "UpdateService.exe")}\" 找到更新服务",
+                    Content = $"无法在 \"{Path.Combine(AppGlobals.ExecuteDirectory, "UpdateService.exe")}\" 找到更新服务",
                     PrimaryButtonText = "确定",
                     DefaultButton = ContentDialogButton.Primary
                 });

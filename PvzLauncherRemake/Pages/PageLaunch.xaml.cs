@@ -41,17 +41,17 @@ namespace PvzLauncherRemake.Pages
             {
                 logger.Info($"[启动] 开始初始化...");
 
-                if (!string.IsNullOrEmpty(AppInfo.Config.CurrentGame))
+                if (!string.IsNullOrEmpty(AppGlobals.Config.CurrentGame))
                 {
-                    logger.Info($"[启动] 当前选中游戏: {AppInfo.Config.CurrentGame}");
+                    logger.Info($"[启动] 当前选中游戏: {AppGlobals.Config.CurrentGame}");
 
                     //查找选择游戏信息
-                    foreach (var game in AppInfo.GameList)
-                        if (game.GameInfo.Name == AppInfo.Config.CurrentGame)
+                    foreach (var game in AppGlobals.GameList)
+                        if (game.GameInfo.Name == AppGlobals.Config.CurrentGame)
                             currentGameInfo = game;
 
                     //设置按钮文本
-                    textBlock_LaunchVersion.Text = AppInfo.Config.CurrentGame;
+                    textBlock_LaunchVersion.Text = AppGlobals.Config.CurrentGame;
 
                 }
                 else
@@ -60,11 +60,11 @@ namespace PvzLauncherRemake.Pages
                     textBlock_LaunchVersion.Text = "请选择一个游戏";
                 }
 
-                if (!string.IsNullOrEmpty(AppInfo.Config.CurrentTrainer))
+                if (!string.IsNullOrEmpty(AppGlobals.Config.CurrentTrainer))
                 {
-                    logger.Info($"[启动] 当前选中修改器: {AppInfo.Config.CurrentTrainer}");
-                    foreach (var trainer in AppInfo.TrainerList)
-                        if (trainer.Name == AppInfo.Config.CurrentTrainer)
+                    logger.Info($"[启动] 当前选中修改器: {AppGlobals.Config.CurrentTrainer}");
+                    foreach (var trainer in AppGlobals.TrainerList)
+                        if (trainer.Name == AppGlobals.Config.CurrentTrainer)
                             currentTrainerInfo = trainer;
                 }
                 else
@@ -87,8 +87,8 @@ namespace PvzLauncherRemake.Pages
                 //播放动画
                 viewBox_Title_EN.Visibility = Visibility.Hidden;
                 viewBox_Title_ZH.Visibility = Visibility.Hidden;
-                logger.Info($"[启动] 标题语言: {AppInfo.Config.LauncherConfig.TitleImage}");
-                switch (AppInfo.Config.LauncherConfig.TitleImage)//切换语言
+                logger.Info($"[启动] 标题语言: {AppGlobals.Config.LauncherConfig.TitleImage}");
+                switch (AppGlobals.Config.LauncherConfig.TitleImage)//切换语言
                 {
                     case "EN":
                         viewBox_Title_EN.Visibility = Visibility.Visible; break;
@@ -102,8 +102,8 @@ namespace PvzLauncherRemake.Pages
                 StartAnimation();
 
                 //设置背景
-                if (!string.IsNullOrEmpty(AppInfo.Config.LauncherConfig.Background))
-                    image.Source = new BitmapImage(new Uri(AppInfo.Config.LauncherConfig.Background));
+                if (!string.IsNullOrEmpty(AppGlobals.Config.LauncherConfig.Background))
+                    image.Source = new BitmapImage(new Uri(AppGlobals.Config.LauncherConfig.Background));
                 logger.Info($"[启动] 完成初始化");
 
             }
@@ -132,7 +132,7 @@ namespace PvzLauncherRemake.Pages
                     textBlock_LaunchText.Text = "结束进程";
 
                     //切换存档
-                    if (AppInfo.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(Path.Combine(AppInfo.GameDirectory, AppInfo.Config.CurrentGame, ".save")))
+                    if (AppGlobals.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(Path.Combine(AppGlobals.GameDirectory, AppGlobals.Config.CurrentGame, ".save")))
                     {
                         logger.Info($"[启动] 已启用存档隔离，开始切换存档");
                         await GameManager.SwitchGameSave(currentGameInfo);
@@ -152,7 +152,7 @@ namespace PvzLauncherRemake.Pages
                         textBlock_LaunchText.Text = "启动游戏";
 
                         //保存存档
-                        if (AppInfo.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(AppInfo.SaveDirectory))
+                        if (AppGlobals.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(AppGlobals.SaveDirectory))
                         {
                             logger.Info($"[启动] 存档隔离已开启，开始保存存档");
                             await GameManager.SaveGameSave(currentGameInfo);
@@ -164,7 +164,7 @@ namespace PvzLauncherRemake.Pages
                     notifi.Show(new NotificationContent
                     {
                         Title = "提示",
-                        Message = $"{AppInfo.Config.CurrentGame} 启动成功!",
+                        Message = $"{AppGlobals.Config.CurrentGame} 启动成功!",
                         Type = NotificationType.Success
                     });
                 }
@@ -208,13 +208,13 @@ namespace PvzLauncherRemake.Pages
 
                 Process.Start(new ProcessStartInfo
                 {
-                    FileName = System.IO.Path.Combine(AppInfo.TrainerDirectory, currentTrainerInfo.Name, currentTrainerInfo.ExecuteName),
+                    FileName = System.IO.Path.Combine(AppGlobals.TrainerDirectory, currentTrainerInfo.Name, currentTrainerInfo.ExecuteName),
                     UseShellExecute = true
                 });
                 notifi.Show(new NotificationContent
                 {
                     Title = "提示",
-                    Message = $"{AppInfo.Config.CurrentTrainer} 启动成功!",
+                    Message = $"{AppGlobals.Config.CurrentTrainer} 启动成功!",
                     Type = NotificationType.Success
                 });
                 logger.Info($"[启动] 修改器启动成功");
