@@ -9,7 +9,12 @@
       xmlns:icons="clr-namespace:PvzLauncherRemake.Controls.Icons"
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="800"
-      Title="PageAbout">
+      Title="PageAbout"
+         
+      xmlns:lex="http://wpflocalizeextension.codeplex.com"
+         lex:LocalizeDictionary.DesignCulture="en-US"
+         lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
+         lex:ResxLocalizationProvider.DefaultDictionary="I18N.PageAbout">
 
     <Grid Margin="10,10,10,10">
         <Viewbox Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0">
@@ -20,7 +25,7 @@
         <TextBlock x:Name="textBlock_Version" Text="Version" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF646464" Margin="0,130,0,0"/>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button x:Name="button_ReportIssue" Content="反馈问题" Margin="0,0,10,0" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl">
+            <Button x:Name="button_ReportIssue" Content="{lex:Loc FeedBack}" Margin="0,0,10,0" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
                         <LinearGradientBrush.RelativeTransform>
@@ -31,7 +36,7 @@
                     </LinearGradientBrush>
                 </Button.BorderBrush>
             </Button>
-            <Button x:Name="button_UploadVersion" Content="提供游戏版本" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl">
+            <Button x:Name="button_UploadVersion" Content="{lex:Loc ProvideGame}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
                         <LinearGradientBrush.RelativeTransform>
@@ -78,6 +83,6 @@
             </StackPanel>
         </ctrl:UserScrollViewer>
 
-        <TextBlock Text="版权所有 ©️ 2025 HuaMouRen 保留所有权益" Foreground="#FF646464" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock Text="{lex:Loc Copyright}" Foreground="#FF646464" VerticalAlignment="Top" HorizontalAlignment="Left"/>
     </Grid>
 </ui:Page>

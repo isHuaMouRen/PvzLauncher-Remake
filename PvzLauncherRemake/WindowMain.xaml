@@ -12,7 +12,7 @@
         
         xmlns:lex="http://wpflocalizeextension.codeplex.com"
         lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
-        lex:ResxLocalizationProvider.DefaultDictionary="I18N.WindowMain.Language">
+        lex:ResxLocalizationProvider.DefaultDictionary="I18N.WindowMain">
     <Grid>
         <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged" BackRequested="navView_BackRequested" PaneDisplayMode="LeftCompact">
             <ui:NavigationView.MenuItems>
