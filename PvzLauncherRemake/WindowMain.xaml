@@ -6,23 +6,29 @@
         xmlns:local="clr-namespace:PvzLauncherRemake"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Assets/icon/Icon.ico">
+        Title="MainWindow" Height="450" Width="800" ui:WindowHelper.UseModernWindowStyle="True" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Assets/icon/Icon.ico"
+        
+        
+        
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
+        lex:ResxLocalizationProvider.DefaultDictionary="I18N.WindowMain">
     <Grid>
         <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged" BackRequested="navView_BackRequested" PaneDisplayMode="LeftCompact">
             <ui:NavigationView.MenuItems>
-                <ui:NavigationViewItem x:Name="navViewItem_Launch" Content="启动" Tag="Launch">
+                <ui:NavigationViewItem x:Name="navViewItem_Launch" Content="{lex:Loc Launch}" Tag="Launch">
                     <ui:NavigationViewItem.Icon>
                         <ui:PathIcon Data="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm178-65q-23-23-23-56.5t23-56.5q23-23 57-23t57 23q23 23 23 56.5T660-541q-23 23-57 23t-57-23Zm19 321 84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem x:Name="navViewItem_Manage" Content="管理" Tag="Manage">
+                <ui:NavigationViewItem x:Name="navViewItem_Manage" Content="{lex:Loc Manage}" Tag="Manage">
                     <ui:NavigationViewItem.Icon>
                         <ui:PathIcon Data="M360-600v-80h360v80H360Zm0 120v-80h360v80H360Zm120 320H200h280Zm0 80H240q-50 0-85-35t-35-85v-120h120v-560h600v361q-20-2-40.5 1.5T760-505v-295H320v480h240l-80 80H200v40q0 17 11.5 28.5T240-160h240v80Zm80 0v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem x:Name="navViewItem_Download" Content="下载" Tag="Download">
+                <ui:NavigationViewItem x:Name="navViewItem_Download" Content="{lex:Loc Download}" Tag="Download">
                     <ui:NavigationViewItem.Icon>
                         <ui:PathIcon Data="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
                     </ui:NavigationViewItem.Icon>
@@ -30,19 +36,19 @@
 
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
-                <ui:NavigationViewItem x:Name="navViewItem_Task" Content="任务" Tag="Task">
+                <ui:NavigationViewItem x:Name="navViewItem_Task" Content="{lex:Loc Task}" Tag="Task">
                     <ui:NavigationViewItem.Icon>
                         <ui:PathIcon Data="m438-240 226-226-58-58-169 169-84-84-57 57 142 142ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem x:Name="navViewItem_Settings" Content="设置" Tag="Settings">
+                <ui:NavigationViewItem x:Name="navViewItem_Settings" Content="{lex:Loc Settings}" Tag="Settings">
                     <ui:NavigationViewItem.Icon>
                         <ui:PathIcon Data="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem x:Name="navViewItem_About" Content="关于" Tag="About">
+                <ui:NavigationViewItem x:Name="navViewItem_About" Content="{lex:Loc About}" Tag="About">
                     <ui:NavigationViewItem.Icon>
                         <ui:PathIcon Data="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
                     </ui:NavigationViewItem.Icon>

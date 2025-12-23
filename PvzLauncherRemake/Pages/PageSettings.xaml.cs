@@ -81,7 +81,7 @@ namespace PvzLauncherRemake.Pages
                 logger.Info($"[设置] 开始初始化");
 
                 //动画归位
-                StackPanel[] sps = { sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11 };
+                StackPanel[] sps = { sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11, sp12 };
                 foreach (var sp in sps)
                 {
                     logger.Info($"[设置: 动画] 动画元素 {sp.Name} 归位");
@@ -118,6 +118,14 @@ namespace PvzLauncherRemake.Pages
                         radioButton_Theme_Light.IsChecked = true; break;
                     case "Dark":
                         radioButton_Theme_Dark.IsChecked = true; break;
+                }
+                //### 语言
+                switch (AppGlobals.Config.LauncherConfig.Language)
+                {
+                    case "zh-CN":
+                        comboBox_Launcher_Language.SelectedIndex = 0;break;
+                    case "en-US":
+                        comboBox_Launcher_Language.SelectedIndex = 1;break;
                 }
                 //### 窗口标题
                 textBox_WindowTitle.Text = AppGlobals.Config.LauncherConfig.WindowTitle;
@@ -307,6 +315,18 @@ namespace PvzLauncherRemake.Pages
                     case "Dark":
                         ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark; break;
                 }
+            }
+        }
+
+        private void Launcher_Language(object sender, SelectionChangedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                var comboBox = (ComboBox)sender;
+                AppGlobals.Config.LauncherConfig.Language = ((ComboBoxItem)comboBox.SelectedItem).Tag.ToString()!;
+                ConfigManager.SaveConfig();
+
+                LocalizeManager.SwitchLanguage(AppGlobals.Config.LauncherConfig.Language);
             }
         }
 

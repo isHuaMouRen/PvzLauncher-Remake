@@ -38,8 +38,16 @@
                                 <RadioButton x:Name="radioButton_Theme_Light" ToolTip="明亮主题" Tag="Light" Content="明亮" Click="Launcher_Theme"/>
                                 <RadioButton x:Name="radioButton_Theme_Dark" ToolTip="暗黑主题" Tag="Dark" Content="暗黑" Click="Launcher_Theme"/>
                             </StackPanel>
-                            <!--标题-->
+                            <!--语言-->
                             <StackPanel x:Name="sp3" Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock Text="颜色主题:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <ComboBox x:Name="comboBox_Launcher_Language" SelectedIndex="0" SelectionChanged="Launcher_Language">
+                                    <ComboBoxItem Content="中文 (中国)" Tag="zh-CN"/>
+                                    <ComboBoxItem Content="英语 (美国)" Tag="en-US"/>
+                                </ComboBox>
+                            </StackPanel>
+                            <!--标题-->
+                            <StackPanel x:Name="sp4" Orientation="Horizontal" Margin="0,0,0,10">
                                 <TextBlock Text="启动器标题:" VerticalAlignment="Center" Margin="0,0,10,0"/>
                                 <TextBox x:Name="textBox_WindowTitle" Text="Plants Vs. Zombies Launcher" Margin="0,0,10,0" TextChanged="Launcher_Title">
                                     <TextBox.BorderBrush>
@@ -65,7 +73,7 @@
                                 </Button>
                             </StackPanel>
                             <!--标题图片-->
-                            <StackPanel x:Name="sp4" Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackPanel x:Name="sp5" Orientation="Horizontal" Margin="0,0,0,10">
                                 <TextBlock Text="标题图片:" Margin="0,0,20,0" VerticalAlignment="Top"/>
                                 <StackPanel Margin="0,0,20,0">
                                     <RadioButton x:Name="radioButton_TitieImage_EN" ToolTip="英文风格" Tag="EN" Content="Plants Vs. Zombies" IsChecked="True" Click="Launcher_TitleImageLanguage"/>
@@ -953,7 +961,7 @@
                                 </StackPanel>
                             </StackPanel>
                             <!--背景图-->
-                            <StackPanel x:Name="sp5" Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackPanel x:Name="sp6" Orientation="Horizontal" Margin="0,0,0,10">
                                 <TextBlock Text="背景图:" Margin="0,0,10,0"/>
                                 <RadioButton x:Name="radioButton_Background_Default" ToolTip="无背景" Tag="Default" Content="默认" IsChecked="True" VerticalAlignment="Top" Click="Launcher_BackgroundSelect"/>
                                 <StackPanel>
@@ -975,7 +983,7 @@
                                 </StackPanel>
                             </StackPanel>
                             <!--NavigationView位置-->
-                            <StackPanel x:Name="sp6" Orientation="Horizontal">
+                            <StackPanel x:Name="sp7" Orientation="Horizontal">
                                 <TextBlock Text="导航栏位置:" Margin="0,0,10,0" VerticalAlignment="Center"/>
                                 <RadioButton x:Name="radioButton_NavViewLeft" ToolTip="左侧导航栏" Content="左侧" Tag="Left" Checked="Launcher_NavigationViewAlign"/>
                                 <RadioButton x:Name="radioButton_NavViewTop" ToolTip="顶部导航栏" Content="顶部" Tag="Top" Checked="Launcher_NavigationViewAlign"/>
@@ -986,7 +994,7 @@
                         <StackPanel Margin="0,0,0,10">
                             <TextBlock Text="更新" FontSize="25" FontWeight="Bold"/>
                             <!--检测更新-->
-                            <StackPanel x:Name="sp7" Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackPanel x:Name="sp8" Orientation="Horizontal" Margin="0,0,0,10">
                                 <TextBlock Text="检测更新:" VerticalAlignment="Center" Margin="0,0,10,0"/>
                                 <Button x:Name="button_CheckUpdate" ToolTip="检测是否可更新到新版本" Content="检测更新" Click="Launcher_CheckUpdate">
                                     <Button.BorderBrush>
@@ -1001,7 +1009,7 @@
                                 </Button>
                             </StackPanel>
                             <!--更新通道-->
-                            <StackPanel x:Name="sp8" Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackPanel x:Name="sp9" Orientation="Horizontal" Margin="0,0,0,10">
                                 <TextBlock Text="更新通道:" VerticalAlignment="Center" Margin="0,0,10,0"/>
                                 <ComboBox x:Name="comboBox_UpdateChannel" ToolTip="选择不同的更新通道，获取不同的更新内容: Stable-更新慢但稳定 Development-更新快但不怎么稳定" BorderBrush="#33000000" SelectedIndex="0" SelectionChanged="Launcher_UpdateChannel">
                                     <ComboBoxItem Content="Stable" Tag="Stable"/>
@@ -1009,7 +1017,7 @@
                                 </ComboBox>
                             </StackPanel>
                             <!--启动时检查更新-->
-                            <StackPanel x:Name="sp9" Orientation="Horizontal">
+                            <StackPanel x:Name="sp10" Orientation="Horizontal">
                                 <TextBlock Text="启动时检查更新:" VerticalAlignment="Center" Margin="0,0,10,0"/>
                                 <CheckBox x:Name="checkBox_StartUpCheckUpdate" ToolTip="在启动器启东时是否检测更新" Content="启用" Click="Launcher_StartUpCheckUpdate"/>
                             </StackPanel>
@@ -1019,7 +1027,7 @@
                         <StackPanel Margin="0,0,0,10">
                             <TextBlock Text="通知" FontSize="25" FontWeight="Bold"/>
                             <!--下载通知-->
-                            <StackPanel x:Name="sp10" Orientation="Horizontal">
+                            <StackPanel x:Name="sp11" Orientation="Horizontal">
                                 <TextBlock Text="下载通知:" Margin="0,0,10,0" VerticalAlignment="Center"/>
 
                                 <CheckBox x:Name="checkBox_DownloadTipGame" ToolTip="在库内没有游戏时，是否提示去下载游戏" Content="游戏下载通知" Tag="Game" IsChecked="False" Click="Launcher_DownloadTips"/>
@@ -1032,7 +1040,7 @@
                             <TextBlock Text="存储" FontWeight="Bold" FontSize="25"/>
                             
                             <!--下载缓存-->
-                            <StackPanel x:Name="sp11" Orientation="Horizontal">
+                            <StackPanel x:Name="sp12" Orientation="Horizontal">
                                 <TextBlock Text="下载缓存:" VerticalAlignment="Center" Margin="0,0,10,0"/>
                                 <Button Content="清理" ToolTip="清理启动器的更新缓存以及下载缓存" Click="Launcher_ClearTemp">
                                     <Button.BorderBrush>

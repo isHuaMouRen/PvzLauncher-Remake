@@ -36,6 +36,9 @@ namespace PvzLauncherRemake.Class.JsonConfigs
             [JsonProperty("theme")]
             public string Theme { get; set; } = "Light";
 
+            [JsonProperty("language")]
+            public string Language { get; set; } = "zh-CN";
+
             [JsonProperty("window_title")]
             public string WindowTitle { get; set; } = "Plants Vs. Zombies Launcher";
 
