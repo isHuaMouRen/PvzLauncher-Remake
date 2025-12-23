@@ -31,7 +31,7 @@ namespace PvzLauncherRemake.Utils
 
             var validGames = new List<JsonGameInfo.Index>();
 
-            foreach (string dir in Directory.EnumerateDirectories(AppInfo.GameDirectory))
+            foreach (string dir in Directory.EnumerateDirectories(AppGlobals.GameDirectory))
             {
                 string configPath = Path.Combine(dir, ".pvzl.json");
                 if (!File.Exists(configPath)) continue;
@@ -41,7 +41,7 @@ namespace PvzLauncherRemake.Utils
                     var config = Json.ReadJson<JsonGameInfo.Index>(configPath);
                     if (config != null)
                     {
-                        if (AppInfo.Config.SaveConfig.EnableSaveIsolation)
+                        if (AppGlobals.Config.SaveConfig.EnableSaveIsolation)
                         {
                             string saveDir = Path.Combine(dir, ".save");
                             if (!Directory.Exists(saveDir))
@@ -61,8 +61,8 @@ namespace PvzLauncherRemake.Utils
                 }
             }
 
-            AppInfo.GameList = validGames;
-            logger.Info($"[游戏管理器] 加载游戏版本完成，共 {AppInfo.GameList.Count} 个有效版本");
+            AppGlobals.GameList = validGames;
+            logger.Info($"[游戏管理器] 加载游戏版本完成，共 {AppGlobals.GameList.Count} 个有效版本");
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace PvzLauncherRemake.Utils
 
             var validTrainers = new List<JsonTrainerInfo.Index>();
 
-            foreach (string dir in Directory.EnumerateDirectories(AppInfo.TrainerDirectory))
+            foreach (string dir in Directory.EnumerateDirectories(AppGlobals.TrainerDirectory))
             {
                 string configPath = Path.Combine(dir, ".pvzl.json");
                 if (!File.Exists(configPath)) continue;
@@ -98,8 +98,8 @@ namespace PvzLauncherRemake.Utils
                 }
             }
 
-            AppInfo.TrainerList = validTrainers;
-            logger.Info($"[游戏管理器] 加载游戏版本完成，共 {AppInfo.TrainerList.Count} 个有效版本");
+            AppGlobals.TrainerList = validTrainers;
+            logger.Info($"[游戏管理器] 加载游戏版本完成，共 {AppGlobals.TrainerList.Count} 个有效版本");
         }
 
         #endregion
@@ -113,7 +113,7 @@ namespace PvzLauncherRemake.Utils
         public static async void LaunchGame(JsonGameInfo.Index gameInfo, Action? exitCallback = null)
         {
             //游戏exe路径
-            string gameExePath = System.IO.Path.Combine(AppInfo.GameDirectory, gameInfo.GameInfo.Name, gameInfo.GameInfo.ExecuteName);
+            string gameExePath = System.IO.Path.Combine(AppGlobals.GameDirectory, gameInfo.GameInfo.Name, gameInfo.GameInfo.ExecuteName);
             logger.Info($"[游戏管理器] 设置游戏可执行文件路径: {gameExePath}");
             //定义Process
             AppProcess.Process = new Process
@@ -122,7 +122,7 @@ namespace PvzLauncherRemake.Utils
                 {
                     FileName = gameExePath,
                     UseShellExecute = true,
-                    WorkingDirectory = System.IO.Path.Combine(AppInfo.GameDirectory, gameInfo.GameInfo.Name)
+                    WorkingDirectory = System.IO.Path.Combine(AppGlobals.GameDirectory, gameInfo.GameInfo.Name)
                 }
             };
             logger.Info($"[游戏管理器] 启动进程");
@@ -132,8 +132,8 @@ namespace PvzLauncherRemake.Utils
             LatestGameLaunchTime = DateTimeOffset.Now;
 
             //启动后操作
-            logger.Info($"[启动] 启动后操作为: {AppInfo.Config.LauncherConfig.LaunchedOperate}");
-            switch (AppInfo.Config.LauncherConfig.LaunchedOperate)
+            logger.Info($"[启动] 启动后操作为: {AppGlobals.Config.LauncherConfig.LaunchedOperate}");
+            switch (AppGlobals.Config.LauncherConfig.LaunchedOperate)
             {
                 case "Close":
                     Environment.Exit(0); break;
@@ -146,12 +146,12 @@ namespace PvzLauncherRemake.Utils
             //启动次数
             gameInfo.Record.PlayCount++;
             logger.Info($"[启动] 启动次数+1, 现在为： {gameInfo.Record.PlayCount}");
-            Json.WriteJson(System.IO.Path.Combine(AppInfo.GameDirectory, gameInfo.GameInfo.Name, ".pvzl.json"), gameInfo);
+            Json.WriteJson(System.IO.Path.Combine(AppGlobals.GameDirectory, gameInfo.GameInfo.Name, ".pvzl.json"), gameInfo);
 
             //启动器整体次数
-            AppInfo.Config.Record.LaunchCount++;
+            AppGlobals.Config.Record.LaunchCount++;
             ConfigManager.SaveConfig();
-            logger.Info($"[启动] 启动器总体启动数: {AppInfo.Config.Record.LaunchCount}");
+            logger.Info($"[启动] 启动器总体启动数: {AppGlobals.Config.Record.LaunchCount}");
 
             IsGameRuning = true;
 
@@ -170,8 +170,8 @@ namespace PvzLauncherRemake.Utils
 
             IsGameRuning = false;
 
-            logger.Info($"[游戏管理器] 启动后操作为: {AppInfo.Config.LauncherConfig.LaunchedOperate}");
-            switch (AppInfo.Config.LauncherConfig.LaunchedOperate)
+            logger.Info($"[游戏管理器] 启动后操作为: {AppGlobals.Config.LauncherConfig.LaunchedOperate}");
+            switch (AppGlobals.Config.LauncherConfig.LaunchedOperate)
             {
                 case "HideAndDisplay":
                     Application.Current.MainWindow.Visibility = Visibility.Visible; break;
@@ -180,7 +180,7 @@ namespace PvzLauncherRemake.Utils
 
             //保存游玩时间
             gameInfo.Record.PlayTime = gameInfo.Record.PlayTime + ((long)(DateTimeOffset.Now - LatestGameLaunchTime!).Value.TotalSeconds);
-            Json.WriteJson(Path.Combine(AppInfo.GameDirectory, gameInfo.GameInfo.Name, ".pvzl.json"), gameInfo);
+            Json.WriteJson(Path.Combine(AppGlobals.GameDirectory, gameInfo.GameInfo.Name, ".pvzl.json"), gameInfo);
         }
 
         /// <summary>
@@ -230,9 +230,9 @@ namespace PvzLauncherRemake.Utils
         /// <returns></returns>
         public static async Task SwitchGameSave(JsonGameInfo.Index gamInfo)
         {
-            if (Directory.Exists(AppInfo.SaveDirectory))
-                Directory.Delete(AppInfo.SaveDirectory, true);
-            await DirectoryManager.CopyDirectoryAsync(Path.Combine(AppInfo.GameDirectory, gamInfo.GameInfo.Name, ".save"), AppInfo.SaveDirectory);
+            if (Directory.Exists(AppGlobals.SaveDirectory))
+                Directory.Delete(AppGlobals.SaveDirectory, true);
+            await DirectoryManager.CopyDirectoryAsync(Path.Combine(AppGlobals.GameDirectory, gamInfo.GameInfo.Name, ".save"), AppGlobals.SaveDirectory);
         }
 
         /// <summary>
@@ -242,9 +242,9 @@ namespace PvzLauncherRemake.Utils
         /// <returns></returns>
         public static async Task SaveGameSave(JsonGameInfo.Index gamInfo)
         {
-            if (Directory.Exists(Path.Combine(AppInfo.GameDirectory, gamInfo.GameInfo.Name, ".save")))
-                Directory.Delete(Path.Combine(AppInfo.GameDirectory, gamInfo.GameInfo.Name, ".save"), true);
-            await DirectoryManager.CopyDirectoryAsync(AppInfo.SaveDirectory, Path.Combine(AppInfo.GameDirectory, gamInfo.GameInfo.Name, ".save"));
+            if (Directory.Exists(Path.Combine(AppGlobals.GameDirectory, gamInfo.GameInfo.Name, ".save")))
+                Directory.Delete(Path.Combine(AppGlobals.GameDirectory, gamInfo.GameInfo.Name, ".save"), true);
+            await DirectoryManager.CopyDirectoryAsync(AppGlobals.SaveDirectory, Path.Combine(AppGlobals.GameDirectory, gamInfo.GameInfo.Name, ".save"));
         }
 
         #endregion
@@ -378,7 +378,7 @@ namespace PvzLauncherRemake.Utils
             using (RegistryKey key = Registry.CurrentUser.CreateSubKey(registyPath))
             {
                 int? valueData;
-                switch (AppInfo.Config.GameConfig.FullScreen)
+                switch (AppGlobals.Config.GameConfig.FullScreen)
                 {
                     case "FullScreen": valueData = 1; break;
                     case "Windowed": valueData = 0; break;
@@ -403,7 +403,7 @@ namespace PvzLauncherRemake.Utils
                 int? gameWindowX;
                 int? gameWindowY;
 
-                switch (AppInfo.Config.GameConfig.StartUpLocation)
+                switch (AppGlobals.Config.GameConfig.StartUpLocation)
                 {
                     case "Center":
                         gameWindowX = (int)((SystemParameters.WorkArea.Width / 2) - (800 / 2));

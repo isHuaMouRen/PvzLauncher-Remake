@@ -96,7 +96,7 @@ namespace PvzLauncherRemake.Utils
                             }
                         };
                         Json.WriteJson(Path.Combine(taskInfo.SavePath, ".pvzl.json"), cfg);
-                        AppInfo.Config.CurrentGame = configName;
+                        AppGlobals.Config.CurrentGame = configName;
                     }
                     else
                     {
@@ -108,7 +108,7 @@ namespace PvzLauncherRemake.Utils
                             Icon = taskInfo.TrainerInfo.Icon
                         };
                         Json.WriteJson(Path.Combine(taskInfo.SavePath, ".pvzl.json"), cfg);
-                        AppInfo.Config.CurrentTrainer = configName;
+                        AppGlobals.Config.CurrentTrainer = configName;
                     }
 
                     new NotificationManager().Show(new NotificationContent

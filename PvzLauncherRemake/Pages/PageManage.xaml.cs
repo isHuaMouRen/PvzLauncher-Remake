@@ -60,11 +60,11 @@ namespace PvzLauncherRemake.Pages
                 logger.Info($"[管理] 游戏列表加载完毕");
 
                 //游戏库里有东西才加
-                if (AppInfo.GameList.Count > 0)
+                if (AppGlobals.GameList.Count > 0)
                 {
                     logger.Info($"[管理] 开始添加卡片");
                     //添加卡片
-                    foreach (var game in AppInfo.GameList)
+                    foreach (var game in AppGlobals.GameList)
                     {
                         //判断版本
                         string version =
@@ -76,7 +76,7 @@ namespace PvzLauncherRemake.Pages
                         {
                             Title = game.GameInfo.Name,
                             Icon = GameManager.ParseToGameIcons(game.GameInfo.Icon),
-                            isActive = game.GameInfo.Name == AppInfo.Config.CurrentGame ? true : false,
+                            isActive = game.GameInfo.Name == AppGlobals.Config.CurrentGame ? true : false,
                             Version = $"{version} {game.GameInfo.Version}", //拼接，示例:"英文原版 1.0.0.1051"
                             Background = System.Windows.Media.Brushes.Transparent,
                             Tag = game,
@@ -92,8 +92,8 @@ namespace PvzLauncherRemake.Pages
                 else
                 {
                     logger.Warn($"[管理] 在游戏库内未发现任何游戏");
-                    AppInfo.Config.CurrentGame = null!;
-                    if (AppInfo.Config.LauncherConfig.DownloadTip.ShowGameDownloadTip)
+                    AppGlobals.Config.CurrentGame = null!;
+                    if (AppGlobals.Config.LauncherConfig.DownloadTip.ShowGameDownloadTip)
                         await DialogManager.ShowDialogAsync(new ContentDialog
                         {
                             Title = "提示",
@@ -113,18 +113,18 @@ namespace PvzLauncherRemake.Pages
 
                 //添加修改器
                 //游戏库里有东西才加
-                if (AppInfo.TrainerList.Count > 0)
+                if (AppGlobals.TrainerList.Count > 0)
                 {
                     logger.Info($"[管理] 添加修改器列表");
                     //添加卡片
-                    foreach (var trainer in AppInfo.TrainerList)
+                    foreach (var trainer in AppGlobals.TrainerList)
                     {
                         //定义卡片
                         var card = new UserCard
                         {
                             Title = trainer.Name,
                             Icon = GameManager.ParseToGameIcons(trainer.Icon),
-                            isActive = trainer.Name == AppInfo.Config.CurrentTrainer ? true : false,
+                            isActive = trainer.Name == AppGlobals.Config.CurrentTrainer ? true : false,
                             Version = $"{trainer.Version}", //拼接，示例:"英文原版 1.0.0.1051"
                             Background = System.Windows.Media.Brushes.Transparent,
                             Tag = trainer,
@@ -140,8 +140,8 @@ namespace PvzLauncherRemake.Pages
                 else
                 {
                     logger.Warn($"[管理] 未发现任何修改器");
-                    AppInfo.Config.CurrentTrainer = null!;
-                    if (AppInfo.Config.LauncherConfig.DownloadTip.ShowTrainerDownloadTip)
+                    AppGlobals.Config.CurrentTrainer = null!;
+                    if (AppGlobals.Config.LauncherConfig.DownloadTip.ShowTrainerDownloadTip)
                         await DialogManager.ShowDialogAsync(new ContentDialog
                         {
                             Title = "提示",
@@ -231,9 +231,9 @@ namespace PvzLauncherRemake.Pages
                     ((UserCard)card).SetLabels();
                 }
 
-                AppInfo.Config.CurrentGame = $"{((UserCard)sender).Title}";
+                AppGlobals.Config.CurrentGame = $"{((UserCard)sender).Title}";
                 ConfigManager.SaveConfig();
-                logger.Info($"[管理] 选择游戏: {AppInfo.Config.CurrentGame}");
+                logger.Info($"[管理] 选择游戏: {AppGlobals.Config.CurrentGame}");
             }
             catch (Exception ex)
             {
@@ -261,9 +261,9 @@ namespace PvzLauncherRemake.Pages
                 }
 
 
-                AppInfo.Config.CurrentTrainer = $"{((UserCard)sender).Title}";
+                AppGlobals.Config.CurrentTrainer = $"{((UserCard)sender).Title}";
                 ConfigManager.SaveConfig();
-                logger.Info($"[管理] 选择修改器: {AppInfo.Config.CurrentTrainer}");
+                logger.Info($"[管理] 选择修改器: {AppGlobals.Config.CurrentTrainer}");
             }
             catch (Exception ex)
             {
@@ -395,17 +395,17 @@ namespace PvzLauncherRemake.Pages
                     {
                         logger.Info($"[管理: 修改器设置] 用户同意删除，开始删除...");
 
-                        await Task.Run(() => Directory.Delete(Path.Combine(AppInfo.TrainerDirectory, trainerConfig.Name), true));
+                        await Task.Run(() => Directory.Delete(Path.Combine(AppGlobals.TrainerDirectory, trainerConfig.Name), true));
                         logger.Info($"[管理: 修改器设置] 删除完毕");
                         await GameManager.LoadTrainerListAsync();
 
-                        if (AppInfo.TrainerList.Count > 0 && AppInfo.Config.CurrentTrainer == trainerConfig.Name)
+                        if (AppGlobals.TrainerList.Count > 0 && AppGlobals.Config.CurrentTrainer == trainerConfig.Name)
                         {
-                            AppInfo.Config.CurrentTrainer = AppInfo.TrainerList[0].Name;
+                            AppGlobals.Config.CurrentTrainer = AppGlobals.TrainerList[0].Name;
                         }
                         else
                         {
-                            AppInfo.Config.CurrentTrainer = null!;
+                            AppGlobals.Config.CurrentTrainer = null!;
                         }
 
                         notificationManager.Show(new NotificationContent
@@ -440,12 +440,12 @@ namespace PvzLauncherRemake.Pages
                     {
                         if (textBox.Text != null)
                         {
-                            if (!Directory.Exists(Path.Combine(AppInfo.TrainerDirectory, textBox.Text)))
+                            if (!Directory.Exists(Path.Combine(AppGlobals.TrainerDirectory, textBox.Text)))
                             {
                                 string lastName = trainerConfig.Name;
                                 trainerConfig.Name = textBox.Text;
-                                Directory.Move(Path.Combine(AppInfo.TrainerDirectory, lastName), Path.Combine(AppInfo.TrainerDirectory, trainerConfig.Name));
-                                Json.WriteJson(Path.Combine(AppInfo.TrainerDirectory, trainerConfig.Name, ".pvzl.json"), trainerConfig);
+                                Directory.Move(Path.Combine(AppGlobals.TrainerDirectory, lastName), Path.Combine(AppGlobals.TrainerDirectory, trainerConfig.Name));
+                                Json.WriteJson(Path.Combine(AppGlobals.TrainerDirectory, trainerConfig.Name, ".pvzl.json"), trainerConfig);
                                 notificationManager.Show(new NotificationContent
                                 {
                                     Title = "更名成功",
@@ -455,8 +455,8 @@ namespace PvzLauncherRemake.Pages
 
                                 logger.Info($"[管理: 修改器设置] 更名成功: {trainerConfig.Name}");
 
-                                if (AppInfo.Config.CurrentTrainer == lastName)
-                                    AppInfo.Config.CurrentTrainer = trainerConfig.Name;
+                                if (AppGlobals.Config.CurrentTrainer == lastName)
+                                    AppGlobals.Config.CurrentTrainer = trainerConfig.Name;
 
                                 this.NavigationService.Refresh();
                             }
@@ -490,7 +490,7 @@ namespace PvzLauncherRemake.Pages
                     dialog.Hide();
                     Process.Start(new ProcessStartInfo
                     {
-                        FileName = Path.Combine(AppInfo.TrainerDirectory, trainerConfig.Name),
+                        FileName = Path.Combine(AppGlobals.TrainerDirectory, trainerConfig.Name),
                         UseShellExecute = true
                     });
                 });
@@ -552,7 +552,7 @@ namespace PvzLauncherRemake.Pages
                         }, (async () =>
                         {
                             //确定逻辑
-                            if (Directory.Exists(System.IO.Path.Combine(AppInfo.GameDirectory, textBox.Text)))
+                            if (Directory.Exists(System.IO.Path.Combine(AppGlobals.GameDirectory, textBox.Text)))
                             {
                                 //目标名已存在
                                 await DialogManager.ShowDialogAsync(new ContentDialog
@@ -570,7 +570,7 @@ namespace PvzLauncherRemake.Pages
                                 //不存在，继续保存
                                 isGameNameInputDone = true;
                                 gameName = textBox.Text;
-                                targetPath = System.IO.Path.Combine(AppInfo.GameDirectory, gameName);
+                                targetPath = System.IO.Path.Combine(AppGlobals.GameDirectory, gameName);
 
                                 //复制文件夹
                                 logger.Info($"[管理] 开始复制游戏");
@@ -689,7 +689,7 @@ namespace PvzLauncherRemake.Pages
 
 
                                     //当前选择:
-                                    AppInfo.Config.CurrentGame = gameName;
+                                    AppGlobals.Config.CurrentGame = gameName;
                                     ConfigManager.SaveConfig();
 
                                     //刷新页面

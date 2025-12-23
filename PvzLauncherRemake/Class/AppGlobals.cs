@@ -5,7 +5,7 @@ using System.Reflection;
 namespace PvzLauncherRemake.Class
 {
     //全局类
-    public static class AppInfo
+    public static class AppGlobals
     {
         //路径
         public static readonly string ExecuteDirectory = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}";//执行目录
@@ -20,6 +20,7 @@ namespace PvzLauncherRemake.Class
         public static List<JsonTrainerInfo.Index> TrainerList = new List<JsonTrainerInfo.Index>();//修改器
         public static JsonConfig.Index Config = null!;//配置
         public static Random Random = new Random();//随机数生成器
+        public static JsonDownloadIndex.Index? DownloadIndex = null;//下载索引
         
         //字符串
         public static readonly string Version = $"1.0.0-rc.16";//版本

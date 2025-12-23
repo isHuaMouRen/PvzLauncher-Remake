@@ -29,20 +29,20 @@ namespace PvzLauncherRemake
             {
                 logger.Info($"[主窗口] 开始构造...");
                 //初始化配置文件
-                if (!File.Exists(System.IO.Path.Combine(AppInfo.ExecuteDirectory, "config.json")))
+                if (!File.Exists(System.IO.Path.Combine(AppGlobals.ExecuteDirectory, "config.json")))
                 {
                     logger.Info($"[主窗口] 未检测到配置文件，即将创建");
                     ConfigManager.CreateDefaultConfig();
                 }//创建游戏目录
-                if (!Directory.Exists(AppInfo.GameDirectory))
+                if (!Directory.Exists(AppGlobals.GameDirectory))
                 {
                     logger.Info($"[主窗口] 未检测到游戏文件夹，即将创建");
-                    Directory.CreateDirectory(AppInfo.GameDirectory);
+                    Directory.CreateDirectory(AppGlobals.GameDirectory);
                 }
-                if (!Directory.Exists(AppInfo.TrainerDirectory))
+                if (!Directory.Exists(AppGlobals.TrainerDirectory))
                 {
                     logger.Info($"[主窗口] 未检测到修改器文件夹，即将创建");
-                    Directory.CreateDirectory(AppInfo.TrainerDirectory);
+                    Directory.CreateDirectory(AppGlobals.TrainerDirectory);
                 }
 
                 //读配置
@@ -50,18 +50,18 @@ namespace PvzLauncherRemake
 
                 //应用配置
                 logger.Info($"[主窗口] 开始应用配置");
-                logger.Info($"[主窗口] 当前配置文件: {JsonConvert.SerializeObject(AppInfo.Config)}");
-                this.Title = AppInfo.Config.LauncherConfig.WindowTitle;
-                this.Width = AppInfo.Config.LauncherConfig.WindowSize.Width;
-                this.Height = AppInfo.Config.LauncherConfig.WindowSize.Height;
-                switch (AppInfo.Config.LauncherConfig.NavigationViewAlign)
+                logger.Info($"[主窗口] 当前配置文件: {JsonConvert.SerializeObject(AppGlobals.Config)}");
+                this.Title = AppGlobals.Config.LauncherConfig.WindowTitle;
+                this.Width = AppGlobals.Config.LauncherConfig.WindowSize.Width;
+                this.Height = AppGlobals.Config.LauncherConfig.WindowSize.Height;
+                switch (AppGlobals.Config.LauncherConfig.NavigationViewAlign)
                 {
                     case "Left":
                         navView.PaneDisplayMode = NavigationViewPaneDisplayMode.LeftCompact; break;
                     case "Top":
                         navView.PaneDisplayMode = NavigationViewPaneDisplayMode.Top; break;
                 }
-                switch (AppInfo.Config.LauncherConfig.Theme)
+                switch (AppGlobals.Config.LauncherConfig.Theme)
                 {
                     case "Light":
                         ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light; break;
@@ -74,7 +74,7 @@ namespace PvzLauncherRemake
                 this.SizeChanged += ((sender, e) =>
                 {
                     logger.Info($"[主窗口] 窗口大小改变:  Width: {this.Width}  Height: {this.Height}");
-                    AppInfo.Config.LauncherConfig.WindowSize = new JsonConfig.WindowSize { Width = this.Width, Height = this.Height };
+                    AppGlobals.Config.LauncherConfig.WindowSize = new JsonConfig.WindowSize { Width = this.Width, Height = this.Height };
                     ConfigManager.SaveConfig();
                 });
 
@@ -118,11 +118,11 @@ namespace PvzLauncherRemake
 
                 //是否CI构建
 #if CI
-                AppInfo.Arguments.isCIBuild = true;
+                AppGlobals.Arguments.isCIBuild = true;
 #endif
                 //是否Debug构建
 #if DEBUG
-                AppInfo.Arguments.isDebugBuild = true;
+                AppGlobals.Arguments.isDebugBuild = true;
 #endif
 
 
@@ -135,24 +135,24 @@ namespace PvzLauncherRemake
                     {
                         //外壳启动
                         case "-shell":
-                            AppInfo.Arguments.isShell = true; break;
+                            AppGlobals.Arguments.isShell = true; break;
                         //更新启动，显示更新完毕对话框
                         case "-update":
-                            AppInfo.Arguments.isUpdate = true; break;
+                            AppGlobals.Arguments.isUpdate = true; break;
                     }
                 }
 
 
 
                 logger.Info($"[主窗口] {new string('=', 10)}启动参数配置{new string('=', 10)}");
-                logger.Info($"[主窗口] isShell={AppInfo.Arguments.isShell}");
-                logger.Info($"[主窗口] isUpdate={AppInfo.Arguments.isUpdate}");
+                logger.Info($"[主窗口] isShell={AppGlobals.Arguments.isShell}");
+                logger.Info($"[主窗口] isUpdate={AppGlobals.Arguments.isUpdate}");
                 logger.Info($"[主窗口] ");
-                logger.Info($"[主窗口] IsCIBuild={AppInfo.Arguments.isCIBuild}");
+                logger.Info($"[主窗口] IsCIBuild={AppGlobals.Arguments.isCIBuild}");
                 logger.Info($"[主窗口] {new string('=', 30)}");
 
                 //参数检测
-                if (!AppInfo.Arguments.isShell && !Debugger.IsAttached)//是否外壳启动
+                if (!AppGlobals.Arguments.isShell && !Debugger.IsAttached)//是否外壳启动
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
@@ -166,18 +166,18 @@ namespace PvzLauncherRemake
                         //Primary=>改用外壳启动
                         Process.Start(new ProcessStartInfo
                         {
-                            FileName = System.IO.Path.Combine(AppInfo.RootDirectory, "PvzLauncher.exe"),
+                            FileName = System.IO.Path.Combine(AppGlobals.RootDirectory, "PvzLauncher.exe"),
                             UseShellExecute = true
                         });
                         Environment.Exit(0);
                     }));
                 }
-                if (AppInfo.Arguments.isUpdate)//更新启动
+                if (AppGlobals.Arguments.isUpdate)//更新启动
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "更新完毕",
-                        Content = $"您已更新到最新版 {AppInfo.Version} , 尽情享受吧！",
+                        Content = $"您已更新到最新版 {AppGlobals.Version} , 尽情享受吧！",
                         PrimaryButtonText = "确定",
                         DefaultButton = ContentDialogButton.Primary
                     });
@@ -185,18 +185,18 @@ namespace PvzLauncherRemake
 
 
                 //构建检测
-                if (AppInfo.Arguments.isCIBuild)//CI
+                if (AppGlobals.Arguments.isCIBuild)//CI
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
                         Title = "警告",
-                        Content = $"您使用的是基于 {AppInfo.Version} 构建的CI版本\nCI构建是每个提交自动生成的，稳定性无法得到保证，因此仅用于测试使用\n\n如果使用CI版本出现了BUG请不要反馈给开发者!",
+                        Content = $"您使用的是基于 {AppGlobals.Version} 构建的CI版本\nCI构建是每个提交自动生成的，稳定性无法得到保证，因此仅用于测试使用\n\n如果使用CI版本出现了BUG请不要反馈给开发者!",
                         PrimaryButtonText = "我明确风险且遇到BUG会反馈开发者",
                         CloseButtonText = "我明确风险并了解处理BUG的方法",
                         DefaultButton = ContentDialogButton.Primary
                     }, (() => Environment.Exit(0)));
                 }
-                else if (AppInfo.Arguments.isDebugBuild)//DEBUG
+                else if (AppGlobals.Arguments.isDebugBuild)//DEBUG
                 {
                     await DialogManager.ShowDialogAsync(new ContentDialog
                     {
@@ -218,7 +218,7 @@ namespace PvzLauncherRemake
 
 
                 //检查更新
-                if (AppInfo.Config.LauncherConfig.StartUpCheckUpdate)
+                if (AppGlobals.Config.LauncherConfig.StartUpCheckUpdate)
                 {
                     logger.Info($"[主窗口] 检测更新");
                     await Updater.CheckUpdate(null!, true);

@@ -25,7 +25,7 @@ namespace PvzLauncherRemake.Pages
                 // =====
 
                 string text = "";
-                Type type = typeof(AppInfo);
+                Type type = typeof(AppGlobals);
 
                 FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Static);
 

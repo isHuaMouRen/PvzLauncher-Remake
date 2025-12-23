@@ -20,7 +20,7 @@ namespace PvzLauncherRemake
 
             Task.Run(async () =>
             {
-                await Task.Delay(1000);
+                await Task.Delay(500);
 
                 await this.Dispatcher.Invoke(async () =>
                 {

@@ -20,8 +20,6 @@ namespace PvzLauncherRemake.Pages
     /// </summary>
     public partial class PageDownload : ModernWpf.Controls.Page
     {
-        private JsonDownloadIndex.Index DownloadIndex = null!;
-
         #region AddCard
         private void AddGameCard(StackPanel stackPanel, JsonDownloadIndex.GameInfo[] gameInfos)
         {
@@ -96,11 +94,14 @@ namespace PvzLauncherRemake.Pages
                 logger.Info($"[下载] 开始初始化...");
                 StartLoad();
 
-                using (var client = new HttpClient())
+                if (AppGlobals.DownloadIndex == null)
                 {
-                    string indexString = await client.GetStringAsync(AppInfo.DownloadIndexUrl);
-                    logger.Info($"[下载] 获取下载索引: {indexString}");
-                    DownloadIndex = Json.ReadJson<JsonDownloadIndex.Index>(indexString);
+                    using (var client = new HttpClient())
+                    {
+                        string indexString = await client.GetStringAsync(AppGlobals.DownloadIndexUrl);
+                        logger.Info($"[下载] 获取下载索引: {indexString}");
+                        AppGlobals.DownloadIndex = Json.ReadJson<JsonDownloadIndex.Index>(indexString);
+                    }
                 }
 
                 //中文原版
@@ -110,10 +111,10 @@ namespace PvzLauncherRemake.Pages
                 stackPanel_enOrigin.Children.Clear();
                 stackPanel_trainer.Children.Clear();
 
-                AddGameCard(stackPanel_zhOrigin, DownloadIndex.ZhOrigin);
-                AddGameCard(stackPanel_zhRevision, DownloadIndex.ZhRevision);
-                AddGameCard(stackPanel_enOrigin, DownloadIndex.EnOrigin);
-                AddTrainerCard(stackPanel_trainer, DownloadIndex.Trainer);
+                AddGameCard(stackPanel_zhOrigin, AppGlobals.DownloadIndex.ZhOrigin);
+                AddGameCard(stackPanel_zhRevision, AppGlobals.DownloadIndex.ZhRevision);
+                AddGameCard(stackPanel_enOrigin, AppGlobals.DownloadIndex.EnOrigin);
+                AddTrainerCard(stackPanel_trainer, AppGlobals.DownloadIndex.Trainer);
 
                 EndLoad();
                 logger.Info($"[下载] 结束初始化");
@@ -184,8 +185,8 @@ namespace PvzLauncherRemake.Pages
             bool isTrainer = userCard.AttachedProperty.ToString() == "Trainer";
             var info = isTrainer ? (JsonDownloadIndex.TrainerInfo)userCard.Tag! : (JsonDownloadIndex.GameInfo)userCard.Tag!;
             string baseDirectory =
-                isTrainer ? AppInfo.TrainerDirectory :
-                AppInfo.GameDirectory;
+                isTrainer ? AppGlobals.TrainerDirectory :
+                AppGlobals.GameDirectory;
 
             //确认下载
             bool confirm = false;
@@ -208,7 +209,7 @@ namespace PvzLauncherRemake.Pages
 
         private async Task StartDownloadAsync(dynamic info, string savePath, bool isTrainer)
         {
-            string tempPath = Path.Combine(AppInfo.TempDiectory, $"PVZLAUNCHER.DOWNLOAD.CACHE.{AppInfo.Random.Next(Int32.MinValue, Int32.MaxValue) + AppInfo.Random.Next(Int32.MinValue, Int32.MaxValue)}");
+            string tempPath = Path.Combine(AppGlobals.TempDiectory, $"PVZLAUNCHER.DOWNLOAD.CACHE.{AppGlobals.Random.Next(Int32.MinValue, Int32.MaxValue) + AppGlobals.Random.Next(Int32.MinValue, Int32.MaxValue)}");
 
             logger.Info($"[下载] 生成随机临时名: {tempPath}");
 

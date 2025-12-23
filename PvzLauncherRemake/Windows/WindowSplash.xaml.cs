@@ -21,7 +21,7 @@ namespace PvzLauncherRemake.Windows
             {
                 To = 1,
                 From = 0,
-                Duration = TimeSpan.FromSeconds(1),
+                Duration = TimeSpan.FromMilliseconds(200),
                 EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
             };
             icon.BeginAnimation(OpacityProperty, null);
@@ -34,7 +34,7 @@ namespace PvzLauncherRemake.Windows
             {
                 To = 0,
                 From = 1,
-                Duration = TimeSpan.FromMilliseconds(500),
+                Duration = TimeSpan.FromMilliseconds(200),
                 EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
             };
             icon.BeginAnimation(OpacityProperty, null);
