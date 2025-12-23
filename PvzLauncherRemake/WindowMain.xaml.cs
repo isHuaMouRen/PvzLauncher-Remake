@@ -69,6 +69,9 @@ namespace PvzLauncherRemake
                         ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark; break;
                 }
 
+                //切换语言
+                LocalizeManager.SwitchLanguage(AppGlobals.Config.LauncherConfig.Language);
+
                 //注册事件
                 logger.Info($"[主窗口] 注册窗口大小改变事件...");
                 this.SizeChanged += ((sender, e) =>
