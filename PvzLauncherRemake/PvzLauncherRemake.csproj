@@ -48,6 +48,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>PageDownload.resx</DependentUpon>
     </Compile>
+    <Compile Update="I18N\PageLaunch.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PageLaunch.resx</DependentUpon>
+    </Compile>
     <Compile Update="I18N\WindowMain.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -63,6 +68,10 @@
     <EmbeddedResource Update="I18N\PageDownload.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PageDownload.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="I18N\PageLaunch.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PageLaunch.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="I18N\WindowMain.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

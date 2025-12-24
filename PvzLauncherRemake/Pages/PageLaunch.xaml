@@ -7,7 +7,13 @@
       xmlns:ui="http://schemas.modernwpf.com/2019"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageLaunch">
+      Title="PageLaunch"
+         
+         
+         xmlns:lex="http://wpflocalizeextension.codeplex.com"
+         lex:LocalizeDictionary.DesignCulture="en-US"
+         lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
+         lex:ResxLocalizationProvider.DefaultDictionary="I18N.PageLaunch">
 
     <Grid>
         <Image x:Name="image" Stretch="UniformToFill" Opacity="0.7" Margin="-20,-20,-20,-20">
@@ -20,7 +26,7 @@
             <StackPanel x:Name="stackPanel_LaunchButtons" VerticalAlignment="Bottom" HorizontalAlignment="Right">
                 <Button x:Name="button_Launch" Style="{DynamicResource AccentButtonStyle}" Height="60" Width="250" Margin="0,0,0,5" Click="button_Launch_Click">
                     <StackPanel>
-                        <TextBlock x:Name="textBlock_LaunchText" Text="启动游戏" Foreground="#E4FFFFFF" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="textBlock_LaunchText" Text="{lex:Loc LaunchGame}" Foreground="#E4FFFFFF" HorizontalAlignment="Center"/>
                         <TextBlock x:Name="textBlock_LaunchVersion" Text="Version" FontSize="10" HorizontalAlignment="Center" Foreground="#7FFFFFFF"/>
                     </StackPanel>
                 </Button>
@@ -36,7 +42,7 @@
                         </LinearGradientBrush>
                     </Button.BorderBrush>
                     <StackPanel>
-                        <TextBlock Text="启动修改器"/>
+                        <TextBlock Text="{lex:Loc LaunchTrainer}"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
