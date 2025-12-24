@@ -3,10 +3,13 @@ using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
+using WPFLocalizeExtension.Engine;
+using WPFLocalizeExtension.Extensions;
 using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Pages
@@ -78,7 +81,7 @@ namespace PvzLauncherRemake.Pages
                     if (GameManager.IsGameRuning == true)
                     {
                         logger.Info($"[启动] 检测到游戏仍在运行切换为结束状态");
-                        textBlock_LaunchText.Text = "结束进程";
+                        textBlock_LaunchText.Text = I18N.PageLaunch.StopGame;
                     }
                 }
                 catch (InvalidOperationException) { }
@@ -129,7 +132,7 @@ namespace PvzLauncherRemake.Pages
                 {
                     logger.Info($"[启动] 开始启动游戏");
 
-                    textBlock_LaunchText.Text = "结束进程";
+                    textBlock_LaunchText.Text = LocExtension.GetLocalizedValue<string>("StopGame");
 
                     //切换存档
                     if (AppGlobals.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(Path.Combine(AppGlobals.GameDirectory, AppGlobals.Config.CurrentGame, ".save")))
@@ -147,9 +150,7 @@ namespace PvzLauncherRemake.Pages
                             Title = "提示",
                             Message = $"游戏进程退出, 退出代码: {AppProcess.Process.ExitCode}",
                             Type = NotificationType.Warning
-                        });
-
-                        textBlock_LaunchText.Text = "启动游戏";
+                        }); 
 
                         //保存存档
                         if (AppGlobals.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(AppGlobals.SaveDirectory))
@@ -172,7 +173,7 @@ namespace PvzLauncherRemake.Pages
                 else if (GameManager.IsGameRuning == true) 
                 {
                     logger.Info($"[启动] 正在结束游戏...");
-                    textBlock_LaunchText.Text = "启动游戏";
+                    textBlock_LaunchText.Text = LocExtension.GetLocalizedValue<string>("LaunchGame");
 
                     await GameManager.KillGame((() =>
                     {
