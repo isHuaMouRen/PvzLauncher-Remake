@@ -75,7 +75,7 @@ namespace PvzLauncherRemake.Pages
                 //判断游戏是否运行
                 try
                 {
-                    if (AppProcess.Process != null && AppProcess.Process.Id != 0 && !AppProcess.Process.HasExited)
+                    if (GameManager.IsGameRuning == true)
                     {
                         logger.Info($"[启动] 检测到游戏仍在运行切换为结束状态");
                         textBlock_LaunchText.Text = "结束进程";
