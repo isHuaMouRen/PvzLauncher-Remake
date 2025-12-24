@@ -125,7 +125,7 @@ namespace PvzLauncherRemake.Pages
             try
             {
                 //没运行就启动
-                if (textBlock_LaunchText.Text == "启动游戏")
+                if (GameManager.IsGameRuning == false)
                 {
                     logger.Info($"[启动] 开始启动游戏");
 
@@ -169,7 +169,7 @@ namespace PvzLauncherRemake.Pages
                     });
                 }
                 //运行就结束
-                else if (textBlock_LaunchText.Text == "结束进程")
+                else if (GameManager.IsGameRuning == true) 
                 {
                     logger.Info($"[启动] 正在结束游戏...");
                     textBlock_LaunchText.Text = "启动游戏";
