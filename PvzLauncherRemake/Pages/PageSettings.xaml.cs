@@ -7,6 +7,7 @@ using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -34,7 +35,28 @@ namespace PvzLauncherRemake.Pages
         }
 
         #region Animation
-        public void StartAnimation(StackPanel sp)
+        public async Task StartAnimation()
+        {
+            List<StackPanel> animationStackPanels = new List<StackPanel>();
+
+            foreach (var controls in VisualTreeTools.GetVisualChildren(this))
+            {
+                if (controls is StackPanel sp && sp.Tag != null && sp.Tag.ToString() == "aniSp") 
+                {
+                    animationStackPanels.Add(sp);
+                    sp.Margin = new Thickness(-500, sp.Margin.Top, sp.Margin.Right, sp.Margin.Bottom);
+                    sp.Opacity = 0;
+                }
+            }
+
+            foreach (var sp in animationStackPanels)
+            {
+                await Task.Delay(50);
+                StackPanelFadeIn(sp);
+            }
+        }
+
+        public void StackPanelFadeIn(StackPanel sp)
         {
             sp.BeginAnimation(MarginProperty, new ThicknessAnimation
             {
@@ -80,16 +102,6 @@ namespace PvzLauncherRemake.Pages
             {
                 logger.Info($"[设置] 开始初始化");
 
-                //动画归位
-                StackPanel[] sps = { sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11, sp12 };
-                foreach (var sp in sps)
-                {
-                    logger.Info($"[设置: 动画] 动画元素 {sp.Name} 归位");
-                    sp.Margin = new Thickness(-500, sp.Margin.Top, sp.Margin.Right, sp.Margin.Bottom);
-                    sp.Opacity = 0;
-                }
-
-                logger.Info($"[设置: 动画] 所有动画元素已归位");
 
                 logger.Info($"[设置] 当前配置文件: {JsonConvert.SerializeObject(AppGlobals.Config)}");
 
@@ -228,14 +240,10 @@ namespace PvzLauncherRemake.Pages
 
 
                 logger.Info($"[设置] 设置项应用完毕");
+
+                await StartAnimation();
+
                 isInitialized = true;
-                logger.Info($"[设置: 动画] 动画元素开始执行");
-                foreach (var sp in sps)
-                {
-                    logger.Info($"[设置: 动画] 元素 {sp.Name} 开始播放动画");
-                    await Task.Delay(50);
-                    StartAnimation(sp);
-                }
                 logger.Info($"[设置] 完成初始化");
             }
             catch (Exception ex)
