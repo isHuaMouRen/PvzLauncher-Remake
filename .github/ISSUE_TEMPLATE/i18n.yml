@@ -1,0 +1,13 @@
+name: 🟣 本地化问题
+description: 反馈项目的本地化错误，比如翻译错误、漏翻译等
+type: "本地化"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 描述
+      description: 简要描述是哪出现了问题
+      placeholder: |
+        例如: 导航栏的启动标签丢失了翻译
+    validations:
+      required: true
