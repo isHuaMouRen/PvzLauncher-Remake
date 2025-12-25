@@ -40,8 +40,8 @@
                             </StackPanel>
                             <!--语言-->
                             <StackPanel x:Name="sp3" Orientation="Horizontal" Margin="0,0,0,10">
-                                <TextBlock Text="颜色主题:" Margin="0,0,10,0" VerticalAlignment="Center"/>
-                                <ComboBox x:Name="comboBox_Launcher_Language" SelectedIndex="0" SelectionChanged="Launcher_Language">
+                                <TextBlock Text="语言:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <ComboBox x:Name="comboBox_Launcher_Language" ToolTip="启动器显示的语言" SelectedIndex="0" SelectionChanged="Launcher_Language">
                                     <ComboBoxItem Content="中文 (中国)" Tag="zh-CN"/>
                                     <ComboBoxItem Content="英语 (美国)" Tag="en-US"/>
                                 </ComboBox>
