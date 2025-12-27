@@ -12,56 +12,28 @@
       Title="PageAbout"
          
       xmlns:lex="http://wpflocalizeextension.codeplex.com"
-         lex:LocalizeDictionary.DesignCulture="en-US"
-         lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
-         lex:ResxLocalizationProvider.DefaultDictionary="I18N.PageAbout">
+      lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
+      lex:ResxLocalizationProvider.DefaultDictionary="I18N.PageAbout">
 
     <Grid Margin="10,10,10,10">
+        <!--图标-->
         <Viewbox Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0">
             <icons:IconApplicationFull MouseRightButtonDown="Canvas_MouseRightButtonDown" MouseLeftButtonDown="Canvas_MouseLeftButtonDown"/>
         </Viewbox>
 
+        <!--标题与版本-->
         <TextBlock Text="Plants vs. Zombies Launcher" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Margin="0,100,0,0"/>
         <TextBlock x:Name="textBlock_Version" Text="Version" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF646464" Margin="0,130,0,0"/>
 
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Button x:Name="button_ReportIssue" Content="{lex:Loc FeedBack}" Margin="0,0,10,0" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
-                        <LinearGradientBrush.RelativeTransform>
-                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#33000000"/>
-                        <GradientStop Color="#0F000000" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-            </Button>
-            <Button x:Name="button_UploadVersion" Content="{lex:Loc ProvideGame}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl" Margin="0,0,10,0">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
-                        <LinearGradientBrush.RelativeTransform>
-                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#33000000"/>
-                        <GradientStop Color="#0F000000" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-            </Button>
-            <Button x:Name="button_i18nReport" Content="{lex:Loc i18nReport}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=i18n.yml" Click="GoToUrl">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
-                        <LinearGradientBrush.RelativeTransform>
-                            <ScaleTransform CenterY="0.5" ScaleY="-1"/>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#33000000"/>
-                        <GradientStop Color="#0F000000" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-            </Button>
-
+        <!--快捷按钮-->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" FlowDirection="RightToLeft">
+            <Button x:Name="button_ReportIssue" Content="{lex:Loc FeedBack}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl" Margin="10,0,0,0"/>
+            <Button x:Name="button_UploadVersion" Content="{lex:Loc ProvideGame}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl" Margin="10,0,0,0"/>
+            <Button x:Name="button_i18nReport" Content="{lex:Loc i18nReport}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=i18n.yml" Click="GoToUrl" Margin="10,0,0,0"/>
         </StackPanel>
 
-        <ctrl:UserScrollViewer Margin="0,150,0,0" Cursor="Hand">
+        <!--名单-->
+        <ctrl:UserScrollViewer Margin="0,150,0,0">
             <StackPanel>
                 <!--开发者-->
                 <TextBlock Text="{lex:Loc List_Developer}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center"/>
@@ -72,34 +44,35 @@
                 <ui:HyperlinkButton NavigateUri="https://github.com/PvzLauncher/PvzLauncher" Content="PvzLauncher/PvzLauncher" HorizontalAlignment="Center"/>
 
                 <!--UI-->
-                <TextBlock Text="UI" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/dotnet/wpf" Content="dotnet/wpf - UI框架" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/Kinnara/ModernWpf" Content="Kinnara/ModernWpf - 主UI库" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/TwilightLemon/FluentScrollViewer" Content="TwilightLemon/FluentScrollViewer - ScrollViewer平滑滚动" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://learn.microsoft.com/zh-cn/microsoft-edge/webview2/" Content="microsoft/WebView2 - 网页渲染" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/Federerer/Notifications.Wpf" Content="Federerer/Notifications.Wpf - 通知弹窗" Cursor="Hand" HorizontalAlignment="Center"/>
+                <TextBlock Text="UI" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/dotnet/wpf" Content="dotnet/wpf - UI框架" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/Kinnara/ModernWpf" Content="Kinnara/ModernWpf - 主UI库"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/TwilightLemon/FluentScrollViewer" Content="TwilightLemon/FluentScrollViewer - ScrollViewer平滑滚动"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://learn.microsoft.com/zh-cn/microsoft-edge/webview2/" Content="microsoft/WebView2 - 网页渲染"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/Federerer/Notifications.Wpf" Content="Federerer/Notifications.Wpf - 通知弹窗"  HorizontalAlignment="Center"/>
 
                 <!--程序-->
-                <TextBlock Text="{lex:Loc List_Code}" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/qaiu/netdisk-fast-download" Content="qaiu/netdisk-fast-download - 网盘直链解析" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/JamesNK/Newtonsoft.Json" Content="JamesNK/Newtonsoft.Json - Json读写" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/adamhathcock/sharpcompress" Content="adamhathcock/sharpcompress - 压缩包操作" Cursor="Hand" HorizontalAlignment="Center"/>
-                
+                <TextBlock Text="{lex:Loc List_Code}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/qaiu/netdisk-fast-download" Content="qaiu/netdisk-fast-download - 网盘直链解析"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/JamesNK/Newtonsoft.Json" Content="JamesNK/Newtonsoft.Json - Json读写"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/adamhathcock/sharpcompress" Content="adamhathcock/sharpcompress - 压缩包操作"  HorizontalAlignment="Center"/>
+
                 <!--宝贵意见提出者-->
-                <TextBlock Text="{lex:Loc List_Feedback}" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/Xiaowang0229" Content="Xiaowang0229 - 在 Release Candidate 阶段提出宝贵建议" Cursor="Hand" HorizontalAlignment="Center"/>
-                
+                <TextBlock Text="{lex:Loc List_Feedback}" FontSize="15" FontWeight="Bold"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/Xiaowang0229" Content="Xiaowang0229 - 在 Release Candidate 阶段提出宝贵建议"  HorizontalAlignment="Center"/>
+
                 <!--软件-->
-                <TextBlock Text="{lex:Loc List_Software}" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://visualstudio.microsoft.com" Content="Visual Studio Community 2026 - 开发本软件使用的IDE" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://code.visualstudio.com/" Content="Visual Studio Code - 辅助开发" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://git-scm.com" Content="Git - 分布式版本控制软件" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://inkscape.org" Content="Inkscape - 矢量图绘制软件" Cursor="Hand" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://www.getpaint.net/" Content="Paint.NET - 位图绘制软件" Cursor="Hand" HorizontalAlignment="Center"/>
+                <TextBlock Text="{lex:Loc List_Software}" FontSize="15" FontWeight="Bold"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://visualstudio.microsoft.com" Content="Visual Studio Community 2026 - 开发本软件使用的IDE"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://code.visualstudio.com/" Content="Visual Studio Code - 辅助开发"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://git-scm.com" Content="Git - 分布式版本控制软件"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://inkscape.org" Content="Inkscape - 矢量图绘制软件"  HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://www.getpaint.net/" Content="Paint.NET - 位图绘制软件"  HorizontalAlignment="Center"/>
 
             </StackPanel>
         </ctrl:UserScrollViewer>
 
+        <!--版权信息-->
         <TextBlock Text="{lex:Loc Copyright}" Foreground="#FF646464" VerticalAlignment="Top" HorizontalAlignment="Left"/>
     </Grid>
 </ui:Page>
