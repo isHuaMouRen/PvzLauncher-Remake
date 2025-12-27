@@ -79,7 +79,7 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
-        ///   查找类似 启动 的本地化字符串。
+        ///   查找类似 启用 的本地化字符串。
         /// </summary>
         public static string General_Enabled {
             get {

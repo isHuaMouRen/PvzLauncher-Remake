@@ -202,7 +202,7 @@
     <value>启动时检查更新:</value>
   </data>
   <data name="General_Enabled" xml:space="preserve">
-    <value>启动</value>
+    <value>启用</value>
   </data>
   <data name="Launcher_Notification" xml:space="preserve">
     <value>通知</value>
