@@ -1,7 +1,11 @@
 ﻿using HuaZi.Library.Json;
+using HuaZi.Library.Logger;
+using ModernWpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
+using PvzLauncherRemake.Utils;
 using PvzLauncherRemake.Windows;
+using System.IO;
 using System.Net.Http;
 using System.Windows;
 
@@ -17,6 +21,42 @@ namespace PvzLauncherRemake
         #region init
         private async void Initialize()
         {
+            //初始化配置文件
+            if (!File.Exists(System.IO.Path.Combine(AppGlobals.ExecuteDirectory, "config.json")))
+            {
+                ConfigManager.CreateDefaultConfig();
+            }
+            //游戏目录
+            if (!Directory.Exists(AppGlobals.GameDirectory))
+            {
+                Directory.CreateDirectory(AppGlobals.GameDirectory);
+            }
+            //修改器目录
+            if (!Directory.Exists(AppGlobals.TrainerDirectory))
+            {
+                Directory.CreateDirectory(AppGlobals.TrainerDirectory);
+            }
+
+            //读配置
+            ConfigManager.LoadConfig();
+
+            //主题
+            switch (AppGlobals.Config.LauncherConfig.Theme)
+            {
+                case "Light":
+                    ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light; break;
+                case "Dark":
+                    ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark; break;
+            }
+
+            //切换语言
+            LocalizeManager.SwitchLanguage(AppGlobals.Config.LauncherConfig.Language);
+
+            //加载列表
+            await GameManager.LoadGameListAsync();
+            await GameManager.LoadTrainerListAsync();
+
+            //获取公告
             if (AppGlobals.AnnouncementsIndex == null)
             {
                 using var client = new HttpClient();

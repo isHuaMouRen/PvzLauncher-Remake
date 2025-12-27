@@ -27,30 +27,7 @@ namespace PvzLauncherRemake
         {
             try
             {
-                logger.Info($"[主窗口] 开始构造...");
-                //初始化配置文件
-                if (!File.Exists(System.IO.Path.Combine(AppGlobals.ExecuteDirectory, "config.json")))
-                {
-                    logger.Info($"[主窗口] 未检测到配置文件，即将创建");
-                    ConfigManager.CreateDefaultConfig();
-                }//创建游戏目录
-                if (!Directory.Exists(AppGlobals.GameDirectory))
-                {
-                    logger.Info($"[主窗口] 未检测到游戏文件夹，即将创建");
-                    Directory.CreateDirectory(AppGlobals.GameDirectory);
-                }
-                if (!Directory.Exists(AppGlobals.TrainerDirectory))
-                {
-                    logger.Info($"[主窗口] 未检测到修改器文件夹，即将创建");
-                    Directory.CreateDirectory(AppGlobals.TrainerDirectory);
-                }
-
-                //读配置
-                ConfigManager.LoadConfig();
-
                 //应用配置
-                logger.Info($"[主窗口] 开始应用配置");
-                logger.Info($"[主窗口] 当前配置文件: {JsonConvert.SerializeObject(AppGlobals.Config)}");
                 this.Title = AppGlobals.Config.LauncherConfig.WindowTitle;
                 this.Width = AppGlobals.Config.LauncherConfig.WindowSize.Width;
                 this.Height = AppGlobals.Config.LauncherConfig.WindowSize.Height;
@@ -61,17 +38,7 @@ namespace PvzLauncherRemake
                     case "Top":
                         navView.PaneDisplayMode = NavigationViewPaneDisplayMode.Top; break;
                 }
-                switch (AppGlobals.Config.LauncherConfig.Theme)
-                {
-                    case "Light":
-                        ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light; break;
-                    case "Dark":
-                        ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark; break;
-                }
-
-                //切换语言
-                LocalizeManager.SwitchLanguage(AppGlobals.Config.LauncherConfig.Language);
-
+                
                 //注册事件
                 logger.Info($"[主窗口] 注册窗口大小改变事件...");
                 this.SizeChanged += ((sender, e) =>
@@ -80,11 +47,6 @@ namespace PvzLauncherRemake
                     AppGlobals.Config.LauncherConfig.WindowSize = new JsonConfig.WindowSize { Width = this.Width, Height = this.Height };
                     ConfigManager.SaveConfig();
                 });
-
-
-                //加载列表
-                await GameManager.LoadGameListAsync();
-                await GameManager.LoadTrainerListAsync();
 
                 //预加载Page
                 void AddType(Type t)
