@@ -1,5 +1,8 @@
-﻿using PvzLauncherRemake.Class;
+﻿using HuaZi.Library.Json;
+using PvzLauncherRemake.Class;
+using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Windows;
+using System.Net.Http;
 using System.Windows;
 
 namespace PvzLauncherRemake
@@ -11,12 +14,30 @@ namespace PvzLauncherRemake
     {
         private WindowSplash? _splash;
 
+        #region init
+        private async void Initialize()
+        {
+            if (AppGlobals.AnnouncementsIndex == null)
+            {
+                using var client = new HttpClient();
+                AppGlobals.AnnouncementsIndex = Json.ReadJson<JsonAnnouncements.Index>(await client.GetStringAsync(AppGlobals.AnnouncementsIndexUrl));
+
+                foreach (var announcment in AppGlobals.AnnouncementsIndex.Announcements)
+                {
+                    announcment.Content = await client.GetStringAsync($"{AppGlobals.AnnouncementsRootUrl}{announcment.Content}");
+                }
+            }
+        }
+        #endregion
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
             _splash = new WindowSplash();
             _splash.ShowAndFadeIn();
+
+            Initialize();
 
             Task.Run(async () =>
             {

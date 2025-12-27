@@ -45,6 +45,25 @@
             <!--标题-->
             <Viewbox x:Name="viewBox_Icon" VerticalAlignment="Top" HorizontalAlignment="Center" Height="60" Margin="0,10,0,0"/>
 
+            
+            
+            <!--公告-->
+            <Grid x:Name="grid_Announcements" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                <Border BorderThickness="2" CornerRadius="3" Background="#19FFFFFF">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
+                            <LinearGradientBrush.RelativeTransform>
+                                <ScaleTransform CenterY="0.5" ScaleY="-1"/>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#33000000"/>
+                            <GradientStop Color="#19000000" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+
+                </Border>
+
+                <TabControl x:Name="tabControl_Announcements" TabStripPlacement="Bottom" MaxWidth="400" MaxHeight="250"/>
+            </Grid>
         </Grid>
     </Grid>
 </ui:Page>

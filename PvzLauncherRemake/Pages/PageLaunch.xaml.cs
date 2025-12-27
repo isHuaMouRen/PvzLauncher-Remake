@@ -1,4 +1,6 @@
-﻿using Notifications.Wpf;
+﻿using HuaZi.Library.Json;
+using MdXaml;
+using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls.Icons;
@@ -6,7 +8,11 @@ using PvzLauncherRemake.Utils;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Net.Http;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using WPFLocalizeExtension.Engine;
@@ -99,6 +105,37 @@ namespace PvzLauncherRemake.Pages
                     }
                 }
                 catch (InvalidOperationException) { }
+
+                //显示公告
+                if (AppGlobals.AnnouncementsIndex != null) 
+                {
+                    tabControl_Announcements.Items.Clear();
+
+                    foreach (var announcement in AppGlobals.AnnouncementsIndex.Announcements)
+                    {
+                        var docViewer = new FlowDocumentScrollViewer
+                        {
+                            VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                            HorizontalScrollBarVisibility = ScrollBarVisibility.Auto
+                        };
+
+                        docViewer.Document = new Markdown().Transform(announcement.Content);
+                        docViewer.Document.FontFamily = new FontFamily("Microsoft YaHei UI");
+                        foreach (var p in docViewer.Document.Blocks.OfType<Paragraph>()) 
+                        {
+                            p.LineHeight = 10;
+                            p.LineStackingStrategy = LineStackingStrategy.BlockLineHeight;
+                        }
+
+                        tabControl_Announcements.Items.Add(new TabItem
+                        {
+                            Header = announcement.Title,
+                            Content = docViewer
+                        });
+                    }
+                    
+                }
+
 
 
                 //播放动画
