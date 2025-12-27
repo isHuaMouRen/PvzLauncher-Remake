@@ -121,4 +121,7 @@
   <data name="List_Developer" xml:space="preserve">
     <value>开发者</value>
   </data>
+  <data name="List_Software" xml:space="preserve">
+    <value>特别感谢-软件</value>
+  </data>
 </root>

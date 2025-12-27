@@ -121,4 +121,7 @@
   <data name="List_Developer" xml:space="preserve">
     <value>Developer</value>
   </data>
+  <data name="List_Software" xml:space="preserve">
+    <value>Special Thanks - Software</value>
+  </data>
 </root>

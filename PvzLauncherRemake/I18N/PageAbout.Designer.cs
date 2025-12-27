@@ -124,6 +124,15 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
+        ///   查找类似 特别感谢-软件 的本地化字符串。
+        /// </summary>
+        public static string List_Software {
+            get {
+                return ResourceManager.GetString("List_Software", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 提供游戏版本 的本地化字符串。
         /// </summary>
         public static string ProvideGame {

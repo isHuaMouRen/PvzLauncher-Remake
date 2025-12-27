@@ -65,7 +65,7 @@
             <StackPanel>
                 <!--开发者-->
                 <TextBlock Text="{lex:Loc List_Developer}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <ui:HyperlinkButton NavigateUri="https://github.com/isHuaMouRen" Content="isHuaMouRen - 主开发人员 (也是唯一的开发人员)" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://github.com/isHuaMouRen" Content="isHuaMouRen - 主开发人员" HorizontalAlignment="Center"/>
 
                 <!--项目仓库-->
                 <TextBlock Text="{lex:Loc List_Repository}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center"/>
@@ -88,7 +88,14 @@
                 <!--宝贵意见提出者-->
                 <TextBlock Text="{lex:Loc List_Feedback}" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
                 <ui:HyperlinkButton NavigateUri="https://github.com/Xiaowang0229" Content="Xiaowang0229 - 在 Release Candidate 阶段提出宝贵建议" Cursor="Hand" HorizontalAlignment="Center"/>
-
+                
+                <!--软件-->
+                <TextBlock Text="{lex:Loc List_Software}" FontSize="15" FontWeight="Bold" Cursor="Hand" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://visualstudio.microsoft.com" Content="Visual Studio Community 2026 - 开发本软件使用的IDE" Cursor="Hand" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://code.visualstudio.com/" Content="Visual Studio Code - 辅助开发" Cursor="Hand" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://git-scm.com" Content="Git - 分布式版本控制软件" Cursor="Hand" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://inkscape.org" Content="Inkscape - 矢量图绘制软件" Cursor="Hand" HorizontalAlignment="Center"/>
+                <ui:HyperlinkButton NavigateUri="https://www.getpaint.net/" Content="Paint.NET - 位图绘制软件" Cursor="Hand" HorizontalAlignment="Center"/>
 
             </StackPanel>
         </ctrl:UserScrollViewer>
