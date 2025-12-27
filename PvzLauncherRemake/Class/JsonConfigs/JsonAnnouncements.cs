@@ -7,7 +7,7 @@ namespace PvzLauncherRemake.Class.JsonConfigs
         public class Index
         {
             [JsonProperty("announcements")]
-            public AnnouncementInfo[] News { get; set; }
+            public AnnouncementInfo[] Announcements { get; set; }
         }
 
         public class AnnouncementInfo
