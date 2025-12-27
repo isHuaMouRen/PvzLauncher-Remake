@@ -1,19 +1,16 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PvzLauncherRemake.Class.JsonConfigs
 {
-    public class JsonNews
+    public class JsonAnnouncements
     {
         public class Index
         {
-            [JsonProperty("news")]
-            public NewsInfo[] News { get; set; }
+            [JsonProperty("announcements")]
+            public AnnouncementInfo[] News { get; set; }
         }
 
-        public class NewsInfo
+        public class AnnouncementInfo
         {
             [JsonProperty("title")]
             public string Title { get; set; }
