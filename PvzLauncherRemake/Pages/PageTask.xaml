@@ -12,6 +12,7 @@
 
     <Grid>
         <Grid>
+            <!--上栏-->
             <Border BorderThickness="2" CornerRadius="3" VerticalAlignment="Top" Margin="5" Background="#19FFFFFF">
                 <Border.BorderBrush>
                     <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
@@ -22,6 +23,7 @@
                         <GradientStop Color="#19000000" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.BorderBrush>
+                
                 <Grid Margin="10" VerticalAlignment="Top" >
                     <TextBlock x:Name="textBlock_ProgressAverage" Text="总进度: %" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10"/>
                     <TextBlock x:Name="textBlock_SpeedSum" Text="总速度: Mb/s" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,10"/>
@@ -29,13 +31,13 @@
                 </Grid>
             </Border>
             
+            <!--任务列表-->
             <controls:UserScrollViewer Margin="0,60,0,0">
-                <StackPanel x:Name="stackPanel_Tasks" Background="#00000000" VirtualizingPanel.ScrollUnit="Pixel">
-                    <controls:UserTaskCard Margin="5"/>
-                </StackPanel>
+                <StackPanel x:Name="stackPanel_Tasks" Background="#00000000"/>
             </controls:UserScrollViewer>
         </Grid>
 
+        <!--空提示-->
         <TextBlock x:Name="textBlock_None" Text="这里似乎什么都没有，去下载页看看吧！" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="25" Visibility="Hidden"/>
     </Grid>
 </ui:Page>
