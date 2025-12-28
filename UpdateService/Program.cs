@@ -1,7 +1,6 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
 using System.IO.Compression;
-using System.Diagnostics;
-using System.IO;
+using System.Reflection;
 
 namespace UpdateService
 {
