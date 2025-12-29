@@ -124,4 +124,7 @@
   <data name="List_Software" xml:space="preserve">
     <value>Special Thanks - Software</value>
   </data>
+  <data name="ShowEula" xml:space="preserve">
+    <value>End User License Agreement</value>
+  </data>
 </root>

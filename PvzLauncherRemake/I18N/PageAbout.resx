@@ -124,4 +124,7 @@
   <data name="List_Software" xml:space="preserve">
     <value>特别感谢-软件</value>
   </data>
+  <data name="ShowEula" xml:space="preserve">
+    <value>最终用户许可协议</value>
+  </data>
 </root>

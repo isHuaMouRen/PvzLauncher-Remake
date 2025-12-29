@@ -140,5 +140,14 @@ namespace PvzLauncherRemake.I18N {
                 return ResourceManager.GetString("ProvideGame", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查找类似 最终用户许可协议 的本地化字符串。
+        /// </summary>
+        public static string ShowEula {
+            get {
+                return ResourceManager.GetString("ShowEula", resourceCulture);
+            }
+        }
     }
 }

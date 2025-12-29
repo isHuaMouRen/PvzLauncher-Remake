@@ -27,9 +27,10 @@
 
         <!--快捷按钮-->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" FlowDirection="RightToLeft">
-            <Button x:Name="button_ReportIssue" Content="{lex:Loc FeedBack}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl" Margin="10,0,0,0"/>
-            <Button x:Name="button_UploadVersion" Content="{lex:Loc ProvideGame}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl" Margin="10,0,0,0"/>
-            <Button x:Name="button_i18nReport" Content="{lex:Loc i18nReport}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=i18n.yml" Click="GoToUrl" Margin="10,0,0,0"/>
+            <Button x:Name="button_ReportIssue" Content="{lex:Loc FeedBack}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new/choose" Click="GoToUrl" Margin="0,0,10,0"/>
+            <Button x:Name="button_UploadVersion" Content="{lex:Loc ProvideGame}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=download.yml" Click="GoToUrl" Margin="0,0,10,0"/>
+            <Button x:Name="button_i18nReport" Content="{lex:Loc i18nReport}" Tag="https://github.com/PvzLauncher/PvzLauncher/issues/new?template=i18n.yml" Click="GoToUrl" Margin="0,0,10,0"/>
+            <Button x:Name="button_showEULA" Content="{lex:Loc ShowEula}" Tag="https://github.com/PvzLauncher/PvzLauncher/blob/main/CODE_OF_CONDUCT.md" Click="GoToUrl" Margin="0,0,10,0"/>
         </StackPanel>
 
         <!--名单-->
