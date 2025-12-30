@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using WPFLocalizeExtension.Extensions;
 using static PvzLauncherRemake.Class.AppLogger;
+using static PvzLauncherRemake.Utils.LocalizeManager;
 
 namespace PvzLauncherRemake.Pages
 {
@@ -153,6 +154,8 @@ namespace PvzLauncherRemake.Pages
                             Message = $"游戏进程退出, 退出代码: {AppProcess.Process.ExitCode}",
                             Type = NotificationType.Warning
                         });
+
+                        textBlock_LaunchText.Text = GetLoc("LaunchGame");
 
                         //保存存档
                         if (AppGlobals.Config.SaveConfig.EnableSaveIsolation && Directory.Exists(AppGlobals.SaveDirectory))
