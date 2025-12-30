@@ -304,40 +304,26 @@ namespace PvzLauncherRemake.Utils
         {
             switch (iconName)
             {
-                case "origin":
-                    return GameIcons.Origin;
-                case "goty":
-                    return GameIcons.GOTY;
-                case "steam":
-                    return GameIcons.Steam;
-                case "test":
-                    return GameIcons.Test;
-                case "beta":
-                    return GameIcons.Beta;
-                case "ghtr":
-                    return GameIcons.Ghtr;
-                case "dream":
-                    return GameIcons.Dream;
-                case "ninefive":
-                    return GameIcons.NineFive;
-                case "he":
-                    return GameIcons.Hybrid;
-                case "fe":
-                    return GameIcons.Fusion;
-                case "tat":
-                    return GameIcons.Tat;
+                case "origin": return GameIcons.Origin;
+                case "goty": return GameIcons.GOTY;
+                case "steam": return GameIcons.Steam;
+                case "test": return GameIcons.Test;
+                case "beta": return GameIcons.Beta;
+                case "ghtr": return GameIcons.Ghtr;
+                case "dream": return GameIcons.Dream;
+                case "ninefive": return GameIcons.NineFive;
+                case "he": return GameIcons.Hybrid;
+                case "fe": return GameIcons.Fusion;
+                case "tat": return GameIcons.Tat;
+                case "eagrace": return GameIcons.Eagrace;
 
-                case "pvztoolkit":
-                    return GameIcons.PvzToolkit;
-                case "ce":
-                    return GameIcons.CheatEngine;
+                case "pvztoolkit": return GameIcons.PvzToolkit;
+                case "ce": return GameIcons.CheatEngine;
 
-                case "unknown":
-                    return GameIcons.Unknown;
+                case "unknown": return GameIcons.Unknown;
 
 
-                default:
-                    return GameIcons.Unknown;
+                default: return GameIcons.Unknown;
             }
         }
 
@@ -363,6 +349,7 @@ namespace PvzLauncherRemake.Utils
                 case GameIcons.Hybrid: return new GameIconHybrid();
                 case GameIcons.Fusion: return new GameIconFusion();
                 case GameIcons.Tat: return new GameIconTat();
+                case GameIcons.Eagrace: return new GameIconEagrace();
 
                 case GameIcons.PvzToolkit: return new GameIconPvzToolkit();
                 case GameIcons.CheatEngine: return new GameIconCheatEngine();

@@ -15,6 +15,7 @@
         Hybrid,//he
         Fusion,//fe
         Tat,//tat
+        Eagrace,//eagrace
 
         PvzToolkit,//pvztoolkit
         CheatEngine//ce
