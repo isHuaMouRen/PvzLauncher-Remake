@@ -1,8 +1,11 @@
 ﻿using ModernWpf.Controls;
+using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Controls;
 using PvzLauncherRemake.Utils;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,8 +29,10 @@ namespace PvzLauncherRemake.Pages
         public string BaseDirectory { get; set; }
         public bool IsTrainer { get; set; }
 
+        private string ScreeshotRootUrl = $"{AppGlobals.DownloadIndexUrl}/screenshots";
+
         #region init
-        public void Initialize()
+        public async void Initialize()
         {
             try
             {
@@ -40,6 +45,30 @@ namespace PvzLauncherRemake.Pages
                 //简介
                 textBlock_Description.Text = Info.Description;
 
+                stackPanel_Screenshot.Children.Clear();
+                using (var client = new HttpClient())
+                {
+                    for (int i = 0; i < Info.Screenshot; i++)
+                    {
+                        using (Stream stream = await client.GetStreamAsync($"{ScreeshotRootUrl}/{Info.Version}/{i}.png"))
+                        {
+                            BitmapImage bitmap = new BitmapImage();
+                            bitmap.BeginInit();
+                            bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                            bitmap.StreamSource = stream;
+                            bitmap.EndInit();
+                            bitmap.Freeze();
+
+                            var image = new Image
+                            {
+                                MaxHeight = 500,
+                                Source = bitmap
+                            };
+                            stackPanel_Screenshot.Children.Add(image);
+                            
+                        }
+                    }
+                }
                 
             }
             catch (Exception ex)
