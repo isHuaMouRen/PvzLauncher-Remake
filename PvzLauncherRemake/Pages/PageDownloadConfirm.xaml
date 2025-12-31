@@ -21,25 +21,27 @@
             <!--下载按钮-->
             <Button x:Name="button_Download" Style="{DynamicResource AccentButtonStyle}" Content="{lex:Loc Download}" HorizontalAlignment="Right" Margin="0,0,10,0" Click="button_Download_Click"/>
         </Grid>
-        
+
         <!--简介-->
-        <StackPanel Margin="0,0,0,10">
-            <!--简介-->
-            <TextBlock x:Name="textBlock_Description" Margin="0,0,0,10"/>
-            
-            <!--信息-->
-            <TextBlock x:Name="textBlock_Information" Margin="0,0,0,10">
+        <ctrl:UserScrollViewer>
+            <StackPanel Margin="0,0,0,10">
+                <!--简介-->
+                <TextBlock x:Name="textBlock_Description" Margin="0,0,0,10"/>
+
+                <!--信息-->
+                <TextBlock x:Name="textBlock_Information" Margin="0,0,0,10">
                 <Bold>作者:</Bold> xxx<LineBreak/>
                 <Bold>大小:</Bold> xxxMb<LineBreak/>
                 <Bold>发布日期:</Bold> xxxx-xx-xx xx:xx<LineBreak/>
-            </TextBlock>
-            
-            <!--屏幕截图-->
-            <TextBlock Text="{lex:Loc ScreenShots}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
-            <StackPanel Orientation="Horizontal">
-                
+                </TextBlock>
+
+                <!--屏幕截图-->
+                <TextBlock Text="{lex:Loc ScreenShots}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
+                <StackPanel Orientation="Horizontal">
+
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-        
+        </ctrl:UserScrollViewer>
+
     </StackPanel>
 </ui:Page>
