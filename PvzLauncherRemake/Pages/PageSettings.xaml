@@ -54,6 +54,7 @@
                                 <ComboBox x:Name="comboBox_Launcher_Language" ToolTip="启动器显示的语言" SelectedIndex="0" SelectionChanged="Launcher_Language">
                                     <ComboBoxItem Content="简体中文 (中国大陆)" Tag="zh-CN"/>
                                     <ComboBoxItem Content="English (US)" Tag="en-US"/>
+                                    <ComboBoxItem Content="日本語 (日本)" Tag="ja-JP"/>
                                 </ComboBox>
                             </StackPanel>
                             <!--标题-->
