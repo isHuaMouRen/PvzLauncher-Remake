@@ -58,6 +58,7 @@
                                     <ComboBoxItem Content="Français (France)" Tag="fr-FR"/>
                                     <ComboBoxItem Content="한국어 (한국)" Tag="ko-KR"/>
                                     <ComboBoxItem Content="Русский (Россия)" Tag="ru-RU"/>
+                                    <ComboBoxItem Content="Deutschdeutsch (deutschland)" Tag="de-DE"/>
                                 </ComboBox>
                             </StackPanel>
                             <!--标题-->
