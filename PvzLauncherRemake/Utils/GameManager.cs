@@ -1,4 +1,5 @@
-﻿using HuaZi.Library.Json;
+﻿using HuaZi.Library.Downloader;
+using HuaZi.Library.Json;
 using Microsoft.Win32;
 using ModernWpf.Controls;
 using Notifications.Wpf;
@@ -99,6 +100,44 @@ namespace PvzLauncherRemake.Utils
 
             AppGlobals.TrainerList = validTrainers;
             logger.Info($"[游戏管理器] 加载游戏版本完成，共 {AppGlobals.TrainerList.Count} 个有效版本");
+        }
+
+        #endregion
+
+        #region 下载
+
+        public static async Task StartDownloadAsync(dynamic info, string savePath, bool isTrainer)
+        {
+            string tempPath = Path.Combine(AppGlobals.TempDiectory, $"PVZLAUNCHER.DOWNLOAD.CACHE.{AppGlobals.Random.Next(Int32.MinValue, Int32.MaxValue) + AppGlobals.Random.Next(Int32.MinValue, Int32.MaxValue)}");
+
+            logger.Info($"[下载] 生成随机临时名: {tempPath}");
+
+            try
+            {
+                //清除残留
+                if (File.Exists(tempPath))
+                    await Task.Run(() => File.Delete(tempPath));
+
+                //定义下载器
+                TaskManager.AddTask(new DownloadTaskInfo
+                {
+                    Downloader = new Downloader
+                    {
+                        Url = info.Url,
+                        SavePath = tempPath
+                    },
+                    GameInfo = isTrainer ? null : info,
+                    TrainerInfo = isTrainer ? info : null,
+                    TaskName = $"下载 {Path.GetFileName(savePath)}",
+                    TaskType = isTrainer ? TaskType.Trainer : TaskType.Game,
+                    SavePath = savePath,
+                    TaskIcon = GameManager.ParseToGameIcons(info.Icon)
+                });
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", null!, ex);
+            }
         }
 
         #endregion
