@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="PvzLauncherRemake.Controls.Icons.GameIconUnnamed"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PvzLauncherRemake.Controls.Icons"
+             mc:Ignorable="d">
+    <Canvas UseLayoutRounding="False" Width="512.0" Height="512.0">
+        <Canvas.Clip>
+            <RectangleGeometry Rect="0,0,512.0,512.0"/>
+        </Canvas.Clip>
+        <Canvas UseLayoutRounding="False">
+            <Canvas UseLayoutRounding="False">
+                <Path Stroke="#ff005028" StrokeLineJoin="Round" StrokeThickness="10.3352" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                    <Path.Fill>
+                        <LinearGradientBrush MappingMode="Absolute" StartPoint="336.68622,176.43854" EndPoint="336.68622,354.18958" Transform="1.291894,0.0,0.0,1.291894,-50.59705,-74.623714">
+                            <GradientStop Color="#ffaae600" Offset="0.0"/>
+                            <GradientStop Color="#ff3cc83c" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.Data>
+                        <PathGeometry Figures="m 363.71 145.458 c -19.3471 45.0344 -44.7987 66.5847 -74.5615 71.5588 c 2.99845 23.6224 25.1171 30.7293 45.0977 39.6854 c -1.30297 12.7135 -38.3281 15.2219 -59.5306 22.2498 c 12.06 23.6599 34.6074 34.21 55.9224 46.3013 l -10.2216 52.9147 c -3.93019 9.38875 0.53928 12.8489 10.2216 12.6288 c 44.9126 -1.6177 86.4083 -9.01556 125.29 -4.60263 c 6.66028 -1.49749 9.32565 -0.71098 11.3059 -13.4378 c 1.98023 -12.7268 1.78371 -43.9388 2.9688 -47.2835 c 1.65628 -8.16525 -1.94763 -20.598 -3.4559 -31.9278 c -5.75735 -8.91058 -30.6816 -18.1859 -44.7075 -15.1936 c 16.5923 -22.2997 40.7471 -20.9127 56.1419 -47.482 c -4.2551 -10.7907 -19.7903 -45.9211 -31.8709 -57.309 c -13.8705 8.76239 -32.6515 12.6475 -46.5209 12.1859 c 1.24184 -17.8522 -21.9726 -27.5526 -36.0797 -40.2884 z m 15.0508 78.2187 l 14.8023 9.1019 l -21.5144 20.2111 l -10.3152 -12.389 z m -9.68898 102.659 l 33.1653 0.42643 l 1.70066 12.331 l -35.2924 2.12457 z"/>
+                    </Path.Data>
+                </Path>
+            </Canvas>
+            <Canvas UseLayoutRounding="False">
+                <Path Stroke="#ff005028" StrokeLineJoin="Round" StrokeThickness="10.3352" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round">
+                    <Path.Fill>
+                        <LinearGradientBrush MappingMode="Absolute" StartPoint="153.74323,160.99213" EndPoint="153.74323,364.177" Transform="1.291894,0.0,0.0,1.291894,-50.59705,-74.623714">
+                            <GradientStop Color="#ffaae600" Offset="0.0"/>
+                            <GradientStop Color="#ff3cc83c" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.Data>
+                        <PathGeometry Figures="m 99.0884 166.887 l 9.69818 45.882 c 10.8531 0.46279 40.301 1.39343 29.2541 27.0411 c -31.5811 14.7863 -55.906 9.62719 -91.6427 12.9856 c 8.24256 15.922 12.126 30.6299 12.2951 44.5334 c 15.6179 -0.92853 32.9262 0.7646 36.8301 10.4851 c -23.246 13.837 -36.2018 17.4642 -73.5796 25.0792 c 11.8783 24.9155 46.0915 28.1465 74.0049 34.889 c 19.571 -3.04559 32.081 -26.9672 55.0598 -48.9091 c 9.74294 19.7462 20.9666 45.041 37.4702 49.0123 l 82.0711 -0.60133 c -3.71332 -19.7743 -6.10767 -48.9185 -28.5235 -76.5258 c -6.80294 39.7579 -29.3389 31.8786 -53.8998 29.6834 l -4.91372 -29.0092 l 89.3901 -12.3359 c 4.40313 -12.583 0.41154 -26.7804 -24.5384 -45.0082 c -25.5718 -1.79694 -48.9125 -1.04408 -66.5827 6.1893 l -2.68457 -27.2229 l 34.7003 -3.84448 c 4.30833 -15.9605 -1.3157 -31.9209 -30.8861 -47.8814 c -25.9851 9.86567 -58.2719 11.1841 -83.5228 5.55777 z"/>
+                    </Path.Data>
+                </Path>
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</UserControl>

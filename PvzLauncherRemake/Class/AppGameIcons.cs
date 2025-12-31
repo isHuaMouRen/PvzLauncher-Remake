@@ -16,6 +16,7 @@
         Fusion,//fe
         Tat,//tat
         Eagrace,//eagrace
+        Unnamed,//unnamed
 
         PvzToolkit,//pvztoolkit
         CheatEngine//ce
