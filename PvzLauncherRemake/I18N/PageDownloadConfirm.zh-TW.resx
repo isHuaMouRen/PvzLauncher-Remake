@@ -120,4 +120,7 @@
   <data name="Download" xml:space="preserve">
     <value>下載</value>
   </data>
+  <data name="ScreenShots" xml:space="preserve">
+    <value>屏幕截圖</value>
+  </data>
 </root>

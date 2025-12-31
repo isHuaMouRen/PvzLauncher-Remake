@@ -120,4 +120,7 @@
   <data name="Download" xml:space="preserve">
     <value>herunterladen</value>
   </data>
+  <data name="ScreenShots" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
 </root>
