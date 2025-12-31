@@ -3,7 +3,8 @@ using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls.Icons;
-using PvzLauncherRemake.Utils;
+using PvzLauncherRemake.Utils.Services;
+using PvzLauncherRemake.Utils.UI;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
@@ -14,7 +15,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using WPFLocalizeExtension.Extensions;
 using static PvzLauncherRemake.Class.AppLogger;
-using static PvzLauncherRemake.Utils.LocalizeManager;
+using static PvzLauncherRemake.Utils.Configuration.LocalizeManager;
 
 namespace PvzLauncherRemake.Pages
 {

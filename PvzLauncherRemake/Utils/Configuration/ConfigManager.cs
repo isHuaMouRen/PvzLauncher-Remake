@@ -4,7 +4,7 @@ using PvzLauncherRemake.Class.JsonConfigs;
 using System.IO;
 using static PvzLauncherRemake.Class.AppLogger;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.Configuration
 {
     public static class ConfigManager
     {

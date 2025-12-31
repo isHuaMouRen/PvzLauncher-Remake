@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using static PvzLauncherRemake.Class.AppLogger;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.UI
 {
     public static class ErrorReportDialog
     {

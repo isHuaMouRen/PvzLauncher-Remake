@@ -6,13 +6,16 @@ using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Controls.Icons;
+using PvzLauncherRemake.Utils.Configuration;
+using PvzLauncherRemake.Utils.FileSystem;
+using PvzLauncherRemake.Utils.UI;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using static PvzLauncherRemake.Class.AppLogger;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.Services
 {
     public static class GameManager
     {

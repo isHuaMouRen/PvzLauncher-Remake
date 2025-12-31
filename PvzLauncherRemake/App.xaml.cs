@@ -2,7 +2,8 @@
 using ModernWpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
-using PvzLauncherRemake.Utils;
+using PvzLauncherRemake.Utils.Configuration;
+using PvzLauncherRemake.Utils.Services;
 using PvzLauncherRemake.Windows;
 using System.IO;
 using System.Net.Http;

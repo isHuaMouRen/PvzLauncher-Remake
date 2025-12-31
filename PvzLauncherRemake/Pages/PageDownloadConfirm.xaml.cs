@@ -2,6 +2,8 @@
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Controls;
 using PvzLauncherRemake.Utils;
+using PvzLauncherRemake.Utils.Services;
+using PvzLauncherRemake.Utils.UI;
 using SharpCompress.Compressors.Xz;
 using System;
 using System.Collections.Generic;
@@ -20,7 +22,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static PvzLauncherRemake.Utils.LocalizeManager;
+using static PvzLauncherRemake.Utils.Configuration.LocalizeManager;
 
 namespace PvzLauncherRemake.Pages
 {

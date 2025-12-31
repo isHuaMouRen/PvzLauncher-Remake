@@ -4,6 +4,7 @@ using MdXaml;
 using ModernWpf.Controls;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
+using PvzLauncherRemake.Utils.UI;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
@@ -13,7 +14,7 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using static PvzLauncherRemake.Class.AppLogger;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.Services
 {
     public static class Updater
     {

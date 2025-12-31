@@ -2,7 +2,7 @@
 using SharpCompress.Common;
 using System.IO;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.FileSystem
 {
     public class CompressExtracter
     {

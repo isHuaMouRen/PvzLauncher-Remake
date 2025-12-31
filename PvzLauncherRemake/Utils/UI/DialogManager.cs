@@ -1,7 +1,7 @@
 ﻿using ModernWpf.Controls;
 using static PvzLauncherRemake.Class.AppLogger;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.UI
 {
     public static class DialogManager
     {

@@ -3,7 +3,7 @@ using System.Reflection;
 using WPFLocalizeExtension.Engine;
 using WPFLocalizeExtension.Extensions;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.Configuration
 {
     public class LocalizeManager
     {

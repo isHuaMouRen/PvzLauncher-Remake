@@ -2,7 +2,7 @@
 using System.Windows;
 using static PvzLauncherRemake.Class.AppLogger;
 
-namespace PvzLauncherRemake.Utils
+namespace PvzLauncherRemake.Utils.UI
 {
     public static class NavigationController
     {

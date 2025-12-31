@@ -5,13 +5,16 @@ using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils;
+using PvzLauncherRemake.Utils.Configuration;
+using PvzLauncherRemake.Utils.Services;
+using PvzLauncherRemake.Utils.UI;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Effects;
 using static PvzLauncherRemake.Class.AppLogger;
-using static PvzLauncherRemake.Utils.LocalizeManager;
+using static PvzLauncherRemake.Utils.Configuration.LocalizeManager;
 
 namespace PvzLauncherRemake.Pages
 {
