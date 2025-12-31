@@ -190,6 +190,8 @@ namespace PvzLauncherRemake.Pages
                                 AppGlobals.Config.CurrentGame = null!;
                             }
 
+                            ConfigManager.SaveConfig();
+
                             this.NavigationService.GoBack();
 
                             EndLoad();
