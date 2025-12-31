@@ -132,4 +132,7 @@
   <data name="Unpack" xml:space="preserve">
     <value>Распаковать</value>
   </data>
+  <data name="PakTip" xml:space="preserve">
+    <value>Внимание: функция упаковки теперь является тестовой функцией. Пак, упакованный с помощью этого инструмента, может не загружаться игрой нормально. Пожалуйста, используйте PvzToolkit для упаковки</value>
+  </data>
 </root>

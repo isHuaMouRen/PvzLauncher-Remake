@@ -132,4 +132,7 @@
   <data name="Unpack" xml:space="preserve">
     <value>Unpack</value>
   </data>
+  <data name="PakTip" xml:space="preserve">
+    <value>Warning: The packaging function is now a test function. The Pak packaged using this tool may not be loaded by the game normally. Please use PvzToolkit for packaging</value>
+  </data>
 </root>

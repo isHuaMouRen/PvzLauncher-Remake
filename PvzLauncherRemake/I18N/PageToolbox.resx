@@ -112,4 +112,7 @@
   <data name="Unpack" xml:space="preserve">
     <value>解包</value>
   </data>
+  <data name="PakTip" xml:space="preserve">
+    <value>警告: 打包功能现为测试功能，使用此工具打包的Pak可能无法正常被游戏加载，请使用PvzToolkit进行打包</value>
+  </data>
 </root>

@@ -132,4 +132,7 @@
   <data name="Unpack" xml:space="preserve">
     <value>Auspacken</value>
   </data>
+  <data name="PakTip" xml:space="preserve">
+    <value>Warnung: Die Verpackungsfunktion ist jetzt eine Testfunktion. Das mit diesem Tool gepackte Paket wird möglicherweise nicht normal vom Spiel geladen. Bitte verwenden Sie PvzToolkit zum Packen</value>
+  </data>
 </root>

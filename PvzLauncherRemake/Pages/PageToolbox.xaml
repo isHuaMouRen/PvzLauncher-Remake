@@ -16,7 +16,7 @@
 
     <Grid>
         <ctrl:UserScrollViewer>
-            <StackPanel Margin="10">
+            <StackPanel x:Name="stackpanel" Margin="10">
                 <!--Pak操作-->
                 <Grid Margin="0,0,0,10">
                     <Border BorderThickness="2" CornerRadius="3" Background="#19FFFFFF">
@@ -33,29 +33,36 @@
 
 
                     <StackPanel Margin="10">
-                        <TextBlock Text="{lex:Loc PakOperation}" Margin="0,0,0,10" FontSize="20" FontWeight="Bold"/>
-
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="{lex:Loc PakOperation}" Margin="0,0,10,0" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{lex:Loc PakTip}" Margin="0,0,10,0" FontStyle="Italic" FontSize="10" VerticalAlignment="Bottom"/>
+                        </StackPanel>
 
                         <!--Pak-->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                             <TextBlock Text="Pak:" Margin="0,0,10,0" VerticalAlignment="Center"/>
                             <TextBox x:Name="textBox_Pak_Pak" IsReadOnly="True" Margin="0,0,10,0"/>
-                            <Button x:Name="button_Pak_Pak_Broswer" Content="{lex:Loc Broswe}"/>
+                            <Button x:Name="button_Pak_Pak_Broswer" Content="{lex:Loc Broswe}" Click="button_Pak_Pak_Broswer_Click"/>
                         </StackPanel>
                         <!--文件夹-->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                             <TextBlock Text="{lex:Loc TargetLocation}" Margin="0,0,10,0" VerticalAlignment="Center"/>
                             <TextBox x:Name="textBox_Pak_Directory" IsReadOnly="True" Margin="0,0,10,0"/>
-                            <Button x:Name="button_Pak_Directory_Broswer" Content="{lex:Loc Broswe}"/>
+                            <Button x:Name="button_Pak_Directory_Broswer" Content="{lex:Loc Broswe}" Click="button_Pak_Directory_Broswer_Click"/>
                         </StackPanel>
                         <!--操作-->
                         <StackPanel Orientation="Horizontal">
-                            <Button x:Name="button_Pak_Pack" Content="{lex:Loc Pack}" Margin="0,0,5,0"/>
-                            <Button x:Name="button_Pak_Unpack" Content="{lex:Loc Unpack}" Margin="0,0,5,0"/>
+                            <Button x:Name="button_Pak_Pack" Content="{lex:Loc Pack}" Margin="0,0,5,0" Click="button_Pak_Pack_Click"/>
+                            <Button x:Name="button_Pak_Unpack" Content="{lex:Loc Unpack}" Margin="0,0,5,0" Click="button_Pak_Unpack_Click"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
             </StackPanel>
         </ctrl:UserScrollViewer>
+
+        <Grid x:Name="grid_Loading" Visibility="Hidden">
+            <ui:ProgressRing IsActive="True" Width="50" Height="50"/>
+            <TextBlock x:Name="textBlock_Loading" Text="加载中..." HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,0,0"/>
+        </Grid>
     </Grid>
 </ui:Page>

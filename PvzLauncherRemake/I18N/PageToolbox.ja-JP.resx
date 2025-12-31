@@ -132,4 +132,7 @@
   <data name="Unpack" xml:space="preserve">
     <value>開梱</value>
   </data>
+  <data name="PakTip" xml:space="preserve">
+    <value>警告: パッケージ化機能は現在テスト機能です。このツールを使用してパッケージ化された Pak は、ゲームによって正常にロードされない可能性があります。パッケージ化には PvzToolkit を使用してください</value>
+  </data>
 </root>
