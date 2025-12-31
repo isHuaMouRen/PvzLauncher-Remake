@@ -14,6 +14,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -31,6 +32,31 @@ namespace PvzLauncherRemake.Pages
         public bool IsTrainer { get; set; }
 
         private string ScreeshotRootUrl = $"{AppGlobals.ServiceRootUrl}/screenshots";
+
+        #region animation
+        private void StartImageAnimation(Image image)
+        {
+            //动画
+            var thicknessAnimation = new ThicknessAnimation
+            {
+                From = new Thickness(-50, 0, 0, 0),
+                To = new Thickness(0),
+                Duration = TimeSpan.FromMilliseconds(1000),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+            var doubleAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = 1,
+                Duration = TimeSpan.FromMilliseconds(1000),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+            image.BeginAnimation(MarginProperty, null);
+            image.BeginAnimation(OpacityProperty, null);
+            image.BeginAnimation(MarginProperty, thicknessAnimation);
+            image.BeginAnimation(OpacityProperty, doubleAnimation);
+        }
+        #endregion
 
         #region init
         public async void Initialize()
@@ -72,6 +98,9 @@ namespace PvzLauncherRemake.Pages
                             };
 
                             stackPanel_Screenshot.Children.Add(image);
+
+                            StartImageAnimation(image);
+
                         }
                     }
                 }
