@@ -2,6 +2,7 @@
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Controls;
 using PvzLauncherRemake.Utils;
+using SharpCompress.Compressors.Xz;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +30,7 @@ namespace PvzLauncherRemake.Pages
         public string BaseDirectory { get; set; }
         public bool IsTrainer { get; set; }
 
-        private string ScreeshotRootUrl = $"{AppGlobals.DownloadIndexUrl}/screenshots";
+        private string ScreeshotRootUrl = $"{AppGlobals.ServiceRootUrl}/screenshots";
 
         #region init
         public async void Initialize()
@@ -50,22 +51,27 @@ namespace PvzLauncherRemake.Pages
                 {
                     for (int i = 0; i < Info.Screenshot; i++)
                     {
-                        using (Stream stream = await client.GetStreamAsync($"{ScreeshotRootUrl}/{Info.Version}/{i + 1}.png")) 
+                        string url = $"{ScreeshotRootUrl}/{Info.Version}/{i + 1}.png";
+
+                        byte[] imageBytes = await client.GetByteArrayAsync(url);
+
+                        using (var memoryStream = new MemoryStream(imageBytes))
                         {
-                            BitmapImage bitmap = new BitmapImage();
+                            var bitmap = new BitmapImage();
                             bitmap.BeginInit();
                             bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                            bitmap.StreamSource = stream;
+                            bitmap.StreamSource = memoryStream;           
                             bitmap.EndInit();
                             bitmap.Freeze();
 
                             var image = new Image
                             {
-                                MaxHeight = 500,
+                                MaxHeight = 250,
+                                Stretch = Stretch.Uniform,
                                 Source = bitmap
                             };
+
                             stackPanel_Screenshot.Children.Add(image);
-                            
                         }
                     }
                 }
