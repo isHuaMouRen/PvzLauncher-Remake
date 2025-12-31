@@ -23,21 +23,19 @@
         </Grid>
 
         <!--简介-->
-        <ctrl:UserScrollViewer>
-            <StackPanel Margin="0,0,0,10">
-                <!--简介-->
-                <TextBlock Text="{lex:Loc Description}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
-                <TextBlock x:Name="textBlock_Description" Margin="0,0,0,10"/>
+        <StackPanel Margin="0,0,0,10">
+            <!--简介-->
+            <TextBlock Text="{lex:Loc Description}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
+            <TextBlock x:Name="textBlock_Description" Margin="0,0,0,10"/>
 
-                <!--屏幕截图-->
-                <TextBlock Text="{lex:Loc ScreenShots}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
-                <ctrl:UserScrollViewer>
-                    <StackPanel x:Name="stackPanel_Screenshot" Orientation="Horizontal">
+            <!--屏幕截图-->
+            <TextBlock Text="{lex:Loc ScreenShots}" FontWeight="Bold" FontSize="20" Margin="0,0,0,5"/>
+            <ctrl:UserScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="stackPanel_Screenshot" Orientation="Horizontal">
 
-                    </StackPanel>
-                </ctrl:UserScrollViewer>
-            </StackPanel>
-        </ctrl:UserScrollViewer>
+                </StackPanel>
+            </ctrl:UserScrollViewer>
+        </StackPanel>
 
     </StackPanel>
 </ui:Page>
