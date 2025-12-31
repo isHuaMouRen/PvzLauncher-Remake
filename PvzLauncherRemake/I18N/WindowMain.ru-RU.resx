@@ -135,4 +135,7 @@
   <data name="About" xml:space="preserve">
     <value>о</value>
   </data>
+  <data name="Toolbox" xml:space="preserve">
+    <value>ящик для инструментов</value>
+  </data>
 </root>

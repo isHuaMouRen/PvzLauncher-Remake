@@ -135,4 +135,7 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="Toolbox" xml:space="preserve">
+    <value>Toolbox</value>
+  </data>
 </root>

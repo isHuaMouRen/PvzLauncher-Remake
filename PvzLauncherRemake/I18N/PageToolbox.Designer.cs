@@ -22,14 +22,14 @@ namespace PvzLauncherRemake.I18N {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class WindowMain {
+    public class PageToolbox {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal WindowMain() {
+        internal PageToolbox() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace PvzLauncherRemake.I18N {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PvzLauncherRemake.I18N.WindowMain", typeof(WindowMain).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PvzLauncherRemake.I18N.PageToolbox", typeof(PageToolbox).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,65 +61,47 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
-        ///   查找类似 关于 的本地化字符串。
+        ///   查找类似 浏览... 的本地化字符串。
         /// </summary>
-        public static string About {
+        public static string Broswe {
             get {
-                return ResourceManager.GetString("About", resourceCulture);
+                return ResourceManager.GetString("Broswe", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 下载 的本地化字符串。
+        ///   查找类似 打包 的本地化字符串。
         /// </summary>
-        public static string Download {
+        public static string Pack {
             get {
-                return ResourceManager.GetString("Download", resourceCulture);
+                return ResourceManager.GetString("Pack", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 启动 的本地化字符串。
+        ///   查找类似 Pak操作 的本地化字符串。
         /// </summary>
-        public static string Launch {
+        public static string PakOperation {
             get {
-                return ResourceManager.GetString("Launch", resourceCulture);
+                return ResourceManager.GetString("PakOperation", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 管理 的本地化字符串。
+        ///   查找类似 目标位置: 的本地化字符串。
         /// </summary>
-        public static string Manage {
+        public static string TargetLocation {
             get {
-                return ResourceManager.GetString("Manage", resourceCulture);
+                return ResourceManager.GetString("TargetLocation", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 设置 的本地化字符串。
+        ///   查找类似 解包 的本地化字符串。
         /// </summary>
-        public static string Settings {
+        public static string Unpack {
             get {
-                return ResourceManager.GetString("Settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 任务 的本地化字符串。
-        /// </summary>
-        public static string Task {
-            get {
-                return ResourceManager.GetString("Task", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 工具箱 的本地化字符串。
-        /// </summary>
-        public static string Toolbox {
-            get {
-                return ResourceManager.GetString("Toolbox", resourceCulture);
+                return ResourceManager.GetString("Unpack", resourceCulture);
             }
         }
     }

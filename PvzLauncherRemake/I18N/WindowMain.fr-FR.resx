@@ -135,4 +135,7 @@
   <data name="About" xml:space="preserve">
     <value>à propos</value>
   </data>
+  <data name="Toolbox" xml:space="preserve">
+    <value>boîte à outils</value>
+  </data>
 </root>

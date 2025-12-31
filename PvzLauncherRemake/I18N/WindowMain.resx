@@ -135,4 +135,7 @@
   <data name="About" xml:space="preserve">
     <value>关于</value>
   </data>
+  <data name="Toolbox" xml:space="preserve">
+    <value>工具箱</value>
+  </data>
 </root>

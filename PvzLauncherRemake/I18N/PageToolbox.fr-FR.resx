@@ -117,25 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Launch" xml:space="preserve">
-    <value>起動する</value>
+  <data name="Broswe" xml:space="preserve">
+    <value>Parcourir...</value>
   </data>
-  <data name="Manage" xml:space="preserve">
-    <value>管理</value>
+  <data name="PakOperation" xml:space="preserve">
+    <value>Opération Pak</value>
   </data>
-  <data name="Download" xml:space="preserve">
-    <value>ダウンロード</value>
+  <data name="TargetLocation" xml:space="preserve">
+    <value>Localisation cible :</value>
   </data>
-  <data name="Task" xml:space="preserve">
-    <value>タスク</value>
+  <data name="Pack" xml:space="preserve">
+    <value>Paquet</value>
   </data>
-  <data name="Settings" xml:space="preserve">
-    <value>設定</value>
+  <data name="Unpack" xml:space="preserve">
+    <value>Déballer</value>
   </data>
-  <data name="About" xml:space="preserve">
-    <value>について</value>
-  </data>
-  <data name="Toolbox" xml:space="preserve">
-    <value>ツールボックス</value>
+  <data name="PakTip" xml:space="preserve">
+    <value>Attention : La fonction packaging est désormais une fonction de test. Le Pak fourni à l'aide de cet outil peut ne pas être chargé normalement par le jeu. Veuillez utiliser PvzToolkit pour l'emballage</value>
   </data>
 </root>

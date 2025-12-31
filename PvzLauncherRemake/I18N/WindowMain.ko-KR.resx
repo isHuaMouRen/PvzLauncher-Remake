@@ -135,4 +135,7 @@
   <data name="About" xml:space="preserve">
     <value>~에 대한</value>
   </data>
+  <data name="Toolbox" xml:space="preserve">
+    <value>도구 상자</value>
+  </data>
 </root>
