@@ -8,10 +8,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -32,6 +34,34 @@ namespace PvzLauncherRemake.Pages
         public bool IsTrainer { get; set; }
 
         private string ScreeshotRootUrl = $"{AppGlobals.ServiceRootUrl}/game-library/screenshots";
+
+        #region image
+        private void ImageMouseEnter(object sender)
+        {
+            var animation = new DoubleAnimation
+            {
+                From = 250,
+                To = 300,
+                Duration = TimeSpan.FromMilliseconds(500),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+            ((Image)sender).BeginAnimation(MaxHeightProperty, null);
+            ((Image)sender).BeginAnimation(MaxHeightProperty, animation);
+        }
+
+        private void ImageMouseLeave(object sender)
+        {
+            var animation = new DoubleAnimation
+            {
+                From = 300,
+                To = 250,
+                Duration = TimeSpan.FromMilliseconds(1000),
+                EasingFunction = new PowerEase { Power = 5, EasingMode = EasingMode.EaseOut }
+            };
+            ((Image)sender).BeginAnimation(MaxHeightProperty, null);
+            ((Image)sender).BeginAnimation(MaxHeightProperty, animation);
+        }
+        #endregion
 
         #region animation
         private void StartImageAnimation(Image image)
@@ -96,6 +126,8 @@ namespace PvzLauncherRemake.Pages
                                 Stretch = Stretch.Uniform,
                                 Source = bitmap
                             };
+                            image.MouseEnter += ((s, e) => ImageMouseEnter(s));
+                            image.MouseLeave += ((s, e) => ImageMouseLeave(s));
 
                             stackPanel_Screenshot.Children.Add(image);
 
