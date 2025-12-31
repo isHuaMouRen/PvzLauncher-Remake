@@ -88,6 +88,15 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
+        ///   查找类似 警告: 打包功能现为测试功能，使用此工具打包的Pak可能无法正常被游戏加载，请使用PvzToolkit进行打包 的本地化字符串。
+        /// </summary>
+        public static string PakTip {
+            get {
+                return ResourceManager.GetString("PakTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 目标位置: 的本地化字符串。
         /// </summary>
         public static string TargetLocation {
