@@ -17,7 +17,7 @@
         Tat,//tat
         Eagrace,//eagrace
         Unnamed,//unnamed
-        Essence,//essence
+        Ultimate,//ultimate
 
         PvzToolkit,//pvztoolkit
         CheatEngine//ce
