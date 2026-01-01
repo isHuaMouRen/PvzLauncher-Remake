@@ -360,6 +360,7 @@ namespace PvzLauncherRemake.Utils.Services
                 case "eagrace": return GameIcons.Eagrace;
                 case "unnamed": return GameIcons.Unnamed;
                 case "ultimate": return GameIcons.Ultimate;
+                case "random": return GameIcons.Random;
 
                 case "pvztoolkit": return GameIcons.PvzToolkit;
                 case "ce": return GameIcons.CheatEngine;
@@ -396,6 +397,7 @@ namespace PvzLauncherRemake.Utils.Services
                 case GameIcons.Eagrace: return new GameIconEagrace();
                 case GameIcons.Unnamed: return new GameIconUnnamed();
                 case GameIcons.Ultimate: return new GameIconUltimate();
+                case GameIcons.Random: return new GameIconRandom();
 
                 case GameIcons.PvzToolkit: return new GameIconPvzToolkit();
                 case GameIcons.CheatEngine: return new GameIconCheatEngine();

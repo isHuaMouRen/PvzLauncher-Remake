@@ -18,6 +18,7 @@
         Eagrace,//eagrace
         Unnamed,//unnamed
         Ultimate,//ultimate
+        Random,//random
 
         PvzToolkit,//pvztoolkit
         CheatEngine//ce
