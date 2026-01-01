@@ -14,7 +14,7 @@
         lex:ResxLocalizationProvider.DefaultAssembly="PvzLauncherRemake"
         lex:ResxLocalizationProvider.DefaultDictionary="I18N.WindowMain">
     <Grid>
-        <ui:NavigationView x:Name="navView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged" BackRequested="navView_BackRequested" PaneDisplayMode="LeftCompact">
+        <ui:NavigationView x:Name="navView" PaneDisplayMode="Top" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="navView_SelectionChanged" BackRequested="navView_BackRequested">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem x:Name="navViewItem_Launch" Content="{lex:Loc Launch}" Tag="Launch">
                     <ui:NavigationViewItem.Icon>
