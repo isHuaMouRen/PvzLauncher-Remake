@@ -19,7 +19,7 @@
             <StackPanel x:Name="stackpanel" Margin="10">
                 <!--Pak操作-->
                 <Grid Margin="0,0,0,10">
-                    <Border BorderThickness="2" CornerRadius="3" Background="#19FFFFFF">
+                    <Border BorderThickness="1" CornerRadius="5" Background="#19FFFFFF">
                         <Border.BorderBrush>
                             <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
                                 <LinearGradientBrush.RelativeTransform>

@@ -18,7 +18,7 @@
     <Grid>
         <Grid>
             <!--上栏-->
-            <Border BorderThickness="2" CornerRadius="3" VerticalAlignment="Top" Margin="5" Background="#19FFFFFF">
+            <Border BorderThickness="1" CornerRadius="5" VerticalAlignment="Top" Margin="5" Background="#19FFFFFF">
                 <Border.BorderBrush>
                     <LinearGradientBrush EndPoint="0,3" MappingMode="Absolute">
                         <LinearGradientBrush.RelativeTransform>
