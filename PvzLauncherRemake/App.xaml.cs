@@ -51,7 +51,7 @@ namespace PvzLauncherRemake
             switch (AppGlobals.Config.LauncherConfig.Theme)
             {
                 case "Light":
-                    ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light; break;
+                    ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;OnThemeChanged(null!,null!   ); break;
                 case "Dark":
                     ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark; break;
             }
