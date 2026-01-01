@@ -3,6 +3,7 @@ using HuaZi.Library.Json;
 using Notifications.Wpf;
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Class.JsonConfigs;
+using PvzLauncherRemake.Utils.Configuration;
 using PvzLauncherRemake.Utils.FileSystem;
 using System.IO;
 using static PvzLauncherRemake.Class.AppLogger;
@@ -111,6 +112,11 @@ namespace PvzLauncherRemake.Utils.Services
                         Json.WriteJson(Path.Combine(taskInfo.SavePath, ".pvzl.json"), cfg);
                         AppGlobals.Config.CurrentTrainer = configName;
                     }
+
+                    ConfigManager.SaveConfig();
+                    //刷新列表
+                    await GameManager.LoadGameListAsync();
+                    await GameManager.LoadTrainerListAsync();
 
                     new NotificationManager().Show(new NotificationContent
                     {
