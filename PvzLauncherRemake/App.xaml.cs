@@ -2,7 +2,6 @@
 using PvzLauncherRemake.Class;
 using PvzLauncherRemake.Utils.Configuration;
 using PvzLauncherRemake.Utils.Services;
-using PvzLauncherRemake.Windows;
 using System.IO;
 using System.Windows;
 
@@ -13,8 +12,6 @@ namespace PvzLauncherRemake
     /// </summary>
     public partial class App : Application
     {
-        private WindowSplash? _splash;
-
         #region init
         private async void Initialize()
         {
@@ -53,38 +50,27 @@ namespace PvzLauncherRemake
             await GameManager.LoadGameListAsync();
             await GameManager.LoadTrainerListAsync();
         }
+
+        private async void InitializeLoaded()
+        {
+
+        }
         #endregion
 
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-            _splash = new WindowSplash();
-            _splash.ShowAndFadeIn();
-
             Initialize();
 
-            Task.Run(async () =>
-            {
-                await Task.Delay(500);
+            var mainWindow = new WindowMain();
+            this.MainWindow = mainWindow;
 
-                await this.Dispatcher.Invoke(async () =>
-                {
-                    var mainWindow = new WindowMain();
-                    this.MainWindow = mainWindow;
+            InitializeLoaded();
 
-                    mainWindow.Show();
-                    mainWindow.Activate();
-                    mainWindow.Focus();
-
-                    await Task.Delay(500);
-
-                    _splash?.FadeOutAndClose();
-                    _splash = null;
-
-                });
-            });
-
+            mainWindow.Show();
+            mainWindow.Activate();
+            mainWindow.Focus();
         }
 
         protected override void OnExit(ExitEventArgs e)
