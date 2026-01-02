@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using static PvzLauncherRemake.Class.AppLogger;
+using static PvzLauncherRemake.Utils.Configuration.LocalizeManager;
 
 namespace PvzLauncherRemake.Pages
 {
@@ -74,14 +75,14 @@ namespace PvzLauncherRemake.Pages
         #region Load
         public void StartLoad()
         {
-            tabControl_Main.IsEnabled = false;
-            tabControl_Main.Effect = new BlurEffect { Radius = 10 };
+            grid.IsEnabled = false;
+            grid.Effect = new BlurEffect { Radius = 10 };
             grid_Loading.Visibility = Visibility.Visible;
         }
         public void EndLoad()
         {
-            tabControl_Main.IsEnabled = true;
-            tabControl_Main.Effect = null;
+            grid.IsEnabled = true;
+            grid.Effect = null;
             grid_Loading.Visibility = Visibility.Hidden;
         }
         #endregion
@@ -117,6 +118,17 @@ namespace PvzLauncherRemake.Pages
                 AddTrainerCard(stackPanel_trainer, AppGlobals.DownloadIndex.Trainer);
 
                 EndLoad();
+
+
+                //获取下载数
+                using (var client = new HttpClient())
+                {
+                    string url = $"{AppGlobals.CounterRootUrl}/pvzlauncher-download";
+                    var counterInfo = Json.ReadJson<JsonCounter.Index>(await client.GetStringAsync(url));
+
+                    textBlock_DownloadCount.Text = $"{GetLoc("I18N.PageDownload", "Counter")}: {counterInfo.Data.UpCount}";
+                }
+
                 logger.Info($"[下载] 结束初始化");
             }
             catch (Exception ex)

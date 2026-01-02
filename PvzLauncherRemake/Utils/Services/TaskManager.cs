@@ -6,6 +6,9 @@ using PvzLauncherRemake.Class.JsonConfigs;
 using PvzLauncherRemake.Utils.Configuration;
 using PvzLauncherRemake.Utils.FileSystem;
 using System.IO;
+using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Threading.Tasks;
 using static PvzLauncherRemake.Class.AppLogger;
 
 namespace PvzLauncherRemake.Utils.Services
@@ -18,6 +21,13 @@ namespace PvzLauncherRemake.Utils.Services
 
         //主任务列表
         public static List<DownloadTaskInfo> DownloadTaskList = new List<DownloadTaskInfo>();
+
+        private static async void AddCounter()
+        {
+            using (var client = new HttpClient())
+                await client.GetStringAsync($"{AppGlobals.CounterRootUrl}/pvzlauncher-download/up");
+        }
+
 
         /// <summary>
         /// 向任务列表添加任务
@@ -40,6 +50,9 @@ namespace PvzLauncherRemake.Utils.Services
                 }
 
             }
+
+            //增加下载计数
+            AddCounter();
 
             var originDownloader = taskInfo.Downloader;
             taskInfo.Downloader = new Downloader

@@ -132,4 +132,7 @@
   <data name="EnglishOriginalEdition" xml:space="preserve">
     <value>английский оригинал</value>
   </data>
+  <data name="Counter" xml:space="preserve">
+    <value>общее количество загрузок</value>
+  </data>
 </root>

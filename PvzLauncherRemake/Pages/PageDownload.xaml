@@ -15,37 +15,42 @@
       lex:ResxLocalizationProvider.DefaultDictionary="I18N.PageDownload">
 
     <Grid>
-        <TabControl x:Name="tabControl_Main" Style="{StaticResource TabControlPivotStyle}" SelectionChanged="tabControl_Main_SelectionChanged">
-            <!--游戏下载-->
-            <TabItem Header="{lex:Loc GameDownload}">
-                <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10" SelectionChanged="tabControl_Main_SelectionChanged">
-                    <!--中文原版-->
-                    <TabItem Header="{lex:Loc ChineseOriginalEdition}">
-                        <ctrl:UserScrollViewer>
-                            <StackPanel x:Name="stackPanel_zhOrigin" Tag="game"/>
-                        </ctrl:UserScrollViewer>
-                    </TabItem>
-                    <!--中文改版-->
-                    <TabItem Header="{lex:Loc ChineseRevisionEdition}">
-                        <ctrl:UserScrollViewer>
-                            <StackPanel x:Name="stackPanel_zhRevision" Tag="game"/>
-                        </ctrl:UserScrollViewer>
-                    </TabItem>
-                    <!--英文原版-->
-                    <TabItem Header="{lex:Loc EnglishOriginalEdition}">
-                        <ctrl:UserScrollViewer>
-                            <StackPanel x:Name="stackPanel_enOrigin" Tag="game"/>
-                        </ctrl:UserScrollViewer>
-                    </TabItem>
-                </TabControl>
-            </TabItem>
-            <!--修改器下载-->
-            <TabItem Header="{lex:Loc TrainerDownload}">
-                <ctrl:UserScrollViewer>
-                    <StackPanel x:Name="stackPanel_trainer" Tag="trainer"/>
-                </ctrl:UserScrollViewer>
-            </TabItem>
-        </TabControl>
+        <Grid x:Name="grid">
+            <TabControl x:Name="tabControl_Main" Style="{StaticResource TabControlPivotStyle}" SelectionChanged="tabControl_Main_SelectionChanged">
+                <!--游戏下载-->
+                <TabItem Header="{lex:Loc GameDownload}">
+                    <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10" SelectionChanged="tabControl_Main_SelectionChanged">
+                        <!--中文原版-->
+                        <TabItem Header="{lex:Loc ChineseOriginalEdition}">
+                            <ctrl:UserScrollViewer>
+                                <StackPanel x:Name="stackPanel_zhOrigin" Tag="game"/>
+                            </ctrl:UserScrollViewer>
+                        </TabItem>
+                        <!--中文改版-->
+                        <TabItem Header="{lex:Loc ChineseRevisionEdition}">
+                            <ctrl:UserScrollViewer>
+                                <StackPanel x:Name="stackPanel_zhRevision" Tag="game"/>
+                            </ctrl:UserScrollViewer>
+                        </TabItem>
+                        <!--英文原版-->
+                        <TabItem Header="{lex:Loc EnglishOriginalEdition}">
+                            <ctrl:UserScrollViewer>
+                                <StackPanel x:Name="stackPanel_enOrigin" Tag="game"/>
+                            </ctrl:UserScrollViewer>
+                        </TabItem>
+                    </TabControl>
+                </TabItem>
+                <!--修改器下载-->
+                <TabItem Header="{lex:Loc TrainerDownload}">
+                    <ctrl:UserScrollViewer>
+                        <StackPanel x:Name="stackPanel_trainer" Tag="trainer"/>
+                    </ctrl:UserScrollViewer>
+                </TabItem>
+            </TabControl>
+
+            <TextBlock x:Name="textBlock_DownloadCount" Text="{lex:Loc Counter}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0"/>
+        </Grid>
+        
         
         <!--加载屏幕-->
         <Grid x:Name="grid_Loading" Visibility="Hidden">
