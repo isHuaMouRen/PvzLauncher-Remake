@@ -112,9 +112,6 @@
   <data name="ChangeExecute" xml:space="preserve">
     <value>Change the executable file</value>
   </data>
-  <data name="Record_FirstPlay" xml:space="preserve">
-    <value>Initial startup</value>
-  </data>
   <data name="Record_PlayTime" xml:space="preserve">
     <value>Playing time</value>
   </data>
@@ -129,5 +126,8 @@
   </data>
   <data name="Record_Hour" xml:space="preserve">
     <value>h</value>
+  </data>
+  <data name="Record_FirstPlay" xml:space="preserve">
+    <value>Storage time</value>
   </data>
 </root>

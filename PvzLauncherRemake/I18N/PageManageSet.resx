@@ -113,7 +113,7 @@
     <value>更改可执行文件</value>
   </data>
   <data name="Record_FirstPlay" xml:space="preserve">
-    <value>首次启动</value>
+    <value>入库时间</value>
   </data>
   <data name="Record_PlayTime" xml:space="preserve">
     <value>游玩时间</value>

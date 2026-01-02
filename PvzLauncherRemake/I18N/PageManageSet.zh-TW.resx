@@ -132,9 +132,6 @@
   <data name="ChangeExecute" xml:space="preserve">
     <value>更改可執行文件</value>
   </data>
-  <data name="Record_FirstPlay" xml:space="preserve">
-    <value>首次啟動</value>
-  </data>
   <data name="Record_PlayTime" xml:space="preserve">
     <value>遊玩時間</value>
   </data>
@@ -149,5 +146,8 @@
   </data>
   <data name="Record_Hour" xml:space="preserve">
     <value>小時</value>
+  </data>
+  <data name="Record_FirstPlay" xml:space="preserve">
+    <value>入庫時間</value>
   </data>
 </root>

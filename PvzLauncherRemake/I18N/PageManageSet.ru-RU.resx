@@ -132,9 +132,6 @@
   <data name="ChangeExecute" xml:space="preserve">
     <value>Изменить исполняемый файл</value>
   </data>
-  <data name="Record_FirstPlay" xml:space="preserve">
-    <value>первый старт</value>
-  </data>
   <data name="Record_PlayTime" xml:space="preserve">
     <value>время игры</value>
   </data>
@@ -149,5 +146,8 @@
   </data>
   <data name="Record_Hour" xml:space="preserve">
     <value>Час</value>
+  </data>
+  <data name="Record_FirstPlay" xml:space="preserve">
+    <value>Срок хранения</value>
   </data>
 </root>

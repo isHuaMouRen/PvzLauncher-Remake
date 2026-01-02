@@ -132,9 +132,6 @@
   <data name="ChangeExecute" xml:space="preserve">
     <value>実行ファイルを変更します</value>
   </data>
-  <data name="Record_FirstPlay" xml:space="preserve">
-    <value>最初の起動です</value>
-  </data>
   <data name="Record_PlayTime" xml:space="preserve">
     <value>行楽の時間です</value>
   </data>
@@ -149,5 +146,8 @@
   </data>
   <data name="Record_Hour" xml:space="preserve">
     <value>時間です</value>
+  </data>
+  <data name="Record_FirstPlay" xml:space="preserve">
+    <value>保管時間</value>
   </data>
 </root>

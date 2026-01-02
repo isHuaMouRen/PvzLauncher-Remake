@@ -97,7 +97,7 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
-        ///   查找类似 首次启动 的本地化字符串。
+        ///   查找类似 入库时间 的本地化字符串。
         /// </summary>
         public static string Record_FirstPlay {
             get {
