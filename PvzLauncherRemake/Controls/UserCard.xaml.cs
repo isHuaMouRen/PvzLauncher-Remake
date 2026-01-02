@@ -28,6 +28,7 @@ namespace PvzLauncherRemake.Controls
         public bool isActive { get; set; }
         public object AttachedProperty { get; set; }
         public bool BigIconMode { get; set; } = false;
+        public bool IsReadOnly { get; set; } = false;
 
         public UserCard()
         {
@@ -43,6 +44,10 @@ namespace PvzLauncherRemake.Controls
                 }
 
 
+                if (IsReadOnly)
+                {
+                    border.Opacity = 1;
+                }
 
                 textBlock_Title.Text = Title;
                 textBlock_Description.Text = Description;
@@ -101,6 +106,9 @@ namespace PvzLauncherRemake.Controls
 
         private void rectangle_MouseTrigger_MouseEnter(object sender, MouseEventArgs e)
         {
+            if (IsReadOnly)
+                return;
+
             var animation = new DoubleAnimation
             {
                 To = 1,
@@ -113,6 +121,9 @@ namespace PvzLauncherRemake.Controls
 
         private void rectangle_MouseTrigger_MouseLeave(object sender, MouseEventArgs e)
         {
+            if (IsReadOnly)
+                return;
+
             var animation = new DoubleAnimation
             {
                 To = 0,
@@ -126,6 +137,9 @@ namespace PvzLauncherRemake.Controls
 
         private void rectangle_MouseTrigger_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if (IsReadOnly)
+                return;
+
             var animation = new DoubleAnimation
             {
                 To = 0.98,
@@ -141,6 +155,9 @@ namespace PvzLauncherRemake.Controls
 
         private void rectangle_MouseTrigger_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (IsReadOnly)
+                return;
+
             var animation = new DoubleAnimation
             {
                 To = 1,

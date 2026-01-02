@@ -17,7 +17,7 @@
     <StackPanel Margin="10" >
         <!--游戏卡片-->
         <Grid Margin="0,0,0,10">
-            <ctrl:UserCard x:Name="userCard"/>
+            <ctrl:UserCard x:Name="userCard" IsReadOnly="True"/>
             <!--下载按钮-->
             <Button x:Name="button_Download" Style="{DynamicResource AccentButtonStyle}" Content="{lex:Loc Download}" HorizontalAlignment="Right" Margin="0,0,10,0" Click="button_Download_Click"/>
         </Grid>
