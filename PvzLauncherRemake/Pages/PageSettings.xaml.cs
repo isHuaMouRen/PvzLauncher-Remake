@@ -152,31 +152,18 @@ namespace PvzLauncherRemake.Pages
                 }
                 //### 背景
                 radioButton_Background_Default.IsChecked = false; radioButton_Background_Custom.IsChecked = false;
-                if (!string.IsNullOrEmpty(AppGlobals.Config.LauncherConfig.Background))
+                switch (AppGlobals.Config.LauncherConfig.BackgroundMode)
+                {
+                    case "default":radioButton_Background_Default.IsChecked = true;button_Background_Select.IsEnabled = false; break;
+                    case "custom":radioButton_Background_Custom.IsChecked = true;button_Background_Select.IsEnabled = true; break;
+                }
+
+                if (AppGlobals.Config.LauncherConfig.BackgroundMode == "custom" && !string.IsNullOrEmpty(AppGlobals.Config.LauncherConfig.Background)) 
                 {
                     if (File.Exists(AppGlobals.Config.LauncherConfig.Background))
                     {
-                        radioButton_Background_Custom.IsChecked = true;
-                        button_Background_Select.IsEnabled = true;
                         image_Background.Source = new BitmapImage(new Uri(AppGlobals.Config.LauncherConfig.Background));
                     }
-                    else
-                    {
-                        new NotificationManager().Show(new NotificationContent
-                        {
-                            Title = "背景设置项失效",
-                            Message = $"\"{AppGlobals.Config.LauncherConfig.Background}\" 不存在！已恢复为默认背景!",
-                            Type = NotificationType.Error
-                        });
-                        AppGlobals.Config.LauncherConfig.Background = null!;
-                        ConfigManager.SaveConfig();
-                        this.NavigationService.Refresh();
-                    }
-                }
-                else
-                {
-                    button_Background_Select.IsEnabled = false;
-                    radioButton_Background_Default.IsChecked = true;
                 }
                 //### NavigationView位置
                 radioButton_NavViewLeft.IsChecked = false; radioButton_NavViewTop.IsChecked = false;
@@ -404,12 +391,13 @@ namespace PvzLauncherRemake.Pages
                     if ((string)radioButton.Tag == "Default")
                     {
                         button_Background_Select.IsEnabled = false;
-                        AppGlobals.Config.LauncherConfig.Background = null!;
+                        AppGlobals.Config.LauncherConfig.BackgroundMode = "default";
                         radioButton_Background_Custom.IsChecked = false;
                     }
                     if ((string)radioButton.Tag == "Custom")
                     {
                         button_Background_Select.IsEnabled = true;
+                        AppGlobals.Config.LauncherConfig.BackgroundMode = "custom";
                         radioButton_Background_Default.IsChecked = false;
                     }
                     ConfigManager.SaveConfig();

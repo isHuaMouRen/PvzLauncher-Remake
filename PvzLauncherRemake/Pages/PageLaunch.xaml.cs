@@ -105,7 +105,7 @@ namespace PvzLauncherRemake.Pages
                 StartAnimation();
 
                 //设置背景
-                if (!string.IsNullOrEmpty(AppGlobals.Config.LauncherConfig.Background))
+                if (AppGlobals.Config.LauncherConfig.BackgroundMode == "custom" && !string.IsNullOrEmpty(AppGlobals.Config.LauncherConfig.Background)) 
                     image.Source = new BitmapImage(new Uri(AppGlobals.Config.LauncherConfig.Background));
                 logger.Info($"[启动] 完成初始化");
 
