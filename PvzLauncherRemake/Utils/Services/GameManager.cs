@@ -134,7 +134,7 @@ namespace PvzLauncherRemake.Utils.Services
                     TaskName = $"下载 {Path.GetFileName(savePath)}",
                     TaskType = isTrainer ? TaskType.Trainer : TaskType.Game,
                     SavePath = savePath,
-                    TaskIcon = GameManager.ParseToGameIcons(info.Icon)
+                    TaskIcon = GameIconConverter.ParseToGameIcons(info.Icon)
                 });
             }
             catch (Exception ex)

@@ -55,7 +55,7 @@ namespace PvzLauncherRemake.Pages
                 //设置卡片
                 userGameCard.Title = GameInfo.GameInfo.Name;
                 userGameCard.Version = GameInfo.GameInfo.Version;
-                userGameCard.Icon = GameManager.ParseToGameIcons(GameInfo.GameInfo.Icon);
+                userGameCard.Icon = GameIconConverter.ParseToGameIcons(GameInfo.GameInfo.Icon);
                 logger.Info($"[游戏设置] 传入的游戏信息: {JsonConvert.SerializeObject(GameInfo)}");
 
                 //判断游玩时间显示
