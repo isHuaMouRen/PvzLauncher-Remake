@@ -1,0 +1,13 @@
+name: 🟠 优化建议
+description: 某些地方做的不足，需要优化
+type: "优化"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 简要描述
+      description: 需要优化哪些地方
+      placeholder: |
+        打开程序很慢，需要加速
+    validations:
+      required: true
