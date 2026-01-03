@@ -22,6 +22,7 @@ namespace PvzLauncherRemake.Class
         Unnamed,//unnamed
         Ultimate,//ultimate
         Random,//random
+        Guidance,//guidance
 
         PvzToolkit,//pvztoolkit
         CheatEngine//ce
@@ -53,6 +54,7 @@ namespace PvzLauncherRemake.Class
                 case "unnamed": return GameIcons.Unnamed;
                 case "ultimate": return GameIcons.Ultimate;
                 case "random": return GameIcons.Random;
+                case "duidance": return GameIcons.Guidance;
 
                 case "pvztoolkit": return GameIcons.PvzToolkit;
                 case "ce": return GameIcons.CheatEngine;
@@ -90,6 +92,7 @@ namespace PvzLauncherRemake.Class
                 case GameIcons.Unnamed: return new GameIconUnnamed();
                 case GameIcons.Ultimate: return new GameIconUltimate();
                 case GameIcons.Random: return new GameIconRandom();
+                case GameIcons.Guidance: return new GameIconGuidance();
 
                 case GameIcons.PvzToolkit: return new GameIconPvzToolkit();
                 case GameIcons.CheatEngine: return new GameIconCheatEngine();

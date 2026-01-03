@@ -1,0 +1,1780 @@
+<?xml version="1.0" ?>
+<Viewbox xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" Name="guidance">
+    <Canvas UseLayoutRounding="False" Width="512.0" Height="512.0">
+        <Canvas.Clip>
+            <RectangleGeometry Rect="0,0,512.0,512.0"/>
+        </Canvas.Clip>
+        <Canvas UseLayoutRounding="False">
+            <Path Fill="#ff7e7165">
+                <Path.Data>
+                    <PathGeometry Figures="m 241.524 72.0434 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff743c26">
+                <Path.Data>
+                    <PathGeometry Figures="M 56.2258 75.081 L 53.1881 87.2317 C 39.7803 112.022 82.4594 169.899 63.3019 73.705 Z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff38332f">
+                <Path.Data>
+                    <PathGeometry Figures="m 241.524 75.081 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffddbd94">
+                <Path.Data>
+                    <PathGeometry Figures="m 244.561 75.081 c 0 5.45808 0.0424 4.62181 3.03768 9.11301 l -12.1507 -3.03767 l -15.1883 21.2637 c 6.57959 -2.19168 11.3062 -3.28584 18.226 -3.03767 c 6.38215 -1.34538 8.97632 0.17072 15.1883 3.03767 c -0.73208 -11.1033 0.21872 -20.3117 -9.11301 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff59544c">
+                <Path.Data>
+                    <PathGeometry Figures="m 247.599 75.081 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc65d29">
+                <Path.Data>
+                    <PathGeometry Figures="M 59.2635 78.1187 C 54.3683 90.6129 54.9348 96.6801 65.3388 105.458 C 64.149 96.0905 63.1231 86.7135 59.2635 78.1187 Z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff716761">
+                <Path.Data>
+                    <PathGeometry Figures="m 223.298 81.1564 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff796f62">
+                <Path.Data>
+                    <PathGeometry Figures="m 238.486 81.1564 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff97816a">
+                <Path.Data>
+                    <PathGeometry Figures="m 244.561 81.1564 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffedd8bb">
+                <Path.Data>
+                    <PathGeometry Figures="m 250.637 81.1564 c -1.72724 18.1899 -4.41288 40.5075 12.1507 30.3767 c 7.10511 1.74454 12.0049 5.11756 18.226 9.11301 c -2.79465 -13.432 -7.95565 -26.4013 -12.1507 -39.4897 c -4.24059 2.00881 -5.51033 2.92953 -9.11301 6.07534 c -3.71508 -3.63062 -4.3135 -3.99879 -9.11302 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff645f5f">
+                <Path.Data>
+                    <PathGeometry Figures="m 50.1505 84.194 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff2c251e">
+                <Path.Data>
+                    <PathGeometry Figures="m 224.309 86.2193 c -0.16707 0.16859 -0.33717 3.37515 1.01458 2.02491 c 0.16708 -0.168893 0.33718 -3.37485 -1.01458 -2.02491 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffceae84">
+                <Path.Data>
+                    <PathGeometry Figures="m 226.335 84.194 c -3.43257 4.25304 -6.73755 7.33901 -9.11301 12.1507 l -12.1507 -3.03767 c -6.33659 7.41586 -12.3253 11.2503 -21.2637 15.1883 c 0 5.45809 0.0434 4.62182 3.03768 9.11301 c -8.42802 1.24636 -16.1817 3.48998 -24.3014 6.07534 c 1.43409 4.30195 2.47176 5.50942 6.07534 9.11301 c -8.29314 0.35662 -16.1428 1.51641 -24.3013 3.03767 c 1.81561 3.63123 1.41585 2.96902 6.07534 6.07534 c -11.2637 4.90219 -20.5543 11.5717 -29.3405 19.9503 c 45.8413 14.5855 127.681 39.9022 98.5498 -11.4083 c 15.6625 -3.27748 59.7472 46.5905 12.8077 -57.1447 c -2.07776 -4.79951 -2.44532 -5.39854 -6.07533 -9.113 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff867a69">
+                <Path.Data>
+                    <PathGeometry Figures="m 229.373 84.194 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff796f65">
+                <Path.Data>
+                    <PathGeometry Figures="m 259.75 84.194 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff68635c">
+                <Path.Data>
+                    <PathGeometry Figures="m 268.863 84.194 l 3.03765 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff603729">
+                <Path.Data>
+                    <PathGeometry Figures="M 55.5293 75.9737 C 23.6115 132.482 51.9434 103.73 50.1505 117.608 c 5.99423 -9.28524 9.69932 -31.6153 5.37884 -41.6347 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6a635b">
+                <Path.Data>
+                    <PathGeometry Figures="m 220.26 87.2317 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fff7e7ce">
+                <Path.Data>
+                    <PathGeometry Figures="m 271.9 87.2317 c 1.60694 11.7005 5.52858 22.2203 9.11301 33.4144 l -15.1883 -12.1507 c -17.047 10.5561 -16.9615 20.7626 12.1507 30.3767 c -3.60267 -3.60359 -4.81167 -4.64125 -9.113 -6.07534 c -3.63913 3.7822 -3.44473 3.26186 -9.11301 3.03767 l 6.07534 -9.11301 c -9.89066 -5.83202 -15.8415 -11.1072 -21.2637 -21.2637 c 5.30073 2.70353 9.49273 4.41374 15.1884 6.07534 c -5.11848 -7.04071 -12.7096 -19.1258 -21.2637 -12.1507 c -6.70717 -1.37758 -7.74909 -1.96324 -12.1507 3.03767 l -12.1507 -3.03767 c 0 9.53859 -10.0911 6.91435 -18.226 9.11301 c 1.81653 3.63123 1.41555 2.96903 6.07534 6.07534 c -6.13608 8.55256 4.72966 14.5799 12.1507 18.226 l 3.03767 -9.11301 l -12.1507 -6.07534 c 6.92285 -2.74484 12.1507 -2.20595 12.1507 -9.11301 c 7.43014 2.98087 14.6628 8.08628 21.2637 3.03767 c 5.75942 15.206 16.2394 25.596 24.3014 39.4897 c 8.96112 0.84295 12.1385 2.49909 18.226 9.11301 c -5.47084 -1.70657 -9.48359 -2.50334 -15.1883 -3.03767 c 2.30907 23.3978 6.34504 35.9932 18.226 42.5274 l 9.11301 -3.03768 c -0.79587 -7.37486 3.33208 5.24982 4.12794 -2.12503 l -1.09027 -6.98798 c 4.30133 -1.43408 0.63186 15.7913 4.23454 12.1877 c 0.69258 7.66921 -0.78919 -3.62349 4.82443 1.58916 c -2.19319 7.34507 3.24966 11.9574 3.0917 19.6375 c 3.63002 -1.81562 2.9678 -1.41586 6.07534 -6.07535 c 5.43135 4.31806 8.21993 5.15615 15.1883 6.07535 c -0.72904 15.8992 -7.54253 29.8837 -9.11301 45.565 l 8.7289 5.48398 c 2.20838 -9.34994 2.52567 -20.1429 9.49712 -26.7477 c 0.17315 -12.0553 7.38457 -21.4976 9.11302 -33.4144 c -2.76733 4.18165 -4.2649 7.4113 -6.07535 12.1507 c -1.70717 -5.46963 -2.50303 -9.483 -3.03767 -15.1883 c -3.9915 2.33263 -4.62692 -3.4889 -6.95985 0.5029 c -1.70716 -5.46962 -1.61853 -3.91086 -2.15316 -9.6159 l -12.1507 3.03767 c -0.34022 -11.7424 -3.73632 -22.0286 -6.07534 -33.4144 c 9.96053 14.7616 18.791 28.9654 33.4144 39.4897 c -0.70171 -6.45718 -0.74727 -11.7834 0 -18.226 c -11.4277 -11.1422 -6.51581 -19.2631 -3.03768 -33.4144 c 0.68043 5.11513 0.66221 7.02765 0 12.1507 l 18.226 9.11301 c -2.99513 4.4912 -3.03766 3.65493 -3.03766 9.11301 c 5.47084 1.70657 9.4836 2.50334 15.1883 3.03768 l -6.07534 3.03767 c 4.57473 2.07472 7.03221 2.5088 12.1507 3.03766 c -1.65554 4.9672 -1.10876 4.4195 -6.07534 6.07535 c 5.59538 6.69562 9.83293 9.79374 18.226 12.1507 c -0.38881 -16.5769 -3.97934 -33.7831 -21.2637 -39.4897 c 2.99515 -4.4912 3.03768 -3.65492 3.03768 -9.113 c -12.1932 -1.67923 -9.41374 -11.0228 -17.0079 -18.6082 c -6.7497 -6.7418 -16.5766 -8.48391 -25.5195 -8.73087 c -5.54678 -13.7069 -15.3159 -24.9329 -18.226 -39.4897 c -3.05286 6.53099 -4.64763 12.5091 -9.113 18.226 l 3.03767 9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff938372">
+                <Path.Data>
+                    <PathGeometry Figures="m 287.089 87.2317 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff312018">
+                <Path.Data>
+                    <PathGeometry Figures="M 47.1128 90.2694 C 41.4065 105.158 33.2814 124.869 40.8054 140.607 c 8.00669 16.7467 24.9663 21.8633 30.6088 40.7929 h 12.1507 c -2.97753 -5.41708 -2.75699 -4.84296 -9.11302 -6.07534 c 3.07956 -18.167 -12.5195 -23.1323 -22.5972 -36.9769 c -7.63722 -10.4919 4.18792 -30.1495 -4.7418 -48.0778 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb29a78">
+                <Path.Data>
+                    <PathGeometry Figures="m 215.196 92.2946 c -0.16707 0.16859 -0.33718 3.37516 1.01457 2.02491 c 0.16708 -0.1689 0.33718 -3.37485 -1.01457 -2.02491 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff363433">
+                <Path.Data>
+                    <PathGeometry Figures="m 274.938 90.2694 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe0c7a7">
+                <Path.Data>
+                    <PathGeometry Figures="m 287.089 90.2694 c -1.28493 9.62486 -2.03828 15.3569 6.07534 21.2637 c -0.64702 -8.44654 -1.26672 -14.3417 -6.07534 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff786f64">
+                <Path.Data>
+                    <PathGeometry Figures="m 202.034 93.307 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7d7064">
+                <Path.Data>
+                    <PathGeometry Figures="m 285.063 95.3323 c -0.16708 0.1686 -0.33718 3.37516 1.01457 2.02491 c 0.16707 -0.1689 0.33718 -3.37485 -1.01457 -2.02491 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff743d31">
+                <Path.Data>
+                    <PathGeometry Figures="m 53.1881 96.3447 c -3.12894 13.8153 -11.1417 31.9816 3.03767 30.3767 c 14.5975 4.65463 12.9308 14.3111 9.11301 27.339 c 8.23601 4.0486 16.4011 8.00669 15.1883 0 c -0.919806 -17.6914 -13.7549 -31.3017 -12.1507 -48.6027 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9d9489">
+                <Path.Data>
+                    <PathGeometry Figures="m 277.976 96.3447 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3e3934">
+                <Path.Data>
+                    <PathGeometry Figures="m 281.013 96.3447 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffead3b8">
+                <Path.Data>
+                    <PathGeometry Figures="m 290.126 96.3447 c 0.7017 6.45748 0.74727 11.7837 0 18.226 c 4.91191 3.94533 8.11665 7.25943 12.1507 12.1507 c 1.45504 -4.54921 1.21506 -4.10146 0 -9.11301 c 10.5286 -9.30408 -3.74849 -16.6182 -12.1507 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff373532">
+                <Path.Data>
+                    <PathGeometry Figures="m 308.352 96.3447 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff877d71">
+                <Path.Data>
+                    <PathGeometry Figures="m 311.39 96.3447 v 15.1883 c 2.52126 -6.16798 2.52126 -9.02035 0 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff887c6d">
+                <Path.Data>
+                    <PathGeometry Figures="m 198.996 99.3824 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe7d3ad">
+                <Path.Data>
+                    <PathGeometry Figures="m 253.674 99.3824 c 1.86209 5.04709 3.1683 7.54345 6.07535 12.1507 l -15.1884 -6.07534 c 6.4429 10.5316 15.6835 14.7935 27.339 18.226 c -4.34994 -10.2606 -9.59599 -17.2573 -18.226 -24.3014 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5e574e">
+                <Path.Data>
+                    <PathGeometry Figures="m 296.202 99.3824 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff564b40">
+                <Path.Data>
+                    <PathGeometry Figures="m 192.921 102.42 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffecd4b3">
+                <Path.Data>
+                    <PathGeometry Figures="m 208.109 108.495 l 9.11301 -3.03767 c -5.40098 -2.90218 -6.13913 -2.32746 -9.11301 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3a3633">
+                <Path.Data>
+                    <PathGeometry Figures="m 302.277 102.42 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff726659">
+                <Path.Data>
+                    <PathGeometry Figures="m 305.315 102.42 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff897967">
+                <Path.Data>
+                    <PathGeometry Figures="m 180.77 111.533 l 9.11301 -3.03767 c -5.40159 -2.90219 -6.14035 -2.32746 -9.11301 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff817c76">
+                <Path.Data>
+                    <PathGeometry Figures="m 65.3388 108.495 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffdbc2a1">
+                <Path.Data>
+                    <PathGeometry Figures="m 217.222 108.495 c 0 6.33476 0.4192 5.23725 -6.07534 6.07534 c 7.27218 4.08445 15.5559 -0.75 6.07534 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff412c26">
+                <Path.Data>
+                    <PathGeometry Figures="m 466.311 108.495 c -6.65927 16.1152 -2.80446 121.684 9.11301 15.1883 c -2.60632 -5.96051 -4.96355 -10.2327 -9.11301 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff553c34">
+                <Path.Data>
+                    <PathGeometry Figures="m 65.3388 111.533 l 3.03767 12.1507 c 1.19381 -5.84447 0.442284 -7.16768 -3.03767 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe6d4b8">
+                <Path.Data>
+                    <PathGeometry Figures="m 189.883 111.533 c 1.55133 5.93014 2.22751 7.46355 6.07533 12.1507 c 2.09296 -5.12729 2.05347 -6.28342 6.07534 -9.11301 c -4.57473 -2.07472 -7.03221 -2.50881 -12.1507 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa5896e">
+                <Path.Data>
+                    <PathGeometry Figures="m 223.298 111.533 c -4.68713 3.84782 -6.22115 4.5237 -12.1507 6.07534 c 3.96416 7.47631 6.81653 12.76 6.07534 21.2637 c -8.76368 -4.83628 -13.0468 -9.66162 -18.226 -18.226 c -10.8129 10.9256 -15.8806 25.2722 -21.2637 39.4897 h 12.1507 c -3.95338 30.7123 4.64629 21.1746 18.226 21.2637 l 1.20799 -9.02706 l 3.03767 6.07534 c 1.88943 -5.90311 -2.92123 -18.157 -4.24566 -24.3873 c 9.596 11.3038 13.8852 26.5717 21.2637 39.4897 c 34.6255 28.0386 19.6774 22.8649 19.6665 6.56066 c 8.70292 16.3414 4.74787 -11.2285 8.49636 6.88395 c 20.2148 19.1662 15.3114 -2.60326 20.4398 -37.746 c -6.17861 -6.34599 -9.89369 -13.9025 -15.6956 -20.2512 c -7.44836 -8.1525 -19.3469 -14.038 -25.8202 -22.7825 c -2.81288 -3.80104 -0.2096 -5.62485 2.02612 -8.60663 c -5.30073 -2.70352 -9.49271 -4.41374 -15.1883 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc7ab8b">
+                <Path.Data>
+                    <PathGeometry Figures="m 238.486 111.533 v 9.11301 c 2.11423 -4.71963 2.11423 -4.39338 0 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb69c7d">
+                <Path.Data>
+                    <PathGeometry Figures="m 247.599 111.533 c 5.17315 9.62912 10.7685 12.4256 21.2637 15.1883 c -6.40949 -6.62577 -13.1288 -10.819 -21.2637 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7c756e">
+                <Path.Data>
+                    <PathGeometry Figures="m 469.349 111.533 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff584b48">
+                <Path.Data>
+                    <PathGeometry Figures="m 37.9998 114.571 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff82776a">
+                <Path.Data>
+                    <PathGeometry Figures="m 183.808 114.571 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc5ad90">
+                <Path.Data>
+                    <PathGeometry Figures="m 205.072 114.571 c 1.65553 4.9669 1.10875 4.41981 6.07534 6.07534 v -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff312f2c">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 114.571 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff403e3c">
+                <Path.Data>
+                    <PathGeometry Figures="m 335.691 114.571 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9c4521">
+                <Path.Data>
+                    <PathGeometry Figures="m 47.1128 117.608 c 0.659001 18.3987 3.18947 27.1329 12.1507 18.226 c 2.99423 -4.4912 3.03767 -3.65492 3.03767 -9.11301 c -3.63062 -3.71446 -3.99879 -4.31349 -6.07534 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5d5449">
+                <Path.Data>
+                    <PathGeometry Figures="m 174.695 117.608 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4b4744">
+                <Path.Data>
+                    <PathGeometry Figures="m 320.503 117.608 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff776c64">
+                <Path.Data>
+                    <PathGeometry Figures="m 332.654 117.608 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6f625f">
+                <Path.Data>
+                    <PathGeometry Figures="m 472.387 117.608 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff695f57">
+                <Path.Data>
+                    <PathGeometry Figures="m 165.582 120.646 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe1c9ad">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 120.646 c 3.79102 2.0802 4.70232 2.27461 9.11301 3.03767 c -3.79102 -2.0802 -4.70231 -2.27461 -9.11301 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffebd6b8">
+                <Path.Data>
+                    <PathGeometry Figures="m 332.654 120.646 l -6.07533 15.1883 c 7.08079 2.56805 13.8639 4.70474 21.2637 6.07534 l -3.03767 -9.11301 c -8.03465 -1.05013 -7.95871 -5.90371 -12.1507 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8d7b67">
+                <Path.Data>
+                    <PathGeometry Figures="m 159.507 123.684 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb99e7f">
+                <Path.Data>
+                    <PathGeometry Figures="m 235.448 123.684 c 5.31288 8.94199 12.9982 14.9733 21.2637 21.2637 l 3.03767 -3.03766 c -6.98361 -9.02401 -13.6543 -14.0969 -24.3014 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffcfb396">
+                <Path.Data>
+                    <PathGeometry Figures="m 268.863 123.684 c -3.60268 3.60359 -4.81168 4.64126 -9.11301 6.07535 v 6.07533 c 6.42769 0.85267 5.887 1.8232 9.11301 -3.03767 c 3.60267 3.60359 4.81166 4.64126 9.113 6.07534 c -1.97752 -7.39491 -3.52369 -9.97175 -9.113 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff86786a">
+                <Path.Data>
+                    <PathGeometry Figures="m 329.616 123.684 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5e4038">
+                <Path.Data>
+                    <PathGeometry Figures="m 466.311 123.684 v 12.1507 c 3.63002 -3.71447 3.99758 -4.31349 6.07534 -9.11301 l 3.03767 6.07534 c 1.85556 -14.0721 -2.27133 -10.0366 -9.11301 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5d2c18">
+                <Path.Data>
+                    <PathGeometry Figures="m 50.1505 126.721 c 0.428311 13.1944 3.2819 20.8916 15.1883 27.339 c 16.9544 -6.09706 -6.77097 -19.3475 -15.1883 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffad512e">
+                <Path.Data>
+                    <PathGeometry Figures="m 62.3012 126.721 c -10.7649 14.0517 -2.76412 16.9036 0 24.3014 c 8.66951 -6.62637 8.04861 -14.0508 6.07534 -24.3014 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff302a25">
+                <Path.Data>
+                    <PathGeometry Figures="m 153.431 126.721 c 4.18165 2.76853 7.41161 4.26428 12.1507 6.07534 c -3.99149 -4.91465 -5.70231 -5.14368 -12.1507 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffead8bf">
+                <Path.Data>
+                    <PathGeometry Figures="m 202.034 126.721 c 4.98177 8.53099 8.44472 10.1063 18.226 9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffceb694">
+                <Path.Data>
+                    <PathGeometry Figures="m 214.185 126.721 v 6.07534 c 4.96659 -1.65553 4.41981 -1.10844 6.07534 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbca486">
+                <Path.Data>
+                    <PathGeometry Figures="m 256.712 126.721 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffedd9bf">
+                <Path.Data>
+                    <PathGeometry Figures="m 290.126 126.721 c -1.95626 6.39703 -2.75213 11.5283 -3.03767 18.226 c 2.0808 -3.79222 2.27521 -4.70352 3.03767 -9.113 l 6.07534 12.1507 c 3.16525 -9.18227 0.40704 -14.3515 -6.07534 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb4a697">
+                <Path.Data>
+                    <PathGeometry Figures="m 323.541 126.721 l 3.03768 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa6654a">
+                <Path.Data>
+                    <PathGeometry Figures="m 472.387 126.721 l -3.03767 18.226 c 5.91434 -6.71841 7.3542 -10.2366 3.03767 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff877f75">
+                <Path.Data>
+                    <PathGeometry Figures="m 158.494 130.772 c -1.35024 1.35024 1.85632 1.18135 2.02491 1.01275 c 1.34994 -1.35024 -1.85632 -1.18135 -2.02491 -1.01275 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8f816f">
+                <Path.Data>
+                    <PathGeometry Figures="m 165.582 129.759 l 3.03767 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3d3831">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 129.759 l 3.03766 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff796d61">
+                <Path.Data>
+                    <PathGeometry Figures="m 335.691 129.759 l 3.03766 6.07533 c 4.96659 -1.65553 4.41981 -1.10814 6.07535 -6.07533 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff37332d">
+                <Path.Data>
+                    <PathGeometry Figures="m 150.394 132.797 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff645563">
+                <Path.Data>
+                    <PathGeometry Figures="m 463.274 132.797 c 2.07777 4.79952 2.44533 5.39854 6.07534 9.11301 c -2.07777 -4.79952 -2.44532 -5.39855 -6.07534 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff31457b">
+                <Path.Data>
+                    <PathGeometry Figures="m 475.911 128.316 c -6.18534 8.46926 -6.33579 30.1358 -0.48648 25.7444 c 2.88882 -6.94198 1.6063 -18.0948 0.48648 -25.7444 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8e857d">
+                <Path.Data>
+                    <PathGeometry Figures="m 147.356 138.872 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff2e2b29">
+                <Path.Data>
+                    <PathGeometry Figures="m 347.842 138.872 l 3.03765 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff395994">
+                <Path.Data>
+                    <PathGeometry Figures="m 463.274 138.872 c 0.71583 3.7237 -20.1687 27.0855 -31.7542 38.6156 c 8.08629 -2.05954 35.855 -22.4995 43.9048 -20.3895 c -1.56136 -9.47328 -4.21932 -12.8457 -12.1507 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff1f1c18">
+                <Path.Data>
+                    <PathGeometry Figures="m 37.7496 125.523 c -0.430854 9.82151 6.18655 50.1439 14.081 54.9482 c 8.01003 1.04678 0.328618 -9.96429 1.35748 -2.10949 c 3.63123 -1.81561 2.96902 -1.41585 6.07534 -6.07534 c 13.9763 28.3837 56.1501 38.6161 85.0548 42.5274 l -9.11301 9.11302 c 14.1315 5.5158 36.9633 0.45656 51.6404 -3.03767 c -5.4748 -9.95232 -5.76854 -26.4985 -12.2327 -34.6167 c -10.9827 -13.7934 -39.9951 -0.50323 -46.2336 8.92083 C 111.967 185.294 90.6271 182.745 71.4142 181.399 C 68.0165 162.707 54.1514 156.64 44.0751 141.91 Z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3e3d4e">
+                <Path.Data>
+                    <PathGeometry Figures="m 75.8989 137.281 c -1.18019 27.8886 11.4314 26.0337 25.892 28.9297 c -5.09144 -10.1127 -17.3783 -21.5065 -25.892 -28.9297 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff101010">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 141.91 v 12.1507 c 2.15675 -5.34479 2.15675 -6.8059 0 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffccb79d">
+                <Path.Data>
+                    <PathGeometry Figures="m 257.724 143.935 c -0.16706 0.16858 -0.33717 3.37514 1.01459 2.0249 c 0.16707 -0.16858 0.33718 -3.37515 -1.01459 -2.0249 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff33312f">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 141.91 l 3.03768 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6b6560">
+                <Path.Data>
+                    <PathGeometry Figures="m 356.955 141.91 l -3.03767 6.07534 h 6.07533 c 0 -5.62941 0.91131 -4.10116 -3.03766 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa8927d">
+                <Path.Data>
+                    <PathGeometry Figures="m 74.4518 144.947 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff665e55">
+                <Path.Data>
+                    <PathGeometry Figures="m 138.243 144.947 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff756a5f">
+                <Path.Data>
+                    <PathGeometry Figures="m 363.03 144.947 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff94836f">
+                <Path.Data>
+                    <PathGeometry Figures="m 135.205 147.985 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6c5349">
+                <Path.Data>
+                    <PathGeometry Figures="m 235.448 147.985 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd7c2a8">
+                <Path.Data>
+                    <PathGeometry Figures="m 265.825 147.985 c 1.93195 9.05772 6.5249 9.58475 15.1883 12.1507 c -4.19804 -7.35207 -7.17801 -9.29801 -15.1883 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb59f86">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 147.985 c 1.91677 9.3062 2.31471 17.0091 12.1507 18.226 l -3.03768 9.113 c 5.89005 2.7087 7.6519 4.25821 12.1507 9.11301 h 9.113 c -4.65978 -11.8858 -13.2321 -20.583 -15.1883 -33.4144 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff423f3d">
+                <Path.Data>
+                    <PathGeometry Figures="m 368.094 148.998 c -1.35176 1.34995 1.85603 1.18166 2.02308 1.01276 c 1.35177 -1.35023 -1.85601 -1.18135 -2.02308 -1.01276 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff69615e">
+                <Path.Data>
+                    <PathGeometry Figures="m 37.9998 151.023 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff2f2727">
+                <Path.Data>
+                    <PathGeometry Figures="m 235.448 151.023 c -2.46659 14.562 -1.85601 30.5948 -3.03767 45.565 c 26.5462 -2.06987 14.7266 -31.0814 3.03767 -45.565 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3961a5">
+                <Path.Data>
+                    <PathGeometry Figures="m 448.085 172.286 c 7.18409 -7.685 19.11 -11.161 21.2637 -21.2637 c -12.3603 3.68621 -20.6501 7.62576 -21.2637 21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff423031">
+                <Path.Data>
+                    <PathGeometry Figures="m 65.3388 154.06 c 8.9189 6.83293 19.8691 19.6173 30.4964 22.874 c 7.30651 2.23906 16.6006 -1.60176 24.1817 -1.61028 c 1.70657 -5.46962 2.50334 -9.48298 3.03767 -15.1883 c -6.75152 2.79313 -8.30468 2.54161 -15.1883 0 c -15.7591 4.94836 -26.5954 -5.55834 -42.5274 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb09273">
+                <Path.Data>
+                    <PathGeometry Figures="m 208.109 154.06 l 3.03767 15.1883 l -3.03767 -6.07533 c -2.7977 7.05529 -2.08688 10.8764 0 18.226 c -7.16282 -2.00213 -9.85116 -3.84781 -15.1884 -9.11301 c -3.94531 10.422 -0.25211 29.2424 12.5881 32.329 c 8.49399 2.7122 19.995 3.51084 26.9016 -1.9523 c 5.57616 -11.8258 -8.2898 -36.1155 -24.3013 -48.6027 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd6bfa4">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 154.06 v 12.1507 c 2.15675 -5.34478 2.15675 -6.80591 0 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3b3633">
+                <Path.Data>
+                    <PathGeometry Figures="m 451.123 154.06 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff705e5a">
+                <Path.Data>
+                    <PathGeometry Figures="m 475.424 154.06 v 12.1507 c 2.15674 -5.34478 2.15674 -6.80591 0 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff51301c">
+                <Path.Data>
+                    <PathGeometry Figures="m 68.3765 157.098 c 2.71719 6.20201 4.66677 11.6276 6.07534 18.226 c -19.4409 12.1452 24.1215 9.94292 51.6404 9.11301 c -2.90795 4.60694 -4.21386 7.1039 -6.07534 12.1507 l 9.11301 9.113 c 5.05954 -12.2937 8.66708 -19.0729 21.2637 -24.3013 c -2.99424 4.4912 -3.03767 3.65493 -3.03767 9.11302 c 12.4766 -5.57231 19.5492 -10.9195 30.3767 0 c 19.7266 -25.3117 -16.8026 -24.2552 -33.4144 -27.339 c -10.1021 11.3384 -17.4684 8.60511 -31.1993 10.442 c -6.22723 0.83293 -11.9174 4.49971 -18.151 1.62911 c -9.90767 -4.56289 -16.0756 -13.891 -26.5915 -18.1464 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb5927b">
+                <Path.Data>
+                    <PathGeometry Figures="m 150.394 160.136 c 8.82352 2.71476 18.0668 0.39338 27.339 0 c -9.36362 -3.89369 -17.5951 -2.31622 -27.339 0 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffddc8ae">
+                <Path.Data>
+                    <PathGeometry Figures="m 341.767 157.098 l -3.03767 9.11301 c 5.36453 -2.97267 5.93865 -3.71143 3.03767 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5e5e81">
+                <Path.Data>
+                    <PathGeometry Figures="m 471.375 158.111 c -1.35176 1.34994 1.85601 1.18166 2.02309 1.01275 c 1.35176 -1.35023 -1.85603 -1.18134 -2.02309 -1.01275 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7a7574">
+                <Path.Data>
+                    <PathGeometry Figures="m 101.791 160.136 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff55443f">
+                <Path.Data>
+                    <PathGeometry Figures="m 161.532 161.148 c -1.35024 1.35025 1.85632 1.18135 2.02492 1.01276 c 1.35024 -1.35025 -1.85634 -1.18135 -2.02492 -1.01276 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3b2821">
+                <Path.Data>
+                    <PathGeometry Figures="m 150.394 163.173 c 12.0462 5.0565 29.8201 17.8391 42.6739 21.85 l -3.18423 -24.8877 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff947b66">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 160.136 v 24.3013 c 3.52674 -8.41404 3.52674 -15.8873 0 -24.3013 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffdac1a6">
+                <Path.Data>
+                    <PathGeometry Figures="m 250.637 160.136 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6471a5">
+                <Path.Data>
+                    <PathGeometry Figures="m 451.123 163.173 c -0.56231 7.80768 -3.0672 17.7522 3.03767 18.226 c 6.82563 -6.55224 11.3366 -12.6318 15.1883 -21.2637 c -7.79238 -3.9478 -12.3216 1.53137 -18.226 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff212429">
+                <Path.Data>
+                    <PathGeometry Figures="m 47.1128 163.173 c -0.02583 17.8943 14.4538 39.1373 30.8946 47.0322 c 13.4666 6.46689 24.2394 2.51913 32.8965 16.7588 c 13.5684 -0.69046 25.5608 0.25911 33.4144 -12.1507 c -15.9508 -2.65856 -31.6306 -7.44714 -45.565 -15.1883 c -3.11635 -1.73148 -7.70143 -3.9046 -10.8998 -5.50393 c -3.96294 -1.98148 -8.59628 -5.63674 -10.3639 -6.64676 h -6.07534 c -5.25456 -5.25456 -7.77461 -11.6874 -12.1507 -15.1883 c -4.60268 -3.68225 -4.44208 -1.66253 -4.66383 -0.55438 c -2.68986 -5.96082 -3.28454 -3.65127 -7.48685 -8.55862 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff928678">
+                <Path.Data>
+                    <PathGeometry Figures="m 123.055 163.173 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff917a65">
+                <Path.Data>
+                    <PathGeometry Figures="m 140.268 164.186 c -1.35024 1.35025 1.85632 1.18135 2.0249 1.01276 c 1.35025 -1.35025 -1.85632 -1.18134 -2.0249 -1.01276 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe9d2b7">
+                <Path.Data>
+                    <PathGeometry Figures="m 253.674 163.173 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8a8078">
+                <Path.Data>
+                    <PathGeometry Figures="m 375.181 163.173 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd07a56">
+                <Path.Data>
+                    <PathGeometry Figures="m 469.349 163.173 l -6.07534 18.226 c 6.00547 -4.62879 10.5377 -9.19411 15.1883 -15.1883 c -5.7456 -21.3175 -9.10399 -12.1581 -9.11301 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff39384a">
+                <Path.Data>
+                    <PathGeometry Figures="m 121.929 161.208 c -2.66704 5.58877 -6.20772 11.4312 1.1258 14.1166 c 4.28537 0.43225 13.8831 -2.48542 21.2637 -6.07534 c 5.3015 -8.24433 -14.6638 -7.98442 -22.3895 -8.04123 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd6bfab">
+                <Path.Data>
+                    <PathGeometry Figures="m 257.724 168.236 c -0.16706 0.1686 -0.33717 3.37516 1.01459 2.02491 c 0.16707 -0.1686 0.33718 -3.37515 -1.01459 -2.02491 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb59b7f">
+                <Path.Data>
+                    <PathGeometry Figures="m 338.729 166.211 c -7.84631 19.8855 5.16708 28.2983 24.3014 30.3767 c -4.15553 -7.41039 -7.60025 -11.3639 -15.1883 -15.1883 c 2.99513 -4.49119 3.03765 -3.65491 3.03765 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff384b82">
+                <Path.Data>
+                    <PathGeometry Figures="m 442.01 166.211 c 3.53281 6.73361 6.33658 10.3105 12.1507 15.1883 c -2.26004 -8.14034 -4.6446 -11.2974 -12.1507 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff988a8e">
+                <Path.Data>
+                    <PathGeometry Figures="m 466.311 166.211 c -5.69399 6.04008 -19.3548 18.6335 -12.9164 20.9377 c 3.7822 6.0655 19.41 -16.2673 12.9164 -20.9377 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff544c48">
+                <Path.Data>
+                    <PathGeometry Figures="m 44.0751 169.249 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe4d0bb">
+                <Path.Data>
+                    <PathGeometry Figures="m 311.39 169.249 l 6.07534 33.4144 l 12.1507 -3.03767 v 15.1883 l 9.11301 -6.07533 v 15.1883 c 11.7406 -16.4997 -15.6562 -42.4809 -27.339 -54.6781 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff293c6b">
+                <Path.Data>
+                    <PathGeometry Figures="m 438.972 169.249 c -3.4434 11.4677 2.13825 6.80596 9.11301 9.11301 c 11.1113 -13.9967 3.74515 -10.4168 -9.11301 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc75e2d">
+                <Path.Data>
+                    <PathGeometry Figures="m 472.387 169.249 c -7.22358 9.64946 -17.5577 15.7379 -21.2637 27.339 c 11.003 4.95885 25.6396 -11.736 21.2637 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa5866b">
+                <Path.Data>
+                    <PathGeometry Figures="m 186.846 172.286 c 0.29495 10.1467 2.11087 17.9909 6.07532 27.339 h -6.07532 v 6.07532 c 4.8548 4.4988 6.4034 6.26217 9.113 12.1507 c 12.9253 -0.97205 25.8734 -1.54225 33.7075 -11.8272 c -26.0146 4.52582 -32.8266 -14.1437 -42.8205 -33.7379 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd6c2af">
+                <Path.Data>
+                    <PathGeometry Figures="m 260.761 174.312 c -0.16707 0.16858 -0.33717 3.37516 1.01459 2.02492 c 0.16707 -0.1686 0.33718 -3.37517 -1.01459 -2.02492 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbaa081">
+                <Path.Data>
+                    <PathGeometry Figures="m 271.9 172.286 v 12.1507 c 2.15676 -5.34478 2.15676 -6.80589 0 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffdabfa5">
+                <Path.Data>
+                    <PathGeometry Figures="m 274.938 172.286 c -1.96841 7.68621 -4.33475 11.8017 -9.113 18.226 c 7.48752 12.026 13.842 34.6492 27.339 6.07533 c -5.45869 0 -4.62029 0.0434 -9.11301 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe9d3ba">
+                <Path.Data>
+                    <PathGeometry Figures="m 277.976 172.286 c 0.0972 8.7333 -0.63183 15.4147 6.07534 21.2637 c -1.80741 -7.27705 -3.01034 -14.4806 -6.07534 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd8bea2">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 172.286 l -3.03765 9.11301 l 9.113 6.07534 l 3.03766 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff736357">
+                <Path.Data>
+                    <PathGeometry Figures="m 384.294 172.286 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff212b4a">
+                <Path.Data>
+                    <PathGeometry Figures="m 435.935 172.286 c -3.60268 3.60359 -4.64156 4.81106 -6.07535 9.11301 l 21.2637 3.03767 c 7.55955 -12.449 -7.78029 -9.00797 -15.1883 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5b5651">
+                <Path.Data>
+                    <PathGeometry Figures="m 47.1128 175.324 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd0b99d">
+                <Path.Data>
+                    <PathGeometry Figures="m 293.164 175.324 l -3.03767 15.1884 c 4.00365 -5.85117 5.01518 -8.40159 3.03767 -15.1884 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff554a48">
+                <Path.Data>
+                    <PathGeometry Figures="m 378.45 172.197 c 0.75739 18.6272 9.32293 28.6421 17.9943 6.1649 c -3.79102 -2.08019 -13.5836 -5.40183 -17.9943 -6.1649 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4a2c29">
+                <Path.Data>
+                    <PathGeometry Figures="m 390.369 178.362 l 3.03767 12.1507 c 5.04558 -1.8615 7.54254 -3.16738 12.1507 -6.07535 c -5.65615 -5.37849 -7.35116 -5.99301 -15.1884 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff686561">
+                <Path.Data>
+                    <PathGeometry Figures="m 429.859 175.324 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff947152">
+                <Path.Data>
+                    <PathGeometry Figures="m 183.808 178.362 c -19.2064 13.3376 -8.07679 27.8808 9.79029 44.6199 c 1.2415 -6.90645 -4.35803 -16.6153 -6.75261 -23.3562 h 6.07532 c -2.1867 -7.71282 3.14837 -20.2173 -9.113 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffeddccb">
+                <Path.Data>
+                    <PathGeometry Figures="m 262.787 178.362 v 9.11301 c 2.11422 -4.71963 2.11422 -4.39338 0 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff80786f">
+                <Path.Data>
+                    <PathGeometry Figures="m 404.546 179.374 c -1.35176 1.34995 1.85602 1.18135 2.02309 1.01276 c 1.35176 -1.35055 -1.85603 -1.18136 -2.02309 -1.01276 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff393347">
+                <Path.Data>
+                    <PathGeometry Figures="m 405.558 181.399 c -37.6692 -6.46449 32.6249 22.9511 18.226 0 c -6.82262 -1.01883 -11.4794 -1.1859 -18.226 0 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4d3d3f">
+                <Path.Data>
+                    <PathGeometry Figures="m 423.784 178.362 c -1.75275 8.23573 -2.33294 10.3117 6.07532 12.1507 c -0.0122 -5.23298 6.98103 -3.22134 3.03768 -9.11302 c -4.49272 -2.99422 -3.65431 -3.03767 -9.113 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff422410">
+                <Path.Data>
+                    <PathGeometry Figures="m 132.168 196.588 c 20.6555 7.1742 16.8695 -3.13374 18.226 -15.1883 c -10.0453 2.76459 -14.3973 5.40644 -18.226 15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffedd3ae">
+                <Path.Data>
+                    <PathGeometry Figures="m 220.26 181.399 c 0.91129 11.7388 3.30803 16.2464 15.1883 18.226 c -4.52916 -7.13762 -8.87 -12.6315 -15.1883 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd4bfa5">
+                <Path.Data>
+                    <PathGeometry Figures="m 302.277 181.399 c 0.94471 6.9584 1.11178 7.04771 6.07533 12.1507 c -1.71324 -5.322 -2.79162 -7.72176 -6.07533 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc6aa84">
+                <Path.Data>
+                    <PathGeometry Figures="m 384.294 181.399 c 3.18954 18.8466 3.86391 29.7704 0 48.6027 c 17.4158 -11.4206 27.2199 -46.0591 0 -48.6027 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff312829">
+                <Path.Data>
+                    <PathGeometry Figures="m 432.897 181.399 v 12.1507 c 5.70474 -0.53433 9.7175 -1.33111 15.1883 -3.03767 v -6.07535 c 4.01082 -5.26218 -9.4836 -2.50334 -15.1883 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff754f41">
+                <Path.Data>
+                    <PathGeometry Figures="m 449.354 173.527 l -2.68387 17.574 l 9.34803 1.50368 c 0 -5.62941 -2.71519 -17.1035 -6.66416 -19.0777 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa07161">
+                <Path.Data>
+                    <PathGeometry Figures="m 454.161 181.399 c 3.791 2.08021 4.70231 2.27461 9.113 3.03767 c -3.791 -2.08019 -4.70231 -2.2746 -9.113 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7d716d">
+                <Path.Data>
+                    <PathGeometry Figures="m 53.1881 184.437 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff402310">
+                <Path.Data>
+                    <PathGeometry Figures="m 86.6025 184.437 c 10.7038 9.28494 25.9952 14.075 39.4897 18.226 c -2.33262 -3.99181 -2.08353 -3.74272 -6.07534 -6.07535 l 8.10972 -13.5659 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc1a78a">
+                <Path.Data>
+                    <PathGeometry Figures="m 293.164 184.437 c -0.35541 8.29315 -20.3186 23.5054 -2.16204 28.3042 l 14.3127 2.07248 l 6.07533 -12.1507 c -5.33415 -7.90038 -9.96659 -13.415 -18.226 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8c4121">
+                <Path.Data>
+                    <PathGeometry Figures="m 402.52 184.437 c -8.80651 0.27133 -4.67934 6.81356 -3.03767 12.1507 c 10.3062 2.29677 29.3365 -6.40688 3.03767 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff523029">
+                <Path.Data>
+                    <PathGeometry Figures="m 405.558 184.437 v 12.1507 c 12.2438 3.15559 26.0996 4.05603 39.4897 0 c 3.61312 -9.02592 -8.52698 -6.51651 -12.1507 -12.1507 c -10.2127 5.36787 -16.692 3.7737 -27.339 0 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa0918a">
+                <Path.Data>
+                    <PathGeometry Figures="m 426.822 184.437 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa25330">
+                <Path.Data>
+                    <PathGeometry Figures="m 399.482 187.475 l -6.07534 3.03768 c 4.50183 2.40309 8.49333 2.64216 6.07534 -3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa54c22">
+                <Path.Data>
+                    <PathGeometry Figures="m 448.085 187.475 c -6.94626 4.21568 -2.17366 9.86048 0 15.1884 c 5.17063 -6.28634 13.2365 -8.09099 0 -15.1884 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8d7263">
+                <Path.Data>
+                    <PathGeometry Figures="m 189.883 208.738 l 3.03765 9.11301 c -5.06105 -5.47297 -8.64368 -8.77977 -15.1883 -12.1507 c 1.91706 5.43197 4.65888 10.007 3.03767 15.1884 c 9.27126 9.72359 8.39155 17.6683 6.07534 30.3767 c 7.84933 -8.47084 12.98 -19.3047 24.3469 -23.9122 c 1.93379 21.2462 79.985 28.4997 27.2935 -3.4268 c -1.81652 -3.63123 -1.41554 -2.96901 -6.07534 -6.07534 c 7.05651 -5.78919 9.70233 -9.44108 12.1507 -18.226 c 8.73938 -0.96721 13.1653 -1.88336 18.226 -9.11301 c -13.2473 1.61421 -28.1622 6.69228 -39.4897 14.007 c -21.7428 -5.15688 -11.1422 10.8481 -18.141 11.9821 c -5.62577 0.9113 -10.6683 -5.5158 -15.2734 -7.76307 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc5ae91">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 190.512 c 0 6.37059 -1.64337 5.34538 -6.07533 9.11301 c 6.07838 1.52369 10.0851 2.66008 15.1883 6.07532 c 5.84448 -3.04131 6.37304 -3.27308 9.11302 -9.113 h -12.1507 l 6.07534 -3.03766 c -4.57474 -2.07473 -7.03221 -2.50881 -12.1507 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff572c17">
+                <Path.Data>
+                    <PathGeometry Figures="m 445.048 190.512 c -12.2114 12.1124 -32.9466 6.7664 -48.6027 3.03767 v 9.11301 c 23.0498 0.24452 45.1793 16.2707 63.7911 -6.07535 c -4.16948 -5.75777 -7.0272 -1.29882 -12.1507 6.07535 c -0.52855 -5.11908 -0.96294 -7.57596 -3.03766 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3c2113">
+                <Path.Data>
+                    <PathGeometry Figures="m 466.311 190.512 c -24.2133 23.428 -38.0681 16.8642 -66.8287 9.11301 c -10.4301 26.4618 73.2837 22.5228 66.8287 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd9cabd">
+                <Path.Data>
+                    <PathGeometry Figures="m 253.674 217.851 c 1.23331 -5.04041 0.93865 -6.80985 0 -12.1507 l 18.226 -9.113 c -14.8026 -3.89034 -21.1239 8.22024 -18.226 21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fffcf0db">
+                <Path.Data>
+                    <PathGeometry Figures="m 341.767 193.55 c 2.82807 19.3387 2.56379 27.7008 -6.07533 45.565 c 18.4956 13.425 30.537 6.07558 42.5274 3.03767 c 1.3791 -5.91435 3.01945 -9.93015 6.07534 -15.1883 c -12.497 -13.812 -23.9004 -28.5593 -42.5274 -33.4144 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fff7ebd6">
+                <Path.Data>
+                    <PathGeometry Figures="m 265.825 196.588 c -4.06137 3.88731 -7.29042 6.16799 -12.1507 9.113 c 2.81592 10.322 6.27887 15.3275 15.1884 21.2637 c 2.38456 -7.78859 5.00607 -14.2357 9.113 -21.2637 l -6.07535 -9.113 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff675f59">
+                <Path.Data>
+                    <PathGeometry Figures="m 466.311 196.588 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7d7a74">
+                <Path.Data>
+                    <PathGeometry Figures="m 65.3388 199.625 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb59f8b">
+                <Path.Data>
+                    <PathGeometry Figures="m 244.561 199.625 c -3.35966 7.63305 -18.7933 10.3559 -12.1507 21.2637 c 15.3281 3.78828 28.4174 4.43135 33.4144 21.2637 h 12.1507 c -3.79101 -2.0802 -4.70231 -2.27461 -9.113 -3.03767 c -2.46053 -15.624 -16.5644 -23.2124 -15.1884 -39.4897 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb89c80">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 199.625 c 4.4988 7.05862 8.03768 10.8767 15.1884 15.1883 c -2.62151 -9.30893 -5.88093 -12.5671 -15.1884 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7e7a77">
+                <Path.Data>
+                    <PathGeometry Figures="m 68.3765 202.663 l 3.03767 3.03765 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7c6856">
+                <Path.Data>
+                    <PathGeometry Figures="m 396.445 202.663 v 12.1507 c 3.98898 -6.02797 25.0079 -15.3266 0 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffdfcebc">
+                <Path.Data>
+                    <PathGeometry Figures="m 274.938 205.701 c -3.79404 10.1294 -5.6045 19.569 -6.07533 30.3767 c 2.07472 -4.57474 2.50911 -7.0316 3.03765 -12.1507 c 2.70353 5.29981 4.41374 9.49272 6.07535 15.1883 l 12.1507 -3.03767 v 12.1507 c 4.96659 1.65584 4.41981 1.10814 6.07534 6.07534 l 15.1883 -3.03767 c 2.17194 10.4866 3.387 20.6966 12.1507 27.339 c -0.34629 -6.86393 -2.53038 -14.4678 -1.34872 -21.2637 c 1.98056 -11.4095 15.7473 -29.678 -1.68895 -33.4144 c -0.49514 8.56046 -3.7424 16.0577 -6.07534 24.3013 c -12.7673 -7.40796 -7.91616 -21.5592 -24.3013 -24.3013 l 6.07534 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd4b690">
+                <Path.Data>
+                    <PathGeometry Figures="m 375.181 205.701 c 0.69865 9.71539 2.13851 14.476 9.11301 21.2637 l 6.07533 -12.1507 c -5.77461 -2.55528 -10.1276 -5.29951 -15.1883 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff827a78">
+                <Path.Data>
+                    <PathGeometry Figures="m 460.236 205.701 l 3.03766 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd0b49b">
+                <Path.Data>
+                    <PathGeometry Figures="m 293.164 208.738 c -0.20656 5.69624 -1.209 9.74545 -3.03767 15.1883 c 14.921 4.63274 10.1944 19.5775 24.3013 24.3013 c 3.4265 -8.52825 6.16951 -15.1385 6.07534 -24.3013 c -4.30133 1.43408 -5.51033 2.47174 -9.11301 6.07534 l -3.03767 -21.2637 c -3.63001 1.81562 -2.96779 1.41586 -6.07533 6.07533 c -3.60268 -3.1458 -4.87243 -4.06622 -9.11301 -6.07533 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff191e1f">
+                <Path.Data>
+                    <PathGeometry Figures="m 399.482 208.738 c -11.266 0.79193 -19.6844 17.0231 -18.8344 27.2139 c 25.1928 0.89832 36.2221 -5.03348 40.0981 -21.1386 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7d7974">
+                <Path.Data>
+                    <PathGeometry Figures="m 80.5272 211.776 l 3.03768 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff2c2c32">
+                <Path.Data>
+                    <PathGeometry Figures="m 77.4036 208.592 c 5.90067 9.36726 22.7916 13.8522 33.5003 15.3349 c -6.3618 -9.07808 -22.7184 -13.8337 -33.5003 -15.3349 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd9bfa8">
+                <Path.Data>
+                    <PathGeometry Figures="m 312.402 216.839 c -0.16707 0.16858 -0.33718 3.37515 1.01458 2.02491 c 0.16708 -0.1686 0.33718 -3.37516 -1.01458 -2.02491 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff292c31">
+                <Path.Data>
+                    <PathGeometry Figures="m 405.129 234.076 c 12.9037 -0.34394 23.5783 -2.08105 33.8437 -4.07391 c -1.01254 -5.06279 5.89873 -15.6723 -3.03766 -15.1884 c -18.1856 -5.29526 -26.1866 5.54549 -30.806 19.2623 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff1d1d1c">
+                <Path.Data>
+                    <PathGeometry Figures="m 437.811 229.806 c 6.98967 -1.20656 13.113 -16.4167 19.4769 -19.585 c -8.39006 -4.83446 -27.6904 4.33662 -19.4769 19.585 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffefdabf">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 213.098 c -7.25596 6.04977 -6.36536 11.8086 -4.41363 17.5295 c 6.20292 -2.71721 22.5109 7.09161 19.602 -6.70079 c 4.75088 -7.43541 -9.6446 -9.15619 -15.1883 -10.8287 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5d5143">
+                <Path.Data>
+                    <PathGeometry Figures="m 393.407 220.889 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff736d69">
+                <Path.Data>
+                    <PathGeometry Figures="m 445.048 220.889 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6b6359">
+                <Path.Data>
+                    <PathGeometry Figures="m 156.469 223.927 c 3.79223 2.0802 4.70353 2.2746 9.11301 3.03767 c -3.79222 -2.08021 -4.70352 -2.2746 -9.11301 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff947868">
+                <Path.Data>
+                    <PathGeometry Figures="m 165.582 223.927 c -1.35449 10.3639 -12.0058 10.3612 -21.2637 12.1507 c 11.8269 4.9517 24.0623 1.56592 36.452 0 c -2.90159 28.1455 -19.5231 36.432 -45.565 36.452 c 9.97753 6.80711 18.9131 5.73421 30.3767 3.03767 l -15.1883 12.1507 l 9.113 45.565 c 21.7326 11.7645 43.216 70.9228 75.9417 36.452 c -33.4387 -12.2114 -78.5165 -34.3591 -67.6936 -75.9417 c 2.65158 -10.1874 4.03452 -24.6685 16.1844 -27.5756 c 10.7032 -2.56099 15.5052 17.1308 30.2455 14.743 c 19.4162 11.9147 32.2304 17.9386 48.6027 6.7573 c -8.35055 -13.2345 -36.5432 -26.3958 -51.6404 -24.3014 c 4.52162 -8.36899 -0.80893 -18.0426 -3.03767 -27.339 l -12.1507 -3.03767 l -7.40211 14.4226 l 1.32678 -23.5356 c -6.12079 -5.19663 -15.7048 -1.30229 -24.3014 0 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6c4b3c">
+                <Path.Data>
+                    <PathGeometry Figures="m 205.072 226.965 c -15.0944 10.4466 5.8668 10.9749 15.1883 12.1507 c -3.30499 14.4478 -1.6525 23.4292 12.1507 30.3767 c -3.19258 -12.346 -8.51155 -20.2236 -6.07533 -33.4144 c 4.49271 2.99423 3.65431 3.03767 9.113 3.03767 c -6.24847 -4.8053 -10.2916 -5.54558 -18.226 -6.07534 c 3.87911 -5.81714 3.87911 -3.29588 0 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff855542">
+                <Path.Data>
+                    <PathGeometry Figures="m 217.222 223.927 c 4.68712 3.84781 6.22115 4.524 12.1507 6.07534 c -4.68713 -3.84782 -6.22115 -4.52369 -12.1507 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff855d43">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 223.927 c 5.37365 2.36603 9.22237 2.77157 15.1884 3.03767 c 5.94328 -4.96743 -10.8186 -9.15653 -15.1884 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa37e67">
+                <Path.Data>
+                    <PathGeometry Figures="m 247.599 223.927 c -8.22048 8.76974 10.0132 10.1569 15.1883 15.1883 c 2.31167 -10.6158 -5.89915 -13.2576 -15.1883 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbdab9c">
+                <Path.Data>
+                    <PathGeometry Figures="m 271.9 223.927 c -2.02386 3.82341 -31.4302 -25.9101 -3.03765 15.1883 c 20.5464 13.5301 9.78778 -7.24904 3.03765 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff76756f">
+                <Path.Data>
+                    <PathGeometry Figures="m 438.972 223.927 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe2ceb0">
+                <Path.Data>
+                    <PathGeometry Figures="m 122.347 225.726 l 15.896 13.389 c 2.07473 -4.57474 2.50881 -7.0316 3.03767 -12.1507 c -5.30354 -0.88484 9.65311 -11.2609 -18.9336 -1.23833 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd4c4b3">
+                <Path.Data>
+                    <PathGeometry Figures="m 141.281 226.965 v 12.1507 l 27.339 -9.11301 c 5.19073 -10.9951 -6.63813 -8.89703 -27.339 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff321f15">
+                <Path.Data>
+                    <PathGeometry Figures="m 217.222 230.002 c 10.4253 4.37515 22.175 3.03767 33.4144 3.03767 c 2.87364 16.9292 16.2698 31.1586 -9.11301 36.452 c 6.84084 3.30649 13.7758 4.61329 21.2637 6.07533 c 0.81713 -10.3512 8.0313 -24.8859 4.1127 -34.9169 c -6.90158 -17.6656 -34.8934 -12.3942 -49.6777 -10.6481 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6b3b24">
+                <Path.Data>
+                    <PathGeometry Figures="m 238.486 226.965 c 5.37364 2.36604 9.22237 2.77157 15.1883 3.03767 c -5.59527 -3.36342 -10.2279 -7.29654 -15.1883 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7a7771">
+                <Path.Data>
+                    <PathGeometry Figures="m 432.897 226.965 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffefdfc6">
+                <Path.Data>
+                    <PathGeometry Figures="m 105.776 222.572 c 6.51262 7.28193 38.4177 19.6093 46.3536 20.1391 c 15.8227 -23.2299 -38.7928 -19.3648 -46.3536 -20.1391 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7a5b4c">
+                <Path.Data>
+                    <PathGeometry Figures="m 198.996 233.04 c 3.79101 2.08019 4.70231 2.2746 9.11301 3.03767 c 0.28038 5.95936 -1.67087 12.7201 3.03767 15.1883 h 6.07534 c 5.30553 -1.90374 2.48639 -7.8698 3.03767 -12.1507 c -7.77036 -1.80832 -13.1349 -5.85694 -21.2637 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff958f86">
+                <Path.Data>
+                    <PathGeometry Figures="m 378.219 230.002 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff473e3e">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 233.04 c 6.64035 3.39033 10.7807 3.72601 18.226 3.03767 c -6.2333 -2.65553 -11.3821 -2.89429 -18.226 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff724e3e">
+                <Path.Data>
+                    <PathGeometry Figures="m 259.75 233.04 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffad8e7b">
+                <Path.Data>
+                    <PathGeometry Figures="m 116.979 248.228 c 10.1279 6.62212 18.8852 2.82686 30.3767 3.71751 c 19.0478 8.90303 31.7289 20.3813 33.4144 -15.8682 c -21.8469 1.72418 -43.5808 3.20534 -63.7911 12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff73655a">
+                <Path.Data>
+                    <PathGeometry Figures="m 226.335 236.078 c -2.85541 10.4806 -1.70064 28.2511 7.5764 34.8088 c 7.96101 13.5412 18.2888 -15.8569 10.6496 -31.7712 c -6.06623 -2.28281 -11.6859 -2.54679 -18.226 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbdb09f">
+                <Path.Data>
+                    <PathGeometry Figures="m 277.976 239.115 c 4.07352 3.87029 7.29952 6.19897 12.1507 9.113 c 0.68044 -5.11513 0.66221 -7.02763 0 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff302f2e">
+                <Path.Data>
+                    <PathGeometry Figures="m 378.219 236.078 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff775d56">
+                <Path.Data>
+                    <PathGeometry Figures="m 98.7532 239.115 c 6.9207 8.10975 0.32615 19.7761 27.2734 22.6158 c 4.96719 -1.65584 8.84208 -14.4643 10.4979 -19.4315 c -20.1923 2.02683 -25.1854 -2.12099 -37.7713 -3.18425 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff491d0a">
+                <Path.Data>
+                    <PathGeometry Figures="m 238.486 242.153 c 6.23749 2.6641 15.5296 11.3551 18.226 3.03767 c -6.89856 -5.10389 -9.84813 -5.03402 -18.226 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe6ccae">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 239.115 c 3.79102 2.08019 4.70233 2.2746 9.11301 3.03767 c -3.79101 -2.0802 -4.7023 -2.27461 -9.11301 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc4a887">
+                <Path.Data>
+                    <PathGeometry Figures="m 369.106 239.115 c 2.35724 6.4754 5.80928 20.1752 11.4897 23.9091 c -2.90098 -5.36817 3.62397 -30.1863 -11.4897 -23.9091 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc5b39e">
+                <Path.Data>
+                    <PathGeometry Figures="m 378.219 239.115 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff83796c">
+                <Path.Data>
+                    <PathGeometry Figures="m 381.256 239.115 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff987b6b">
+                <Path.Data>
+                    <PathGeometry Figures="m 104.829 242.153 l 3.03767 12.1507 l 21.2637 -9.113 c -7.93651 -3.33446 -15.688 -3.01581 -24.3013 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff612d15">
+                <Path.Data>
+                    <PathGeometry Figures="m 235.448 242.153 c 5.6045 7.16433 13.8275 7.3387 21.2637 12.1507 c 4.11603 -10.918 -13.3232 -10.14 -21.2637 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa1887c">
+                <Path.Data>
+                    <PathGeometry Figures="m 265.825 242.153 c 4.55042 24.5073 3.63 46.9633 15.1883 69.8664 c 3.29588 -18.4891 -12.5425 -32.0347 3.03768 -48.6027 l 9.11301 48.6027 c 15.8857 4.13447 29.3624 -14.9746 6.07534 -27.339 l 3.03767 -9.113 c -5.45869 0 -4.6203 -0.0435 -9.11301 -3.03767 c 3.60268 -3.60359 4.64155 -4.81106 6.07534 -9.11301 c -11.9274 -11.2964 -0.3616 -28.2346 -33.4144 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffffd594">
+                <Path.Data>
+                    <PathGeometry Figures="m 332.654 251.266 c 7.10417 -1.99128 17.0631 1.94644 21.2637 -6.07533 c -11.2074 -6.4064 -20.3268 -8.81815 -21.2637 6.07533 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff874e38">
+                <Path.Data>
+                    <PathGeometry Figures="m 347.842 248.228 c 9.26184 2.31865 19.0448 8.2435 28.4889 8.28663 c -2.56065 -21.1675 -17.2161 -15.889 -28.4889 -8.28663 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffaa8264">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 242.153 c 2.07776 4.79951 2.44532 5.39854 6.07534 9.113 c -2.07777 -4.79951 -2.44532 -5.39855 -6.07534 -9.113 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffce8956">
+                <Path.Data>
+                    <PathGeometry Figures="m 344.804 245.191 l 3.03767 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff904321">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 248.228 l 3.03767 18.226 c 2.70049 -7.61847 1.50366 -11.5884 -3.03767 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa75234">
+                <Path.Data>
+                    <PathGeometry Figures="m 235.448 248.228 l 3.03767 21.2637 c 7.418 -0.33264 14.0431 -1.30014 21.2637 -3.03768 l -3.03767 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8a7061">
+                <Path.Data>
+                    <PathGeometry Figures="m 265.825 248.228 c -5.04151 18.8915 -4.06566 31.0971 -0.12516 40.0086 c 18.3489 24.9079 4.21385 -30.2668 0.12516 -40.0086 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc4b3a3">
+                <Path.Data>
+                    <PathGeometry Figures="m 290.126 248.228 c -0.66221 5.12303 -0.68044 7.03556 0 12.1507 c 3.84873 -4.68713 4.52308 -6.22055 6.07534 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd98146">
+                <Path.Data>
+                    <PathGeometry Figures="m 337.718 249.241 c -1.35176 1.35025 1.85601 1.18134 2.02308 1.01276 c 1.35177 -1.35024 -1.85601 -1.18136 -2.02308 -1.01276 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff391c10">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 272.53 c 9.26185 -6.85359 47.6326 -18.8651 24.3013 -24.3014 c -18.4562 -5.38387 -22.8065 6.57492 -24.3013 24.3014 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff93684c">
+                <Path.Data>
+                    <PathGeometry Figures="m 346.045 258.903 c 3.4449 9.99578 10.4379 13.7527 16.9852 -7.63715 c -5.40098 -2.90248 -14.0113 2.27202 -16.9852 7.63715 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb07866">
+                <Path.Data>
+                    <PathGeometry Figures="m 110.904 251.266 c 12.0986 19.7831 48.8424 21.3908 63.791 9.11302 c -19.3399 -12.1519 -42.0177 -7.84419 -63.791 -9.11302 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8c6552">
+                <Path.Data>
+                    <PathGeometry Figures="m 211.147 251.266 v 12.1507 l 12.1507 3.03767 c 11.7731 -0.0421 -2.90398 -23.6803 -12.1507 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbe8168">
+                <Path.Data>
+                    <PathGeometry Figures="m 253.674 251.266 v 6.07534 h 6.07535 c -1.65554 -4.96689 -1.10876 -4.4195 -6.07535 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fff7e8ce">
+                <Path.Data>
+                    <PathGeometry Figures="m 293.164 257.341 c 5.92649 7.90402 5.02127 13.7625 12.1507 15.1883 c -5.69184 2.96167 -4.78993 6.76284 -6.07534 12.1507 c 20.4164 20.8522 20.0251 62.9498 45.3099 74.1769 c 5.04712 6.19195 9.34153 22.7333 21.5189 10.8779 c -0.5802 -11.3153 -5.38883 -22.1962 -5.23086 -33.4144 c 0.1458 -10.3493 7.28128 -22.6692 1.53097 -32.4933 c -4.01579 -6.85783 -12.9374 -8.2509 -19.2224 -12.2327 c -15.0508 -31.2143 -26.0511 -20.3001 -31.7558 -40.3287 c -7.15067 1.04162 -18.702 -6.88943 -18.226 6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffcd9875">
+                <Path.Data>
+                    <PathGeometry Figures="m 329.616 251.266 l -3.03766 12.1507 c 3.86999 -4.07352 6.19988 -7.30013 9.11301 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff894f2e">
+                <Path.Data>
+                    <PathGeometry Figures="m 335.691 251.266 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffaa9890">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 251.266 c -19.5969 15.5813 -2.5373 5.25028 3.03768 3.03767 c 2.00875 -2.5232 4.98059 -5.52796 -3.03768 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa78164">
+                <Path.Data>
+                    <PathGeometry Figures="m 356.955 251.266 v 15.1883 c 2.8068 -5.00638 4.40159 -9.64429 6.07534 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6d4d3f">
+                <Path.Data>
+                    <PathGeometry Figures="m 338.729 263.417 c 8.77887 0.50274 13.0407 1.11514 18.226 -6.07534 c -8.46599 -0.21203 -13.0589 -0.95139 -18.226 6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd5cec9">
+                <Path.Data>
+                    <PathGeometry Figures="m 347.842 254.304 l 3.03765 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fffdf9f5">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 254.304 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbdafa4">
+                <Path.Data>
+                    <PathGeometry Figures="m 353.917 254.304 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbd896e">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 254.304 c -2.14763 11.8582 -13.6457 20.5329 -22.7951 28.4004 c 22.3064 19.5547 38.7543 -15.1351 22.7951 -28.4004 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9c7c62">
+                <Path.Data>
+                    <PathGeometry Figures="m 361.085 252.181 c -1.14033 9.48761 8.36235 26.2066 14.0966 17.3112 l 3.03767 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff44403e">
+                <Path.Data>
+                    <PathGeometry Figures="m 113.942 257.341 l 3.03766 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9a6049">
+                <Path.Data>
+                    <PathGeometry Figures="m 114.71 257.695 c 6.46924 8.44547 18.7679 15.0781 29.3406 14.0966 c -4.19776 -7.35208 -21.329 -11.2439 -29.3406 -14.0966 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffca784e">
+                <Path.Data>
+                    <PathGeometry Figures="m 241.524 257.341 c 1.86514 8.65979 3.95809 8.67073 12.1507 6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff87482c">
+                <Path.Data>
+                    <PathGeometry Figures="m 329.616 257.341 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc1b5aa">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 257.341 l 3.03768 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff694838">
+                <Path.Data>
+                    <PathGeometry Figures="m 177.733 260.379 l 3.03767 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa59284">
+                <Path.Data>
+                    <PathGeometry Figures="m 259.75 342.396 c -4.85421 -4.49878 -6.40341 -6.26064 -9.11302 -12.1507 c -15.483 0.55286 -23.5966 -16.322 -30.3767 -27.339 c -4.17376 -6.78371 -11.045 -11.2211 -15.1883 -18.226 c -3.69987 -6.25516 -4.68409 -19.6516 -12.1507 -22.7825 c -20.685 -8.67438 -24.1917 27.4481 -27.8454 37.9709 c -8.18805 23.5814 4.64489 30.3742 19.8241 43.9192 c 6.62213 5.90827 11.9247 14.1702 20.1719 18.353 c 22.1414 18.642 48.1932 5.06474 54.6781 -19.7448 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff583222">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 260.379 c 1.12498 6.57266 -0.71148 8.87679 6.07534 9.11301 c -2.09903 -4.2175 -2.9921 -5.6519 -6.07534 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff856252">
+                <Path.Data>
+                    <PathGeometry Figures="m 262.787 260.379 v 15.1883 c -12.7562 -5.07293 -25.7398 -9.00875 -39.4897 -9.11301 c 8.31714 10.284 30.1089 28.0159 39.4897 15.1884 c 2.37546 -8.13793 3.23513 -13.4056 0 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc4b0a3">
+                <Path.Data>
+                    <PathGeometry Figures="m 295.19 261.391 c -1.35175 1.34995 1.85601 1.18166 2.02309 1.01277 c 1.35176 -1.35025 -1.85601 -1.18135 -2.02309 -1.01277 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fff7e3c6">
+                <Path.Data>
+                    <PathGeometry Figures="m 378.219 260.379 l 3.03767 9.11301 c -7.94959 7.20869 -1.56744 15.8226 8.99453 14.0586 c 7.01398 -1.17162 9.19503 -5.44624 12.2691 -11.021 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff454341">
+                <Path.Data>
+                    <PathGeometry Figures="m 384.294 260.379 l 3.03766 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa26f5e">
+                <Path.Data>
+                    <PathGeometry Figures="m 132.168 272.53 c 14.8499 0 28.5252 2.08354 39.4897 -9.11301 c -14.0756 2.32261 -30.4396 -3.3879 -39.4897 9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb09f91">
+                <Path.Data>
+                    <PathGeometry Figures="m 281.013 263.417 c -15.4769 22.1249 4.04148 67.5741 12.5348 89.5936 l 11.9131 1.59214 l -0.14657 -15.244 l -6.07534 -21.2637 l 9.113 6.07533 c 7.60189 -6.12517 5.89394 -17.0923 6.07534 -27.339 c -5.83232 3.93864 -7.03523 5.44046 -9.113 12.1507 c -6.57656 -0.44138 -6.63123 -0.47661 -12.1507 3.03767 c 0.48907 -17.7184 -4.94123 -56.232 -12.1507 -48.6027 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff874124">
+                <Path.Data>
+                    <PathGeometry Figures="m 329.293 270.907 c 10.1607 2.70949 12.2603 0.78823 12.4742 -7.49056 c -4.79952 2.07656 -8.7591 3.85995 -12.4742 7.49056 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe07b43">
+                <Path.Data>
+                    <PathGeometry Figures="m 341.767 263.417 c -2.24181 6.4186 -2.45443 8.22237 -9.11301 9.11301 c 4.5463 7.65048 7.56657 10.8825 15.1884 6.07535 v -15.1884 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff833f29">
+                <Path.Data>
+                    <PathGeometry Figures="m 347.842 263.417 c -1.29405 8.52462 -3.14399 11.9918 -9.11302 18.226 c 11.9715 1.65096 16.0511 -7.7084 18.226 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd1a884">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 263.417 l -3.03767 18.226 c 8.11969 0 6.52701 13.5658 15.7494 16.3079 c 1.35649 -8.19721 -2.67222 -27.533 -12.7117 -34.5339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd3b695">
+                <Path.Data>
+                    <PathGeometry Figures="m 377.069 259.082 l -5.07202 14.2129 c 5.97214 1.88316 7.55368 -1.42032 9.25958 -3.80341 c 0 -5.62942 -0.23846 -8.43529 -4.18756 -10.4095 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffcbb5aa">
+                <Path.Data>
+                    <PathGeometry Figures="m 293.164 275.567 h 12.1507 c 3.56777 -6.09702 -4.21926 -3.15503 -3.03767 -9.11301 c -9.4765 -1.39253 -10.9715 2.71414 -9.11301 9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa97b60">
+                <Path.Data>
+                    <PathGeometry Figures="m 324.552 268.479 c -0.16708 0.16889 -0.33718 3.37484 1.01458 2.0249 c 0.16707 -0.16858 0.33718 -3.37514 -1.01458 -2.0249 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff5d5751">
+                <Path.Data>
+                    <PathGeometry Figures="m 390.369 266.454 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffad5025">
+                <Path.Data>
+                    <PathGeometry Figures="m 329.616 269.492 c 1.53706 9.03342 2.9192 11.7145 12.1507 12.1507 l -9.11301 -9.11302 c 5.81714 3.8782 3.29587 3.87789 9.11301 0 c -4.57474 -2.07472 -7.03221 -2.5088 -12.1507 -3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbaac9e">
+                <Path.Data>
+                    <PathGeometry Figures="m 393.407 269.492 l 3.03767 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff46403a">
+                <Path.Data>
+                    <PathGeometry Figures="m 396.445 269.492 l 3.03767 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff494642">
+                <Path.Data>
+                    <PathGeometry Figures="m 132.168 272.53 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff997f70">
+                <Path.Data>
+                    <PathGeometry Figures="m 198.996 272.53 c 4.46051 33.4966 48.4862 25.6676 66.3397 48.5347 c 11.3244 14.7734 6.53081 45.9822 27.8281 42.5954 c 3.21689 -25.5832 -3.38093 -38.7698 -14.9423 -61.0252 c -4.94836 -9.52583 -6.20293 -17.9119 -15.4344 -24.0295 c -15.4253 25.8718 -44.2011 1.74877 -63.7911 -6.07535 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff583c2a">
+                <Path.Data>
+                    <PathGeometry Figures="m 323.541 272.53 v 6.07535 h 6.07534 v -6.07535 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff735c4f">
+                <Path.Data>
+                    <PathGeometry Figures="m 161.532 276.58 c -1.35024 1.35024 1.85632 1.18135 2.02492 1.01275 c 1.35024 -1.35024 -1.85634 -1.18134 -2.02492 -1.01275 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff201e1b">
+                <Path.Data>
+                    <PathGeometry Figures="m 155.808 275.102 l -4.46769 14.8316 c 4.96689 -1.65584 14.927 -10.8654 16.5828 -15.8323 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff92745a">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 278.605 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#fff6c8a7">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 278.605 c -9.80864 5.88243 -16.0055 8.02612 -27.339 6.07532 c 3.46903 11.8609 16.4915 12.2448 24.3014 21.2637 c 3.90948 -8.7087 5.85662 -18.1741 3.03767 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff8a827a">
+                <Path.Data>
+                    <PathGeometry Figures="m 399.482 278.605 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffcfaf8f">
+                <Path.Data>
+                    <PathGeometry Figures="m 331.642 282.655 c -1.35175 1.34993 1.85603 1.18164 2.02309 1.01275 c 1.35177 -1.35024 -1.85601 -1.18135 -2.02309 -1.01275 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd79c6e">
+                <Path.Data>
+                    <PathGeometry Figures="m 341.767 284.68 c 7.0565 2.79922 10.8779 2.08779 18.226 0 c -6.31835 -1.53979 -11.6586 -0.71961 -18.226 0 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff938474">
+                <Path.Data>
+                    <PathGeometry Figures="m 396.445 281.643 l 3.03767 3.03765 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc6b09c">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 287.718 l -4.86483 18.1957 c 4.76002 -2.11907 11.8089 -5.66196 17.0155 -6.04501 c 4.18144 -7.59372 -12.4178 -31.8752 -12.1507 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa28a7b">
+                <Path.Data>
+                    <PathGeometry Figures="m 208.109 290.756 c 11.6859 15.5058 20.1413 45.6847 42.5274 39.4897 c 2.07776 6.71022 3.28069 8.21082 9.11302 12.1507 c -8.11969 11.1452 -17.6823 18.9186 -30.3767 24.3014 c 4.39875 43.1973 37.7764 10.8081 60.7534 0 c -11.2454 -14.2467 -13.0802 -31.4824 -22.8129 -45.6331 c -11.8348 -17.2069 -39.5049 -27.6428 -59.2042 -30.3087 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc5b7ab">
+                <Path.Data>
+                    <PathGeometry Figures="m 305.315 299.869 c 4.79952 -2.07656 5.39794 -2.44472 9.113 -6.07535 c -6.35479 1.23239 -6.13608 0.65827 -9.113 6.07535 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff33312e">
+                <Path.Data>
+                    <PathGeometry Figures="m 150.394 296.831 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9a8c7c">
+                <Path.Data>
+                    <PathGeometry Figures="m 369.106 296.831 c -9.25368 9.18065 -8.7661 12.2523 -4.1572 12.7395 c 3.08324 -3.46112 9.54874 -6.66454 10.2325 -12.7395 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc2afa1">
+                <Path.Data>
+                    <PathGeometry Figures="m 302.277 299.869 c -2.99514 4.49119 -3.03767 3.65493 -3.03767 9.11301 c 5.36453 -2.97266 5.93865 -3.71143 3.03767 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff78736d">
+                <Path.Data>
+                    <PathGeometry Figures="m 147.356 302.906 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffcdc2b4">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 302.906 l -3.03767 15.1884 c 7.71265 0 7.01398 4.90279 9.11301 12.1507 c 3.61787 -10.2047 0.23694 -18.8557 -6.07534 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff56504b">
+                <Path.Data>
+                    <PathGeometry Figures="m 362.795 307.683 c -0.19442 9.34964 -1.3305 18.1498 -3.03766 27.339 c 6.5249 -8.61483 7.22358 -17.3405 3.03766 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffbd8e7b">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 315.057 c -3.60267 3.60358 -4.64156 4.81106 -6.07534 9.113 c -3.60267 -3.14581 -4.87242 -4.06623 -9.113 -6.07533 c 1.58262 17.0079 2.51822 32.6762 9.113 48.6027 l 18.226 -6.07535 c 3.30498 10.6319 11.2333 15.9144 18.226 24.3014 c 8.15917 -1.52188 16.0085 -2.68226 24.3013 -3.03768 l -3.03766 -12.1507 l -9.11301 3.03766 c -1.18469 -8.83354 -10.1944 -11.5158 -16.1999 -18.4508 c -10.9477 -12.6428 -17.4028 -25.8475 -26.3275 -39.2649 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffe1cfc0">
+                <Path.Data>
+                    <PathGeometry Figures="m 323.541 321.132 c 1.26975 8.16829 2.17801 10.7959 9.11301 15.1883 c -2.27521 -6.8469 -4.08263 -10.0668 -9.11301 -15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb7a896">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 324.17 c -2.99514 4.49272 -3.03767 3.65432 -3.03767 9.11301 c 3.91556 -4.38335 4.25578 -3.74848 3.03767 -9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc5ac96">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 327.208 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc3b09f">
+                <Path.Data>
+                    <PathGeometry Figures="m 320.503 330.245 c 3.72419 6.18166 5.17315 7.06562 12.1507 9.11302 c -4.07351 -3.87 -7.29952 -6.19989 -12.1507 -9.11302 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff877163">
+                <Path.Data>
+                    <PathGeometry Figures="m 162.398 332.752 c 4.11938 20.4162 25.6937 40.4761 45.7116 46.0958 c -9.9028 -16.6616 -31.5142 -32.7574 -45.7116 -46.0958 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffb8ac9b">
+                <Path.Data>
+                    <PathGeometry Figures="m 359.993 333.283 v 15.1884 c 2.52127 -6.16648 2.52127 -9.02189 0 -15.1884 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff332f2a">
+                <Path.Data>
+                    <PathGeometry Figures="m 165.582 342.396 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa88773">
+                <Path.Data>
+                    <PathGeometry Figures="m 296.202 342.396 c -4.27401 19.5839 -19.0249 36.2364 -39.4897 39.4897 c 7.2418 7.92225 14.0929 20.1441 23.692 25.1745 c 8.47206 4.43802 19.5945 1.07502 28.5739 2.02278 c 9.32261 0.98723 17.7069 3.75963 26.7136 6.2171 c 3.33536 -6.32443 5.11846 -11.1483 6.07533 -18.226 c -9.59296 -2.84326 2.2428 -6.16128 -3.01237 -14.6576 c -4.24058 2.0079 -1.44156 -17.504 -5.04422 -14.3569 c 6.40614 -8.67751 -9.17857 -11.4114 -19.194 -6.31541 c -7.61848 -7.15674 -11.4372 -11.5321 -18.3145 -19.3481 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffdfc8ae">
+                <Path.Data>
+                    <PathGeometry Figures="m 332.654 342.396 c 2.84326 5.92042 4.22843 7.74606 9.11301 12.1507 c -2.35724 -6.47631 -3.43256 -8.41738 -9.11301 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff413c39">
+                <Path.Data>
+                    <PathGeometry Figures="m 171.657 351.509 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff645f5d">
+                <Path.Data>
+                    <PathGeometry Figures="m 363.03 351.509 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff44423f">
+                <Path.Data>
+                    <PathGeometry Figures="m 174.695 354.547 l 3.03768 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff352f2c">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 354.547 l 3.03766 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff84553f">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 363.66 c 5.05166 4.56562 8.79709 6.67985 15.1883 9.11301 l -3.03766 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff655651">
+                <Path.Data>
+                    <PathGeometry Figures="m 361.288 359.997 l 4.78041 12.7761 c 5.45869 0 7.43481 6.64974 11.9275 3.65459 c -0.47288 -7.53114 -13.6247 -12.9708 -16.7079 -16.4307 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd8b69a">
+                <Path.Data>
+                    <PathGeometry Figures="m 355.944 364.671 c -1.35177 1.35177 1.85601 1.18166 2.02308 1.01459 c 1.35176 -1.35177 -1.85601 -1.18166 -2.02308 -1.01459 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff332e2b">
+                <Path.Data>
+                    <PathGeometry Figures="m 186.846 366.697 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff563e35">
+                <Path.Data>
+                    <PathGeometry Figures="m 311.39 375.81 c 5.8384 -2.73998 6.0723 -3.26854 9.11301 -9.11301 c -6.45201 2.73086 -6.38214 2.66099 -9.11301 9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff100c08">
+                <Path.Data>
+                    <PathGeometry Figures="m 317.465 369.735 c 3.90341 9.73573 7.90401 11.3366 18.226 12.1507 c -5.75943 -6.13609 -10.3737 -9.09782 -18.226 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffd5bfa8">
+                <Path.Data>
+                    <PathGeometry Figures="m 358.981 370.747 c -1.35177 1.35176 1.85602 1.18165 2.02308 1.01457 c 1.35176 -1.35175 -1.85602 -1.18164 -2.02308 -1.01457 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9e887a">
+                <Path.Data>
+                    <PathGeometry Figures="m 372.143 369.735 l 3.03767 18.226 c 4.90887 -7.95566 4.62637 -12.6549 -3.03767 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff34312f">
+                <Path.Data>
+                    <PathGeometry Figures="m 192.921 372.773 l 3.03768 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7b675b">
+                <Path.Data>
+                    <PathGeometry Figures="m 232.411 372.773 c -8.44472 4.52614 -14.7266 5.80499 -24.3013 6.07535 c 9.07656 5.87789 17.7277 12.7667 26.4242 19.2874 c 4.75395 -9.01276 3.76416 -16.912 -2.12285 -25.3628 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff553627">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 372.773 l 3.03766 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff946352">
+                <Path.Data>
+                    <PathGeometry Figures="m 329.616 372.773 c 9.67188 12.6765 6.16777 44.3441 15.1884 39.4897 c 4.57472 -9.44107 6.76791 -20.1215 9.113 -30.3767 l -9.113 3.03768 c -4.19807 -7.35117 -7.17802 -9.29831 -15.1884 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff524131">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 372.773 c 2.35722 6.47632 3.43257 8.41739 9.11301 12.1507 v -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff645e58">
+                <Path.Data>
+                    <PathGeometry Figures="m 378.219 372.773 l 3.03767 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3c3936">
+                <Path.Data>
+                    <PathGeometry Figures="m 195.959 375.81 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff75574b">
+                <Path.Data>
+                    <PathGeometry Figures="m 311.39 381.886 l 9.11301 -3.03766 c -5.40097 -2.90098 -6.13913 -2.32686 -9.11301 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6d5e59">
+                <Path.Data>
+                    <PathGeometry Figures="m 360.116 374.935 l 1.84082 32.5402 c 6.59804 -4.63004 33.8861 -31.6394 12.3653 -32.6653 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff877264">
+                <Path.Data>
+                    <PathGeometry Figures="m 238.486 378.848 l -6.07534 21.2637 c 8.40827 0.24909 16.5553 0.48603 23.6179 5.75335 c 16.1726 12.0535 15.3919 41.2667 40.1094 42.2449 c 5.2582 0.20657 10.2035 -1.24543 15.2521 -2.43316 l -3.03767 15.1883 c 6.70414 -2.15066 14.8329 -7.76124 21.2637 -6.07533 c 6.7892 -6.05712 16.0277 -14.0849 9.20205 -23.1737 c -1.88427 -17.2738 -32.7647 -12.5997 -48.6462 -16.2249 c -17.6857 -11.3775 -23.1686 -34.2365 -51.6859 -36.5432 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff866c5d">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 387.961 c 5.73974 -0.13943 7.87359 -0.0243 6.07534 -9.11301 c -7.12978 2.94395 -11.8484 1.06503 -6.07534 9.11301 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff211918">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 390.999 l 15.1883 3.03768 c -0.53463 -5.70475 -1.3305 -9.71751 -3.03767 -15.1883 c -7.53646 3.08931 -9.91496 4.36816 -12.1507 12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4d3e39">
+                <Path.Data>
+                    <PathGeometry Figures="m 323.541 381.886 l 3.03768 3.03768 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff292021">
+                <Path.Data>
+                    <PathGeometry Figures="m 350.88 400.112 c 5.80499 -5.7503 13.7497 2.4199 13.3305 -5.68156 l 4.89551 -9.50678 c -17.0113 -11.9412 -26.2559 2.82533 -18.226 15.1883 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6c574b">
+                <Path.Data>
+                    <PathGeometry Figures="m 256.712 384.923 c -7.70718 3.28907 4.31029 3.99748 9.11301 6.07533 c -3.71508 -3.63001 -3.54831 -10.1192 -9.11301 -6.07533 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9c8272">
+                <Path.Data>
+                    <PathGeometry Figures="m 347.842 397.074 c -0.87182 8.71204 -5.44173 17.7076 -8.45205 25.9275 l 20.6027 10.5245 c 4.00366 -7.94047 6.64036 -15.7564 9.11301 -24.3014 c -4.80558 -6.24849 -5.54677 -10.2916 -6.07533 -18.226 c 4.96658 1.65553 4.4198 1.10875 6.07533 6.07535 c 2.07473 -4.57474 2.50912 -7.03221 3.03768 -12.1507 c -8.89126 3.34751 -14.9058 10.9022 -24.3013 12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff39312e">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 390.999 c 4.68711 3.84873 6.22114 4.52309 12.1507 6.07535 l -3.03766 -9.11301 c -5.45869 0 -4.62031 0.0425 -9.11301 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff554540">
+                <Path.Data>
+                    <PathGeometry Figures="m 262.787 390.999 c 4.0401 5.32504 6.82564 8.11058 12.1507 12.1507 c -3.50547 -6.83171 -5.31897 -8.64521 -12.1507 -12.1507 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffcfb295">
+                <Path.Data>
+                    <PathGeometry Figures="m 363.03 390.999 v 18.226 h 6.07533 v -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6b5952">
+                <Path.Data>
+                    <PathGeometry Figures="m 229.373 394.036 l 4.59948 13.95 c 31.3454 -1.92553 28.0384 -6.46217 6.81326 -9.61341 c -2.95565 -3.85784 -7.5549 -1.38098 -11.4127 -4.33663 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff655042">
+                <Path.Data>
+                    <PathGeometry Figures="m 356.955 394.036 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4a3835">
+                <Path.Data>
+                    <PathGeometry Figures="m 235.448 403.149 c 7.08385 2.9921 13.5389 2.97995 21.2637 3.03767 c -7.61848 -5.72905 -12.096 -5.51945 -21.2637 -3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4a3a36">
+                <Path.Data>
+                    <PathGeometry Figures="m 274.938 403.149 c 8.68166 15.2461 26.7102 16.8074 42.5274 21.2637 c -8.70596 -10.7776 -29.8694 -14.6385 -42.5274 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6d5a52">
+                <Path.Data>
+                    <PathGeometry Figures="m 259.75 406.187 l -14.036 -2.50194 c 7.05652 4.48663 21.5907 26.4813 29.2243 29.841 c -4.7661 -9.31046 -8.88214 -19.0401 -15.1883 -27.339 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff9a7a66">
+                <Path.Data>
+                    <PathGeometry Figures="m 287.089 409.225 c 15.4374 11.0024 42.8524 18.1956 54.678 0 c -3.9915 2.33292 -3.7424 2.08385 -6.07533 6.07534 c -17.3876 -6.69503 -30.0972 -9.49878 -48.6027 -6.07534 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff7b6253">
+                <Path.Data>
+                    <PathGeometry Figures="m 341.767 406.187 c 2.10258 -18.0241 -6.25806 8.41957 -10.6141 12.651 c 12.5718 7.62996 15.11 -1.54129 10.6141 -12.651 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff363432">
+                <Path.Data>
+                    <PathGeometry Figures="m 247.599 412.262 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffc4b9ab">
+                <Path.Data>
+                    <PathGeometry Figures="m 256.712 412.262 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff57514d">
+                <Path.Data>
+                    <PathGeometry Figures="m 366.068 412.262 l 3.03766 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff947d6b">
+                <Path.Data>
+                    <PathGeometry Figures="m 284.051 418.338 c -2.57595 17.661 12.5395 20.0425 27.339 21.2637 c -8.56927 -7.72479 -17.8038 -14.7661 -27.339 -21.2637 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4d4a49">
+                <Path.Data>
+                    <PathGeometry Figures="m 256.712 421.375 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff3f2f2b">
+                <Path.Data>
+                    <PathGeometry Figures="m 317.465 421.375 c 11.8864 5.72601 26.5371 9.45627 39.4897 12.1507 C 345.436 417.036 332.513 412.671 317.465 421.375 Z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff2c2a28">
+                <Path.Data>
+                    <PathGeometry Figures="m 262.787 427.451 l 3.03768 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff6b5952">
+                <Path.Data>
+                    <PathGeometry Figures="m 335.691 427.451 c 1.88031 6.43074 2.84022 11.5492 3.03766 18.226 c 35.8959 -15.2309 22.5308 -19.2252 -3.03766 -18.226 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff705f57">
+                <Path.Data>
+                    <PathGeometry Figures="m 288.25 445.587 c 5.82322 5.47388 13.6503 11.7014 21.4783 13.366 l 1.6617 -13.2765 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ffa79f92">
+                <Path.Data>
+                    <PathGeometry Figures="m 302.277 454.79 l 3.03767 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff565048">
+                <Path.Data>
+                    <PathGeometry Figures="m 326.578 454.79 l 3.03766 3.03766 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff544e4b">
+                <Path.Data>
+                    <PathGeometry Figures="m 302.215 454.888 c 3.71506 3.63002 4.12584 5.49864 8.92536 7.57641 c -0.96309 -5.06854 -4.12585 -5.49864 -8.92536 -7.57641 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path Fill="#ff4c4946">
+                <Path.Data>
+                    <PathGeometry Figures="m 314.428 457.827 l 3.03767 3.03767 z" FillRule="Nonzero"/>
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </Canvas>
+</Viewbox>
