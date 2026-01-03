@@ -19,7 +19,7 @@
         <Grid Margin="0,0,0,10">
             <ctrl:UserCard x:Name="userCard" IsReadOnly="True"/>
             <!--下载按钮-->
-            <Button x:Name="button_Download" Style="{DynamicResource AccentButtonStyle}" Content="{lex:Loc Download}" HorizontalAlignment="Right" Margin="0,0,10,0" Click="button_Download_Click"/>
+            <Button x:Name="button_Download" MinWidth="100" Style="{DynamicResource AccentButtonStyle}" Content="{lex:Loc Download}" HorizontalAlignment="Right" Margin="0,0,10,0" Click="button_Download_Click"/>
         </Grid>
 
         <!--简介-->
