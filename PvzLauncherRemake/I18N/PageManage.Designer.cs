@@ -70,7 +70,7 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
-        ///   查找类似 导入游戏 的本地化字符串。
+        ///   查找类似 导入 的本地化字符串。
         /// </summary>
         public static string ImportGame {
             get {

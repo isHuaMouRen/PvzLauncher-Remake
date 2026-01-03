@@ -124,6 +124,6 @@
     <value>修正器管理です</value>
   </data>
   <data name="ImportGame" xml:space="preserve">
-    <value>ゲームを導入します</value>
+    <value>輸入</value>
   </data>
 </root>

@@ -32,7 +32,7 @@
             </TabControl>
 
             <!--导入游戏按钮-->
-            <Button x:Name="button_Load" Content="{lex:Loc ImportGame}" VerticalAlignment="Top" Click="button_Load_Click" HorizontalAlignment="Right" Margin="0,10,10,0"/>
+            <Button x:Name="button_ImportGame" Content="{lex:Loc ImportGame}" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Click="button_ImportGame_Click"/>
 
 
         </Grid>

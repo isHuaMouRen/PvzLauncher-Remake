@@ -104,6 +104,6 @@
     <value>Trainer manage</value>
   </data>
   <data name="ImportGame" xml:space="preserve">
-    <value>Import the game</value>
+    <value>Import</value>
   </data>
 </root>

@@ -11,6 +11,7 @@ using PvzLauncherRemake.Utils.FileSystem;
 using PvzLauncherRemake.Utils.UI;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using static PvzLauncherRemake.Class.AppLogger;
@@ -103,6 +104,175 @@ namespace PvzLauncherRemake.Utils.Services
 
             AppGlobals.TrainerList = validTrainers;
             logger.Info($"[游戏管理器] 加载游戏版本完成，共 {AppGlobals.TrainerList.Count} 个有效版本");
+        }
+
+        #endregion
+
+        #region 导入游戏
+
+        /// <summary>
+        /// 导入游戏或修改器
+        /// </summary>
+        /// <returns></returns>
+        public static async Task ImportGameOrTrainer(Action<string>? progressCallback = null)
+        {
+            try
+            {
+                bool? isTrainer = null;
+
+                //选择位置
+                var openFolderDialog = new OpenFolderDialog
+                {
+                    Multiselect = false,
+                    Title = "请选择游戏/修改器所在的文件夹"
+                };
+
+
+                //选择类型
+                var radioButtonGame = new RadioButton { Content = "游戏" };
+                var radioButtonTrainer = new RadioButton { Content = "修改器" };
+                radioButtonGame.Click += ((s, e) => isTrainer = false);
+                radioButtonTrainer.Click += ((s, e) => isTrainer = true);
+                await DialogManager.ShowDialogAsync(new ContentDialog
+                {
+                    Title = "请选择类型",
+                    Content = new StackPanel
+                    {
+                        Children = { radioButtonGame, radioButtonTrainer }
+                    },
+                    PrimaryButtonText = "确定",
+                    CloseButtonText = "取消导入",
+                    DefaultButton = ContentDialogButton.Primary
+                }, closeCallback: (() => isTrainer = null));
+
+                if (isTrainer == null)
+                    return;
+
+                if (openFolderDialog.ShowDialog() != true)
+                    return;
+
+
+                //解决重名
+                string savePath = await ResolveSameName(Path.GetFileName(openFolderDialog.FolderName), (isTrainer == true ? AppGlobals.TrainerDirectory : AppGlobals.GameDirectory));
+
+                //解决多exe
+                string? exeFile = null;
+                string[] files = Directory.GetFiles(openFolderDialog.FolderName);
+                var listBox = new ListBox();
+
+                foreach (var file in files)
+                {
+                    if (file.EndsWith(".exe"))
+                    {
+                        listBox.Items.Add(Path.GetFileName(file));
+                    }
+                }
+
+                if (listBox.Items.Count == 1)
+                {
+                    exeFile = (string)listBox.Items[0];
+                }
+                else if (listBox.Items.Count <= 0)
+                {
+                    new NotificationManager().Show(new NotificationContent
+                    {
+                        Title = "导入终止",
+                        Message = "您选择的文件夹内没有任何可执行文件，导入被终止",
+                        Type = NotificationType.Error
+                    });
+                    return;
+                }
+                else
+                {
+                    await DialogManager.ShowDialogAsync(new ContentDialog
+                    {
+                        Title = "帮助我们解决问题！",
+                        Content = new StackPanel
+                        {
+                            Children =
+                        {
+                            new TextBlock{Text="我们在您的文件夹内发现了多个可执行文件！请帮助我们选择正确的那一个！",Margin=new Thickness(0,0,0,10)},
+                            listBox
+                        }
+                        },
+                        PrimaryButtonText = "确定",
+                        CloseButtonText = "取消导入",
+                        DefaultButton = ContentDialogButton.Primary
+                    });
+                    if (listBox.SelectedItem == null)
+                        return;
+
+                    exeFile = (string)listBox.SelectedItem;
+                }
+
+                //导入确认
+                bool isImportConfirm = false;
+                await DialogManager.ShowDialogAsync(new ContentDialog
+                {
+                    Title = "导入确认",
+                    Content = "此操作会将您选择的文件夹复制到启动器游戏库内，如果游戏过可能会需要很长时间，且此操作无法取消！\n\n确定开始导入？",
+                    PrimaryButtonText = "确定",
+                    CloseButtonText = "取消",
+                    DefaultButton = ContentDialogButton.Primary
+                }, (() => isImportConfirm = true));
+
+                if (!isImportConfirm)
+                    return;
+
+                await DirectoryManager.CopyDirectoryAsync(openFolderDialog.FolderName, savePath, ((p) => progressCallback?.Invoke(p)));
+
+
+
+                if (isTrainer == true)
+                {
+                    var config = new JsonTrainerInfo.Index
+                    {
+                        ExecuteName = exeFile,
+                        Icon = "origin",
+                        Name = Path.GetFileName(savePath),
+                        Version = "1.0.0.0"
+                    };
+                    Json.WriteJson(Path.Combine(savePath, ".pvzl.json"), config);
+                }
+                else
+                {
+                    var config = new JsonGameInfo.Index
+                    {
+                        GameInfo = new JsonGameInfo.GameInfo
+                        {
+                            ExecuteName = exeFile,
+                            Icon = "origin",
+                            Name = Path.GetFileName(savePath),
+                            Version = "1.0.0.0",
+                            VersionType = "zh_origin"
+                        },
+                        Record = new JsonGameInfo.Record
+                        {
+                            FirstPlay = DateTimeOffset.Now.ToUnixTimeSeconds(),
+                            PlayCount = 0,
+                            PlayTime = 0
+                        }
+                    };
+                    Json.WriteJson(Path.Combine(savePath, ".pvzl.json"), config);
+                }
+
+                new NotificationManager().Show(new NotificationContent
+                {
+                    Title = "导入",
+                    Message = $"导入 \"{Path.GetFileName(savePath)}\" 成功！",
+                    Type = NotificationType.Success
+                });
+
+
+
+                return;              
+
+
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", null!, ex);
+            }
         }
 
         #endregion

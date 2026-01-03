@@ -124,6 +124,6 @@
     <value>Gestion des modificateurs</value>
   </data>
   <data name="ImportGame" xml:space="preserve">
-    <value>Importer un jeu</value>
+    <value>importer</value>
   </data>
 </root>

@@ -12,6 +12,7 @@ using PvzLauncherRemake.Utils.Services;
 using PvzLauncherRemake.Utils.UI;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -105,7 +106,7 @@ namespace PvzLauncherRemake.Pages
                             NavigationController.Navigate(this, "Download");
                         }), (() =>
                         {
-                            button_Load_Click(button_Load, null!);
+                            button_ImportGame_Click(button_ImportGame, null!);
                         }));
                 }
 
@@ -505,214 +506,17 @@ namespace PvzLauncherRemake.Pages
         //导入游戏
         //我已经懒得碰这坨该死的屎山了，能跑就完事了
         // :(
-        private async void button_Load_Click(object sender, RoutedEventArgs e)
+        //幸运的是，我现在已经开始重构他了！！(2026-1-3)
+        private async void button_ImportGame_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                logger.Info($"[管理] 开始导入游戏");
+            StartLoad();
 
-                //导入游戏总逻辑================================================
-                string originPath = null!;
-                string targetPath = null!;
-                string gameName = null!;
-                string[] gameFiles = null!;
-                List<string> gameExes = new List<string>();
-                string gameExeName = null!;
-                JsonGameInfo.Index jsonContent = null!;
+            await GameManager.ImportGameOrTrainer(((progress) => textBlock_Loading.Text = $"正在移动: {progress}"));
 
-                bool isGameNameInputDone = false;
-                bool isExeSelectDone = false;
+            NavigationService.Refresh();
 
-                void cancelLoad() { isGameNameInputDone = true; isExeSelectDone = true; }
-                var openFolderDialog = new OpenFolderDialog
-                {
-                    Title = "请选择游戏文件夹",
-                    Multiselect = false
-                };
-                var textBox = new System.Windows.Controls.TextBox();//游戏名输入框
-                var listBox = new System.Windows.Controls.ListBox();//选择exe
-
-
-                if (openFolderDialog.ShowDialog() == true)//用户完成选择
-                {
-                    originPath = openFolderDialog.FolderName;
-                    logger.Info($"[管理] 原文件夹: {originPath}");
-                    //输入游戏名
-                    while (!isGameNameInputDone)
-                    {
-                        await DialogManager.ShowDialogAsync(new ContentDialog
-                        {
-                            Title = "输入游戏名",
-                            Content = textBox,
-                            PrimaryButtonText = "确定",
-                            CloseButtonText = "取消导入",
-                            DefaultButton = ContentDialogButton.Primary
-                        }, (async () =>
-                        {
-                            //确定逻辑
-                            if (Directory.Exists(System.IO.Path.Combine(AppGlobals.GameDirectory, textBox.Text)))
-                            {
-                                //目标名已存在
-                                await DialogManager.ShowDialogAsync(new ContentDialog
-                                {
-                                    Title = "已有同名游戏!",
-                                    Content = $"游戏目录下已有 \"{textBox.Text}\"同名文件夹!",
-                                    PrimaryButtonText = "重新输入",
-                                    DefaultButton = ContentDialogButton.Primary
-                                });
-                                //继续执行，重复输入游戏名
-                            }
-                            else
-                            {
-                                logger.Info($"[管理] 游戏名: {textBox.Text}");
-                                //不存在，继续保存
-                                isGameNameInputDone = true;
-                                gameName = textBox.Text;
-                                targetPath = System.IO.Path.Combine(AppGlobals.GameDirectory, gameName);
-
-                                //复制文件夹
-                                logger.Info($"[管理] 开始复制游戏");
-                                StartLoad();
-                                await DirectoryManager.CopyDirectoryAsync(originPath, targetPath, ((f) => textBlock_Loading.Text = $"复制文件: {f}"));
-                                EndLoad();
-                                logger.Info($"[管理] 复制结束");
-
-
-
-                                //检测exe
-                                gameFiles = Directory.GetFiles(targetPath);
-                                foreach (var file in gameFiles)//过滤.exe文件
-                                {
-                                    if (file.EndsWith(".exe"))
-                                    {
-                                        logger.Info($"[管理] 检测到exe文件: {file}");
-                                        gameExes.Add(System.IO.Path.GetFileName(file));
-                                    }
-                                }
-
-                                //选择exe
-                                if (gameExes.Count == 0)//无exe
-                                {
-                                    logger.Info($"[管理] 未发现exe。开始清理");
-                                    await DialogManager.ShowDialogAsync(new ContentDialog
-                                    {
-                                        Title = "导入失败",
-                                        Content = "游戏目录下没有任何可执行文件",
-                                        CloseButtonText = "取消导入"
-                                    });
-                                    notificationManager.Show(new NotificationContent
-                                    {
-                                        Title = "提示",
-                                        Message = "导入取消，清理文件中...",
-                                        Type = NotificationType.Information
-                                    });
-                                    //清理文件
-                                    StartLoad();
-                                    await Task.Run(() => Directory.Delete(targetPath, true));
-                                    EndLoad();
-
-                                    cancelLoad();
-                                }
-                                else if (gameExes.Count == 1)//只有一个exe
-                                {
-                                    logger.Info($"[管理] 仅检测到一个exe");
-                                    gameExeName = gameExes[0];
-                                }
-                                else//多个exe
-                                {
-                                    logger.Info($"[管理] 检测到多个exe。开始解决问题");
-                                    //添加进listBox
-                                    listBox.Items.Clear();
-                                    foreach (var exe in gameExes)
-                                        listBox.Items.Add(exe);
-
-                                    while (!isExeSelectDone)
-                                    {
-                                        await DialogManager.ShowDialogAsync(new ContentDialog
-                                        {
-                                            Title = "帮助我们解决问题！",
-                                            Content = new StackPanel
-                                            {
-                                                Children =
-                                                {
-                                                    new TextBlock
-                                                    {
-                                                        Text="我们在您的游戏文件夹内发现了多个可执行文件, 请您选择正确的可执行文件!",
-                                                        Margin=new Thickness(0,0,0,10)
-                                                    },
-                                                    listBox
-                                                }
-                                            },
-                                            PrimaryButtonText = "确定",
-                                            DefaultButton = ContentDialogButton.Primary
-                                        });
-                                        if (listBox.SelectedItem != null)
-                                        {
-                                            isExeSelectDone = true;
-                                            gameExeName = (string)listBox.SelectedItem;
-                                            logger.Info($"[管理] 选择exe: {gameExeName}");
-                                        }
-                                    }
-
-                                }
-
-                                if (gameExes.Count > 0)
-                                {
-                                    //保存配置文件
-                                    jsonContent = new JsonGameInfo.Index
-                                    {
-                                        GameInfo = new JsonGameInfo.GameInfo
-                                        {
-                                            ExecuteName = gameExeName,
-                                            Name = gameName,
-                                            Version = "unknown",
-                                            VersionType = "unknown"
-                                        },
-                                        Record = new JsonGameInfo.Record
-                                        {
-                                            FirstPlay = DateTimeOffset.Now.ToUnixTimeSeconds(),
-                                            PlayCount = 0,
-                                            PlayTime = 0
-                                        }
-                                    };
-                                    logger.Info($"[管理] 保存游戏配置文件: {JsonConvert.SerializeObject(jsonContent)}");
-                                    Json.WriteJson(System.IO.Path.Combine(targetPath, ".pvzl.json"), jsonContent);
-
-                                    notificationManager.Show(new NotificationContent
-                                    {
-                                        Title = "导入成功",
-                                        Message = $"{gameName} 已成功导入您的游戏库!",
-                                        Type = NotificationType.Success
-                                    });
-
-
-                                    //当前选择:
-                                    AppGlobals.Config.CurrentGame = gameName;
-                                    ConfigManager.SaveConfig();
-
-                                    //刷新页面
-                                    this.NavigationService.Refresh();
-                                }
-                            }
-
-
-                        }), null, (() =>
-                        {
-                            //取消逻辑
-                            cancelLoad();
-                        }));
-                    }
-                }
-                else //用户取消选择
-                {
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                ErrorReportDialog.Show("发生错误", "导入游戏时发生错误", ex);
-            }
+            EndLoad();
         }
+
     }
 }
