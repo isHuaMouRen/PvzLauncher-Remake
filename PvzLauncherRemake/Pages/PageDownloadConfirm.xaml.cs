@@ -154,7 +154,7 @@ namespace PvzLauncherRemake.Pages
 
         private async void button_Download_Click(object sender, RoutedEventArgs e)
         {
-            //确认下载
+            /*//确认下载
             bool confirm = false;
             await DialogManager.ShowDialogAsync(new ContentDialog
             {
@@ -164,7 +164,7 @@ namespace PvzLauncherRemake.Pages
                 CloseButtonText = "取消",
                 DefaultButton = ContentDialogButton.Primary
             }, (() => confirm = true));
-            if (!confirm) return;
+            if (!confirm) return;*/
 
             //处理同名
             string savePath = await GameManager.ResolveSameName(Info.Name, BaseDirectory);

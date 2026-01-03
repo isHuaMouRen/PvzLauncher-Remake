@@ -9,6 +9,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageManageSet"
+      Tag="sub"
          
          
       xmlns:lex="http://wpflocalizeextension.codeplex.com"

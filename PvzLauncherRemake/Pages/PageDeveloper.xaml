@@ -8,7 +8,9 @@
       xmlns:mdxaml="clr-namespace:MdXaml;assembly=MdXaml"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageDeveloper">
+      Title="PageDeveloper"
+      Tag="sub"   
+         >
 
     <Grid Margin="10">
         <!--标题与副标题-->

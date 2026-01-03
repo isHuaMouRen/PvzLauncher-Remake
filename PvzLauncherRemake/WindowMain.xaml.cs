@@ -225,16 +225,9 @@ namespace PvzLauncherRemake
         }
         #endregion
 
-
         public WindowMain() { InitializeComponent(); Initialize(); }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            Dispatcher.BeginInvoke(async () =>
-            {
-                await InitializeLoaded();
-            }, System.Windows.Threading.DispatcherPriority.Normal);
-        }
+        private void Window_Loaded(object sender, RoutedEventArgs e) => Dispatcher.BeginInvoke((async () => await InitializeLoaded()), System.Windows.Threading.DispatcherPriority.Normal);
 
         private void navView_SelectionChanged(ModernWpf.Controls.NavigationView sender, ModernWpf.Controls.NavigationViewSelectionChangedEventArgs args)
         {
@@ -260,8 +253,7 @@ namespace PvzLauncherRemake
             try
             {
                 //判断是否显示返回箭头
-
-                if (frame.Content is PageManageSet || frame.Content is PageDeveloper || frame.Content is PageDownloadConfirm)
+                if (frame.Content is ModernWpf.Controls.Page page && page.Tag != null && page.Tag.ToString() == "sub") 
                 {
                     navView.IsBackButtonVisible = NavigationViewBackButtonVisible.Visible;
                     navView.IsBackEnabled = true;
