@@ -212,32 +212,6 @@ namespace PvzLauncherRemake.Pages
             try
             {
 
-
-                //VersionType
-                var comboBox = new ComboBox
-                {
-                    IsReadOnly = true,
-                    Margin = new Thickness(0, 0, 0, 10),
-                    Items =
-                    {
-                        new ComboBoxItem
-                        {
-                            Content="中文原版",
-                            Tag="zh_origin"
-                        },
-                        new ComboBoxItem
-                        {
-                            Content="中文改版",
-                            Tag="zh_revision"
-                        },
-                        new ComboBoxItem
-                        {
-                            Content="英文原版",
-                            Tag="en_origin"
-                        }
-                    },
-                    SelectedIndex = GameInfo.GameInfo.VersionType == "zh_origin" ? 0 : GameInfo.GameInfo.VersionType == "zh_revision" ? 1 : 2
-                };
                 //Version
                 var textBox = new TextBox
                 {
@@ -254,12 +228,6 @@ namespace PvzLauncherRemake.Pages
                         {
                             new TextBlock
                             {
-                                Text="版本类型:",
-                                Margin=new Thickness(0,0,0,5)
-                            },
-                            comboBox,
-                            new TextBlock
-                            {
                                 Text="版本号:",
                                 Margin=new Thickness(0,0,0,5)
                             },
@@ -272,7 +240,6 @@ namespace PvzLauncherRemake.Pages
                 }, (() =>
                 {
                     GameInfo.GameInfo.Version = textBox.Text;
-                    GameInfo.GameInfo.VersionType = (string)((ComboBoxItem)comboBox.SelectedItem).Tag;
                     Json.WriteJson(System.IO.Path.Combine(AppGlobals.GameDirectory, GameInfo.GameInfo.Name, ".pvzl.json"), GameInfo);
 
                     notificationManage.Show(new NotificationContent

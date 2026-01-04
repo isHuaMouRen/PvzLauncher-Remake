@@ -99,7 +99,6 @@ namespace PvzLauncherRemake.Utils.Services
                             {
                                 ExecuteName = taskInfo.GameInfo.ExecuteName,
                                 Version = taskInfo.GameInfo.Version,
-                                VersionType = taskInfo.GameInfo.VersionType,
                                 Name = configName,
                                 Icon = taskInfo.GameInfo.Icon
                             },

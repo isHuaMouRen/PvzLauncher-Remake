@@ -18,9 +18,6 @@ namespace PvzLauncherRemake.Class.JsonConfigs
 
         public partial class GameInfo
         {
-            [JsonProperty("version_type")]
-            public string VersionType { get; set; }
-
             [JsonProperty("version")]
             public string Version { get; set; }
 

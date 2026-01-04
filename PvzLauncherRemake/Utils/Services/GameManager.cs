@@ -244,7 +244,6 @@ namespace PvzLauncherRemake.Utils.Services
                             Icon = "origin",
                             Name = Path.GetFileName(savePath),
                             Version = "1.0.0.0",
-                            VersionType = "zh_origin"
                         },
                         Record = new JsonGameInfo.Record
                         {
