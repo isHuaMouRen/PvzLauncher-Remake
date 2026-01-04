@@ -79,15 +79,6 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
-        ///   查找类似 总下载量 的本地化字符串。
-        /// </summary>
-        public static string Counter {
-            get {
-                return ResourceManager.GetString("Counter", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 英文原版 的本地化字符串。
         /// </summary>
         public static string EnglishOriginalEdition {

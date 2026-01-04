@@ -132,7 +132,4 @@
   <data name="EnglishOriginalEdition" xml:space="preserve">
     <value>英語の原書です</value>
   </data>
-  <data name="Counter" xml:space="preserve">
-    <value>総ダウンロード数</value>
-  </data>
 </root>

@@ -112,7 +112,4 @@
   <data name="EnglishOriginalEdition" xml:space="preserve">
     <value>English original version</value>
   </data>
-  <data name="Counter" xml:space="preserve">
-    <value>Total downloads</value>
-  </data>
 </root>

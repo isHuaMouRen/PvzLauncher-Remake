@@ -18,16 +18,8 @@ namespace PvzLauncherRemake.Utils.Services
         public static event Action<DownloadTaskInfo>? TaskAdded;
         public static event Action<DownloadTaskInfo>? TaskRemoved;
 
-
         //主任务列表
         public static List<DownloadTaskInfo> DownloadTaskList = new List<DownloadTaskInfo>();
-
-        private static async void AddCounter()
-        {
-            using (var client = new HttpClient())
-                await client.GetStringAsync($"{AppGlobals.CounterRootUrl}/pvzlauncher-download/up");
-        }
-
 
         /// <summary>
         /// 向任务列表添加任务
@@ -50,9 +42,6 @@ namespace PvzLauncherRemake.Utils.Services
                 }
 
             }
-
-            //增加下载计数
-            AddCounter();
 
             var originDownloader = taskInfo.Downloader;
             taskInfo.Downloader = new Downloader

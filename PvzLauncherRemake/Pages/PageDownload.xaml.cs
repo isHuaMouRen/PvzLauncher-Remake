@@ -119,16 +119,6 @@ namespace PvzLauncherRemake.Pages
 
                 EndLoad();
 
-
-                //获取下载数
-                using (var client = new HttpClient())
-                {
-                    string url = $"{AppGlobals.CounterRootUrl}/pvzlauncher-download";
-                    var counterInfo = Json.ReadJson<JsonCounter.Index>(await client.GetStringAsync(url));
-
-                    textBlock_DownloadCount.Text = $"{GetLoc("I18N.PageDownload", "Counter")}: {counterInfo.Data.UpCount}";
-                }
-
                 logger.Info($"[下载] 结束初始化");
             }
             catch (Exception ex)
