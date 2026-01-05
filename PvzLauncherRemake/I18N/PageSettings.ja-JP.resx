@@ -228,4 +228,34 @@
   <data name="NoticeTrainer" xml:space="preserve">
     <value>モディファイアのダウンロード通知</value>
   </data>
+  <data name="GameConfig" xml:space="preserve">
+    <value>ゲーム構成</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>全画面表示：</value>
+  </data>
+  <data name="ForceFullScreen" xml:space="preserve">
+    <value>全画面表示を強制する</value>
+  </data>
+  <data name="ForceWindowed" xml:space="preserve">
+    <value>強制ウィンドウ処理</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>位置：</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>中心</value>
+  </data>
+  <data name="LeftTop" xml:space="preserve">
+    <value>左上隅</value>
+  </data>
+  <data name="DeleteSave" xml:space="preserve">
+    <value>アーカイブの削除</value>
+  </data>
+  <data name="MoveSave" xml:space="preserve">
+    <value>アーカイブの移行</value>
+  </data>
+  <data name="SaveIsolation" xml:space="preserve">
+    <value>アーカイブの隔離</value>
+  </data>
 </root>

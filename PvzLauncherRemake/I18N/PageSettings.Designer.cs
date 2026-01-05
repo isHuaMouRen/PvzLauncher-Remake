@@ -79,6 +79,15 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
+        ///   查找类似 居中 的本地化字符串。
+        /// </summary>
+        public static string Center {
+            get {
+                return ResourceManager.GetString("Center", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 检测 的本地化字符串。
         /// </summary>
         public static string Check {
@@ -111,6 +120,15 @@ namespace PvzLauncherRemake.I18N {
         public static string Default {
             get {
                 return ResourceManager.GetString("Default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 删除存档 的本地化字符串。
+        /// </summary>
+        public static string DeleteSave {
+            get {
+                return ResourceManager.GetString("DeleteSave", resourceCulture);
             }
         }
         
@@ -156,6 +174,42 @@ namespace PvzLauncherRemake.I18N {
         public static string Enabled {
             get {
                 return ResourceManager.GetString("Enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 强制全屏 的本地化字符串。
+        /// </summary>
+        public static string ForceFullScreen {
+            get {
+                return ResourceManager.GetString("ForceFullScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 强制窗口化 的本地化字符串。
+        /// </summary>
+        public static string ForceWindowed {
+            get {
+                return ResourceManager.GetString("ForceWindowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 全屏: 的本地化字符串。
+        /// </summary>
+        public static string FullScreen {
+            get {
+                return ResourceManager.GetString("FullScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏配置 的本地化字符串。
+        /// </summary>
+        public static string GameConfig {
+            get {
+                return ResourceManager.GetString("GameConfig", resourceCulture);
             }
         }
         
@@ -219,6 +273,33 @@ namespace PvzLauncherRemake.I18N {
         public static string LaunchOperate {
             get {
                 return ResourceManager.GetString("LaunchOperate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 左上角 的本地化字符串。
+        /// </summary>
+        public static string LeftTop {
+            get {
+                return ResourceManager.GetString("LeftTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 位置: 的本地化字符串。
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 存档迁移 的本地化字符串。
+        /// </summary>
+        public static string MoveSave {
+            get {
+                return ResourceManager.GetString("MoveSave", resourceCulture);
             }
         }
         
@@ -291,6 +372,15 @@ namespace PvzLauncherRemake.I18N {
         public static string Reset {
             get {
                 return ResourceManager.GetString("Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 存档隔离 的本地化字符串。
+        /// </summary>
+        public static string SaveIsolation {
+            get {
+                return ResourceManager.GetString("SaveIsolation", resourceCulture);
             }
         }
         

@@ -172,23 +172,23 @@
                         
                         <!--游戏配置-->
                         <StackPanel Margin="0,0,0,10">
-                            <TextBlock Text="游戏配置" FontSize="25" FontWeight="Bold"/>
+                            <TextBlock Text="{lex:Loc GameConfig}" FontSize="25" FontWeight="Bold"/>
                             <!--全屏-->
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                                <TextBlock Text="全屏:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="{lex:Loc FullScreen}" Margin="0,0,10,0" VerticalAlignment="Center"/>
                                 <ComboBox x:Name="comboBox_Game_FullScreen" SelectedIndex="0" SelectionChanged="Game_FullScreen">
-                                    <ComboBoxItem Content="默认" Tag="Default"/>
-                                    <ComboBoxItem Content="强制全屏" Tag="FullScreen"/>
-                                    <ComboBoxItem Content="强制窗口化" Tag="Windowed"/>
+                                    <ComboBoxItem Content="{lex:Loc Default}" Tag="Default"/>
+                                    <ComboBoxItem Content="{lex:Loc ForceFullScreen}" Tag="FullScreen"/>
+                                    <ComboBoxItem Content="{lex:Loc ForceWindowed}" Tag="Windowed"/>
                                 </ComboBox>
                             </StackPanel>
                             <!--位置-->
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="位置:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="{lex:Loc Location}" Margin="0,0,10,0" VerticalAlignment="Center"/>
                                 <ComboBox x:Name="comboBox_Game_Location" SelectedIndex="0" SelectionChanged="Game_Location">
-                                    <ComboBoxItem Content="默认" Tag="Default"/>
-                                    <ComboBoxItem Content="居中" Tag="Center"/>
-                                    <ComboBoxItem Content="左上角" Tag="LeftTop"/>
+                                    <ComboBoxItem Content="{lex:Loc Default}" Tag="Default"/>
+                                    <ComboBoxItem Content="{lex:Loc Center}" Tag="Center"/>
+                                    <ComboBoxItem Content="{lex:Loc LeftTop}" Tag="LeftTop"/>
                                 </ComboBox>
                             </StackPanel>
                         </StackPanel>
@@ -202,14 +202,14 @@
                     <StackPanel Margin="10">
                         <!--操作-->
                         <StackPanel Margin="0,0,0,10">
-                            <TextBlock Text="操作" FontSize="25" FontWeight="Bold" Margin="0,0,0,10"/>
+                            <TextBlock Text="{lex:Loc Operate}" FontSize="25" FontWeight="Bold" Margin="0,0,0,10"/>
                             <!--操作-->
                             <StackPanel Orientation="Horizontal">
                                 <!--删除-->
                                 <Button x:Name="button_SaveDelete" ToolTip="移除当前存档(不会移除存档隔离下的独立存档)" Foreground="#E4FF0000" FontWeight="Bold" Margin="0,0,10,0" Click="Save_DeleteSave">
                                     <StackPanel Orientation="Horizontal">
                                         <ui:PathIcon Data="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" Height="15" Width="15" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                                        <TextBlock Text="删除存档" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{lex:Loc DeleteSave}" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </Button>
                                 <!--迁移-->
@@ -225,7 +225,7 @@
                                     </Button.BorderBrush>
                                     <StackPanel Orientation="Horizontal">
                                         <ui:PathIcon Width="15" Height="15" Margin="0,0,5,0" Data="m280-120-56-56 63-66q-106-12-176.5-91.5T40-520q0-117 81.5-198.5T320-800h120v80H320q-83 0-141.5 58.5T120-520q0 72 46 127t117 69l-59-59 56-57 160 160-160 160Zm240-40v-280h360v280H520Zm0-360v-280h360v280H520Zm80-80h200v-120H600v120Z"/>
-                                        <TextBlock Text="存档迁移"/>
+                                        <TextBlock Text="{lex:Loc MoveSave}"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>
@@ -233,11 +233,11 @@
                         
                         <!--版本隔离-->
                         <StackPanel Margin="0,0,0,10">
-                            <TextBlock Text="存档隔离" FontSize="25" FontWeight="Bold"/>
+                            <TextBlock Text="{lex:Loc SaveIsolation}" FontSize="25" FontWeight="Bold"/>
                             <!--开启存档隔离-->
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="启用存档隔离:" Margin="0,0,10,0" VerticalAlignment="Center"/>
-                                <CheckBox x:Name="checkBox_EnableIsolationSave" ToolTip="启用存档隔离，也就是多个游戏不共用一个存档，有效的避免了串档问题。此功能仅对使用原版存档系统的游戏生效。如果某些改版改动了存档系统，那么此功能将没有任何用处" Content="启用" Click="Save_EnabledSaveIsolation"/>
+                                <TextBlock Text="{lex:Loc SaveIsolation}" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <CheckBox x:Name="checkBox_EnableIsolationSave" ToolTip="启用存档隔离，也就是多个游戏不共用一个存档，有效的避免了串档问题。此功能仅对使用原版存档系统的游戏生效。如果某些改版改动了存档系统，那么此功能将没有任何用处" Content="{lex:Loc Enabled}" Click="Save_EnabledSaveIsolation"/>
                             </StackPanel>
                         </StackPanel>
                         

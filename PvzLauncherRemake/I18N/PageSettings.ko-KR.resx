@@ -228,4 +228,34 @@
   <data name="NoticeTrainer" xml:space="preserve">
     <value>수정자 다운로드 알림</value>
   </data>
+  <data name="GameConfig" xml:space="preserve">
+    <value>게임 구성</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>전체 화면:</value>
+  </data>
+  <data name="ForceFullScreen" xml:space="preserve">
+    <value>강제 전체 화면</value>
+  </data>
+  <data name="ForceWindowed" xml:space="preserve">
+    <value>강제 기간 설정</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>위치:</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>센터</value>
+  </data>
+  <data name="LeftTop" xml:space="preserve">
+    <value>왼쪽 상단</value>
+  </data>
+  <data name="DeleteSave" xml:space="preserve">
+    <value>아카이브 삭제</value>
+  </data>
+  <data name="MoveSave" xml:space="preserve">
+    <value>아카이브 마이그레이션</value>
+  </data>
+  <data name="SaveIsolation" xml:space="preserve">
+    <value>아카이브 격리</value>
+  </data>
 </root>

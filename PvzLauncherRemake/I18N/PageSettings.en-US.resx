@@ -228,4 +228,34 @@
   <data name="NoticeTrainer" xml:space="preserve">
     <value>Modifier download notification</value>
   </data>
+  <data name="GameConfig" xml:space="preserve">
+    <value>Game configuration</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Full screen:</value>
+  </data>
+  <data name="ForceFullScreen" xml:space="preserve">
+    <value>Force full screen</value>
+  </data>
+  <data name="ForceWindowed" xml:space="preserve">
+    <value>Force windowing</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="LeftTop" xml:space="preserve">
+    <value>Upper left corner</value>
+  </data>
+  <data name="DeleteSave" xml:space="preserve">
+    <value>Delete save</value>
+  </data>
+  <data name="MoveSave" xml:space="preserve">
+    <value>Save migration</value>
+  </data>
+  <data name="SaveIsolation" xml:space="preserve">
+    <value>Save Quarantine</value>
+  </data>
 </root>

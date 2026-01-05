@@ -228,4 +228,34 @@
   <data name="NoticeTrainer" xml:space="preserve">
     <value>Benachrichtigung zum Herunterladen des Modifikators</value>
   </data>
+  <data name="GameConfig" xml:space="preserve">
+    <value>Spielkonfiguration</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Vollbild:</value>
+  </data>
+  <data name="ForceFullScreen" xml:space="preserve">
+    <value>Vollbildmodus erzwingen</value>
+  </data>
+  <data name="ForceWindowed" xml:space="preserve">
+    <value>Fensterung erzwingen</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Standort:</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="LeftTop" xml:space="preserve">
+    <value>obere linke Ecke</value>
+  </data>
+  <data name="DeleteSave" xml:space="preserve">
+    <value>Archiv löschen</value>
+  </data>
+  <data name="MoveSave" xml:space="preserve">
+    <value>Archivmigration</value>
+  </data>
+  <data name="SaveIsolation" xml:space="preserve">
+    <value>Archivquarantäne</value>
+  </data>
 </root>

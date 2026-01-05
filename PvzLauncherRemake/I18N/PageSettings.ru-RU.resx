@@ -228,4 +228,34 @@
   <data name="NoticeTrainer" xml:space="preserve">
     <value>Уведомление о загрузке модификатора</value>
   </data>
+  <data name="GameConfig" xml:space="preserve">
+    <value>Конфигурация игры</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>полноэкранный:</value>
+  </data>
+  <data name="ForceFullScreen" xml:space="preserve">
+    <value>Принудительно открыть полный экран</value>
+  </data>
+  <data name="ForceWindowed" xml:space="preserve">
+    <value>Принудительное оконное управление</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Расположение:</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>центр</value>
+  </data>
+  <data name="LeftTop" xml:space="preserve">
+    <value>верхний левый угол</value>
+  </data>
+  <data name="DeleteSave" xml:space="preserve">
+    <value>Удалить архив</value>
+  </data>
+  <data name="MoveSave" xml:space="preserve">
+    <value>Миграция архива</value>
+  </data>
+  <data name="SaveIsolation" xml:space="preserve">
+    <value>Архив Карантин</value>
+  </data>
 </root>

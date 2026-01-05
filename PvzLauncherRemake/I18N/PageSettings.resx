@@ -228,4 +228,34 @@
   <data name="EchoCave" xml:space="preserve">
     <value>回声洞:</value>
   </data>
+  <data name="GameConfig" xml:space="preserve">
+    <value>游戏配置</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>全屏:</value>
+  </data>
+  <data name="ForceFullScreen" xml:space="preserve">
+    <value>强制全屏</value>
+  </data>
+  <data name="ForceWindowed" xml:space="preserve">
+    <value>强制窗口化</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>位置:</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>居中</value>
+  </data>
+  <data name="LeftTop" xml:space="preserve">
+    <value>左上角</value>
+  </data>
+  <data name="DeleteSave" xml:space="preserve">
+    <value>删除存档</value>
+  </data>
+  <data name="MoveSave" xml:space="preserve">
+    <value>存档迁移</value>
+  </data>
+  <data name="SaveIsolation" xml:space="preserve">
+    <value>存档隔离</value>
+  </data>
 </root>
