@@ -225,4 +225,7 @@
   <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
     <value>청소하다</value>
   </data>
+  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
+    <value>에코 동굴:</value>
+  </data>
 </root>

@@ -225,4 +225,7 @@
   <data name="Launcher_Storage_DownloadCache" xml:space="preserve">
     <value>ダウンロードキャッシュ:</value>
   </data>
+  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
+    <value>エコーケイブ:</value>
+  </data>
 </root>

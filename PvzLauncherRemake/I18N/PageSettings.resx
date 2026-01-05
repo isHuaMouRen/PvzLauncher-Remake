@@ -225,4 +225,7 @@
   <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
     <value>清理</value>
   </data>
+  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
+    <value>回声洞:</value>
+  </data>
 </root>

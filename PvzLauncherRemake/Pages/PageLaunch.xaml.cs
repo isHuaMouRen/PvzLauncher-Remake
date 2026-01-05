@@ -161,7 +161,16 @@ namespace PvzLauncherRemake.Pages
                 if (AppGlobals.Config.LauncherConfig.BackgroundMode == "custom" && !string.IsNullOrEmpty(AppGlobals.Config.LauncherConfig.Background)) 
                     image.Source = new BitmapImage(new Uri(AppGlobals.Config.LauncherConfig.Background));
 
-                await RefreshEchoCave();
+                //回声洞
+                if (AppGlobals.Config.LauncherConfig.EchoCaveEnabled)
+                {
+                    button_EchoCave.Visibility = Visibility.Visible;
+                    await RefreshEchoCave();
+                }
+                else
+                {
+                    button_EchoCave.Visibility = Visibility.Hidden;
+                }
                 
                 
                 logger.Info($"[启动] 完成初始化");

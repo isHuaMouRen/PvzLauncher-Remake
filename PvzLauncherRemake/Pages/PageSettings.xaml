@@ -99,7 +99,14 @@
                                     <Button x:Name="button_Background_Select" Content="{lex:Loc General_Select}" VerticalAlignment="Top" Click="Launcher_BackgroundCustom"/>
                                 </StackPanel>
                             </StackPanel>
-                            
+
+                            <!--回声洞-->
+                            <StackPanel Tag="aniSp" Orientation="Horizontal">
+                                <TextBlock Text="{lex:Loc Launcher_Appearance_EchoCave}" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                <CheckBox x:Name="checkBox_Launcher_EchoCave" Content="{lex:Loc General_Enabled}" Click="Launcher_EchoCave"/>
+
+                            </StackPanel>
+
                             <!--NavigationView位置-->
                             <StackPanel Tag="aniSp" Orientation="Horizontal">
                                 <TextBlock Text="{lex:Loc Launcher_Appearance_NavViewLocation}" Margin="0,0,10,0" VerticalAlignment="Center"/>

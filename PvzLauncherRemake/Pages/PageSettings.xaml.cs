@@ -165,6 +165,8 @@ namespace PvzLauncherRemake.Pages
                         image_Background.Source = new BitmapImage(new Uri(AppGlobals.Config.LauncherConfig.Background));
                     }
                 }
+                //### 回声洞
+                checkBox_Launcher_EchoCave.IsChecked = AppGlobals.Config.LauncherConfig.EchoCaveEnabled;
                 //### NavigationView位置
                 radioButton_NavViewLeft.IsChecked = false; radioButton_NavViewTop.IsChecked = false;
                 switch (AppGlobals.Config.LauncherConfig.NavigationViewAlign)
@@ -404,6 +406,18 @@ namespace PvzLauncherRemake.Pages
                 }
 
 
+            }
+        }
+
+        private void Launcher_EchoCave(object sender,RoutedEventArgs e)
+        {
+            if (isInitialized)
+            {
+                if (sender is not CheckBox checkBox)
+                    return;
+
+                AppGlobals.Config.LauncherConfig.EchoCaveEnabled = checkBox.IsChecked == true ? true : false;
+                ConfigManager.SaveConfig();
             }
         }
 

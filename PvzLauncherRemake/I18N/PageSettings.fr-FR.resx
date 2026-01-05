@@ -225,4 +225,7 @@
   <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
     <value>nettoyer</value>
   </data>
+  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
+    <value>Grotte de l'Écho :</value>
+  </data>
 </root>
