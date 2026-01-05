@@ -117,115 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Tab_LauncherSettings" xml:space="preserve">
+  <data name="LauncherSettings" xml:space="preserve">
     <value>Launcher-Einstellungen</value>
   </data>
-  <data name="Tab_GameSettings" xml:space="preserve">
+  <data name="GameSettings" xml:space="preserve">
     <value>Spieleinstellungen</value>
   </data>
-  <data name="Tab_SaveSettings" xml:space="preserve">
+  <data name="SaveSettings" xml:space="preserve">
     <value>Archiveinstellungen</value>
   </data>
-  <data name="General_Operate" xml:space="preserve">
+  <data name="Operate" xml:space="preserve">
     <value>arbeiten</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate" xml:space="preserve">
-    <value>Operationen nach dem Start des Spiels:</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_None" xml:space="preserve">
-    <value>nichts tun</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_Close" xml:space="preserve">
-    <value>Der Launcher wird geschlossen</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_HideAndShow" xml:space="preserve">
-    <value>Der Launcher ist ausgeblendet und wird nach Ende des Spiels angezeigt</value>
-  </data>
-  <data name="Launcher_Appearance" xml:space="preserve">
+  <data name="Appearance" xml:space="preserve">
     <value>Aussehen</value>
   </data>
-  <data name="Launcher_Appearance_Theme" xml:space="preserve">
-    <value>Thema:</value>
-  </data>
-  <data name="Launcher_Appearance_Theme_Light" xml:space="preserve">
-    <value>hell</value>
-  </data>
-  <data name="Launcher_Appearance_Theme_Dark" xml:space="preserve">
-    <value>dunkel</value>
-  </data>
-  <data name="Launcher_Appearance_Language" xml:space="preserve">
-    <value>Sprache:</value>
-  </data>
-  <data name="Launcher_Appearance_WindowTitle" xml:space="preserve">
-    <value>Fenstertitel:</value>
-  </data>
-  <data name="General_Reset" xml:space="preserve">
+  <data name="Reset" xml:space="preserve">
     <value>zurücksetzen</value>
   </data>
-  <data name="Launcher_Appearance_TitleImage" xml:space="preserve">
-    <value>Titelbild:</value>
-  </data>
-  <data name="Launcher_Appearance_Background" xml:space="preserve">
-    <value>Hintergrund:</value>
-  </data>
-  <data name="General_Default" xml:space="preserve">
+  <data name="Default" xml:space="preserve">
     <value>Standard</value>
   </data>
-  <data name="General_Custom" xml:space="preserve">
+  <data name="Custom" xml:space="preserve">
     <value>Anpassen</value>
   </data>
-  <data name="General_Select" xml:space="preserve">
+  <data name="Select" xml:space="preserve">
     <value>wählen</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation" xml:space="preserve">
-    <value>Position der Navigationsleiste:</value>
-  </data>
-  <data name="Launcher_Appearance_NavViewLocation_Left" xml:space="preserve">
-    <value>linke Seite</value>
-  </data>
-  <data name="Launcher_Appearance_NavViewLocation_Top" xml:space="preserve">
-    <value>Spitze</value>
-  </data>
-  <data name="Launcher_Update" xml:space="preserve">
+  <data name="Update" xml:space="preserve">
     <value>erneuern</value>
   </data>
-  <data name="Launcher_Update_CheckUpdate" xml:space="preserve">
-    <value>Nach Updates suchen:</value>
-  </data>
-  <data name="Launcher_Update_CheckUpdate_Check" xml:space="preserve">
-    <value>Erkennung</value>
-  </data>
-  <data name="Launcher_Update_Channel" xml:space="preserve">
-    <value>Kanal aktualisieren:</value>
-  </data>
-  <data name="Launcher_Update_StartUpCheck" xml:space="preserve">
-    <value>Beim Start nach Updates suchen:</value>
-  </data>
-  <data name="General_Enabled" xml:space="preserve">
+  <data name="Enabled" xml:space="preserve">
     <value>aktivieren</value>
   </data>
-  <data name="Launcher_Notification" xml:space="preserve">
+  <data name="Notification" xml:space="preserve">
     <value>benachrichtigen</value>
   </data>
-  <data name="Launcher_Notification_DownloadNotice" xml:space="preserve">
-    <value>Download-Benachrichtigung:</value>
-  </data>
-  <data name="Launcher_Notification_DownloadNotice_Game" xml:space="preserve">
-    <value>Benachrichtigung zum Herunterladen des Spiels</value>
-  </data>
-  <data name="Launcher_Notification_DownloadNotice_Trainer" xml:space="preserve">
-    <value>Benachrichtigung zum Herunterladen des Modifikators</value>
-  </data>
-  <data name="Launcher_Storage" xml:space="preserve">
+  <data name="Storage" xml:space="preserve">
     <value>speichern</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache" xml:space="preserve">
+  <data name="Theme" xml:space="preserve">
+    <value>Thema:</value>
+  </data>
+  <data name="Theme_Light" xml:space="preserve">
+    <value>hell</value>
+  </data>
+  <data name="Theme_Dark" xml:space="preserve">
+    <value>dunkel</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache:</value>
+  </data>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>Fenstertitel:</value>
+  </data>
+  <data name="TitleImage" xml:space="preserve">
+    <value>Titelbild:</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>Hintergrund:</value>
+  </data>
+  <data name="NavViewLocation" xml:space="preserve">
+    <value>Position der Navigationsleiste:</value>
+  </data>
+  <data name="NavViewLocation_Left" xml:space="preserve">
+    <value>linke Seite</value>
+  </data>
+  <data name="NavViewLocation_Top" xml:space="preserve">
+    <value>Spitze</value>
+  </data>
+  <data name="EchoCave" xml:space="preserve">
+    <value>Echohöhle:</value>
+  </data>
+  <data name="DownloadCache" xml:space="preserve">
     <value>Cache herunterladen:</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
+  <data name="DownloadCache_Clear" xml:space="preserve">
     <value>aufräumen</value>
   </data>
-  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
-    <value>Echohöhle:</value>
+  <data name="LaunchOperate" xml:space="preserve">
+    <value>Operationen nach dem Start des Spiels:</value>
+  </data>
+  <data name="LaunchNone" xml:space="preserve">
+    <value>nichts tun</value>
+  </data>
+  <data name="LaunchClose" xml:space="preserve">
+    <value>Der Launcher wird geschlossen</value>
+  </data>
+  <data name="LaunchHideAndShow" xml:space="preserve">
+    <value>Der Launcher ist ausgeblendet und wird nach dem Ende des Spiels angezeigt</value>
+  </data>
+  <data name="CheckUpdate" xml:space="preserve">
+    <value>Nach Updates suchen:</value>
+  </data>
+  <data name="UpdateChannel" xml:space="preserve">
+    <value>Kanal aktualisieren:</value>
+  </data>
+  <data name="StartUpCheck" xml:space="preserve">
+    <value>Beim Start nach Updates suchen:</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Erkennung</value>
+  </data>
+  <data name="DownloadNotice" xml:space="preserve">
+    <value>Download-Benachrichtigung:</value>
+  </data>
+  <data name="NoticeGame" xml:space="preserve">
+    <value>Benachrichtigung zum Herunterladen des Spiels</value>
+  </data>
+  <data name="NoticeTrainer" xml:space="preserve">
+    <value>Benachrichtigung zum Herunterladen des Modifikators</value>
   </data>
 </root>

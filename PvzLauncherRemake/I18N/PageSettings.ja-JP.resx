@@ -117,115 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Tab_SaveSettings" xml:space="preserve">
-    <value>アーカイブ設定です</value>
+  <data name="LauncherSettings" xml:space="preserve">
+    <value>ランチャーの設定</value>
   </data>
-  <data name="Tab_LauncherSettings" xml:space="preserve">
-    <value>スターター設定です</value>
+  <data name="GameSettings" xml:space="preserve">
+    <value>ゲーム設定</value>
   </data>
-  <data name="Tab_GameSettings" xml:space="preserve">
-    <value>ゲーム設定です</value>
+  <data name="SaveSettings" xml:space="preserve">
+    <value>アーカイブ設定</value>
   </data>
-  <data name="Launcher_Update_StartUpCheck" xml:space="preserve">
-    <value>起動時に更新をチェックします:</value>
-  </data>
-  <data name="Launcher_Update_CheckUpdate_Check" xml:space="preserve">
-    <value>検出します</value>
-  </data>
-  <data name="Launcher_Update_CheckUpdate" xml:space="preserve">
-    <value>更新を検知します:</value>
-  </data>
-  <data name="Launcher_Update_Channel" xml:space="preserve">
-    <value>更新します:</value>
-  </data>
-  <data name="Launcher_Update" xml:space="preserve">
-    <value>更新します</value>
-  </data>
-  <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
-    <value>清算します</value>
-  </data>
-  <data name="General_Operate" xml:space="preserve">
+  <data name="Operate" xml:space="preserve">
     <value>操作する</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate" xml:space="preserve">
-    <value>ゲーム開始後の操作：</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_None" xml:space="preserve">
-    <value>何もしない</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_Close" xml:space="preserve">
-    <value>ランチャーが閉じます</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_HideAndShow" xml:space="preserve">
-    <value>ランチャーは非表示になっており、ゲーム終了後に表示されます</value>
-  </data>
-  <data name="Launcher_Appearance" xml:space="preserve">
+  <data name="Appearance" xml:space="preserve">
     <value>外観</value>
   </data>
-  <data name="Launcher_Appearance_Theme" xml:space="preserve">
-    <value>テーマ：</value>
-  </data>
-  <data name="Launcher_Appearance_Theme_Light" xml:space="preserve">
-    <value>明るい</value>
-  </data>
-  <data name="Launcher_Appearance_Theme_Dark" xml:space="preserve">
-    <value>暗い</value>
-  </data>
-  <data name="Launcher_Appearance_Language" xml:space="preserve">
-    <value>言語：</value>
-  </data>
-  <data name="Launcher_Appearance_WindowTitle" xml:space="preserve">
-    <value>ウィンドウのタイトル:</value>
-  </data>
-  <data name="General_Reset" xml:space="preserve">
+  <data name="Reset" xml:space="preserve">
     <value>リセット</value>
   </data>
-  <data name="Launcher_Appearance_TitleImage" xml:space="preserve">
-    <value>タイトル画像:</value>
-  </data>
-  <data name="Launcher_Appearance_Background" xml:space="preserve">
-    <value>背景：</value>
-  </data>
-  <data name="General_Default" xml:space="preserve">
+  <data name="Default" xml:space="preserve">
     <value>デフォルト</value>
   </data>
-  <data name="General_Custom" xml:space="preserve">
+  <data name="Custom" xml:space="preserve">
     <value>カスタマイズ</value>
   </data>
-  <data name="General_Select" xml:space="preserve">
+  <data name="Select" xml:space="preserve">
     <value>選ぶ</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation" xml:space="preserve">
-    <value>ナビゲーション バーの場所:</value>
+  <data name="Update" xml:space="preserve">
+    <value>更新する</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation_Left" xml:space="preserve">
-    <value>左側</value>
-  </data>
-  <data name="Launcher_Appearance_NavViewLocation_Top" xml:space="preserve">
-    <value>トップ</value>
-  </data>
-  <data name="General_Enabled" xml:space="preserve">
+  <data name="Enabled" xml:space="preserve">
     <value>有効にする</value>
   </data>
-  <data name="Launcher_Notification" xml:space="preserve">
+  <data name="Notification" xml:space="preserve">
     <value>通知する</value>
   </data>
-  <data name="Launcher_Notification_DownloadNotice" xml:space="preserve">
-    <value>ダウンロード通知:</value>
-  </data>
-  <data name="Launcher_Notification_DownloadNotice_Game" xml:space="preserve">
-    <value>ゲームダウンロードの通知</value>
-  </data>
-  <data name="Launcher_Notification_DownloadNotice_Trainer" xml:space="preserve">
-    <value>モディファイアのダウンロード通知</value>
-  </data>
-  <data name="Launcher_Storage" xml:space="preserve">
+  <data name="Storage" xml:space="preserve">
     <value>店</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache" xml:space="preserve">
+  <data name="Theme" xml:space="preserve">
+    <value>テーマ：</value>
+  </data>
+  <data name="Theme_Light" xml:space="preserve">
+    <value>明るい</value>
+  </data>
+  <data name="Theme_Dark" xml:space="preserve">
+    <value>暗い</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>言語：</value>
+  </data>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>ウィンドウのタイトル:</value>
+  </data>
+  <data name="TitleImage" xml:space="preserve">
+    <value>タイトル画像:</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>背景：</value>
+  </data>
+  <data name="NavViewLocation" xml:space="preserve">
+    <value>ナビゲーション バーの場所:</value>
+  </data>
+  <data name="NavViewLocation_Left" xml:space="preserve">
+    <value>左側</value>
+  </data>
+  <data name="NavViewLocation_Top" xml:space="preserve">
+    <value>トップ</value>
+  </data>
+  <data name="EchoCave" xml:space="preserve">
+    <value>エコーケイブ:</value>
+  </data>
+  <data name="DownloadCache" xml:space="preserve">
     <value>ダウンロードキャッシュ:</value>
   </data>
-  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
-    <value>エコーケイブ:</value>
+  <data name="DownloadCache_Clear" xml:space="preserve">
+    <value>掃除</value>
+  </data>
+  <data name="LaunchOperate" xml:space="preserve">
+    <value>ゲーム開始後の操作：</value>
+  </data>
+  <data name="LaunchNone" xml:space="preserve">
+    <value>何もしない</value>
+  </data>
+  <data name="LaunchClose" xml:space="preserve">
+    <value>ランチャーが閉じます</value>
+  </data>
+  <data name="LaunchHideAndShow" xml:space="preserve">
+    <value>ランチャーは非表示になっており、ゲーム終了後に表示されます</value>
+  </data>
+  <data name="CheckUpdate" xml:space="preserve">
+    <value>更新を確認します:</value>
+  </data>
+  <data name="UpdateChannel" xml:space="preserve">
+    <value>更新チャンネル:</value>
+  </data>
+  <data name="StartUpCheck" xml:space="preserve">
+    <value>起動時にアップデートを確認します:</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>検出</value>
+  </data>
+  <data name="DownloadNotice" xml:space="preserve">
+    <value>ダウンロード通知:</value>
+  </data>
+  <data name="NoticeGame" xml:space="preserve">
+    <value>ゲームダウンロードの通知</value>
+  </data>
+  <data name="NoticeTrainer" xml:space="preserve">
+    <value>モディファイアのダウンロード通知</value>
   </data>
 </root>

@@ -61,335 +61,335 @@ namespace PvzLauncherRemake.I18N {
         }
         
         /// <summary>
-        ///   查找类似 自定义 的本地化字符串。
-        /// </summary>
-        public static string General_Custom {
-            get {
-                return ResourceManager.GetString("General_Custom", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 默认 的本地化字符串。
-        /// </summary>
-        public static string General_Default {
-            get {
-                return ResourceManager.GetString("General_Default", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 启用 的本地化字符串。
-        /// </summary>
-        public static string General_Enabled {
-            get {
-                return ResourceManager.GetString("General_Enabled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 操作 的本地化字符串。
-        /// </summary>
-        public static string General_Operate {
-            get {
-                return ResourceManager.GetString("General_Operate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 重置 的本地化字符串。
-        /// </summary>
-        public static string General_Reset {
-            get {
-                return ResourceManager.GetString("General_Reset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 选择 的本地化字符串。
-        /// </summary>
-        public static string General_Select {
-            get {
-                return ResourceManager.GetString("General_Select", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 外观 的本地化字符串。
         /// </summary>
-        public static string Launcher_Appearance {
+        public static string Appearance {
             get {
-                return ResourceManager.GetString("Launcher_Appearance", resourceCulture);
+                return ResourceManager.GetString("Appearance", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 背景: 的本地化字符串。
         /// </summary>
-        public static string Launcher_Appearance_Background {
+        public static string Background {
             get {
-                return ResourceManager.GetString("Launcher_Appearance_Background", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 回声洞: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_EchoCave {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_EchoCave", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 语言: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_Language {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_Language", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 导航栏位置: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_NavViewLocation {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_NavViewLocation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 左侧 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_NavViewLocation_Left {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_NavViewLocation_Left", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 顶部 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_NavViewLocation_Top {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_NavViewLocation_Top", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 主题: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_Theme {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_Theme", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 黑暗 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_Theme_Dark {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_Theme_Dark", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 明亮 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_Theme_Light {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_Theme_Light", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 标题图片: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_TitleImage {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_TitleImage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 窗口标题: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Appearance_WindowTitle {
-            get {
-                return ResourceManager.GetString("Launcher_Appearance_WindowTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 通知 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Notification {
-            get {
-                return ResourceManager.GetString("Launcher_Notification", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 下载通知: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Notification_DownloadNotice {
-            get {
-                return ResourceManager.GetString("Launcher_Notification_DownloadNotice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 游戏下载通知 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Notification_DownloadNotice_Game {
-            get {
-                return ResourceManager.GetString("Launcher_Notification_DownloadNotice_Game", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 修改器下载通知 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Notification_DownloadNotice_Trainer {
-            get {
-                return ResourceManager.GetString("Launcher_Notification_DownloadNotice_Trainer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 游戏启动后操作: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Operate_LaunchOperate {
-            get {
-                return ResourceManager.GetString("Launcher_Operate_LaunchOperate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 启动器关闭 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Operate_LaunchOperate_Close {
-            get {
-                return ResourceManager.GetString("Launcher_Operate_LaunchOperate_Close", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 启动器隐藏，等待游戏结束后显示 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Operate_LaunchOperate_HideAndShow {
-            get {
-                return ResourceManager.GetString("Launcher_Operate_LaunchOperate_HideAndShow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 不执行任何操作 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Operate_LaunchOperate_None {
-            get {
-                return ResourceManager.GetString("Launcher_Operate_LaunchOperate_None", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 储存 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Storage {
-            get {
-                return ResourceManager.GetString("Launcher_Storage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 下载缓存: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Storage_DownloadCache {
-            get {
-                return ResourceManager.GetString("Launcher_Storage_DownloadCache", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 清理 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Storage_DownloadCache_Clear {
-            get {
-                return ResourceManager.GetString("Launcher_Storage_DownloadCache_Clear", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 更新 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Update {
-            get {
-                return ResourceManager.GetString("Launcher_Update", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 更新通道: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Update_Channel {
-            get {
-                return ResourceManager.GetString("Launcher_Update_Channel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 检测更新: 的本地化字符串。
-        /// </summary>
-        public static string Launcher_Update_CheckUpdate {
-            get {
-                return ResourceManager.GetString("Launcher_Update_CheckUpdate", resourceCulture);
+                return ResourceManager.GetString("Background", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 检测 的本地化字符串。
         /// </summary>
-        public static string Launcher_Update_CheckUpdate_Check {
+        public static string Check {
             get {
-                return ResourceManager.GetString("Launcher_Update_CheckUpdate_Check", resourceCulture);
+                return ResourceManager.GetString("Check", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 启动时检查更新: 的本地化字符串。
+        ///   查找类似 检测更新: 的本地化字符串。
         /// </summary>
-        public static string Launcher_Update_StartUpCheck {
+        public static string CheckUpdate {
             get {
-                return ResourceManager.GetString("Launcher_Update_StartUpCheck", resourceCulture);
+                return ResourceManager.GetString("CheckUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 自定义 的本地化字符串。
+        /// </summary>
+        public static string Custom {
+            get {
+                return ResourceManager.GetString("Custom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 默认 的本地化字符串。
+        /// </summary>
+        public static string Default {
+            get {
+                return ResourceManager.GetString("Default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 下载缓存: 的本地化字符串。
+        /// </summary>
+        public static string DownloadCache {
+            get {
+                return ResourceManager.GetString("DownloadCache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 清理 的本地化字符串。
+        /// </summary>
+        public static string DownloadCache_Clear {
+            get {
+                return ResourceManager.GetString("DownloadCache_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 下载通知: 的本地化字符串。
+        /// </summary>
+        public static string DownloadNotice {
+            get {
+                return ResourceManager.GetString("DownloadNotice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 回声洞: 的本地化字符串。
+        /// </summary>
+        public static string EchoCave {
+            get {
+                return ResourceManager.GetString("EchoCave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 启用 的本地化字符串。
+        /// </summary>
+        public static string Enabled {
+            get {
+                return ResourceManager.GetString("Enabled", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 游戏设置 的本地化字符串。
         /// </summary>
-        public static string Tab_GameSettings {
+        public static string GameSettings {
             get {
-                return ResourceManager.GetString("Tab_GameSettings", resourceCulture);
+                return ResourceManager.GetString("GameSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 语言: 的本地化字符串。
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 启动器关闭 的本地化字符串。
+        /// </summary>
+        public static string LaunchClose {
+            get {
+                return ResourceManager.GetString("LaunchClose", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 启动器设置 的本地化字符串。
         /// </summary>
-        public static string Tab_LauncherSettings {
+        public static string LauncherSettings {
             get {
-                return ResourceManager.GetString("Tab_LauncherSettings", resourceCulture);
+                return ResourceManager.GetString("LauncherSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 启动器隐藏，等待游戏结束后显示 的本地化字符串。
+        /// </summary>
+        public static string LaunchHideAndShow {
+            get {
+                return ResourceManager.GetString("LaunchHideAndShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 不执行任何操作 的本地化字符串。
+        /// </summary>
+        public static string LaunchNone {
+            get {
+                return ResourceManager.GetString("LaunchNone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏启动后操作: 的本地化字符串。
+        /// </summary>
+        public static string LaunchOperate {
+            get {
+                return ResourceManager.GetString("LaunchOperate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 导航栏位置: 的本地化字符串。
+        /// </summary>
+        public static string NavViewLocation {
+            get {
+                return ResourceManager.GetString("NavViewLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 左侧 的本地化字符串。
+        /// </summary>
+        public static string NavViewLocation_Left {
+            get {
+                return ResourceManager.GetString("NavViewLocation_Left", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 顶部 的本地化字符串。
+        /// </summary>
+        public static string NavViewLocation_Top {
+            get {
+                return ResourceManager.GetString("NavViewLocation_Top", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏下载通知 的本地化字符串。
+        /// </summary>
+        public static string NoticeGame {
+            get {
+                return ResourceManager.GetString("NoticeGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 修改器下载通知 的本地化字符串。
+        /// </summary>
+        public static string NoticeTrainer {
+            get {
+                return ResourceManager.GetString("NoticeTrainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 通知 的本地化字符串。
+        /// </summary>
+        public static string Notification {
+            get {
+                return ResourceManager.GetString("Notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 操作 的本地化字符串。
+        /// </summary>
+        public static string Operate {
+            get {
+                return ResourceManager.GetString("Operate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 重置 的本地化字符串。
+        /// </summary>
+        public static string Reset {
+            get {
+                return ResourceManager.GetString("Reset", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 存档设置 的本地化字符串。
         /// </summary>
-        public static string Tab_SaveSettings {
+        public static string SaveSettings {
             get {
-                return ResourceManager.GetString("Tab_SaveSettings", resourceCulture);
+                return ResourceManager.GetString("SaveSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择 的本地化字符串。
+        /// </summary>
+        public static string Select {
+            get {
+                return ResourceManager.GetString("Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 启动时检查更新: 的本地化字符串。
+        /// </summary>
+        public static string StartUpCheck {
+            get {
+                return ResourceManager.GetString("StartUpCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 储存 的本地化字符串。
+        /// </summary>
+        public static string Storage {
+            get {
+                return ResourceManager.GetString("Storage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 主题: 的本地化字符串。
+        /// </summary>
+        public static string Theme {
+            get {
+                return ResourceManager.GetString("Theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 黑暗 的本地化字符串。
+        /// </summary>
+        public static string Theme_Dark {
+            get {
+                return ResourceManager.GetString("Theme_Dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 明亮 的本地化字符串。
+        /// </summary>
+        public static string Theme_Light {
+            get {
+                return ResourceManager.GetString("Theme_Light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 标题图片: 的本地化字符串。
+        /// </summary>
+        public static string TitleImage {
+            get {
+                return ResourceManager.GetString("TitleImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 更新 的本地化字符串。
+        /// </summary>
+        public static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 更新通道: 的本地化字符串。
+        /// </summary>
+        public static string UpdateChannel {
+            get {
+                return ResourceManager.GetString("UpdateChannel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 窗口标题: 的本地化字符串。
+        /// </summary>
+        public static string WindowTitle {
+            get {
+                return ResourceManager.GetString("WindowTitle", resourceCulture);
             }
         }
     }

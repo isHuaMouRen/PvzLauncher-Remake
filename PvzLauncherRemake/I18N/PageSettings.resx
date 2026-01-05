@@ -117,115 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Tab_LauncherSettings" xml:space="preserve">
+  <data name="LauncherSettings" xml:space="preserve">
     <value>启动器设置</value>
   </data>
-  <data name="Tab_GameSettings" xml:space="preserve">
+  <data name="GameSettings" xml:space="preserve">
     <value>游戏设置</value>
   </data>
-  <data name="Tab_SaveSettings" xml:space="preserve">
+  <data name="SaveSettings" xml:space="preserve">
     <value>存档设置</value>
   </data>
-  <data name="General_Operate" xml:space="preserve">
+  <data name="Operate" xml:space="preserve">
     <value>操作</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate" xml:space="preserve">
+  <data name="LaunchOperate" xml:space="preserve">
     <value>游戏启动后操作:</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate_None" xml:space="preserve">
+  <data name="LaunchNone" xml:space="preserve">
     <value>不执行任何操作</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate_Close" xml:space="preserve">
+  <data name="LaunchClose" xml:space="preserve">
     <value>启动器关闭</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate_HideAndShow" xml:space="preserve">
+  <data name="LaunchHideAndShow" xml:space="preserve">
     <value>启动器隐藏，等待游戏结束后显示</value>
   </data>
-  <data name="Launcher_Appearance" xml:space="preserve">
+  <data name="Appearance" xml:space="preserve">
     <value>外观</value>
   </data>
-  <data name="Launcher_Appearance_Theme" xml:space="preserve">
+  <data name="Theme" xml:space="preserve">
     <value>主题:</value>
   </data>
-  <data name="Launcher_Appearance_Theme_Light" xml:space="preserve">
+  <data name="Theme_Light" xml:space="preserve">
     <value>明亮</value>
   </data>
-  <data name="Launcher_Appearance_Theme_Dark" xml:space="preserve">
+  <data name="Theme_Dark" xml:space="preserve">
     <value>黑暗</value>
   </data>
-  <data name="Launcher_Appearance_Language" xml:space="preserve">
+  <data name="Language" xml:space="preserve">
     <value>语言:</value>
   </data>
-  <data name="Launcher_Appearance_WindowTitle" xml:space="preserve">
+  <data name="WindowTitle" xml:space="preserve">
     <value>窗口标题:</value>
   </data>
-  <data name="General_Reset" xml:space="preserve">
+  <data name="Reset" xml:space="preserve">
     <value>重置</value>
   </data>
-  <data name="Launcher_Appearance_TitleImage" xml:space="preserve">
+  <data name="TitleImage" xml:space="preserve">
     <value>标题图片:</value>
   </data>
-  <data name="Launcher_Appearance_Background" xml:space="preserve">
+  <data name="Background" xml:space="preserve">
     <value>背景:</value>
   </data>
-  <data name="General_Default" xml:space="preserve">
+  <data name="Default" xml:space="preserve">
     <value>默认</value>
   </data>
-  <data name="General_Custom" xml:space="preserve">
+  <data name="Custom" xml:space="preserve">
     <value>自定义</value>
   </data>
-  <data name="General_Select" xml:space="preserve">
+  <data name="Select" xml:space="preserve">
     <value>选择</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation" xml:space="preserve">
+  <data name="NavViewLocation" xml:space="preserve">
     <value>导航栏位置:</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation_Left" xml:space="preserve">
+  <data name="NavViewLocation_Left" xml:space="preserve">
     <value>左侧</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation_Top" xml:space="preserve">
+  <data name="NavViewLocation_Top" xml:space="preserve">
     <value>顶部</value>
   </data>
-  <data name="Launcher_Update" xml:space="preserve">
+  <data name="Update" xml:space="preserve">
     <value>更新</value>
   </data>
-  <data name="Launcher_Update_CheckUpdate" xml:space="preserve">
+  <data name="CheckUpdate" xml:space="preserve">
     <value>检测更新:</value>
   </data>
-  <data name="Launcher_Update_CheckUpdate_Check" xml:space="preserve">
+  <data name="Check" xml:space="preserve">
     <value>检测</value>
   </data>
-  <data name="Launcher_Update_Channel" xml:space="preserve">
+  <data name="UpdateChannel" xml:space="preserve">
     <value>更新通道:</value>
   </data>
-  <data name="Launcher_Update_StartUpCheck" xml:space="preserve">
+  <data name="StartUpCheck" xml:space="preserve">
     <value>启动时检查更新:</value>
   </data>
-  <data name="General_Enabled" xml:space="preserve">
+  <data name="Enabled" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="Launcher_Notification" xml:space="preserve">
+  <data name="Notification" xml:space="preserve">
     <value>通知</value>
   </data>
-  <data name="Launcher_Notification_DownloadNotice" xml:space="preserve">
+  <data name="DownloadNotice" xml:space="preserve">
     <value>下载通知:</value>
   </data>
-  <data name="Launcher_Notification_DownloadNotice_Game" xml:space="preserve">
+  <data name="NoticeGame" xml:space="preserve">
     <value>游戏下载通知</value>
   </data>
-  <data name="Launcher_Notification_DownloadNotice_Trainer" xml:space="preserve">
+  <data name="NoticeTrainer" xml:space="preserve">
     <value>修改器下载通知</value>
   </data>
-  <data name="Launcher_Storage" xml:space="preserve">
+  <data name="Storage" xml:space="preserve">
     <value>储存</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache" xml:space="preserve">
+  <data name="DownloadCache" xml:space="preserve">
     <value>下载缓存:</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
+  <data name="DownloadCache_Clear" xml:space="preserve">
     <value>清理</value>
   </data>
-  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
+  <data name="EchoCave" xml:space="preserve">
     <value>回声洞:</value>
   </data>
 </root>

@@ -117,115 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Tab_LauncherSettings" xml:space="preserve">
+  <data name="LauncherSettings" xml:space="preserve">
     <value>Настройки лаунчера</value>
   </data>
-  <data name="Tab_GameSettings" xml:space="preserve">
+  <data name="GameSettings" xml:space="preserve">
     <value>настройки игры</value>
   </data>
-  <data name="Tab_SaveSettings" xml:space="preserve">
+  <data name="SaveSettings" xml:space="preserve">
     <value>Настройки архива</value>
   </data>
-  <data name="General_Operate" xml:space="preserve">
+  <data name="Operate" xml:space="preserve">
     <value>действовать</value>
   </data>
-  <data name="Launcher_Operate_LaunchOperate" xml:space="preserve">
-    <value>Действия после запуска игры:</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_None" xml:space="preserve">
-    <value>ничего не делать</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_Close" xml:space="preserve">
-    <value>Лаунчер закрывается</value>
-  </data>
-  <data name="Launcher_Operate_LaunchOperate_HideAndShow" xml:space="preserve">
-    <value>Лаунчер скрыт и будет отображаться после завершения игры</value>
-  </data>
-  <data name="Launcher_Appearance" xml:space="preserve">
+  <data name="Appearance" xml:space="preserve">
     <value>Появление</value>
   </data>
-  <data name="Launcher_Appearance_Theme" xml:space="preserve">
-    <value>тема:</value>
-  </data>
-  <data name="Launcher_Appearance_Theme_Light" xml:space="preserve">
-    <value>яркий</value>
-  </data>
-  <data name="Launcher_Appearance_Theme_Dark" xml:space="preserve">
-    <value>темный</value>
-  </data>
-  <data name="Launcher_Appearance_Language" xml:space="preserve">
-    <value>язык:</value>
-  </data>
-  <data name="Launcher_Appearance_WindowTitle" xml:space="preserve">
-    <value>Название окна:</value>
-  </data>
-  <data name="General_Reset" xml:space="preserve">
+  <data name="Reset" xml:space="preserve">
     <value>перезагрузить</value>
   </data>
-  <data name="Launcher_Appearance_TitleImage" xml:space="preserve">
-    <value>Заглавное изображение:</value>
-  </data>
-  <data name="Launcher_Appearance_Background" xml:space="preserve">
-    <value>фон:</value>
-  </data>
-  <data name="General_Default" xml:space="preserve">
+  <data name="Default" xml:space="preserve">
     <value>по умолчанию</value>
   </data>
-  <data name="General_Custom" xml:space="preserve">
+  <data name="Custom" xml:space="preserve">
     <value>Настроить</value>
   </data>
-  <data name="General_Select" xml:space="preserve">
+  <data name="Select" xml:space="preserve">
     <value>выбирать</value>
   </data>
-  <data name="Launcher_Appearance_NavViewLocation" xml:space="preserve">
-    <value>Расположение панели навигации:</value>
-  </data>
-  <data name="Launcher_Appearance_NavViewLocation_Left" xml:space="preserve">
-    <value>левая сторона</value>
-  </data>
-  <data name="Launcher_Appearance_NavViewLocation_Top" xml:space="preserve">
-    <value>вершина</value>
-  </data>
-  <data name="Launcher_Update" xml:space="preserve">
+  <data name="Update" xml:space="preserve">
     <value>возобновлять</value>
   </data>
-  <data name="Launcher_Update_CheckUpdate" xml:space="preserve">
-    <value>Проверьте наличие обновлений:</value>
-  </data>
-  <data name="Launcher_Update_CheckUpdate_Check" xml:space="preserve">
-    <value>Обнаружение</value>
-  </data>
-  <data name="Launcher_Update_Channel" xml:space="preserve">
-    <value>Обновление канала:</value>
-  </data>
-  <data name="Launcher_Update_StartUpCheck" xml:space="preserve">
-    <value>Проверьте наличие обновлений при запуске:</value>
-  </data>
-  <data name="General_Enabled" xml:space="preserve">
+  <data name="Enabled" xml:space="preserve">
     <value>давать возможность</value>
   </data>
-  <data name="Launcher_Notification" xml:space="preserve">
+  <data name="Notification" xml:space="preserve">
     <value>уведомить</value>
   </data>
-  <data name="Launcher_Notification_DownloadNotice" xml:space="preserve">
-    <value>Уведомление о загрузке:</value>
-  </data>
-  <data name="Launcher_Notification_DownloadNotice_Game" xml:space="preserve">
-    <value>Уведомление о загрузке игры</value>
-  </data>
-  <data name="Launcher_Notification_DownloadNotice_Trainer" xml:space="preserve">
-    <value>Уведомление о загрузке модификатора</value>
-  </data>
-  <data name="Launcher_Storage" xml:space="preserve">
+  <data name="Storage" xml:space="preserve">
     <value>магазин</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache" xml:space="preserve">
+  <data name="Theme" xml:space="preserve">
+    <value>тема:</value>
+  </data>
+  <data name="Theme_Light" xml:space="preserve">
+    <value>яркий</value>
+  </data>
+  <data name="Theme_Dark" xml:space="preserve">
+    <value>темный</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>язык:</value>
+  </data>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>Название окна:</value>
+  </data>
+  <data name="TitleImage" xml:space="preserve">
+    <value>Заглавное изображение:</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>фон:</value>
+  </data>
+  <data name="NavViewLocation" xml:space="preserve">
+    <value>Расположение панели навигации:</value>
+  </data>
+  <data name="NavViewLocation_Left" xml:space="preserve">
+    <value>левая сторона</value>
+  </data>
+  <data name="NavViewLocation_Top" xml:space="preserve">
+    <value>вершина</value>
+  </data>
+  <data name="EchoCave" xml:space="preserve">
+    <value>Пещера Эха:</value>
+  </data>
+  <data name="DownloadCache" xml:space="preserve">
     <value>Скачать кэш:</value>
   </data>
-  <data name="Launcher_Storage_DownloadCache_Clear" xml:space="preserve">
+  <data name="DownloadCache_Clear" xml:space="preserve">
     <value>убирать</value>
   </data>
-  <data name="Launcher_Appearance_EchoCave" xml:space="preserve">
-    <value>Пещера Эха:</value>
+  <data name="LaunchOperate" xml:space="preserve">
+    <value>Действия после запуска игры:</value>
+  </data>
+  <data name="LaunchNone" xml:space="preserve">
+    <value>ничего не делать</value>
+  </data>
+  <data name="LaunchClose" xml:space="preserve">
+    <value>Лаунчер закрывается</value>
+  </data>
+  <data name="LaunchHideAndShow" xml:space="preserve">
+    <value>Лаунчер скрыт и будетотображаться после завершениигры</value>
+  </data>
+  <data name="CheckUpdate" xml:space="preserve">
+    <value>Проверьте наличие обновлений:</value>
+  </data>
+  <data name="UpdateChannel" xml:space="preserve">
+    <value>Обновление канала:</value>
+  </data>
+  <data name="StartUpCheck" xml:space="preserve">
+    <value>Проверьте наличие обновлений при запуске:</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Обнаружение</value>
+  </data>
+  <data name="DownloadNotice" xml:space="preserve">
+    <value>Уведомление о загрузке:</value>
+  </data>
+  <data name="NoticeGame" xml:space="preserve">
+    <value>Уведомление о загрузке игры</value>
+  </data>
+  <data name="NoticeTrainer" xml:space="preserve">
+    <value>Уведомление о загрузке модификатора</value>
   </data>
 </root>
