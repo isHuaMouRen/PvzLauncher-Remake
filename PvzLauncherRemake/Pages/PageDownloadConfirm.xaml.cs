@@ -108,7 +108,7 @@ namespace PvzLauncherRemake.Pages
                 {
                     for (int i = 0; i < Info.Screenshot; i++)
                     {
-                        string url = $"{ScreeshotRootUrl}/{Info.Version}/{i + 1}.png";
+                        string url = $"{ScreeshotRootUrl}/{Info.Name}/{i + 1}.png";
 
                         byte[] imageBytes = await client.GetByteArrayAsync(url);
 
