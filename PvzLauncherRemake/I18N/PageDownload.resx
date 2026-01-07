@@ -112,4 +112,7 @@
   <data name="EnglishOriginalEdition" xml:space="preserve">
     <value>英文原版</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
 </root>

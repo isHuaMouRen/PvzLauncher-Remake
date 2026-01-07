@@ -132,4 +132,7 @@
   <data name="EnglishOriginalEdition" xml:space="preserve">
     <value>英語の原書です</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
 </root>

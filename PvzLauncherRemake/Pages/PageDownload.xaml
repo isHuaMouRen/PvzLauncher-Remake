@@ -22,34 +22,58 @@
                     <TabControl Style="{StaticResource TabControlPivotStyle}" Margin="0,0,0,10" SelectionChanged="tabControl_Main_SelectionChanged">
                         <!--中文原版-->
                         <TabItem Header="{lex:Loc ChineseOriginalEdition}">
-                            <ctrl:UserScrollViewer>
-                                <StackPanel x:Name="stackPanel_zhOrigin" Tag="game"/>
-                            </ctrl:UserScrollViewer>
+                            <Grid>
+                                <ctrl:UserScrollViewer>
+                                    <StackPanel x:Name="stackPanel_zhOrigin" Tag="game"/>
+                                </ctrl:UserScrollViewer>
+                            </Grid>
                         </TabItem>
                         <!--中文改版-->
                         <TabItem Header="{lex:Loc ChineseRevisionEdition}">
-                            <ctrl:UserScrollViewer>
-                                <StackPanel x:Name="stackPanel_zhRevision" Tag="game"/>
-                            </ctrl:UserScrollViewer>
+                            <Grid>
+                                <ctrl:UserScrollViewer>
+                                    <StackPanel x:Name="stackPanel_zhRevision" Tag="game"/>
+                                </ctrl:UserScrollViewer>
+                            </Grid>
                         </TabItem>
                         <!--英文原版-->
                         <TabItem Header="{lex:Loc EnglishOriginalEdition}">
-                            <ctrl:UserScrollViewer>
-                                <StackPanel x:Name="stackPanel_enOrigin" Tag="game"/>
-                            </ctrl:UserScrollViewer>
+                            <Grid>
+                                <ctrl:UserScrollViewer>
+                                    <StackPanel x:Name="stackPanel_enOrigin" Tag="game"/>
+                                </ctrl:UserScrollViewer>
+                            </Grid>
                         </TabItem>
                     </TabControl>
                 </TabItem>
                 <!--修改器下载-->
                 <TabItem Header="{lex:Loc TrainerDownload}">
-                    <ctrl:UserScrollViewer>
-                        <StackPanel x:Name="stackPanel_trainer" Tag="trainer"/>
-                    </ctrl:UserScrollViewer>
+                    <Grid>
+                        <ctrl:UserScrollViewer>
+                            <StackPanel x:Name="stackPanel_trainer" Tag="trainer"/>
+                        </ctrl:UserScrollViewer>
+                    </Grid>
+                </TabItem>
+
+                <!--搜索-->
+                <TabItem Header="{lex:Loc Search}">
+                    <Grid>
+                        <!--搜索框-->
+                        <Grid VerticalAlignment="Top">
+                            <TextBox x:Name="textBox_Search" Margin="0,0,110,0" KeyUp="textBox_Search_KeyUp"/>
+                            <Button x:Name="button_Search" Style="{DynamicResource AccentButtonStyle}" MinWidth="100" Content="{lex:Loc Search}" HorizontalAlignment="Right" Click="button_Search_Click"/>
+                        </Grid>
+
+                        <!--结果-->
+                        <ctrl:UserScrollViewer Margin="0,42,0,0">
+                            <StackPanel x:Name="stackPanel_Search"/>
+                        </ctrl:UserScrollViewer>
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Grid>
-        
-        
+
+
         <!--加载屏幕-->
         <Grid x:Name="grid_Loading" Visibility="Hidden">
             <ui:ProgressRing IsActive="True" Width="50" Height="50"/>

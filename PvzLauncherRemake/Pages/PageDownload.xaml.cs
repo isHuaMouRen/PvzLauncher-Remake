@@ -7,6 +7,7 @@ using PvzLauncherRemake.Utils.UI;
 using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using static PvzLauncherRemake.Class.AppLogger;
@@ -138,15 +139,15 @@ namespace PvzLauncherRemake.Pages
                     return;
 
                 var selectItem = ((TabControl)sender).SelectedContent;
-                UserScrollViewer animControl = null!;
+                Grid animControl = null!;
 
-                if (selectItem is UserScrollViewer)
+                if (selectItem is Grid)
                 {
-                    animControl = (UserScrollViewer)selectItem;
+                    animControl = (Grid)selectItem;
                 }
-                else if (selectItem is TabControl tabcontrol && tabcontrol.SelectedContent is UserScrollViewer)
+                else if (selectItem is TabControl tabcontrol && tabcontrol.SelectedContent is Grid ) 
                 {
-                    animControl = (UserScrollViewer)tabcontrol.SelectedContent;
+                    animControl = (Grid)tabcontrol.SelectedContent;
                 }
                 else
                 {
@@ -199,6 +200,68 @@ namespace PvzLauncherRemake.Pages
             });
 
             return;
+        }
+
+        private void button_Search_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //检测有无内容
+                if (stackPanel_enOrigin.Children.Count <= 0 || stackPanel_trainer.Children.Count <= 0 || stackPanel_zhOrigin.Children.Count <= 0 || stackPanel_zhRevision.Children.Count <= 0)
+                    return;
+
+                stackPanel_Search.Children.Clear();
+
+                var allItem = new List<UserCard>();
+
+                allItem.Clear();
+                //添加项
+                foreach (var item in stackPanel_enOrigin.Children)
+                    if (item is UserCard card)
+                        allItem.Add(card);
+                foreach (var item in stackPanel_trainer.Children)
+                    if (item is UserCard card)
+                        allItem.Add(card);
+                foreach (var item in stackPanel_zhOrigin.Children)
+                    if (item is UserCard card)
+                        allItem.Add(card);
+                foreach (var item in stackPanel_zhRevision.Children)
+                    if (item is UserCard card)
+                        allItem.Add(card);
+
+                //寻找并添加
+                foreach (var item in allItem)
+                {
+                    if (item.Title.Contains(textBox_Search.Text))
+                    {
+                        var card = new UserCard
+                        {
+                            Title = item.Title,
+                            Icon = item.Icon,
+                            Version = item.Version,
+                            Size = item.Size,
+                            isNew = item.isNew,
+                            isRecommend = item.isRecommend,
+                            Tag = item.Tag,
+                            AttachedProperty = item.AttachedProperty,
+                            Margin = item.Margin
+                        };
+                        card.MouseUp += UserCard_Click;
+                        stackPanel_Search.Children.Add(card);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorReportDialog.Show("发生错误", null!, ex);
+            }
+        }
+
+        private void textBox_Search_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            //传递到搜索按钮上
+            if (e.Key == Key.Enter)
+                button_Search_Click(button_Search, null!);
         }
     }
 }

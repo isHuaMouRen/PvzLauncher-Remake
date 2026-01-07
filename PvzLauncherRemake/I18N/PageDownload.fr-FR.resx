@@ -132,4 +132,7 @@
   <data name="EnglishOriginalEdition" xml:space="preserve">
     <value>Anglais original</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>recherche</value>
+  </data>
 </root>
